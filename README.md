@@ -1,181 +1,231 @@
-# TSDX React w/ Storybook User Guide
-
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
-
-> This TSDX setup is meant for developing React component libraries (not apps!) that can be published to NPM. If you’re looking to build a React-based app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
-
-> If you’re new to TypeScript and React, checkout [this handy cheatsheet](https://github.com/sw-yx/react-typescript-cheatsheet/)
-
-## Commands
-
-TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
-
-The recommended workflow is to run TSDX in one terminal:
-
-```bash
-npm start # or yarn start
-```
-
-This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
-
-Then run either Storybook or the example playground:
-
-### Storybook
-
-Run inside another terminal:
-
-```bash
-yarn storybook
-```
-
-This loads the stories from `./stories`.
-
-> NOTE: Stories should reference the components as if using the library, similar to the example playground. This means importing from the root project directory. This has been aliased in the tsconfig and the storybook webpack config as a helper.
-
-### Example
-
-Then run the example inside another:
-
-```bash
-cd example
-npm i # or yarn to install dependencies
-npm start # or yarn start
-```
-
-The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**, we use [Parcel's aliasing](https://parceljs.org/module_resolution.html#aliases).
-
-To do a one-off build, use `npm run build` or `yarn build`.
-
-To run tests, use `npm test` or `yarn test`.
-
-## Configuration
-
-Code quality is set up for you with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
-
-### Jest
-
-Jest tests are set up to run with `npm test` or `yarn test`.
-
-### Bundle analysis
-
-Calculates the real cost of your library using [size-limit](https://github.com/ai/size-limit) with `npm run size` and visulize it with `npm run analyze`.
-
-#### Setup Files
-
-This is the folder structure we set up for you:
-
-```txt
-/example
-  index.html
-  index.tsx       # test your component here in a demo app
-  package.json
-  tsconfig.json
-/src
-  index.tsx       # EDIT THIS
-/test
-  blah.test.tsx   # EDIT THIS
-/stories
-  Thing.stories.tsx # EDIT THIS
-/.storybook
-  main.js
-  preview.js
-.gitignore
-package.json
-README.md         # EDIT THIS
-tsconfig.json
-```
-
-#### React Testing Library
-
-We do not set up `react-testing-library` for you yet, we welcome contributions and documentation on this.
-
-### Rollup
-
-TSDX uses [Rollup](https://rollupjs.org) as a bundler and generates multiple rollup configs for various module formats and build settings. See [Optimizations](#optimizations) for details.
-
-### TypeScript
-
-`tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
-
-## Continuous Integration
-
-### GitHub Actions
-
-Two actions are added by default:
-
-- `main` which installs deps w/ cache, lints, tests, and builds on all pushes against a Node and OS matrix
-- `size` which comments cost comparison of your library on every pull request using [size-limit](https://github.com/ai/size-limit)
-
-## Optimizations
-
-Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
-
-```js
-// ./types/index.d.ts
-declare var __DEV__: boolean;
-
-// inside your code...
-if (__DEV__) {
-  console.log('foo');
-}
-```
-
-You can also choose to install and use [invariant](https://github.com/palmerhq/tsdx#invariant) and [warning](https://github.com/palmerhq/tsdx#warning) functions.
-
-## Module Formats
-
-CJS, ESModules, and UMD module formats are supported.
-
-The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
-
-## Deploying the Example Playground
-
-The Playground is just a simple [Parcel](https://parceljs.org) app, you can deploy it anywhere you would normally deploy that. Here are some guidelines for **manually** deploying with the Netlify CLI (`npm i -g netlify-cli`):
-
-```bash
-cd example # if not already in the example folder
-npm run build # builds to dist
-netlify deploy # deploy the dist folder
-```
-
-Alternatively, if you already have a git repo connected, you can set up continuous deployment with Netlify:
-
-```bash
-netlify init
-# build command: yarn build && cd example && yarn && yarn build
-# directory to deploy: example/dist
-# pick yes for netlify.toml
-```
-
-## Named Exports
-
-Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
-
-## Including Styles
-
-There are many ways to ship styles, including with CSS-in-JS. TSDX has no opinion on this, configure how you like.
-
-For vanilla CSS, you can include it at the root directory and add it to the `files` section in your `package.json`, so that it can be imported separately by your users and run through their bundler's loader.
-
-## Publishing to NPM
-
-We recommend using [np](https://github.com/sindresorhus/np).
-
-## Usage with Lerna
-
-When creating a new package with TSDX within a project set up with Lerna, you might encounter a `Cannot resolve dependency` error when trying to run the `example` project. To fix that you will need to make changes to the `package.json` file _inside the `example` directory_.
-
-The problem is that due to the nature of how dependencies are installed in Lerna projects, the aliases in the example project's `package.json` might not point to the right place, as those dependencies might have been installed in the root of your Lerna project.
-
-Change the `alias` to point to where those packages are actually installed. This depends on the directory structure of your Lerna project, so the actual path might be different from the diff below.
-
-```diff
-   "alias": {
--    "react": "../node_modules/react",
--    "react-dom": "../node_modules/react-dom"
-+    "react": "../../../node_modules/react",
-+    "react-dom": "../../../node_modules/react-dom"
-   },
-```
-
-An alternative to fixing this problem would be to remove aliases altogether and define the dependencies referenced as aliases as dev dependencies instead. [However, that might cause other problems.](https://github.com/palmerhq/tsdx/issues/64)
+import {Meta} from '@storybook/addon-docs'
+
+<Meta title="@RuskelUI/About RuskelUI" />
+
+# RuskelUI
+RuskelUI is set of UI primitives dedicated for Web3 built with React and TailwindCSS - components that you can use with any React framework!
+
+## 🕵️ About RuskelUI
+RuskelUI came about to be due to the wanting to create my own UI vault that would be oriented towards Web3 development. This is the official UI set of primitives for all of the Web3 initiatives (7+) that I'm working on, which I hope you keep an eye out for, as it may help you ship robust Web3 platforms that use - phew, nearly gave it away!😅
+
+It follows what I deem as `Neonic Nerophism`, which combines three UI trends together - neon colours, dark mode and glassmorphism, hence the name. The goal for this is to create aesthetically beautiful interfaces with RuskelUI primitives that facilitates faster UI developement, getting you from concept to production very quickly.
+
+## ⭐️ Star Us!
+If this project helps/has helped you build your Web3 projects faster, star us - every little star helps!
+
+
+## 🧩 Table Of Components
+- [⬇ Installation: `<installation/>`](#installation)
+- [👤 Avatar: `<rui-avatar/>`](#rui-avatar)
+- [⌨️ Button: `<rui-button/>`](#rui-button)
+- [🃏 Card: `<rui-card/>`](#rui-card)
+- [✅ Checkbox: `<rui-checkbox/>`](#rui-checkbox)
+- [💬 Input: `<rui-input/>`](#rui-input)
+- [⏲ Loader: `<rui-loader/>`](#rui-loader)
+- [🪟 Modal: `<rui-modal/>`](#rui-modal)
+- [💊 Pill: `<rui-pill/>`](#rui-pill)
+- [📻 Radio: `<rui-radio/>`](#rui-radio)
+- [🗃 Select: `<rui-select/>`](#rui-select)
+- [🥂 Toast: `<rui-toast/>`](#rui-toast)
+- [💡 Toggle: `<rui-toggle/>`](#rui-toggle)
+- [🛠 Tooltip: `<rui-tooltip/>`](#rui-tooltip)
+
+
+### installation
+This is the process to install RuskelUI components. TBC.
+
+
+### rui-avatar
+The Avatar element displays information from a user in the form of an image if available, and displaying the initials of the user if the user's image is not available.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+elemName | elem-name | abac | string
+floatingLabel | floating-label | abac | string
+label | label | abac | string
+placeholder | placeholder | abac | string
+
+### rui-button
+The Button element.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+elemName | elem-name | abac | string
+floatingLabel | floating-label | abac | string
+label | label | abac | string
+placeholder | placeholder | abac | string
+
+### rui-card
+The Card element displays information.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+elemName | elem-name | abac | string
+floatingLabel | floating-label | abac | string
+label | label | abac | string
+placeholder | placeholder | abac | string
+
+### rui-checkbox
+The Checkbox element displays checked elements.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+color | color | abac | string
+labelAfter | label-after | abac | string
+labelBefore| label-before | abac | string
+name | name | abac | string
+
+### rui-cryptologo
+The CryptoLogo element displays SVG's icons of cryptocurrency.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+szie | size | Sets the size of the crypto logo | sizeType | 6
+chain | chain | Sets the cryptocurrency to display | cryptoType | "xrp"
+
+### rui-dropdown
+The Dropdown element displays options to select elements.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+label | label | abac | string
+
+### rui-input
+The Input element allows data input.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+elemName | elem-name | abac | string
+floatingLabel | floating-label | abac | string
+label | label | abac | string
+placeholder | placeholder | abac | string
+
+
+### rui-loader
+The Loader element.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+color | color | Sets the color of the inner element inside the loader | string
+name | name | Name that's attached to ID HTML attribute | string
+
+### rui-modal
+The Modal element.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+elemName | elem-name | abac | string
+floatingLabel | floating-label | abac | string
+label | label | abac | string
+placeholder | placeholder | abac | string
+
+### rui-pill
+The Pill element displays information or status about a process.
+
+#### Props
+*We recommend to use 12 by 12 (pixels) SVG icon to ensure that it fits within the sizing of the pill. If using Tailwind, set the width and height by using "w-3 h-3" in the class/className attribute.
+
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+|label | label | Useful for displaying statuses | string | undefined
+|iconBefore | icon-before | Default version - sets the icon to appear before the label | boolean | true
+|iconAfter | icon-after | Sets the icon to appear after the label | boolean | undefined
+|color | color | Sets the global color of the pill | string | undefined
+
+### rui-progressbar
+The ProgressBar element visually shows the % of the meter filled.
+
+#### Props
+
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+|color | color | Sets BG color as RuskelUI's neonic colours or Tailwind's native colours - only for single colour styling | colorType | "amethyst"
+|name | name | Name that's attached to Title & ID of element | string
+|isGradient | isGradient | Enables for dual gradients | boolean | false
+|startColour | startColour | Starting colour of dual gradient | colorType | "blue"
+|endColour | endColour | Ending colour of dual gradient | colorType | "amethyst"
+|percentage | percentage | Sets the percentage value for the progress bar and changes how much is filled | number
+
+### rui-progressdonut
+The ProgressBar element visually shows the % of the meter filled.
+
+#### Props
+
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+|color | color | Sets BG color as RuskelUI's neonic colours or Tailwind's native colours - only for single colour styling | colorType | "ruby"
+|name | name | Name that's attached to Title & ID of ProgressDonut | string
+|percentage | percentage | Sets the percentage value for the progress bar and changes how much is filled | number | 0
+
+### rui-radio
+The Radio element.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+elemName | elem-name | abac | string
+floatingLabel | floating-label | abac | string
+label | label | abac | string
+placeholder | placeholder | abac | string
+
+### rui-select
+The Select element.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+elemName | elem-name | abac | string
+floatingLabel | floating-label | abac | string
+label | label | abac | string
+placeholder | placeholder | abac | string
+
+
+### rui-swap
+The Select element.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+offIcon | | Provides slot for a string, HTML element or SVGs | ReactNode
+onIcon | | Provides slot for a string, HTML element or SVGs | ReactNode
+color | color | Sets the colour from RuskelUI's neonic colours or Tailwind's native colours | colorType
+name | name | Provides a name for the Swap component | string
+
+### rui-toast
+The Toast element.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+color | color | Sets the colour from RuskelUI's neonic colours or Tailwind's native colours | colorType | "peridot"
+title | title | Sets the title of the toast component | string
+content | content | Sets the content of the toast to convey information | ReactNode
+
+### rui-toggle
+The Toggle element.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+color | color | Sets BG color as RuskelUI's neonic colours or Tailwind's native colours | string
+name | name | Sets the accesibility name | string
+
+### rui-tooltip
+The Tooltip element.
+
+#### Props
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+children | children |  | ReactNode
+name | name | Provides a name for the tooltip | string
+message | message | Sets the message to display when tooltip is shown | string
+position | position | Sets the position from which the tooltip should be shown | posType | "t"
