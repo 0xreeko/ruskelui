@@ -1,4 +1,4 @@
-import React, {HTMLAttributes, ReactNode} from "react"
+import React, {HTMLAttributes} from "react"
 import clsx from 'clsx'
 import { colorType } from "./utils";
 
@@ -6,7 +6,7 @@ export interface Props extends HTMLAttributes<HTMLElement> {
     color: colorType;
     position: "tl" | 't' | 'tr' | 'br' | 'b' | 'bl'
     title: string;
-    content: ReactNode
+    content: string
 }
 
 const colorVar: {[key in colorType]: string[]} = {

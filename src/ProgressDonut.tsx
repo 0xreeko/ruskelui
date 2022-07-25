@@ -54,8 +54,8 @@ const colorVar: { [key in colorType]: string } = {
 
 export const RuiProgressDonut = ({ name, percentage = 0, color = 'ruby' }: Props) => {
     return (
-        <div title={name} id={name} className="relative inline-block">
-            <span className={clsx(`absolute text-d-h3 top-[35%] font-semibold`, `${colorVar[color]}`, `${percentage < 10 ? 'right-[40%]' : 'right-[35%]'}`)}>{percentage}</span>
+        <div title={name} id={name} className="relative inline-flex items-center justify-center">
+            <div className={clsx(`absolute text-d-h4 font-semibold`, `${colorVar[color]}`)}>{percentage}%</div>
             <svg className={styles.svg} viewBox="0 0 120 120" >
                 <circle className="text-black/30" stroke-width="4" stroke="currentColor" fill="transparent" r="54" cx="60" cy="60" />
                 <circle className={clsx(`${colorVar[color]}`)} strokeWidth="10" strokeDasharray={100} style={{ strokeDashoffset: Number(100 - percentage) }} pathLength="100" strokeLinecap="round" stroke="currentColor" fill="transparent" r="54" cx="60" cy="60" />
