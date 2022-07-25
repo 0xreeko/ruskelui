@@ -1,0 +1,7 @@
+.card {
+    @apply px-2 pt-2 bg-russian-800/30 text-sylver-100 rounded-lg w-44 h-24 backdrop-blur-sm
+}
+
+.image {
+    @apply absolute -top-[95%]  w-40 left-2 rounded-lg h-36 bg-stratos-400
+}

@@ -1,0 +1,128 @@
+ /* Colors - Pill */
+
+ .white {
+    @apply text-white
+ }
+ .black {
+    @apply text-black
+ }
+
+    .amber {
+        @apply bg-amber-400
+    }
+
+    .amethyst {
+        @apply bg-amethyst-400
+    }
+
+    .aqua {
+        @apply bg-aqua-400
+    }
+
+    .azure {
+        @apply bg-azure-400
+    }
+
+    .blue {
+        @apply bg-blue-400
+    }
+
+    .cyan {
+        @apply bg-cyan-400
+    }
+
+    .emerald {
+        @apply bg-emerald-400
+    }
+
+    .fuchsia {
+        @apply bg-fuchsia-400
+    }
+
+    .green {
+        @apply bg-green-400
+    }
+
+    .indigo {
+        @apply bg-indigo-400
+    }
+
+    .jade {
+        @apply bg-jade-400
+    }
+
+    .jasper {
+        @apply bg-jasper-400
+    }
+
+    .kunzite {
+        @apply bg-kunzite-400
+    }
+
+    .lime {
+        @apply bg-lime-400
+    }
+
+    .moonstone {
+        @apply bg-moonstone-400
+    }
+
+    .orange {
+        @apply bg-orange-400
+    }
+
+    .peridot {
+        @apply bg-peridot-400
+    }
+
+    .pink {
+        @apply bg-pink-400
+    }
+
+    .purple {
+        @apply bg-purple-400
+    }
+
+    .red {
+        @apply bg-red-400
+    }
+
+    .rose {
+        @apply bg-rose-400
+    }
+
+    .ruby {
+        @apply bg-ruby-400
+    }
+
+    .russian {
+        @apply bg-russian-400
+    }
+
+    .scarlet {
+        @apply bg-scarlet-400
+    }
+
+    .stratos {
+        @apply bg-stratos-400
+    }
+
+    .sunstone {
+        @apply bg-sunstone-400
+    }
+
+    .sylver {
+        @apply bg-sylver-400
+    }
+
+    .teal {
+        @apply bg-teal-400
+    }
+
+    .violet {
+        @apply bg-violet-400
+    }
+
+    .yellow {
+        @apply bg-yellow-400
+    }

@@ -1,0 +1,42 @@
+.amethyst {
+    @apply peer-checked:bg-amethyst-600;
+}
+.aqua {
+    @apply peer-checked:bg-aqua-600;
+}
+.azure {
+    @apply peer-checked:bg-azure-600;
+}
+.jade {
+    @apply peer-checked:bg-jade-600;
+}
+.jasper {
+    @apply peer-checked:bg-jasper-600;
+}
+.kunzite {
+    @apply peer-checked:bg-kunzite-600;
+}
+.moonstone {
+    @apply peer-checked:bg-moonstone-600;
+}
+.peridot {
+    @apply peer-checked:bg-peridot-600;
+}
+.ruby {
+    @apply peer-checked:bg-ruby-600;
+}
+.russian {
+    @apply peer-checked:bg-russian-600;
+}
+.scarlet {
+    @apply peer-checked:bg-scarlet-600;
+}
+.stratos {
+    @apply peer-checked:bg-stratos-600;
+}
+.sunstone {
+    @apply peer-checked:bg-sunstone-600;
+}
+.sylver {
+    @apply peer-checked:bg-sylver-600;
+}
