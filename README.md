@@ -18,7 +18,7 @@ If this project helps/has helped you build your Web3 projects faster, star us - 
 - [⌨️ Button: `<rui-button/>`](#rui-button)
 - [🃏 Card: `<rui-card/>`](#rui-card)
 - [✅ Checkbox: `<rui-checkbox/>`](#rui-checkbox)
-- [✅ CryptoLogo: `<rui-cryptologo/>`](#rui-cryptologo)
+- [🎨 CryptoLogo: `<rui-cryptologo/>`](#rui-cryptologo)
 - [⬇️ Dropdown: `<rui-dropdown/>`](#rui-dropdown)
 - [💬 Input: `<rui-input/>`](#rui-input)
 - [🎹 KBD: `<rui-kbd/>`](#rui-kbd)
