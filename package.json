@@ -19,7 +19,8 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -58,6 +59,7 @@
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addons": "^6.5.9",
     "@storybook/react": "^6.5.9",
+    "@storybook/storybook-deployer": "^2.8.12",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "autoprefixer": "^10.4.7",
