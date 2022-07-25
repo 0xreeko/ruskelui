@@ -4,7 +4,7 @@ RuskelUI is set of UI primitives dedicated for Web3 built with React and Tailwin
 ## 🕵️ About RuskelUI
 RuskelUI came about to be due to the wanting to create my own UI vault that would be oriented towards Web3 development. This is the official UI set of primitives for all of the Web3 initiatives (7+) that I'm working on, which I hope you keep an eye out for, as it may help you ship robust Web3 platforms that use - phew, nearly gave it away!😅
 
-It follows what I deem as `Neonic Nerophism`, which combines three UI trends together - neon colours, dark mode and glassmorphism, hence the name. The goal for this is to create aesthetically beautiful interfaces with RuskelUI primitives that facilitates faster UI developement, getting you from concept to production very quickly.
+It follows what I deem as `Neonic Nerophism`, which combines three UI trends together - neon colours, dark mode and glassmorphism, hence the name. The goal for this is to create aesthetically beautiful interfaces with RuskelUI primitives that facilitate faster UI developement, getting you from concept to production very quickly.
 
 Live Storybook Demo (Github Pages): https://0xreeko.github.io/ruskelui
 
