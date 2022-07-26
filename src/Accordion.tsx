@@ -56,7 +56,7 @@ export const RuiAccordion = ({ data = [{ title: "What is Web3?", content: "Web3 
     }
 
     return (
-        <div className={clsx(styles.wrapper)}>
+        <div className={clsx(styles.wrapper)} tabIndex={0}>
             {data.map((item, idx) => (
                 <>
                     <button className={clsx(styles.accordionItem)} onClick={() => toggle(idx)}>
