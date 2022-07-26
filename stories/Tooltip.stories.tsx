@@ -8,6 +8,9 @@ const meta: Meta = {
     argTypes: {
         children: {
             defaultValue: 'Default button'
+        },
+        message: {
+            defaultValue: "This is an example"
         }
     }
 }

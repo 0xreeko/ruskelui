@@ -1,0 +1,8 @@
+.wrap {
+    @apply flex font-medium
+}
+
+.inactive::after {
+    content: ">";
+    @apply mx-2 text-sylver-700
+}
