@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import clsx from 'clsx'
 
-export const RuiSideNav = (children) => {
+export const RuiSideNav = () => {
     const [open, setOpen] = useState(false)
     return (
         <aside className='inset-0 flex'>
@@ -13,7 +13,7 @@ export const RuiSideNav = (children) => {
                     herllo
                 </div>
             </div>
-            <div className={clsx(`flex-1 h-screen`, `${open ? `bg-russian-400/30 duration-300 opacity-100` : `duration-300 opacity-75`}`)}></div>
+            <div className={clsx(`flex-1 h-screen`, `${open ? `bg-russian-400/3 0 duration-300 opacity-100` : `duration-300 opacity-75`}`)}></div>
         </aside>
     )
 }
