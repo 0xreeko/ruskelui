@@ -18,8 +18,3 @@
     content: ">";
     @apply text-gray-500/60 mx-2
 }
-
-/* .innerWrap li::after {
-    content: ">";
-    @apply mx-2 text-sylver-800
-} */

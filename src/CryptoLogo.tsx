@@ -54,7 +54,7 @@ const cryptoVar: { [key in cryptoType]: string[]} = {
 export const RuiCryptoLogo = ({ size = 6, chain = "xrp" }: Props) => {
     return (
             <div className={`overflow-hidden ${sizeVar[size]} bg-transparent inline-flex justify-center items-center`}>
-                <img className='object-cover' src={cryptoVar[chain][0]} alt={cryptoVar[chain][1]} />
+                <img src={cryptoVar[chain][0]} alt={cryptoVar[chain][1]} />
             </div>
         //     <div className='relative w-fit'>
     //     <div className="p-0.5 to-sunstone-500 rounded-full bg-gradient-to-tr from-orange-500">
