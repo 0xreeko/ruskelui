@@ -1,8 +1,16 @@
-.wrap {
+.wrapper {
+    @apply font-sans text-d-copy
+}
+
+.innerWrap {
     @apply flex font-medium
 }
 
-.inactive::after {
+.innerWrap li {
+    @apply text-sylver-700
+}
+
+.innerWrap li::after {
     content: ">";
-    @apply mx-2 text-sylver-700
+    @apply mx-2 text-sylver-800
 }
