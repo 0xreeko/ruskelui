@@ -1,5 +1,5 @@
 .wrapper {
-    @apply font-sans text-d-copy py-2 px-4 bg-russian-600/40 backdrop-blur-sm inline-block rounded-xl
+    @apply font-sans text-d-copy py-2 px-4 bg-russian-600/40 backdrop-blur-sm inline-block rounded-xl mb-2
 }
 
 .innerWrap {
