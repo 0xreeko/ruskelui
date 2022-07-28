@@ -18,20 +18,20 @@ const Template: Story<RootProps> = (args) => <RuiDropdown.Wrapper {...args}>
         <RuiDropdown.Item leftIcon={iconUser} rightIcon={iconChev} menu='settings' isSub>
             Account Settings
            <RuiDropdown.Menu menu='settings' isSub>
-                <RuiDropdown.Item>User Settings</RuiDropdown.Item>
-                <RuiDropdown.Item>Dashboard Settings</RuiDropdown.Item>
-                <RuiDropdown.Item>Team Settings</RuiDropdown.Item>
-                <RuiDropdown.Item>Deactivate</RuiDropdown.Item>
+                <RuiDropdown.Item color='ruby'>User Settings</RuiDropdown.Item>
+                <RuiDropdown.Item color='ruby'>Dashboard Settings</RuiDropdown.Item>
+                <RuiDropdown.Item color='ruby'>Team Settings</RuiDropdown.Item>
+                <RuiDropdown.Item color='scarlet'>Deactivate</RuiDropdown.Item>
             </RuiDropdown.Menu>
         </RuiDropdown.Item>
         <RuiDropdown.Item>Support</RuiDropdown.Item>
         <RuiDropdown.Item>License</RuiDropdown.Item>
-        <RuiDropdown.Item rightIcon={iconChev} >
+        <RuiDropdown.Item rightIcon={iconChev} color='amethyst'>
             Documentation
             <RuiDropdown.Menu leftIcon={iconUser} menu='documentation' isSub>
-                <RuiDropdown.Item>Litepaper</RuiDropdown.Item>
-                <RuiDropdown.Item>PoC</RuiDropdown.Item>
-                <RuiDropdown.Item>Technical</RuiDropdown.Item>
+                <RuiDropdown.Item color='amethyst'>Litepaper</RuiDropdown.Item>
+                <RuiDropdown.Item color='amethyst'>PoC</RuiDropdown.Item>
+                <RuiDropdown.Item color='amethyst'>Technical</RuiDropdown.Item>
             </RuiDropdown.Menu>
         </RuiDropdown.Item>
     </RuiDropdown.Menu>
