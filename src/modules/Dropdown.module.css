@@ -1,0 +1,13 @@
+.wrapper {
+    @apply inline-block;
+}
+
+.wrapper ul > a > ul {
+  transform: translatex(100%) scale(0);
+}
+.wrapper ul > a:hover > ul {
+  transform: translatex(101%) scale(1);
+}
+.wrapper a:hover span {
+  @apply rotate-180 duration-500
+}

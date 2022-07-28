@@ -1,113 +1,97 @@
 import clsx from 'clsx';
-import React, { HTMLAttributes, ReactNode, useState } from 'react'
+import React, { HTMLAttributes, ReactNode } from 'react'
 import { colorType } from './utils';
+// @ts-ignore
+import styles from './modules/Dropdown.module.css'
 
-export interface Props extends HTMLAttributes<HTMLElement> {
-    label?: ReactNode | string
-    color?: colorType
-    id?: string
-    route?: string
-    children?: ReactNode
-    leftIcon?: ReactNode
-    rightIcon?: ReactNode
-    onClick?: () => string
-}
-
-export interface LayoutProps extends HTMLAttributes<HTMLElement> {
-    children: ReactNode
+export interface RootProps extends HTMLAttributes<HTMLElement> {
+    isSub?: boolean // -> this switches the classes depending on whether this prop is true
+    children: ReactNode // -> this allows for elements to be wrapped around
+    leftIcon?: ReactNode // -> this allows for an icon to the left of a menuItem
+    rightIcon?: ReactNode // -> this allows for an icon to the right of a menuItem
+    menu?: string // -> this sets the name for each menu
+    id?: string // -> this sets the with menu ID with mapping idx
+    route?: string // -> this sets the url for the menuItem
+    color?: colorType // -> this sets the hover color for the menuItem
 }
 
 const colorVar: { [key in colorType]: string } = {
-    amber: "text-amber-400 hover:bg-amber-400/20",
-    amethyst: "text-amethyst-400 hover:bg-amethyst-400/20",
-    aqua: "text-aqua-400 hover:bg-aqua-400/20",
-    azure: "text-azure-400 hover:bg-azure-400/20",
-    blue: "text-blue-400 hover:bg-blue-400/20",
-    cyan: "text-cyan-400 hover:bg-cyan-400/20",
-    emerald: "text-emerald-400 hover:bg-emerald-400/20",
-    fuchsia: "text-fuchsia-400 hover:bg-fuchsia-400/20",
-    green: "text-green-400 hover:bg-green-400/20",
-    indigo: "text-indigo-400 hover:bg-indigo-400/20",
-    jade: "text-jade-400 hover:bg-jade-400/20",
-    jasper: "text-jasper-400 hover:bg-jasper-400/20",
-    kunzite: "text-kunzite-400 hover:bg-kunzite-400/20",
-    lime: "text-lime-400 hover:bg-lime-400/20",
-    moonstone: "text-moonstone-400 hover:bg-moonstone-400/20",
-    orange: "text-orange-400 hover:bg-orange-400/20",
-    peridot: "text-peridot-400 hover:bg-peridot-400/20",
-    pink: "text-pink-400 hover:bg-pink-400/20",
-    purple: "text-purple-400 hover:bg-purple-400/20",
-    red: "text-red-400 hover:bg-red-400/20",
-    rose: "text-rose-400 hover:bg-rose-400/20",
-    ruby: "text-ruby-400 hover:bg-ruby-400/20",
-    russian: "text-russian-400 hover:bg-russian-400/20",
-    scarlet: "text-scarlet-400 hover:bg-scarlet-400/20",
-    stratos: "text-stratos-400 hover:bg-stratos-400/20",
-    sunstone: "text-sunstone-400 hover:bg-sunstone-400/20",
-    sylver: "text-sylver-400 hover:bg-sylver-400/20",
-    teal: "text-teal-400 hover:bg-teal-400/20",
-    violet: "text-violet-400 hover:bg-violet-400/20",
-    yellow: "text-yellow-400 hover:bg-yellow-400/20"
+    amber: "hover:text-amber-400 hover:bg-amber-400/20",
+    amethyst: "hover:text-amethyst-400 hover:bg-amethyst-400/20",
+    aqua: "hover:text-aqua-400 hover:bg-aqua-400/20",
+    azure: "hover:text-azure-400 hover:bg-azure-400/20",
+    blue: "hover:text-blue-400 hover:bg-blue-400/20",
+    cyan: "hover:text-cyan-400 hover:bg-cyan-400/20",
+    emerald: "hover:text-emerald-400 hover:bg-emerald-400/20",
+    fuchsia: "hover:text-fuchsia-400 hover:bg-fuchsia-400/20",
+    green: "hover:text-green-400 hover:bg-green-400/20",
+    indigo: "hover:text-indigo-400 hover:bg-indigo-400/20",
+    jade: "hover:text-jade-400 hover:bg-jade-400/20",
+    jasper: "hover:text-jasper-400 hover:bg-jasper-400/20",
+    kunzite: "hover:text-kunzite-400 hover:bg-kunzite-400/20",
+    lime: "hover:text-lime-400 hover:bg-lime-400/20",
+    moonstone: "hover:text-moonstone-400 hover:bg-moonstone-400/20",
+    orange: "hover:text-orange-400 hover:bg-orange-400/20",
+    peridot: "hover:text-peridot-400 hover:bg-peridot-400/20",
+    pink: "hover:text-pink-400 hover:bg-pink-400/20",
+    purple: "hover:text-purple-400 hover:bg-purple-400/20",
+    red: "hover:text-red-400 hover:bg-red-400/20",
+    rose: "hover:text-rose-400 hover:bg-rose-400/20",
+    ruby: "hover:text-ruby-400 hover:bg-ruby-400/20",
+    russian: "hover:text-russian-400 hover:bg-russian-400/20",
+    scarlet: "hover:text-scarlet-400 hover:bg-scarlet-400/20",
+    stratos: "hover:text-stratos-400 hover:bg-stratos-400/20",
+    sunstone: "hover:text-sunstone-400 hover:bg-sunstone-400/20",
+    sylver: "hover:text-sylver-400 hover:bg-sylver-400/20",
+    teal: "hover:text-teal-400 hover:bg-teal-400/20",
+    violet: "hover:text-violet-400 hover:bg-violet-400/20",
+    yellow: "hover:text-yellow-400 hover:bg-yellow-400/20"
 }
 
-export const DropdownWrap = ({children}: Props) => {
+// Wrapper
+
+export const DropdownWrap = ({ children }: RootProps) => {
     return (
-        <div className="inline-block group">
+        <div className={clsx(`${styles.wrapper}`, 'group')}>
             {children}
         </div>
     )
 }
 
-export const DropdownInvoker = ({children, color = "ruby" }: Props) => {
+// Invoker
+export const DropdownInvoker = ({ children, menu, isSub }: RootProps) => {
     return (
-        <button aria-haspopup="true" aria-aria-controls='menu' tabIndex={1} className={clsx('w-14 h-8 flex items-center justify-center px-4 py-2.5 rounded-lg appearance-none min-w-fit text-d-copy duration-300 hover:bg-russian-600/20', `${colorVar[color]}`)}>
+        // w-14 h-8 flex items-center justify-center px-4 py-2.5 rounded-lg appearance-none min-w-fit text-d-copy duration-300 hover:bg-russian-600/20
+        <button aria-haspopup="true" aria-controls={isSub ? menu : 'menu'} tabIndex={1} className={clsx(`outline-none focus:outline-none text-d-copy duration-300 hover:bg-russian-600/20 flex items-center ${isSub ? "w-full text-left" : "px-4 py-2.5 rounded-lg"}`)}>
             {children}
         </button>
     )
 }
 
-export const DropdownMenu = ({ children, className }: { children: ReactNode, className?: string }) => {
+// Menu
+export const DropdownMenu = ({ children, className, menu, isSub }: RootProps) => {
     return (
-        <ul id="menu" aria-hidden="true"  className={clsx(`origin-center absolute left-0 mt-1 w-56 rounded-md shadow-lg bg-gray-800 text-sylver-100 ring-1 ring-black ring-opacity-5 focus:outline-none`, `${className}`)} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex={1}>
-            <div className={clsx(`py-2.5 px-2.5`)} role="none">
-                {children}
-            </div>
+        <ul id={isSub ? menu : 'menu'} aria-hidden="true" className={clsx(`w-56 shadow-lg bg-gray-800 text-sylver-100 rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none transform duration-300 ease-in-out absolute ${isSub ? "bg-gray-800 absolute top-0 right-0 transition duration-150 ease-in-out origin-left" : ` bg-gray-800 -translate-y-3 scale-0 origin-top-left group-hover:scale-100 group-hover:translate-y-0 mt-2`}`, `${className}`)} tabIndex={1}>
+            {children}
         </ul>
     )
 }
 
-export const DropdownItem = ({ route, id, children, leftIcon, rightIcon }: Props) => {
+// Menu Items
+export const DropdownItem = ({ children, leftIcon, rightIcon, isSub, color ="ruby"}: RootProps) => {
     return (
-        <a href={route ? `${route}` : undefined} className="inline-flex items-center w-full px-2 py-2 text-sm rounded-md hover:bg-russian-400/20" role="menuitem" tabIndex={1} id={id ? `menu-item-${id}` : ''}>
-            {leftIcon && <span className='inline-flex items-center w-4 h-4 mr-2'>{leftIcon}</span>}
+        <a className={clsx(`${colorVar[color]} p-2.5 inline-flex rounded-md items-center w-full text-sm ${isSub ? "" : "relative"}`)} role="menuitem" tabIndex={1}>
+            {leftIcon && <div className='inline-flex items-center w-4 h-4 mr-2 left'>{leftIcon}</div>}
             {children}
-            {rightIcon && <span className='inline-flex items-center w-4 h-4 ml-auto'>{rightIcon}</span>}
+            {rightIcon && <span className='inline-flex items-center w-4 h-4 ml-auto transition duration-300 ease-in-out right'>{rightIcon}</span>}
         </a>
     )
 }
 
-export const DropdownSubmenu = ({ children, className }: { children: ReactNode, className?: string }) => {
+export const RuiDropdown = ({ children }: RootProps) => {
     return (
-        <div className={clsx(`origin-center relative inline-flex left-0 mt-1 w-56 rounded-md shadow-lg bg-gray-800 text-sylver-100 ring-1 ring-black ring-opacity-5 focus:outline-none`, `${className}`)} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex={1}>
-            <div className={clsx(`py-2.5 px-2.5`)} role="none">
-                {children}
-            </div>
-        </div>
-    )
-}
-
-export const RuiDropdown = ({ label = "Profile", children, color = "ruby" }: Props) => {
-    const [hidden, setHidden] = useState(true)
-
-    return (
-        <div className="relative inline-block text-left">
-            <button tabIndex={1} onClick={() => setHidden(!hidden)} className={clsx('w-14 h-8 flex items-center justify-center px-4 py-2.5 rounded-lg appearance-none min-w-fit text-d-copy duration-300 hover:bg-russian-600/20', `${colorVar[color]}`)}>
-                {label}
-            </button>
-
-            <div className={`${hidden ? `transition ease-in duration-75 transform opacity-0 scale-95` : `transition ease-out duration-300 transform opacity-100 scale-100`}`}>
-                {children}
-            </div>
+        <div className="home">
+            {children}
         </div>
     )
 }
