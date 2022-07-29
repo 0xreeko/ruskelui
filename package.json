@@ -38,6 +38,8 @@
   },
   "name": "ruskelui",
   "author": "Enric Trillo | 0xreeko",
+  "homepage":"https://0xreeko.github.io/ruskelui",
+  "repository": "https://github.com/0xreeko/ruskelui",
   "module": "dist/ruskelui.esm.js",
   "size-limit": [
     {
