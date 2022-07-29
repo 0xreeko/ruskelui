@@ -4,7 +4,6 @@ import { colorType } from './utils'
 
 
 export interface RootProps {
-    children: ReactNode
     leftIcon: ReactNode
     fullWidth: boolean
     placeholder?: string
@@ -44,7 +43,7 @@ const colorVar: { [key in colorType]: string[] } = {
     yellow: ["focus:border-yellow-400", "peer-focus:text-yellow-400"]
 }
 
-export const RuiSearch = ({ fullWidth, placeholder, color }: RootProps) => {
+export const RuiSearch = ({ fullWidth, placeholder, color, leftIcon }: RootProps) => {
     return (
         // <input type="text" className={`peer pl-3 py-1 ${fullWidth ? "w-full" : "w-full max-w-xs"} transition-all duration-300 outline-none bg-transparent ring-[1px] text-sylver-600 ring-sylver-600 rounded-xl`} />
         <div className={clsx("relative flex items-center justify-between text-gray-400", `${fullWidth ? 'w-full' : 'max-w-lg'}`)}>
@@ -54,7 +53,7 @@ export const RuiSearch = ({ fullWidth, placeholder, color }: RootProps) => {
                 placeholder={placeholder ? placeholder : "Search for ..."}
                 className={clsx("p-1 pr-2 pl-8 w-[100%] outline-none rounded-lg peer duration-300 bg-black/20 backdrop-blur-sm transition border border-gray-800", `${color ? colorVar[color] : 'focus:border-[#6387f1]'}`)}
             />
-            <svg className={clsx("absolute z-10 w-5 h-5 ml-2 pointer-events-none transition duration-300 scale-75 peer-focus:scale-100", `${color ? colorVar[color] : 'peer-focus:text-[#6387f1]'}`)} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+            <span className={clsx("absolute z-10 w-5 h-5 ml-2 pointer-events-none transition duration-300 scale-75 peer-focus:scale-100", `${color ? colorVar[color] : 'peer-focus:text-[#6387f1]'}`)}>{leftIcon}</span>
         </div>
     )
 }
