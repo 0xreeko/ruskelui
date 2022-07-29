@@ -45,9 +45,7 @@ const colorVar: { [key in colorType]: string[] } = {
 
 export const RuiSearch = ({ fullWidth, placeholder, color, leftIcon }: RootProps) => {
     return (
-        // <input type="text" className={`peer pl-3 py-1 ${fullWidth ? "w-full" : "w-full max-w-xs"} transition-all duration-300 outline-none bg-transparent ring-[1px] text-sylver-600 ring-sylver-600 rounded-xl`} />
         <div className={clsx("relative flex items-center justify-between text-gray-400", `${fullWidth ? 'w-full' : 'max-w-lg'}`)}>
-            {/* <SearchIcon className="absolute w-5 h-5 ml-3 text-gray-600 pointer-events-none dark:text-gray-300" /> */}
             <input
                 type="text"
                 placeholder={placeholder ? placeholder : "Search for ..."}
