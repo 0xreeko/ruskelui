@@ -49,7 +49,7 @@ export const RuiSearch = ({ fullWidth, placeholder, color, leftIcon }: RootProps
             <input
                 type="text"
                 placeholder={placeholder ? placeholder : "Search for ..."}
-                className={clsx("p-1 pr-2 pl-8 w-[100%] outline-none rounded-lg peer duration-300 bg-black/20 backdrop-blur-sm transition border border-gray-800", `${color ? colorVar[color][0] : 'focus:border-[#6387f1]'}`)}
+                className={clsx("p-1 pr-2 pl-9 w-[100%] outline-none rounded-lg peer duration-300 bg-black/20 backdrop-blur-sm transition border border-gray-800", `${color ? colorVar[color][0] : 'focus:border-[#6387f1]'}`)}
             />
             <span className={clsx("absolute inline-flex z-10 ml-2 pointer-events-none transition duration-300 scale-75 peer-focus:scale-100", `${color ? colorVar[color][1] : 'peer-focus:text-[#6387f1]'}`)}>{leftIcon}</span>
         </div>
