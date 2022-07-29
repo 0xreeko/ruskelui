@@ -12,7 +12,7 @@ Live Storybook Demo (Github Pages): https://0xreeko.github.io/ruskelui
 If this project helps/has helped you build your Web3 projects faster, star us - every little star helps!
 
 
-## 🧩 Table Of Components
+## 🧩 Table Of Components (Not up to date!)
 - [⬇ Installation: `<installation/>`](#installation)
 - [👤 Avatar: `<rui-avatar/>`](#rui-avatar)
 - [⌨️ Button: `<rui-button/>`](#rui-button)
