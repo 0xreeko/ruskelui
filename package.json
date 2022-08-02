@@ -91,7 +91,6 @@
     "@types/react-transition-group": "^4.4.5",
     "autoprefixer": "^10.4.8",
     "babel-loader": "^8.2.5",
-    "clsx": "^1.2.1",
     "gh-pages": "^4.0.0",
     "husky": "^8.0.1",
     "postcss": "^8.4.14",
@@ -108,6 +107,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "clsx": "^1.2.1",
     "draft-js": "^0.11.7",
     "react-draft-wysiwyg": "^1.15.0"
   }
