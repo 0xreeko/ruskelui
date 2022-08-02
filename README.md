@@ -38,12 +38,18 @@ If this project helps/has helped you build your Web3 projects faster, star us - 
 
 ### Installation
 Run the following to install RuskelUI's Tailwind config file - the "-p" tag is optional and creates a PostCSS file: 
-`npx ruskelui [-p]` 
+```bash
+npx ruskelui -p
+``` 
 
 Run the following to install the RuskelUI package:
-`npm i ruskelui`
+```bash 
+npm i ruskelui
+```
 OR
-`yarn add ruskelui`
+```bash
+yarn add ruskelui
+```
 
 
 ### rui-avatar
