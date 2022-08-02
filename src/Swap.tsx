@@ -1,5 +1,4 @@
 import React, { HTMLAttributes, ReactNode } from 'react'
-import clsx from 'clsx'
 import { colorType } from './utils/'
 // @ts-ignore
 import styles from './modules/Swap.module.css'
@@ -50,8 +49,8 @@ export const RuiSwap = ({ name, offIcon, onIcon}: Props) => {
     return (
         <label role={'switch'} title={name} tabIndex={0} className="relative flex items-center w-10 h-4 overflow-hidden border rounded-md cursor-pointer">
             <input type="checkbox" className="sr-only peer" id={name} />
-            <span className={clsx(`text-sunstone-400 duration-500 scale-100 transfrom transition-all peer-checked:rotate-180 peer-checked:scale-0`)}>{offIcon}</span>
-            <span className={clsx(`absolute text-indigo-400 duration-500 rotate-180 scale-0 peer-checked:scale-100 peer-checked:rotate-0`)}>{onIcon}</span>
+            <span className={`text-sunstone-400 duration-500 scale-100 transfrom transition-all peer-checked:rotate-180 peer-checked:scale-0`}>{offIcon}</span>
+            <span className={`absolute text-indigo-400 duration-500 rotate-180 scale-0 peer-checked:scale-100 peer-checked:rotate-0`}>{onIcon}</span>
         </label>
     )
 }
