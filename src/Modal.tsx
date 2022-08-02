@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import React, { HTMLAttributes, useState } from "react"
 import { RuiButton } from "./Button";
 
@@ -32,7 +31,7 @@ export const RuiModal = ({ }: Props) => {
 				From: "opacity-100"
 				To: "opacity-0"
 			--> */}
-			<div onClick={() => setHidden(!hidden)} className={clsx("fixed inset-0 transition-opacity bg-gray-500 duration-300", `${hidden ? 'ease-in bg-opacity-0' : 'ease-out bg-opacity-75'}`)} ></div>
+			<div onClick={() => setHidden(!hidden)} className={`fixed inset-0 transition-opacity bg-gray-500 duration-300 ${hidden ? 'ease-in bg-opacity-0' : 'ease-out bg-opacity-75'}`} ></div>
 		  
 			<div className="fixed inset-0 z-10 overflow-y-auto">
 			  <div className="flex items-end justify-center min-h-full p-4 text-center sm:items-center sm:p-0">
