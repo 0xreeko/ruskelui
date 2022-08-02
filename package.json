@@ -39,7 +39,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@0xreeko/ruskelui",
+  "name": "ruskelui",
   "author": "0xreeko",
   "description": "RuskeUI is a TailwindCSS-based design system rapid Web3 development in NextJS/React.",
   "homepage":"https://github.com/0xreeko/ruskelui/blob/master/README.md",
