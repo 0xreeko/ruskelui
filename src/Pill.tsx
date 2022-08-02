@@ -19,7 +19,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement>{
 export const RuiPill = ({children, color = "ruby", svg}: Props) => {
 
     return (
-        <div className={`${styles[color]} flex items-center duration-300 select-none w-fit px-2 py-0.5 mobile-overline rounded-[6px]`}>
+        <div className={`${styles[color]} flex items-center duration-300 select-none w-fit px-2 py-1 mobile-overline rounded-[6px]`}>
             <slot name='svg'>{svg}</slot>
             <span>{children}</span>
         </div>

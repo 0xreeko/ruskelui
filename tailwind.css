@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+  .mobile-overline{
+    font-weight: 700;
+    font-size: 0.579rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+  }
