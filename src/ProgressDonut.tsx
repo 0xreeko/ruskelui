@@ -1,5 +1,4 @@
 import React, { HTMLAttributes } from 'react'
-import clsx from 'clsx'
 // @ts-ignore
 import styles from './modules/ProgressDonut.module.css'
 import { colorType } from './utils';
@@ -55,10 +54,10 @@ const colorVar: { [key in colorType]: string } = {
 export const RuiProgressDonut = ({ name, percentage = 0, color = 'ruby' }: Props) => {
     return (
         <div title={name} id={name} className="relative inline-flex items-center justify-center">
-            <div className={clsx(`absolute text-d-h4 font-semibold`, `${colorVar[color]}`)}>{percentage}%</div>
+            <div className={`absolute text-d-h4 font-semibold ${colorVar[color]}`}>{percentage}%</div>
             <svg className={styles.svg} viewBox="0 0 120 120" >
                 <circle className="text-black/30" stroke-width="4" stroke="currentColor" fill="transparent" r="54" cx="60" cy="60" />
-                <circle className={clsx(`${colorVar[color]}`)} strokeWidth="10" strokeDasharray={100} style={{ strokeDashoffset: Number(100 - percentage) }} pathLength="100" strokeLinecap="round" stroke="currentColor" fill="transparent" r="54" cx="60" cy="60" />
+                <circle className={`${colorVar[color]}`} strokeWidth="10" strokeDasharray={100} style={{ strokeDashoffset: Number(100 - percentage) }} pathLength="100" strokeLinecap="round" stroke="currentColor" fill="transparent" r="54" cx="60" cy="60" />
             </svg>
         </div>
     )
