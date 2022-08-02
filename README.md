@@ -1,5 +1,5 @@
 # RuskelUI
-RuskelUI is set of UI primitives dedicated for Web3 built with React and TailwindCSS - components that you can use with any React framework!
+RuskeUI is a TailwindCSS-based design system for rapid Web3 development in NextJS/React.
 
 ## 🕵️ About RuskelUI
 RuskelUI came about to be due to the wanting to create my own UI vault that would be oriented towards Web3 development. This is the official UI set of primitives for all of the Web3 initiatives (7+) that I'm working on, which I hope you keep an eye out for, as it may help you ship robust Web3 platforms that use - phew, nearly gave it away!😅
@@ -13,7 +13,7 @@ If this project helps/has helped you build your Web3 projects faster, star us - 
 
 
 ## 🧩 Table Of Components (Not up to date!)
-- [⬇ Installation: `<installation/>`](#installation)
+- [⬇ Installation: `<installation/>`](#Installation)
 - [👤 Avatar: `<rui-avatar/>`](#rui-avatar)
 - [⌨️ Button: `<rui-button/>`](#rui-button)
 - [🃏 Card: `<rui-card/>`](#rui-card)
@@ -36,8 +36,14 @@ If this project helps/has helped you build your Web3 projects faster, star us - 
 - [🛠 Tooltip: `<rui-tooltip/>`](#rui-tooltip)
 
 
-### installation
-This is the process to install RuskelUI components. TBC.
+### Installation
+Run the following to install RuskelUI's Tailwind config file - the "-p" tag is optional and creates a PostCSS file: 
+`npx ruskelui [-p]` 
+
+Run the following to install the RuskelUI package:
+`npm i ruskelui`
+OR
+`yarn add ruskelui`
 
 
 ### rui-avatar
