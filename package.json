@@ -42,12 +42,27 @@
   "name": "ruskelui",
   "author": "0xreeko",
   "description": "RuskeUI is a TailwindCSS-based design system for rapid Web3 development in NextJS/React.",
-  "homepage":"https://github.com/0xreeko/ruskelui/blob/master/README.md",
+  "homepage": "https://github.com/0xreeko/ruskelui/blob/master/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/0xreeko/ruskelui"
   },
-  "keywords": ["web3", "blockchain", "react", "reactjs", "next", "nextjs", "typescript", "tailwind", "tailwindcss", "ui", "ui kit", "design" , "design system", "dark mode"],
+  "keywords": [
+    "web3",
+    "blockchain",
+    "react",
+    "reactjs",
+    "next",
+    "nextjs",
+    "typescript",
+    "tailwind",
+    "tailwindcss",
+    "ui",
+    "ui kit",
+    "design",
+    "design system",
+    "dark mode"
+  ],
   "readme": "https://github.com/0xreeko/ruskelui/blob/master/README.md",
   "module": "dist/ruskelui.esm.js",
   "size-limit": [
@@ -61,7 +76,7 @@
     }
   ],
   "devDependencies": {
-    "@babel/core": "^7.18.9",
+    "@babel/core": "^7.18.10",
     "@size-limit/preset-small-lib": "^8.0.0",
     "@storybook/addon-docs": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
@@ -83,6 +98,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^8.0.0",
     "storybook-addon-state": "^1.0.3",
     "storybook-css-modules": "^1.0.8",

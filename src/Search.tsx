@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { colorType } from './utils'
 
 
-export interface RootProps {
+export interface Props {
     leftIcon: ReactNode
     fullWidth: boolean
     placeholder?: string
@@ -43,7 +43,7 @@ const colorVar: { [key in colorType]: string[] } = {
     yellow: ["focus:border-yellow-400", "peer-focus:text-yellow-400"]
 }
 
-export const RuiSearch = ({ fullWidth, placeholder, color, leftIcon }: RootProps) => {
+export const RuiSearch = ({ fullWidth, placeholder, color, leftIcon }: Props) => {
     return (
         <div className={clsx("relative flex items-center justify-between text-gray-400", `${fullWidth ? 'w-full' : 'max-w-lg'}`)}>
             <input
