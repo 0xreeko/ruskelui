@@ -4,7 +4,7 @@ import { colorType } from './utils'
 
 export interface Props {
     leftIcon: ReactNode
-    fullWidth: boolean
+    fullWidth?: boolean
     placeholder?: string
     color: colorType
 }
