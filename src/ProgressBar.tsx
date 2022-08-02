@@ -1,5 +1,4 @@
 import React, { HTMLAttributes } from 'react'
-import clsx from 'clsx'
 // @ts-ignore
 import styles from './modules/ProgressBar.module.css'
 import { colorType, barPosType } from './utils';
@@ -72,7 +71,7 @@ const colorVar: {[key in colorType]: string[]} = {
 export const RuiProgressBar = ({name, percentage, isGradient, color = 'amethyst', startColour = 'blue', endColour = 'amethyst', position = 'r' }: Props) => {
     return (
         <div title={name} id={name} tabIndex={0} role={'progressbar'} className={styles.progress}>
-            <div className={clsx(`h-full absolute rounded-full duration-300`, isGradient ? `${positionVar[position]} ${colorVar[startColour][1]} ${colorVar[endColour][2]}` : `${colorVar[color][0]}`)} style={{width: `${percentage}%`}}></div>
+            <div className={`h-full absolute rounded-full duration-300 ${isGradient ? `${positionVar[position]} ${colorVar[startColour][1]} ${colorVar[endColour][2]}` : `${colorVar[color][0]}`}`} style={{width: `${percentage}%`}}></div>
         </div>
     )
 };
