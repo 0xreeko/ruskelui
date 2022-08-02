@@ -4,7 +4,7 @@ import { colorType } from './utils';
 import styles from './modules/KBD.module.css'
 
 export interface Props extends HTMLAttributes<HTMLElement>{
-    child: ReactNode,
+    children: ReactNode,
     color: colorType
 }
 
@@ -41,10 +41,10 @@ const colorVar: { [key in colorType]: string } = {
     yellow: "text-yellow-400"
 }
 
-export const RuiKBD = ({child, color = "teal"}: Props) => {
+export const RuiKBD = ({children, color = "teal"}: Props) => {
     return (
         <div className={`${styles.kbd} ${colorVar[color]}`}>
-            {child}
+            {children}
         </div>
     )
 }
