@@ -1,6 +1,5 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
 import { colorType } from './utils';
-import clsx from 'clsx';
 // @ts-ignore
 import styles from './modules/KBD.module.css'
 
@@ -42,9 +41,9 @@ const colorVar: { [key in colorType]: string } = {
     yellow: "text-yellow-400"
 }
 
-export const KBD = ({child, color = "teal"}: Props) => {
+export const RuiKBD = ({child, color = "teal"}: Props) => {
     return (
-        <div className={clsx(`${styles.kbd}`, `${colorVar[color]}`)}>
+        <div className={`${styles.kbd} ${colorVar[color]}`}>
             {child}
         </div>
     )
