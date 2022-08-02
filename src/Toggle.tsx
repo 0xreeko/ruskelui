@@ -1,5 +1,4 @@
 import React, { HTMLAttributes } from 'react'
-import clsx from 'clsx'
 import { colorType } from './utils/'
 // @ts-ignore
 import styles from './modules/Toggle.module.css'
@@ -49,7 +48,7 @@ export const RuiToggle = ({color = 'amethyst', name}: Props) => {
         <label role={'switch'} title={name} tabIndex={0} className="relative flex items-center w-10 h-4 overflow-hidden rounded-md cursor-pointer">
             <input type="checkbox" className="sr-only peer" id={name} />
             <span className={`w-full h-full ${colorVar[color]} duration-300 transition-all`}></span>
-            <span className={clsx(`w-3 h-3 left-1 absolute duration-300 transition-all rounded-[32%] peer-checked:left-6 bg-stratos-100`, `${color === 'aqua' || 'cyan' || 'jade' || 'lime' || 'peridot' || 'sylver' ? 'peer-checked:bg-russian-500' : 'peer-checked:bg-stratos-100'}`)}></span>
+            <span className={`w-3 h-3 left-1 absolute duration-300 transition-all rounded-[32%] peer-checked:left-6 bg-stratos-100 ${color === 'aqua' || 'cyan' || 'jade' || 'lime' || 'peridot' || 'sylver' ? 'peer-checked:bg-russian-500' : 'peer-checked:bg-stratos-100'}`}></span>
         </label>
     )
 }
