@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import React, { HTMLAttributes, ReactNode } from 'react'
 import { colorType } from './utils';
 // @ts-ignore
@@ -52,7 +51,7 @@ const colorVar: { [key in colorType]: string } = {
 
 export const DropdownWrap = ({ children }: RootProps) => {
     return (
-        <div className={clsx(`${styles.wrapper}`, 'group')}>
+        <div className={`${styles.wrapper} group`}>
             {children}
         </div>
     )
@@ -62,7 +61,7 @@ export const DropdownWrap = ({ children }: RootProps) => {
 export const DropdownInvoker = ({ children, menu, isSub }: RootProps) => {
     return (
         // w-14 h-8 flex items-center justify-center px-4 py-2.5 rounded-lg appearance-none min-w-fit text-d-copy duration-300 hover:bg-russian-600/20
-        <button aria-haspopup="true" aria-controls={isSub ? menu : 'menu'} tabIndex={1} className={clsx(`outline-none focus:outline-none text-d-copy duration-300 hover:bg-russian-600/20 flex items-center ${isSub ? "w-full text-left" : "px-4 py-2.5 rounded-lg"}`)}>
+        <button aria-haspopup="true" aria-controls={isSub ? menu : 'menu'} tabIndex={1} className={`outline-none focus:outline-none text-d-copy duration-300 hover:bg-russian-600/20 flex items-center ${isSub ? "w-full text-left" : "px-4 py-2.5 rounded-lg"}`}>
             {children}
         </button>
     )
@@ -71,7 +70,7 @@ export const DropdownInvoker = ({ children, menu, isSub }: RootProps) => {
 // Menu
 export const DropdownMenu = ({ children, className, menu, isSub }: RootProps) => {
     return (
-        <ul id={isSub ? menu : 'menu'} aria-hidden="true" className={clsx(`w-56 shadow-lg bg-gray-800 text-sylver-100 rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none transform duration-300 ease-in-out absolute ${isSub ? "bg-gray-800 absolute top-0 right-0 transition duration-150 ease-in-out origin-left" : ` bg-gray-800 -translate-y-3 scale-0 origin-top-left group-hover:scale-100 group-hover:translate-y-0 mt-2`}`, `${className}`)} tabIndex={1}>
+        <ul id={isSub ? menu : 'menu'} aria-hidden="true" className={`w-56 shadow-lg bg-gray-800 text-sylver-100 rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none transform duration-300 ease-in-out absolute ${isSub ? "bg-gray-800 absolute top-0 right-0 transition duration-150 ease-in-out origin-left" : ` bg-gray-800 -translate-y-3 scale-0 origin-top-left group-hover:scale-100 group-hover:translate-y-0 mt-2`} ${className}`} tabIndex={1}>
             {children}
         </ul>
     )
@@ -80,7 +79,7 @@ export const DropdownMenu = ({ children, className, menu, isSub }: RootProps) =>
 // Menu Items
 export const DropdownItem = ({ children, leftIcon, rightIcon, isSub, color ="ruby"}: RootProps) => {
     return (
-        <a className={clsx(`${colorVar[color]} p-2.5 inline-flex rounded-md items-center w-full text-sm ${isSub ? "" : "relative"}`)} role="menuitem" tabIndex={1}>
+        <a className={`${colorVar[color]} p-2.5 inline-flex rounded-md items-center w-full text-sm ${isSub ? "" : "relative"}`} role="menuitem" tabIndex={1}>
             {leftIcon && <div className='inline-flex items-center w-4 h-4 mr-2 left'>{leftIcon}</div>}
             {children}
             {rightIcon && <span className='inline-flex items-center w-4 h-4 ml-auto transition duration-300 ease-in-out right'>{rightIcon}</span>}
