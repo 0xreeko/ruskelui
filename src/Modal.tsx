@@ -18,7 +18,7 @@ export const RuiModal = ({ }: Props) => {
     const [hidden, setHidden] = useState(false);
     return (
         <>
-        <RuiButton label="Purchase with Metamask" color="russian" size="small" onClick={() => setHidden(!hidden)}/>
+        <RuiButton color="russian" size="small" onClick={() => setHidden(!hidden)}>Purchase with Metamask</RuiButton>
         {/* <div className="relative z-10 p-5 mx-auto shadow-xl bg-gradient-to-bl bg-opacity-40 from-stratos-400/20 via-stratos-400/20 to-green-600/30 backdrop-blur-sm text-sylver-100 rounded-2xl top-20 w-96"> */}
         {hidden ? '' : (
             <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
