@@ -10,9 +10,8 @@ export interface Props extends HTMLAttributes<HTMLElement>{
     /** Available colour ways to style your button */
     color: colorType;
     checkmarkColor: "white" | "black"
-    strikeThrough: boolean
+    strikeThrough?: boolean
 }
-
 export const RuiCheckbox = ({children, color = 'ruby', checkmarkColor ="white", strikeThrough= false}: Props) => {
   return (
     <label className={`${styles[color]} rounded-md w-5 h-5 min-h-fit flex items-center relative cursor-pointer`}>
