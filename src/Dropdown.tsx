@@ -61,7 +61,7 @@ export const DropdownWrap = ({ children }: RootProps) => {
 export const DropdownInvoker = ({ children, menu, isSub }: RootProps) => {
     return (
         // w-14 h-8 flex items-center justify-center px-4 py-2.5 rounded-lg appearance-none min-w-fit text-d-copy duration-300 hover:bg-russian-600/20
-        <button aria-haspopup="true" aria-controls={isSub ? menu : 'menu'} tabIndex={1} className={`outline-none focus:outline-none text-d-copy duration-300 hover:bg-russian-600/20 flex items-center ${isSub ? "w-full text-left" : "px-4 py-2.5 rounded-lg"}`}>
+        <button aria-haspopup="true" aria-controls={isSub ? menu : 'menu'} tabIndex={1} className={`outline-none focus:outline-none duration-300 hover:bg-russian-600/20 flex items-center ${isSub ? "w-full text-left" : "px-4 py-2.5 rounded-lg"}`}>
             {children}
         </button>
     )
