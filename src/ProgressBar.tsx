@@ -18,16 +18,16 @@ export interface Props extends HTMLAttributes<HTMLElement>{
     name: string;
 
     /** Enables for dual gradients */
-    isGradient: boolean;
+    isGradient?: boolean;
 
     /** Starting colour for dual gradient */
-    startColour: colorType;
+    startColour?: colorType;
     
     /** Ending colour for dual gradient */
-    endColour: colorType;
+    endColour?: colorType;
 
     /**horizontal linear direction of gradient */
-    position: barPosType
+    position?: barPosType
 }
 
 const colorVar: {[key in colorType]: string[]} = {
