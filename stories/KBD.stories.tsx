@@ -14,5 +14,5 @@ const Template: Story<Props> = args => <RuiKBD {...args} />
 export const Default = Template.bind({})
 
 Default.args = {
-    child: 'enter'
+    children: 'enter'
 }
