@@ -49,7 +49,7 @@ const colorVar: { [key in colorType]: string } = {
 
 // Wrapper
 
-export const DropdownWrap = ({ children }: RootProps) => {
+const DropdownWrap = ({ children }: RootProps) => {
     return (
         <div className={`${styles.wrapper} group`}>
             {children}
@@ -58,7 +58,7 @@ export const DropdownWrap = ({ children }: RootProps) => {
 }
 
 // Invoker
-export const DropdownInvoker = ({ children, menu, isSub }: RootProps) => {
+const DropdownInvoker = ({ children, menu, isSub }: RootProps) => {
     return (
         // outline-none focus:outline-none duration-300 hover:bg-russian-600/20 flex items-center ${isSub ? "w-full text-left" : "px-4 py-2.5 rounded-lg"}
         <button aria-haspopup="true" aria-controls={isSub ? menu : 'menu'} tabIndex={1} className={``}>
@@ -68,7 +68,7 @@ export const DropdownInvoker = ({ children, menu, isSub }: RootProps) => {
 }
 
 // Menu
-export const DropdownMenu = ({ children, className, menu, isSub }: RootProps) => {
+const DropdownMenu = ({ children, className, menu, isSub }: RootProps) => {
     return (
         <ul id={isSub ? menu : 'menu'} aria-hidden="true" className={`w-56 shadow-lg bg-gray-800 text-sylver-100 rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none transform duration-300 ease-in-out absolute ${isSub ? "bg-gray-800 absolute top-0 right-0 transition duration-150 ease-in-out origin-left" : ` bg-gray-800 -translate-y-3 scale-0 origin-top-left group-hover:scale-100 group-hover:translate-y-0 mt-2`} ${className}`} tabIndex={1}>
             {children}
@@ -77,7 +77,7 @@ export const DropdownMenu = ({ children, className, menu, isSub }: RootProps) =>
 }
 
 // Menu Items
-export const DropdownItem = ({ children, leftIcon, rightIcon, isSub, color ="ruby"}: RootProps) => {
+const DropdownItem = ({ children, leftIcon, rightIcon, isSub, color ="ruby"}: RootProps) => {
     return (
         <a className={`${colorVar[color]} p-2.5 inline-flex rounded-md items-center w-full text-sm ${isSub ? "" : "relative"}`} role="menuitem" tabIndex={1}>
             {leftIcon && <div className='inline-flex items-center w-4 h-4 mr-2 left'>{leftIcon}</div>}
