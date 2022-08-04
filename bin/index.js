@@ -4,7 +4,6 @@ const {execSync} = require('child_process')
 
 const args = process.argv.slice(2)
 
-
 console.log(`\n   [⏳] Initialising the RuskelUI config ... \n`)
 
 const pathOne = `tailwind.config.js`;
@@ -36,9 +35,7 @@ if (!args.includes('-p')) {
         console.log(`   👾 Author Note: Follow me on Twitter via https://twitter.com/0xreeko, and tweet/tag me if you mention RuskelUI :)\n`)
         return
     }
-}
-
-if (args.includes('-p')) {
+} else {
     if (fs.existsSync(pathOne) && fs.existsSync(pathTwo)) {
         console.log(`${pathOne} & ${pathTwo} already exist.`);
         return
