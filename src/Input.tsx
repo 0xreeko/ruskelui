@@ -12,9 +12,9 @@ export interface Props extends HTMLAttributes<HTMLInputElement> {
     floatingLabel?: string;
     /** Provide an ID for Input */
     name: string;
-    fullWidth: boolean;
+    fullWidth?: boolean;
     /**
-     * Choose from RuskelUI's Neonic colours!
+     * Choose from RuskelUI's Neonic colours + Tailwind's native colours!
      */
     color: colorType;
 
