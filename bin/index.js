@@ -10,8 +10,8 @@ console.log(`\n   [⏳] Initialising the RuskelUI config ... \n`)
 const pathOne = `tailwind.config.js`;
 const pathTwo = `postcss.config.js`;
 
-const cloneBase = `curl https://raw.githubusercontent.com/0xreeko/ruskelui/master/tailwind.config.js -o 'tailwind.config.js'`
-const cloneFull = `${cloneBase} && curl https://raw.githubusercontent.com/0xreeko/ruskelui/master/postcss.config.js -o 'postcss.config.js'`
+const cloneBase = `curl https://raw.githubusercontent.com/0xreeko/ruskelui/master/configs/tailwind.config.js -o 'tailwind.config.js'`
+const cloneFull = `${cloneBase} && curl https://raw.githubusercontent.com/0xreeko/ruskelui/master/configs/postcss.config.js -o 'postcss.config.js'`
 
 const runCmd = async cmd => {
     try {
