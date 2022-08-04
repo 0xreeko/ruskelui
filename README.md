@@ -2,9 +2,9 @@
 RuskeUI is a TailwindCSS-based design system for rapid Web3 development in NextJS/React.
 
 ## 🕵️ About RuskelUI
-RuskelUI came about to be due to the wanting to create my own UI vault that would be oriented towards Web3 development. This is the official UI set of primitives for all of the Web3 initiatives (7+) that I'm working on, which I hope you keep an eye out for, as it may help you ship robust Web3 platforms that use - phew, nearly gave it away!😅
+I wanted to create my own UI vault that would be the official UI set of primitives for all of the Web3 related initiatives (7+) that I'm working on.
 
-It follows what I deem as `Neonic Nerophism`, which combines three UI trends together - neon colours, dark mode and glassmorphism, hence the name. The goal for this is to create aesthetically beautiful interfaces with RuskelUI primitives that facilitate faster UI developement, getting you from concept to production very quickly.
+It follows what I deem as `Neonic Nerophism`, which combines three UI trends together - neonic colours, dark mode and glassmorphism, hence the name. The goal for this project is to rapidly create aesthetically beautiful interfaces, getting you from concept to production very quickly in the ReactJs ecosystem.
 
 Live Storybook Demo (Github Pages): https://0xreeko.github.io/ruskelui
 
