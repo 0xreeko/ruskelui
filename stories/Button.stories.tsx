@@ -6,7 +6,7 @@ const meta: Meta = {
     title: '@RuskelUI/Primitives/Button',
     component: RuiButton,
     argTypes: {
-        label: {
+        children: {
             defaultValue: 'Default button'
         }
     }
@@ -14,7 +14,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<Props> = (args) => <RuiButton {...args} />
+const Template: Story<Props> = (args) => <RuiButton {...args} ></RuiButton>
 
 export const Default = Template.bind({})
 
@@ -22,5 +22,5 @@ export const Secondary = Template.bind({})
 
 Secondary.args = {
     color: 'sunstone',
-    label: "I am secondary"
+    children: "I am secondary example"
 }
