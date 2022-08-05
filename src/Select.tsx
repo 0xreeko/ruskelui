@@ -45,13 +45,6 @@ export const RuiSelect = ({label = "Choose an ISO20022 coin"}: Props) => {
                 </SelectItem>
             </ul>
         </div >
-        // <select name="" id="">
-        //     <option value="">XRP</option>
-        //     <option value="">ALGO</option>
-        //     <option value="">XML</option>
-        //     <option value="">IOTA</option>
-        //     <option value="">XDC</option>
-        // </select>
     )
 }
 

@@ -56,16 +56,6 @@ export const RuiCryptoLogo = ({ size = 6, chain = "xrp" }: Props) => {
             <div className={`overflow-hidden ${sizeVar[size]} bg-transparent inline-flex justify-center items-center`}>
                 <img src={cryptoVar[chain][0]} alt={cryptoVar[chain][1]} />
             </div>
-        //     <div className='relative w-fit'>
-    //     <div className="p-0.5 to-sunstone-500 rounded-full bg-gradient-to-tr from-orange-500">
-    //         <div className={`overflow-hidden ring-transparent ring-2  ${size === 6 ? 'w-6 h-6' : size === 7 ? 'w-7 h-7' : size === 8 ? 'w-8 h-8' : size === 9 ? 'w-9 h-9' : size === 10 ? 'w-10 h-10' : size === 11 ? 'w-11 h-11' : size === 12 ? 'w-12 h-12' : size === 14 ? 'w-14 h-14' : size === 16 ? 'w-16 h-16' : size === 20 ? 'w-20 h-20' : 'w-24 h-24'} ${rounded === 'base' ? 'rounded-[32%]' : 'rounded-full'}`}>
-    //             <a className="block p-0.5 bg-sylver-100 rounded-full" href="https://twitter.com/0xreeko" target="_blank">
-    //                 <img className="rounded-full" src={imageUrl} alt={altTag} />
-    //             </a>
-    //             <span className={`absolute ring-[1px] ring-sylver-100 right-1 bottom-0.5 ${rounded === 'base' ? 'rounded-[32%]' : 'rounded-full'} ${badgeColor ? colorVar[badgeColor] : ''}`}></span>
-    //         </div>
-    //     </div>
-    // </div>
     )
 
 }

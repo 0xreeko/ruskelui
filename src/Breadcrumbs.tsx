@@ -5,31 +5,10 @@ import { colorType } from './utils'
 
 // this works well when it's coupled with Router in NextJS
 
-/*
-PSEUDO
-if the first idx is nill then return 'Home' => item === '' && idx === 0 ? <li><a href={`/`} className={`text-blue-600 hover:text-blue-700`}>{`Home`}</a></li>
-if there are any route then display them blue'd out => <li><a href={`/${item}`} className={`text-blue-600 hover:text-blue-700`}>{`${item}`}</a></li>
-if the route is the last one, then grey it out => idx === arrLength - 1 ? <li>{`${item}`}</li>
-
- */
-
-// interface Child extends HTMLAttributes<HTMLElement> {
-//     child: ReactNode
-// }
-
 export interface Crumb {
     path: string
     color: colorType
 }
-
-// export const BreadcrumbItem = ({ child }: Child) => {
-//     return (
-//         <li>
-//             {child}
-//         </li>
-//     )
-
-// }
 
 const colorVar: {[key in colorType]: string} = {
     amber: "hover:text-amber-600",
@@ -74,14 +53,5 @@ export const RuiBreadcrumbs = ({ path = "/coffee-store/blog1", color = "ruby" }:
                 }
             </ol>
         </nav>
-        //         <nav class="bg-grey-light rounded-md w-full">
-        //   <ol class="list-reset flex">
-        //     <li><a href="#" class="text-blue-600 hover:text-blue-700">Home</a></li>
-        //     <li><span class="text-gray-500 mx-2"></span></li>
-        //     <li><a href="#" class="text-blue-600 hover:text-blue-700">Library</a></li>
-        //     <li><span class="text-gray-500 mx-2"></span></li>
-        //     <li class="text-gray-500">Data</li>
-        //   </ol>
-        // </nav> 
     )
 }

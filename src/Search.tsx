@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react'
 import { colorType } from './utils'
 
-
 export interface Props {
     leftIcon: ReactNode
     fullWidth?: boolean

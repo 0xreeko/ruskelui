@@ -43,25 +43,6 @@ const colorVar: { [key in colorType]: string[]} = {
  
 export const RuiPagination = ({color = "ruby"}: Props) => {
     return (
-        // track the active selection
-        // display different hover colour if unselected
-        // dynamically show numbered pages depending of how far you are (ellipsis)
-        // make it responsive -> mobile - tablet - desktop
-        /* 
-            MOBILE:
-            the pagination will naturally be designed to show the current page and the prev & next buttons
-
-            TABLET:
-            the paginations will display prev & next buttons and a few options
-
-            DESKTOP:
-            the pagination will display the full set of buttons
-
-
-            > display the first 4 pages (ellipses) then the last page
-            > previous pages gt 2 or 3 then display (ellipses) after first page, show the current page and then the last page
-            > display the first page ellipses then the last 4 pages if there's 4 or less pages left
-        */
         <nav className="inline-flex flex-wrap items-center px-6 py-2 max-w-fit justify-evenly rounded-xl bg-russian-600/80 backdrop-blur-sm text-d-copy">
             <ul className='flex items-center gap-2'>
                 <li className={`${('duration-300 transform-all rounded-lg text-sylver-700 px-3 hover:cursor-pointer')} ${colorVar[color][1]}`}><span className="sr-only">Previous</span><svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd"></path></svg></li>
