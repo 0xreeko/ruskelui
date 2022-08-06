@@ -61,7 +61,7 @@ const DropdownWrap = ({ children }: RootProps) => {
 const DropdownInvoker = ({ children, menu, isSub }: RootProps) => {
     return (
         // outline-none focus:outline-none duration-300 hover:bg-russian-600/20 flex items-center ${isSub ? "w-full text-left" : "px-4 py-2.5 rounded-lg"}
-        <button aria-haspopup="true" aria-controls={isSub ? menu : 'menu'} tabIndex={1} className={``}>
+        <button aria-haspopup="true" aria-controls={isSub ? menu : 'menu'} tabIndex={0} className={``}>
             {children}
         </button>
     )
@@ -79,7 +79,7 @@ const DropdownMenu = ({ children, className, menu, isSub }: RootProps) => {
 // Menu Items
 const DropdownItem = ({ children, leftIcon, rightIcon, isSub, color ="ruby"}: RootProps) => {
     return (
-        <a className={`${colorVar[color]} p-2.5 inline-flex rounded-md items-center w-full text-sm ${isSub ? "" : "relative"}`} role="menuitem" tabIndex={1}>
+        <a className={`${colorVar[color]} p-2.5 inline-flex rounded-md items-center w-full text-sm ${isSub ? "" : "relative"}`} role="menuitem" tabIndex={0}>
             {leftIcon && <div className='inline-flex items-center w-4 h-4 mr-2 left'>{leftIcon}</div>}
             {children}
             {rightIcon && <span className='inline-flex items-center w-4 h-4 ml-auto transition duration-300 ease-in-out right'>{rightIcon}</span>}
