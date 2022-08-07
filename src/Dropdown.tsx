@@ -70,7 +70,7 @@ const DropdownInvoker = ({ children, menu, isSub }: RootProps) => {
 // Menu
 const DropdownMenu = ({ children, className, menu, isSub }: RootProps) => {
     return (
-        <ul id={isSub ? menu : 'menu'} aria-hidden="true" className={`w-56 shadow-lg bg-gray-800 text-sylver-100 rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none transform duration-300 ease-in-out absolute ${isSub ? "bg-gray-800 absolute top-0 right-0 transition duration-150 ease-in-out origin-left" : ` bg-gray-800 -translate-y-3 scale-0 origin-top-left group-hover:scale-100 group-hover:translate-y-0 mt-2`} ${className}`} tabIndex={0}>
+        <ul id={isSub ? menu : 'menu'} aria-hidden="true" className={`w-56 shadow-lg bg-gray-800 text-sylver-100 rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none transform duration-300 ease-in-out absolute ${isSub ? "bg-gray-800 absolute top-0 right-0 transition duration-150 ease-in-out origin-left" : ` bg-gray-800 -translate-y-3 scale-0 origin-top-left group-hover:scale-100 group-hover:translate-y-0 mt-2`} ${className}`}>
             {children}
         </ul>
     )
@@ -79,7 +79,7 @@ const DropdownMenu = ({ children, className, menu, isSub }: RootProps) => {
 // Menu Items
 const DropdownItem = ({ children, leftIcon, rightIcon, isSub, color ="ruby"}: RootProps) => {
     return (
-        <a className={`${colorVar[color]} p-2.5 inline-flex rounded-md items-center w-full text-sm ${isSub ? "" : "relative"}`} role="menuitem" tabIndex={0}>
+        <a className={`${colorVar[color]} p-2.5 inline-flex rounded-md items-center w-full text-sm ${isSub ? "" : "relative"}`} role="menuitem">
             {leftIcon && <div className='inline-flex items-center w-4 h-4 mr-2 left'>{leftIcon}</div>}
             {children}
             {rightIcon && <span className='inline-flex items-center w-4 h-4 ml-auto transition duration-300 ease-in-out right'>{rightIcon}</span>}
