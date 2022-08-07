@@ -70,7 +70,7 @@ const colorVar: {[key in colorType]: string[]} = {
  
 export const RuiProgressBar = ({name, percentage, isGradient, color = 'amethyst', startColour = 'blue', endColour = 'amethyst', position = 'r' }: Props) => {
     return (
-        <div title={name} id={name} tabIndex={0} role={'progressbar'} className={styles.progress}>
+        <div title={name ? name : 'progressbar'} id={name} tabIndex={0} role={'progressbar'} className={styles.progress}>
             <div className={`h-full absolute rounded-full duration-300 ${isGradient ? `${positionVar[position]} ${colorVar[startColour][1]} ${colorVar[endColour][2]}` : `${colorVar[color][0]}`}`} style={{width: `${percentage}%`}}></div>
         </div>
     )
