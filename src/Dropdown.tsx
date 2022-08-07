@@ -15,36 +15,36 @@ export interface RootProps extends HTMLAttributes<HTMLElement> {
 }
 
 const colorVar: { [key in colorType]: string } = {
-    amber: "hover:text-amber-400 hover:bg-amber-400/20",
-    amethyst: "hover:text-amethyst-400 hover:bg-amethyst-400/20",
-    aqua: "hover:text-aqua-400 hover:bg-aqua-400/20",
-    azure: "hover:text-azure-400 hover:bg-azure-400/20",
-    blue: "hover:text-blue-400 hover:bg-blue-400/20",
-    cyan: "hover:text-cyan-400 hover:bg-cyan-400/20",
-    emerald: "hover:text-emerald-400 hover:bg-emerald-400/20",
-    fuchsia: "hover:text-fuchsia-400 hover:bg-fuchsia-400/20",
-    green: "hover:text-green-400 hover:bg-green-400/20",
-    indigo: "hover:text-indigo-400 hover:bg-indigo-400/20",
-    jade: "hover:text-jade-400 hover:bg-jade-400/20",
-    jasper: "hover:text-jasper-400 hover:bg-jasper-400/20",
-    kunzite: "hover:text-kunzite-400 hover:bg-kunzite-400/20",
-    lime: "hover:text-lime-400 hover:bg-lime-400/20",
-    moonstone: "hover:text-moonstone-400 hover:bg-moonstone-400/20",
-    orange: "hover:text-orange-400 hover:bg-orange-400/20",
-    peridot: "hover:text-peridot-400 hover:bg-peridot-400/20",
-    pink: "hover:text-pink-400 hover:bg-pink-400/20",
-    purple: "hover:text-purple-400 hover:bg-purple-400/20",
-    red: "hover:text-red-400 hover:bg-red-400/20",
-    rose: "hover:text-rose-400 hover:bg-rose-400/20",
-    ruby: "hover:text-ruby-400 hover:bg-ruby-400/20",
-    russian: "hover:text-russian-400 hover:bg-russian-400/20",
-    scarlet: "hover:text-scarlet-400 hover:bg-scarlet-400/20",
-    stratos: "hover:text-stratos-400 hover:bg-stratos-400/20",
-    sunstone: "hover:text-sunstone-400 hover:bg-sunstone-400/20",
-    sylver: "hover:text-sylver-400 hover:bg-sylver-400/20",
-    teal: "hover:text-teal-400 hover:bg-teal-400/20",
-    violet: "hover:text-violet-400 hover:bg-violet-400/20",
-    yellow: "hover:text-yellow-400 hover:bg-yellow-400/20"
+    amber: "hover:text-amber-600 ",
+    amethyst: "hover:text-amethyst-600 ",
+    aqua: "hover:text-aqua-600 ",
+    azure: "hover:text-azure-600 ",
+    blue: "hover:text-blue-600 ",
+    cyan: "hover:text-cyan-600 ",
+    emerald: "hover:text-emerald-600 ",
+    fuchsia: "hover:text-fuchsia-600 ",
+    green: "hover:text-green-600 ",
+    indigo: "hover:text-indigo-600 ",
+    jade: "hover:text-jade-600 ",
+    jasper: "hover:text-jasper-600 ",
+    kunzite: "hover:text-kunzite-600 ",
+    lime: "hover:text-lime-600 ",
+    moonstone: "hover:text-moonstone-600 ",
+    orange: "hover:text-orange-600 ",
+    peridot: "hover:text-peridot-600 ",
+    pink: "hover:text-pink-600 ",
+    purple: "hover:text-purple-600 ",
+    red: "hover:text-red-600 ",
+    rose: "hover:text-rose-600 ",
+    ruby: "hover:text-ruby-600 ",
+    russian: "hover:text-russian-600 ",
+    scarlet: "hover:text-scarlet-600 ",
+    stratos: "hover:text-stratos-600 ",
+    sunstone: "hover:text-sunstone-600 ",
+    sylver: "hover:text-sylver-600 ",
+    teal: "hover:text-teal-600 ",
+    violet: "hover:text-violet-600 ",
+    yellow: "hover:text-yellow-600 "
 }
 
 // Wrapper
@@ -61,7 +61,7 @@ const DropdownWrap = ({ children }: RootProps) => {
 const DropdownInvoker = ({ children, menu, isSub }: RootProps) => {
     return (
         // outline-none focus:outline-none duration-300 hover:bg-russian-600/20 flex items-center ${isSub ? "w-full text-left" : "px-4 py-2.5 rounded-lg"}
-        <button aria-haspopup="true" aria-controls={isSub ? menu : 'menu'} tabIndex={0} className={``}>
+        <button aria-haspopup="true" aria-controls={isSub ? menu : 'menu'} tabIndex={0}>
             {children}
         </button>
     )
@@ -70,7 +70,7 @@ const DropdownInvoker = ({ children, menu, isSub }: RootProps) => {
 // Menu
 const DropdownMenu = ({ children, className, menu, isSub }: RootProps) => {
     return (
-        <ul id={isSub ? menu : 'menu'} aria-hidden="true" className={`w-56 shadow-lg bg-gray-800 text-sylver-100 rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none transform duration-300 ease-in-out absolute ${isSub ? "bg-gray-800 absolute top-0 right-0 transition duration-150 ease-in-out origin-left" : ` bg-gray-800 -translate-y-3 scale-0 origin-top-left group-hover:scale-100 group-hover:translate-y-0 mt-2`} ${className}`} tabIndex={1}>
+        <ul id={isSub ? menu : 'menu'} aria-hidden="true" className={`w-56 shadow-lg bg-gray-800 text-sylver-100 rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none transform duration-300 ease-in-out absolute ${isSub ? "bg-gray-800 absolute top-0 right-0 transition duration-150 ease-in-out origin-left" : ` bg-gray-800 -translate-y-3 scale-0 origin-top-left group-hover:scale-100 group-hover:translate-y-0 mt-2`} ${className}`} tabIndex={0}>
             {children}
         </ul>
     )
