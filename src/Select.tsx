@@ -27,7 +27,7 @@ export const RuiSelect = ({label = "Choose an ISO20022 coin"}: Props) => {
                 <span>{label}</span>
                 <svg className={`w-4 h-4 ${hidden ? 'rotate-0 duration-300' : 'rotate-180 duration-300'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </button>
-            <ul tabIndex={0} className={`absolute origin-top text-[1rem] w-full z-10 mt-1.5 p-3 h-40 rounded-2xl overflow-scroll bg-russian-500 ${hidden ? 'transform transition-all scale-95 opacity-0 duration-300' : 'transform transition-all opacity-100 duration-300'}`} role="listbox">
+            <ul tabIndex={0} className={`absolute origin-top text-[1rem] w-full z-10 mt-1.5 p-3 h-40 rounded-2xl overflow-scroll bg-russian-500 ${hidden ? 'transform transition-all scale-95 opacity-0 duration-300' : 'transform transition-all opacity-100 duration-300'}`} role="list">
                 <SelectItem>
                     XRP
                 </SelectItem>
