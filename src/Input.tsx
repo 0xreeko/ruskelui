@@ -26,12 +26,12 @@ export const RuiInput = ({ label, placeholder, floatingLabel, name = "username",
             {
                 floatingLabel ? (
                     <>
-                        <input id={name} type="text" className={`peer pl-3 py-1 ${fullWidth ? "w-full" : "w-full max-w-xs"} transition-all duration-300 outline-none bg-transparent ring-[1px] text-sylver-600 ring-sylver-600 focus:${styles[color]} ${placeholder && !floatingLabel ? "" : "placeholder-transparent"} rounded-xl`} placeholder={`${placeholder ? placeholder : "estoesunejemplo@es.com"}`} />
+                        <input id={name} type="text" className={`peer pl-3 py-1 ${fullWidth ? "w-full" : "w-full max-w-xs"} transition-all duration-300 outline-none bg-transparent ring-[1px] text-sylver-600 ring-sylver-600 dark:text-sylver-600 dark:ring-sylver-600 focus:${styles[color]} ${placeholder && !floatingLabel ? "" : "placeholder-transparent"} rounded-lg`} placeholder={`${placeholder ? placeholder : "estoesunejemplo@es.com"}`} />
                         <label htmlFor={name} className="absolute text-sm text-gray-400 transition-all duration-300 bg-transparent select-none left-3 -top-6 peer-placeholder-shown:text-base peer-placeholder-shown:top-1 peer-focus:text-sm peer-focus:-top-6">{floatingLabel}</label>
                     </>
                 ) : (
                     <>
-                        <input id={name} type="text" className={`peer pl-3 py-1 ${fullWidth ? "w-full" : "w-full max-w-xs"} transition-all duration-300 outline-none bg-transparent ring-[1px] text-sylver-600 ring-sylver-600 focus:${styles[color]} ${placeholder ? "" : "placeholder-transparent"} rounded-xl`} placeholder={`${placeholder ? placeholder : "estoesunejemplo@es.com"}`} />
+                        <input id={name} type="text" className={`peer pl-3 py-1 ${fullWidth ? "w-full" : "w-full max-w-xs"} transition-all duration-300 outline-none bg-transparent ring-[1px] text-sylver-600 ring-sylver-600 dark:text-sylver-800 dark:ring-sylver-800 focus:${styles[color]} ${placeholder ? "" : "placeholder-transparent"} rounded-lg`} placeholder={`${placeholder ? placeholder : "estoesunejemplo@es.com"}`} />
                         <label htmlFor={name} className="absolute text-sm select-none left-3 -top-6">{label}</label>
                     </>
                 )
