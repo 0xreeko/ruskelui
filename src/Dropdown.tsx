@@ -15,40 +15,39 @@ export interface RootProps extends HTMLAttributes<HTMLElement> {
 }
 
 const colorVar: { [key in colorType]: string } = {
-    amber: "hover:text-amber-600 ",
-    amethyst: "hover:text-amethyst-600 ",
-    aqua: "hover:text-aqua-600 ",
-    azure: "hover:text-azure-600 ",
-    blue: "hover:text-blue-600 ",
-    cyan: "hover:text-cyan-600 ",
-    emerald: "hover:text-emerald-600 ",
-    fuchsia: "hover:text-fuchsia-600 ",
-    green: "hover:text-green-600 ",
-    indigo: "hover:text-indigo-600 ",
-    jade: "hover:text-jade-600 ",
-    jasper: "hover:text-jasper-600 ",
-    kunzite: "hover:text-kunzite-600 ",
-    lime: "hover:text-lime-600 ",
-    moonstone: "hover:text-moonstone-600 ",
-    orange: "hover:text-orange-600 ",
-    peridot: "hover:text-peridot-600 ",
-    pink: "hover:text-pink-600 ",
-    purple: "hover:text-purple-600 ",
-    red: "hover:text-red-600 ",
-    rose: "hover:text-rose-600 ",
-    ruby: "hover:text-ruby-600 ",
-    russian: "hover:text-russian-600 ",
-    scarlet: "hover:text-scarlet-600 ",
-    stratos: "hover:text-stratos-600 ",
-    sunstone: "hover:text-sunstone-600 ",
-    sylver: "hover:text-sylver-600 ",
-    teal: "hover:text-teal-600 ",
-    violet: "hover:text-violet-600 ",
-    yellow: "hover:text-yellow-600 "
+    amber: "hover:bg-amber-400/20 hover:text-amber-400 ",
+    amethyst: "hover:bg-amethyst-400/20 hover:text-amethyst-400 ",
+    aqua: "hover:bg-aqua-400/20 hover:text-aqua-400 ",
+    azure: "hover:bg-azure-400/20 hover:text-azure-400 ",
+    blue: "hover:bg-blue-400/20 hover:text-blue-400 ",
+    cyan: "hover:bg-cyan-400/20 hover:text-cyan-400 ",
+    emerald: "hover:bg-emerald-400/20 hover:text-emerald-400 ",
+    fuchsia: "hover:bg-fuchsia-400/20 hover:text-fuchsia-400 ",
+    green: "hover:bg-green-400/20 hover:text-green-400 ",
+    indigo: "hover:bg-indigo-400/20 hover:text-indigo-400 ",
+    jade: "hover:bg-jade-400/20 hover:text-jade-400 ",
+    jasper: "hover:bg-jasper-400/20 hover:text-jasper-400 ",
+    kunzite: "hover:bg-kunzite-400/20 hover:text-kunzite-400 ",
+    lime: "hover:bg-lime-400/20 hover:text-lime-400 ",
+    moonstone: "hover:bg-moonstone-400/20 hover:text-moonstone-400 ",
+    orange: "hover:bg-orange-400/20 hover:text-orange-400 ",
+    peridot: "hover:bg-peridot-400/20 hover:text-peridot-400 ",
+    pink: "hover:bg-pink-400/20 hover:text-pink-400 ",
+    purple: "hover:bg-purple-400/20 hover:text-purple-400 ",
+    red: "hover:bg-red-400/20 hover:text-red-400 ",
+    rose: "hover:bg-rose-400/20 hover:text-rose-400 ",
+    ruby: "hover:bg-ruby-400/20 hover:text-ruby-400 ",
+    russian: "hover:bg-russian-400/20 hover:text-russian-400 ",
+    scarlet: "hover:bg-scarlet-400/20 hover:text-scarlet-400 ",
+    stratos: "hover:bg-stratos-400/20 hover:text-stratos-400 ",
+    sunstone: "hover:bg-sunstone-400/20 hover:text-sunstone-400 ",
+    sylver: "hover:bg-sylver-400/20 hover:text-sylver-400 ",
+    teal: "hover:bg-teal-400/20 hover:text-teal-400 ",
+    violet: "hover:bg-violet-400/20 hover:text-violet-400 ",
+    yellow: "hover:bg-yellow-400/20 hover:text-yellow-400 "
 }
 
 // Wrapper
-
 const DropdownWrap = ({ children }: RootProps) => {
     return (
         <div className={`${styles.wrapper} max-w-fit relative group`}>
@@ -68,7 +67,6 @@ const DropdownInvoker = ({ children, menu, isSub }: RootProps) => {
 }
 
 // Menu
-// make it so that one can select fromRight or fromLeft, and apply the needed styling
 const DropdownMenu = ({ children, className, menu, isSub }: RootProps) => {
     return (
         <ul id={isSub ? menu : 'menu'} aria-hidden="true" className={`w-56 shadow-lg bg-gray-800 text-sylver-100 rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none transform duration-300 ease-in-out absolute ${isSub ? "bg-gray-800 absolute top-0 right-0 transition duration-150 ease-in-out origin-left" : `bg-gray-800 -translate-y-3 scale-0 left-0 origin-top-left group-hover:scale-100 group-hover:translate-y-0 mt-6`} ${className}`}>
@@ -80,7 +78,7 @@ const DropdownMenu = ({ children, className, menu, isSub }: RootProps) => {
 // Menu Items
 const DropdownItem = ({ children, leftIcon, rightIcon, isSub, color ="ruby"}: RootProps) => {
     return (
-        <a className={`${colorVar[color]} p-2.5 inline-flex rounded-md items-center w-full text-sm ${isSub ? "" : "relative"}`} role="menuitem">
+        <a className={`${colorVar[color]} p-2.5 font-semibold inline-flex rounded-md items-center w-full text-sm ${isSub ? "" : "relative"}`} role="menuitem">
             {leftIcon && <div className='inline-flex items-center w-4 h-4 mr-2 left'>{leftIcon}</div>}
             {children}
             {rightIcon && <span className='inline-flex items-center w-4 h-4 ml-auto transition duration-300 ease-in-out right'>{rightIcon}</span>}
