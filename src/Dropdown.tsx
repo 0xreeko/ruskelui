@@ -51,7 +51,7 @@ const colorVar: { [key in colorType]: string } = {
 
 const DropdownWrap = ({ children }: RootProps) => {
     return (
-        <div className={`${styles.wrapper} max-w-fit relative border-black border group`}>
+        <div className={`${styles.wrapper} max-w-fit relative group`}>
             {children}
         </div>
     )
