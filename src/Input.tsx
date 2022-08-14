@@ -36,6 +36,7 @@ export const RuiInput = ({ label, placeholder, floatingLabel, name = "username",
                     </>
                 )
             }
+            <span className="sr-only">Input</span>
         </div>
     )
 }
