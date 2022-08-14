@@ -26,7 +26,7 @@ const AccordionBody = () => {
     )
 }
 
-export const RuiAccordion = ({ data = [{ title: "What is Web3?", content: "Web3 is a new paradigm!" }, { title: "What is XRP?", content: "The world's bridge currency👁" }] }: Props) => {
+export const RuiAccordion = ({ open, data = [{ title: "What is Web3?", content: "Web3 is a new paradigm!" }, { title: "What is XRP?", content: "The world's bridge currency👁" }] }: Props) => {
     const [hidden, setHidden] = useState<boolean | number | null>(true);
 
     const toggle = (idx: number) => {
