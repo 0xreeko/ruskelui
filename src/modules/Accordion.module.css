@@ -7,7 +7,7 @@
 }
 
 .content {
-    @apply origin-top transition duration-500 px-3 py-1 rounded-lg bg-russian-400/10 backdrop-blur-sm
+    @apply origin-top transition duration-500 px-3 py-1 rounded-lg bg-russian-400/10 backdrop-blur-sm text-d-copy
 }
 
 .contentHidden{
@@ -19,9 +19,9 @@
 }
 
 .iconBase {
-    @apply rotate-0 duration-300
+    @apply flex duration-300
 }
 
 .iconActive {
-    @apply rotate-180 duration-300
+    @apply hidden duration-300
 }
