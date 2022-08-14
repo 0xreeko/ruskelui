@@ -20,6 +20,7 @@ export const RuiCheckbox = ({children, color = 'ruby', checkmarkColor ="white", 
                 <svg className={`w-5 h-5 ${styles[checkmarkColor]}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"></path></svg>
             </div>
             <span className={`block ml-2 text-russian-600 dark:text-sylver-100 transition-all select-none whitespace-nowrap w-fit ${strikeThrough === true ? 'peer-checked:line-through' : ''}`}>{children}</span>
+            <span className='sr-only'>Checkbox</span>
     </label>
   )
 }
