@@ -10,7 +10,6 @@ export interface Props extends HTMLAttributes<HTMLElement> {
 
 export const RuiTooltip = ({ name, message, children }: Props) => {
     return (
-        <div className="py-12" >
             <div role={'tooltip'} id={name} title={name} className="relative flex-col inline-block duration-300 ease-in-out group text-russian-600 dark:text-sylver-100">
                 {children}
                 <div className="absolute bottom-0 flex-col items-center justify-center hidden mb-6 group-hover:flex">
@@ -18,6 +17,5 @@ export const RuiTooltip = ({ name, message, children }: Props) => {
                     <div className="w-3 h-3 -mt-2 rotate-45 shadow-lg bg-russian-600"></div>
                 </div>
             </div>
-        </div>
     )
 }

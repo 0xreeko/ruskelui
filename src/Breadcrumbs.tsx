@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { HTMLAttributes } from 'react'
 // @ts-ignore
 import styles from './modules/Breadcrumbs.module.css'
 import { colorType } from './utils'
 
 // this works well when it's coupled with Router in NextJS
 
-export interface Crumb {
+export interface Crumb extends HTMLAttributes<HTMLElement> {
     path: string
     color: colorType
 }
 
-const colorVar: {[key in colorType]: string} = {
+const colorVar: { [key in colorType]: string } = {
     amber: "hover:text-amber-600",
     amethyst: "hover:text-amethyst-600",
     aqua: "hover:text-aqua-600",
@@ -43,15 +43,27 @@ const colorVar: {[key in colorType]: string} = {
     yellow: "hover:text-yellow-600"
 }
 
+const CrumbItem = () => {
+    return (
+        <li>
+
+        </li>
+    )
+}
+
 export const RuiBreadcrumbs = ({ path = "/coffee-store/blog1", color = "ruby" }: Crumb) => {
     const arrLength = path.split('/').length
     return (
         <nav className={styles.wrapper}>
             <ol className={styles.innerWrap}>
                 {
-                    path.split('/').map((item, idx) => item === '' && idx === 0 ? <li className={styles.active}><a href={`/`} className={`${colorVar[color]}`}>{`Home`}</a></li> : idx !== arrLength - 1 ? <li className={styles.active}><a href={`/${item}`} className={`${colorVar[color]}`}>{`${item.includes('-') ? `${item.split('-').join(' ')}` : `${item}` }`}</a></li> : <li className={'text-gray-500 underline underline-offset-2'}>{`${item}`}</li> )
+                    path.split('/').map((item, idx) => item === '' && idx === 0 ? <li className={styles.active}><a href={`/`} className={`${colorVar[color]}`}>{`Home`}</a></li> : idx !== arrLength - 1 ? <li className={styles.active}><a href={`/${item}`} className={`${colorVar[color]}`}>{`${item.includes('-') ? `${item.split('-').join(' ')}` : `${item}`}`}</a></li> : <li className={'text-gray-500 underline underline-offset-2'}>{`${item}`}</li>)
                 }
             </ol>
         </nav>
     )
 }
+
+RuiBreadcrumbs.Item = CrumbItem;
+
+export default RuiBreadcrumbs
