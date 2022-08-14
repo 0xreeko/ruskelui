@@ -67,7 +67,7 @@ export const RuiInput = ({ label, placeholder, floatingLabel, name = "username",
                         <input id={name} type="text" className={`peer p-1 ${leftIcon ? "pl-9" : "pl-2"} ${rightIcon ? "pr-9" : "pr-2"} w-full transition-all duration-300 outline-none bg-white/20 dark:bg-black/20 ring-[1px] backdrop-blur-sm ring-sylver-600 dark:ring-sylver-800 ${colorVar[color][0]} ${placeholder ? "" : "placeholder-transparent"} rounded-lg`} placeholder={`${placeholder ? placeholder : "estoesunejemplo@es.com"}`} />
                         <label htmlFor={name} className="absolute text-sm select-none left-3 -top-6">{label}</label>
                         <span className={`absolute inline-flex z-10 left-0 ml-2 pointer-events-none transition duration-300 scale-75 peer-focus:scale-100 ${color ? colorVar[color][1] : 'peer-focus:text-[#6387f1]'}`}>{leftIcon}</span>
-                        <span className={`absolute inline-flex z-10 right-0 mr-2 pointer-events-none transition delay-1000 duration-300 opacity-0 scale-75 peer-focus:opacity-100 ${color ? colorVar[color][1] : 'peer-focus:text-[#6387f1]'}`}>{rightIcon}</span>
+                        <span className={`absolute inline-flex z-10 right-0 mr-2 pointer-events-none transition duration-300 scale-75 ${color ? colorVar[color][1] : 'peer-focus:text-[#6387f1]'}`}>{rightIcon}</span>
                     </>
                 )
             }

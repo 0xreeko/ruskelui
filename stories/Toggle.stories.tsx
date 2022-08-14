@@ -3,7 +3,7 @@ import React from 'react';
 import {RuiToggle, Props} from '../src/Toggle'
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/Toggle',
+    title: '@RuskelUI/Components/Toggle',
     component: RuiToggle
 }
 

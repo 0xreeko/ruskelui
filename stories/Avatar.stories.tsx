@@ -3,7 +3,7 @@ import React from 'react';
 import {RuiAvatar, Props} from '../src/Avatar'
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/Avatar',
+    title: '@RuskelUI/Components/Avatar',
     component: RuiAvatar
 }
      

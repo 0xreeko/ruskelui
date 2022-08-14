@@ -3,7 +3,7 @@ import {Meta,Story} from '@storybook/react'
 import {RuiKBD, Props} from '../src/KBD'
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/KBD',
+    title: '@RuskelUI/Components/KBD',
     component: RuiKBD
 }
 

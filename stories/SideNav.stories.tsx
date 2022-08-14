@@ -4,7 +4,7 @@ import {RuiSideNav} from '../src/SideNav'
 
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/SideNav',
+    title: '@RuskelUI/Components/SideNav',
     component: RuiSideNav
 }
 

@@ -3,7 +3,7 @@ import {Meta, Story} from '@storybook/react'
 import { RuiPill, Props} from '../src/Pill'
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/Pill',
+    title: '@RuskelUI/Components/Pill',
     component: RuiPill,
     argTypes: {
         children: {

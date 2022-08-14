@@ -3,7 +3,7 @@ import {Meta, Story} from '@storybook/react'
 import {RuiButton, Props} from '../src/Button'
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/Button',
+    title: '@RuskelUI/Components/Button',
     component: RuiButton,
     argTypes: {
         children: {
@@ -16,11 +16,31 @@ export default meta;
 
 const Template: Story<Props> = (args) => <RuiButton {...args} ></RuiButton>
 
-export const Default = Template.bind({})
+export const Base = Template.bind({})
+export const Small = Template.bind({})
+export const Large = Template.bind({})
+export const XLarge = Template.bind({})
 
-export const Secondary = Template.bind({})
-
-Secondary.args = {
+Small.args = {
     color: 'sunstone',
-    children: "I am secondary example"
+    children: "I am small",
+    size: "small"
+}
+
+Small.args = {
+    color: 'sunstone',
+    children: "I am small",
+    size: "small"
+}
+
+Large.args = {
+    color: 'ruby',
+    children: "I am small",
+    size: "large"
+}
+
+XLarge.args = {
+    color: 'pink',
+    children: "I am small",
+    size: "xlarge"
 }

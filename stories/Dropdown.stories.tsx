@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react'
 import { RuiDropdown, RootProps } from '../src/Dropdown'
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/Dropdown',
+    title: '@RuskelUI/Components/Dropdown',
     component: RuiDropdown
 }
 

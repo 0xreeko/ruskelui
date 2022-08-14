@@ -3,7 +3,7 @@ import {Meta, Story} from '@storybook/react'
 import { RuiCheckbox, Props} from '../src/Checkbox'
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/Checkbox',
+    title: '@RuskelUI/Components/Checkbox',
     component: RuiCheckbox,
     argTypes: {
         children: {

@@ -3,7 +3,7 @@ import React from 'react'
 import {RuiToast, Props} from '../src/Toast'
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/Toast',
+    title: '@RuskelUI/Components/Toast',
     component: RuiToast,
 }
 

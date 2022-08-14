@@ -3,7 +3,7 @@ import {Meta, Story} from "@storybook/react"
 import {RuiModal, Props} from '../src/Modal'
 
 const meta: Meta = {
-    title: "@RuskelUI/Primitives/Modal",
+    title: "@RuskelUI/Components/Modal",
     component: RuiModal
 }
 

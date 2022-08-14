@@ -3,7 +3,7 @@ import React from 'react';
 import {RuiBreadcrumbs, Crumb} from '../src/Breadcrumbs'
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/Breadcrumbs',
+    title: '@RuskelUI/Components/Breadcrumbs',
     component: RuiBreadcrumbs
 }
 

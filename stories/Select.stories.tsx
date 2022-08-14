@@ -3,7 +3,7 @@ import {Meta, Story} from '@storybook/react'
 import {RuiSelect, Props} from '../src/Select'
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/Select',
+    title: '@RuskelUI/Components/Select',
     component: RuiSelect
 }
 

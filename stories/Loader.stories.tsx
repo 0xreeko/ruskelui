@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react'
 import { RuiLoader, Props} from '../src/Loader'
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/Loader',
+    title: '@RuskelUI/Components/Loader',
     component: RuiLoader
 }
 

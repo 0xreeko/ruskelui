@@ -3,7 +3,7 @@ import {Meta, Story} from '@storybook/react'
 import {RuiProgressDonut, Props} from '../src/ProgressDonut'
 
 const meta: Meta = {
-    title: "@RuskelUI/Primitives/ProgressDonut",
+    title: "@RuskelUI/Components/ProgressDonut",
     component: RuiProgressDonut
 }
 

@@ -3,7 +3,7 @@ import React from 'react';
 import {RuiAccordion, Props} from '../src/Accordion'
 
 const meta: Meta = {
-    title: "@RuskelUI/Primitives/Accordion",
+    title: "@RuskelUI/Components/Accordion",
     component: RuiAccordion
 }
 

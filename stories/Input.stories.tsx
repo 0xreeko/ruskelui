@@ -4,7 +4,7 @@ import { RuiInput, Props} from '../src/Input'
 
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/Input',
+    title: '@RuskelUI/Components/Input',
     component: RuiInput,
     argTypes: {
         name: {
@@ -27,6 +27,21 @@ const iconoRight = <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-
 <line x1="6" y1="6" x2="18" y2="18"></line>
 </svg>
 
-const Template: Story<Props> = (args) => <RuiInput {...args} leftIcon={icono} rightIcon={iconoRight} />
+const Template: Story<Props> = (args) => <RuiInput {...args}/>
 
 export const Default = Template.bind({})
+export const LeftIcon = Template.bind({})
+export const RightIcon = Template.bind({})
+export const FloatingLabel = Template.bind({})
+
+LeftIcon.args = {
+   leftIcon: icono
+}
+
+RightIcon.args = {
+   rightIcon: iconoRight
+}
+
+FloatingLabel.args = {
+    floatingLabel: 'Username'
+}

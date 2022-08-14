@@ -3,7 +3,7 @@ import {Meta, Story} from '@storybook/react'
 import {RuiProgressBar, Props} from '../src/ProgressBar'
 
 const meta: Meta = {
-    title: "@RuskelUI/Primitives/ProgressBar",
+    title: "@RuskelUI/Components/ProgressBar",
     component: RuiProgressBar
 }
 

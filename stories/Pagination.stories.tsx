@@ -3,7 +3,7 @@ import {Meta, Story} from '@storybook/react'
 import {RuiPagination, Props} from '../src/Pagination'
 
 const meta: Meta = {
-    title: '@RuskelUI/Primitives/Pagination',
+    title: '@RuskelUI/Components/Pagination',
     component: RuiPagination,
 }
 
