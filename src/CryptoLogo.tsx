@@ -55,6 +55,7 @@ export const RuiCryptoLogo = ({ size = 6, chain = "xrp" }: Props) => {
     return (
             <div className={`overflow-hidden ${sizeVar[size]} bg-transparent inline-flex justify-center items-center`}>
                 <img src={cryptoVar[chain][0]} alt={cryptoVar[chain][1]} />
+                <span className='sr-only'>Blockchain Logo Icon</span>
             </div>
     )
 
