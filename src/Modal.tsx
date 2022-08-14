@@ -20,7 +20,7 @@ export const RuiModal = ({ }: Props) => {
         <RuiButton color="russian" size="small" onClick={() => setHidden(!hidden)}>Purchase with Metamask</RuiButton>
         {hidden ? '' : (
             <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-			<div onClick={() => setHidden(!hidden)} className={`fixed inset-0 transition-opacity bg-gray-500 duration-300 ${hidden ? 'ease-in bg-opacity-0' : 'ease-out bg-opacity-75'}`} ></div>
+			<div onClick={() => setHidden(!hidden)} className={`fixed inset-0 transition-opacity bg-gray-500 backdrop-blur-sm duration-300 ${hidden ? 'ease-in-out bg-opacity-0' : 'ease-in-out bg-opacity-10'}`} ></div>
 		  
 			<div className="fixed inset-0 z-10 overflow-y-auto">
 			  <div className="flex items-end justify-center min-h-full p-4 text-center sm:items-center sm:p-0">
