@@ -59,6 +59,7 @@ export const RuiProgressDonut = ({ name, percentage = 0, color = 'ruby' }: Props
                 <circle className="text-black/30" strokeWidth={4} stroke="currentColor" fill="transparent" r="54" cx="60" cy="60" />
                 <circle className={`${colorVar[color]}`} strokeWidth="10" strokeDasharray={100} style={{ strokeDashoffset: Number(100 - percentage) }} pathLength="100" strokeLinecap="round" stroke="currentColor" fill="transparent" r="54" cx="60" cy="60" />
             </svg>
+            <span className="sr-only">Progress Donut</span>
         </div>
     )
 };
