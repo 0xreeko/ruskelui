@@ -10,12 +10,13 @@ export interface Props extends HTMLAttributes<HTMLElement>{
     /** Available colour ways to style your button */
     color: colorType;
     checkmarkColor: "white" | "black"
-    strikeThrough?: boolean
+    strikeThrough?: boolean,
+    defaultChecked?: boolean
 }
-export const RuiCheckbox = ({children, color = 'ruby', checkmarkColor ="white", strikeThrough= false}: Props) => {
+export const RuiCheckbox = ({children, color = 'ruby', checkmarkColor ="white", strikeThrough= false, defaultChecked}: Props) => {
   return (
     <label className={`${styles[color]} rounded-md w-5 h-5 min-h-fit flex items-center relative cursor-pointer`}>
-            <input type="checkbox" className="sr-only peer" id="check"/>
+            <input type="checkbox" className="sr-only peer" id="check" defaultChecked={defaultChecked ? defaultChecked : false}/>
             <div className="transition-all ease-linear scale-0 peer-checked:scale-75">
                 <svg className={`w-5 h-5 ${styles[checkmarkColor]}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"></path></svg>
             </div>
