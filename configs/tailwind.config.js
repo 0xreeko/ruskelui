@@ -15,7 +15,7 @@ module.exports = {
         'd-h4': ['1.728rem', {lineHeight: '1.3'}],
         'd-sub1': ['1.44rem'],
         'd-sub2': ['1.2rem'],
-        'd-base': ['1rem', {lineHeight: '1.375'}],
+        'd-base': ['1rem', {lineHeight: '1.5'}],
         'd-copy': ['0.833rem'],
         'd-overline': ['0.694rem', {letterSpacing: '0.25rem', fontWeight: '700', textTransform: 'uppercase'}],
         'm-hero': ['2.281rem', {lineHeight:'1.75', fontWeight:'900'}],
@@ -25,7 +25,7 @@ module.exports = {
         'm-h4': ['1.424rem', {lineHeight:'1.75'}],
         'm-sub1': ['1.266rem'],
         'm-sub2': ['1.125rem'],
-        'm-base': ['1rem', {lineHeight: '1.375'}],
+        'm-base': ['1rem', {lineHeight: '1.5'}],
         'm-copy': ['0.889rem'],
         'm-overline': ['0.79rem', {letterSpacing: '0.25rem', fontWeight: '700', textTransform: 'uppercase'}]
       },

@@ -52,6 +52,12 @@ const colorVar: { [key in colorType]: string[] } = {
     yellow: ["focus:ring-yellow-400 dark:focus:ring-yellow-400", "peer-focus:text-yellow-400"]
 }
 
+const Password = () => {
+    return (
+        <div className="">password input</div>
+    )
+}
+
 export const RuiInput = ({ label, placeholder, floatingLabel, name = "username", color = "kunzite", fullWidth = false, leftIcon, rightIcon}: Props) => {
     return (
         <div className={`relative flex items-center justify-between text-russian-600 dark:text-sylver-200 ${fullWidth ? "w-full" : "w-full max-w-xs"}`} >
@@ -75,3 +81,7 @@ export const RuiInput = ({ label, placeholder, floatingLabel, name = "username",
         </div>
     )
 }
+
+RuiInput.Password = Password
+
+export default RuiInput
