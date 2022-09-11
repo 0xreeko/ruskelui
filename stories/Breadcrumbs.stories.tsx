@@ -1,6 +1,6 @@
-import {Meta, Story} from '@storybook/react'
+import { Meta, Story } from '@storybook/react'
 import React from 'react';
-import {RuiBreadcrumbs, Crumb} from '../src/Breadcrumbs'
+import { RuiBreadcrumbs, Props } from '../src/Breadcrumbs'
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Breadcrumbs',
@@ -9,6 +9,9 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story<Crumb> = args => <RuiBreadcrumbs {...args} />
+const Template: Story<Props> = args => <RuiBreadcrumbs {...args}>
+    <RuiBreadcrumbs.Item route='/'>Home</RuiBreadcrumbs.Item>
+    <RuiBreadcrumbs.Item route='/blog' isInactive={true}>Blog</RuiBreadcrumbs.Item>
+</RuiBreadcrumbs>
 
 export const Default = Template.bind({})

@@ -1,13 +1,16 @@
-import React, { HTMLAttributes } from 'react'
+import React, { HTMLAttributes, ReactNode } from 'react'
 // @ts-ignore
 import styles from './modules/Breadcrumbs.module.css'
 import { colorType } from './utils'
 
 // this works well when it's coupled with Router in NextJS
 
-export interface Crumb extends HTMLAttributes<HTMLElement> {
-    path: string
-    color: colorType
+export interface Props extends HTMLAttributes<HTMLElement> {
+    color?: colorType,
+    route?: string
+    fullWidth?: boolean
+    isInactive?: boolean
+    divider?: ReactNode
 }
 
 const colorVar: { [key in colorType]: string } = {
@@ -43,22 +46,34 @@ const colorVar: { [key in colorType]: string } = {
     yellow: "hover:text-yellow-600"
 }
 
-const CrumbItem = () => {
-    return (
-        <li>
+const dividerIcon = <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} viewBox="0 0 24 24" stroke-width={2} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+<polyline points="9 6 15 12 9 18"></polyline>
+</svg>
 
-        </li>
-    )
-}
+const CrumbItem = ({ route, color = 'ruby', children, isInactive, divider = dividerIcon }: Props) => (
+    <li className={`inline-flex items-center`}>
+        {!isInactive ? (
+            <>
+                <a href={route}>
+                    <span className={`${colorVar[color]}`}>{children}</span>
+                </a>
+                <span className='mx-1'>
+                    {divider}
+                </span>
+            </>
 
-export const RuiBreadcrumbs = ({ path = "/coffee-store/blog1", color = "ruby" }: Crumb) => {
-    const arrLength = path.split('/').length
+        ) : (
+            <span className='cursor-default'>{children}</span>
+        )}
+    </li>
+)
+
+export const RuiBreadcrumbs = ({ children, fullWidth = false }: Props) => {
     return (
-        <nav className={styles.wrapper}>
-            <ol className={styles.innerWrap}>
-                {
-                    path.split('/').map((item, idx) => item === '' && idx === 0 ? <li className={styles.active}><a href={`/`} className={`${colorVar[color]}`}>{`Home`}</a></li> : idx !== arrLength - 1 ? <li className={styles.active}><a href={`/${item}`} className={`${colorVar[color]}`}>{`${item.includes('-') ? `${item.split('-').join(' ')}` : `${item}`}`}</a></li> : <li className={'text-gray-500 underline underline-offset-2'}>{`${item}`}</li>)
-                }
+        <nav className={`p-2 px-4 flex items-center rounded-lg bg-sylver-700/10 backdrop-blur-sm ${fullWidth === true ? "w-full" : "w-fit"}`}>
+            <ol className="inline-flex items-center">
+                {children}
             </ol>
         </nav>
     )
