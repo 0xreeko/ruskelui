@@ -1,6 +1,6 @@
 import React, { HTMLAttributes } from 'react'
 // @ts-ignore
-import styles from './modules/ProgressBar.module.css'
+import styles from './modules/Progress.module.css'
 import { colorType, barPosType } from './utils';
 
 export interface Props extends HTMLAttributes<HTMLElement>{
@@ -123,12 +123,12 @@ const RuiProgressBar = ({ name, percentage, isGradient, color = 'amethyst', star
 };
 
 
-const Progress = () => (
+export const RuiProgress = () => (
      <>select Progress.Bar or Progress.Donut</>
  )
 
-Progress.Bar = RuiProgressBar
-Progress.Donut = RuiProgressDonut
+RuiProgress.Bar = RuiProgressBar
+RuiProgress.Donut = RuiProgressDonut
 
 
-export default Progress
+export default RuiProgress
