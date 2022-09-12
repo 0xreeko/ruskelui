@@ -1,13 +1,13 @@
 .wrapper {
-    @apply relative max-w-xs w-full rounded-xl p-3 overflow-hidden text-sylver-100 bg-russian-600 backdrop-blur-sm
+    @apply flex flex-col relative w-full max-w-xs rounded-xl p-3 text-sylver-100 bg-russian-600 backdrop-blur-sm gap-3
 }
 
 .accordionItem {
-    @apply flex items-center justify-between w-full px-3 py-1 rounded-lg backdrop-blur-sm
+    @apply flex items-center justify-between w-full px-3 py-1 gap-3 backdrop-blur-sm border-b-[0.5px] border-opacity-10 border-sylver-100
 }
 
 .content {
-    @apply origin-top transition duration-500 px-3 py-1 rounded-lg bg-russian-400/10 backdrop-blur-sm text-d-copy
+    @apply origin-top transition duration-500 px-3 py-1 rounded-lg backdrop-blur-sm text-d-copy
 }
 
 .contentHidden{
@@ -19,9 +19,9 @@
 }
 
 .iconBase {
-    @apply flex duration-300
+    @apply transform -rotate-0 transition-transform ease-in-out
 }
 
 .iconActive {
-    @apply hidden duration-300
+    @apply transform rotate-45 transition-transform ease-in-out
 }
