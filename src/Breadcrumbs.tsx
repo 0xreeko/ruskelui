@@ -56,7 +56,7 @@ const CrumbItem = ({ route, color = 'ruby', children, isInactive, divider = divi
         {!isInactive ? (
             <>
                 <a href={route}>
-                    <span className={`${colorVar[color]}`}>{children}</span>
+                    <span className={`${colorVar[color]} text-russian-600 dark:text-sylver-100`}>{children}</span>
                 </a>
                 <span className='mx-1'>
                     {divider}
