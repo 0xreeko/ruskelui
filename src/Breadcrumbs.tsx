@@ -47,8 +47,8 @@ const colorVar: { [key in colorType]: string } = {
 }
 
 const dividerIcon = <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} viewBox="0 0 24 24" stroke-width={2} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-<polyline points="9 6 15 12 9 18"></polyline>
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <polyline points="9 6 15 12 9 18"></polyline>
 </svg>
 
 const CrumbItem = ({ route, color = 'ruby', children, isInactive, divider = dividerIcon }: Props) => (
@@ -62,7 +62,6 @@ const CrumbItem = ({ route, color = 'ruby', children, isInactive, divider = divi
                     {divider}
                 </span>
             </>
-
         ) : (
             <span className='cursor-default'>{children}</span>
         )}
