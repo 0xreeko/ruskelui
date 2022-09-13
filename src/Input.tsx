@@ -52,6 +52,8 @@ const colorVar: { [key in colorType]: string[] } = {
     yellow: ["focus:ring-yellow-400 dark:focus:ring-yellow-400", "peer-focus:text-yellow-400"]
 }
 
+const OTP = () => (<div className="">OTP input</div>)
+
 const Password = () => {
     return (
         <div className="">password input</div>
@@ -83,5 +85,6 @@ export const RuiInput = ({ label, placeholder, floatingLabel, name = "username",
 }
 
 RuiInput.Password = Password
+RuiInput.OTP = OTP
 
 export default RuiInput
