@@ -11,8 +11,6 @@ export interface Props extends HTMLAttributes<HTMLInputElement> {
     name: string;
 }
 
-export const Radio = ({}: Props) => {
-    return (
-        <div className="">alo</div>
+export const Radio = ({name}: Props) => (
+        <input type="radio" name={name} id="" />
     )
-}
