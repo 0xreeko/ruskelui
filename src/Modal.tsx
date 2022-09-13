@@ -6,6 +6,11 @@ export interface Props extends HTMLAttributes<HTMLInputElement> {
 	onClose: () => void
 }
 
+
+const Header = () => <div className=""></div>
+const Main = () => <div className=""></div>
+const Footer = () => <div className=""></div>
+
 export const RuiModal = ({open, onClose}: Props) => {
 
     return (
@@ -45,3 +50,9 @@ export const RuiModal = ({open, onClose}: Props) => {
         </>
     )
 }
+
+RuiModal.Header = Header
+RuiModal.Main = Main
+RuiModal.Footer = Footer
+
+export default RuiModal
