@@ -7,7 +7,10 @@ const meta: Meta = {
     component: RuiButton,
     argTypes: {
         children: {
-            defaultValue: 'Default button'
+            defaultValue: 'Press Me'
+        },
+        size: {
+            defaultValue: 'base'
         }
     }
 }
@@ -15,32 +18,27 @@ const meta: Meta = {
 export default meta;
 
 const Template: Story<Props> = (args) => <RuiButton {...args} ></RuiButton>
+const ButtonOutline: Story<Props> = (args) => <RuiButton.Outline {...args} ></RuiButton.Outline>
+const ButtonText: Story<Props> = (args) => <RuiButton.Text {...args} ></RuiButton.Text>
+const ButtonGradient: Story<Props> = (args) => <RuiButton.Gradient {...args} ></RuiButton.Gradient>
 
-export const Base = Template.bind({})
-export const Small = Template.bind({})
-export const Large = Template.bind({})
-export const XLarge = Template.bind({})
+export const Default = Template.bind({})
+export const Outline = ButtonOutline.bind({})
+export const Text = ButtonText.bind({})
+export const Gradient = ButtonGradient.bind({})
 
-Small.args = {
+Default.args = {
     color: 'sunstone',
-    children: "I am small",
-    size: "small"
 }
 
-Small.args = {
+Outline.args = {
     color: 'sunstone',
-    children: "I am small",
-    size: "small"
 }
 
-Large.args = {
+Text.args = {
     color: 'ruby',
-    children: "I am small",
-    size: "large"
 }
 
-XLarge.args = {
+Gradient.args = {
     color: 'pink',
-    children: "I am small",
-    size: "xlarge"
 }

@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from 'react'
 // @ts-ignore
 import styles from './modules/Progress.module.css'
-import { colorType, barPosType } from './utils';
+import { colorType, barFlowType } from './utils';
 
 export interface Props extends HTMLAttributes<HTMLElement>{
     /**
@@ -21,16 +21,16 @@ export interface Props extends HTMLAttributes<HTMLElement>{
     isGradient?: boolean;
 
     /** Starting colour for dual gradient */
-    startColour?: colorType;
+    startColor?: colorType;
     
     /** Ending colour for dual gradient */
-    endColour?: colorType;
+    endColor?: colorType;
 
     /**horizontal linear direction of gradient */
-    position?: barPosType
+    position?: barFlowType
 }
 
-const barColours: {[key in colorType]: string[]} = {
+const barColour: {[key in colorType]: string[]} = {
     amber: ["bg-amber-400", "from-amber-400", "to-amber-600"],
     amethyst: ["bg-amethyst-400", "from-amethyst-400", "to-amethyst-600"],
     aqua: ["bg-aqua-400", "from-aqua-400", "to-aqua-600"],
@@ -63,7 +63,7 @@ const barColours: {[key in colorType]: string[]} = {
     yellow: ["bg-yellow-400", "from-yellow-400", "to-yellow-600"]
 }
   
-const donutColours: { [key in colorType]: string } = {
+const donutColor: { [key in colorType]: string } = {
     amber: "text-amber-400",
     amethyst: "text-amethyst-400",
     aqua: "text-aqua-400",
@@ -96,15 +96,15 @@ const donutColours: { [key in colorType]: string } = {
     yellow: "text-yellow-400"
 }
 
-const positionVar: {[key in barPosType]: string} = {
+const positionVar: {[key in barFlowType]: string} = {
     r: "bg-gradient-to-r",
     l: "bg-gradient-to-l",
 }
 
-const RuiProgressBar = ({ name, percentage, isGradient, color = 'amethyst', startColour = 'blue', endColour = 'amethyst', position = 'r' }: Props) => {
+const RuiProgressBar = ({ name, percentage, isGradient, color = 'amethyst', startColor = 'blue', endColor = 'amethyst', position = 'r' }: Props) => {
     return (
         <div id={name} tabIndex={0} role={'progressbar'} className={styles.progress}>
-            <div className={`h-full absolute rounded-full duration-300 ${isGradient ? `${positionVar[position]} ${barColours[startColour][1]} ${barColours[endColour][2]}` : `${barColours[color][0]}`}`} style={{width: `${percentage}%`}}></div>
+            <div className={`h-full absolute rounded-full duration-300 ${isGradient ? `${positionVar[position]} ${barColour[startColor][1]} ${barColour[endColor][2]}` : `${barColour[color][0]}`}`} style={{width: `${percentage}%`}}></div>
             <span className="sr-only">Progress Bar</span>
         </div>
     )
@@ -112,10 +112,10 @@ const RuiProgressBar = ({ name, percentage, isGradient, color = 'amethyst', star
  const RuiProgressDonut = ({ name, percentage = 0, color = 'ruby' }: Props) => {
     return (
         <div id={name} className="relative inline-flex items-center justify-center">
-            <div className={`absolute text-d-h4 font-semibold ${donutColours[color]}`}>{percentage}%</div>
+            <div className={`absolute text-d-h4 font-semibold ${donutColor[color]}`}>{percentage}%</div>
             <svg className={styles.svg} viewBox="0 0 120 120" >
                 <circle className="text-black/30" strokeWidth={4} stroke="currentColor" fill="transparent" r="54" cx="60" cy="60" />
-                <circle className={`${donutColours[color]}`} strokeWidth="10" strokeDasharray={100} style={{ strokeDashoffset: Number(100 - percentage) }} pathLength="100" strokeLinecap="round" stroke="currentColor" fill="transparent" r="54" cx="60" cy="60" />
+                <circle className={`${donutColor[color]}`} strokeWidth="10" strokeDasharray={100} style={{ strokeDashoffset: Number(100 - percentage) }} pathLength="100" strokeLinecap="round" stroke="currentColor" fill="transparent" r="54" cx="60" cy="60" />
             </svg>
             <span className="sr-only">Progress Donut</span>
         </div>

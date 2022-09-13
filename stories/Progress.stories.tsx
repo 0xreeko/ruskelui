@@ -9,13 +9,11 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story<Props> = (args) => <RuiProgress {...args} />
-const TemplateOne: Story<Props> = (args) => <RuiProgress.Bar {...args} />
-const TemplateTwo: Story<Props> = (args) => <RuiProgress.Donut {...args} />
+const TemplateBar: Story<Props> = (args) => <RuiProgress.Bar {...args} />
+const TemplateDonut: Story<Props> = (args) => <RuiProgress.Donut {...args} />
 
-export const Default = Template.bind({})
-export const Bar = TemplateOne.bind({})
-export const Donut = TemplateTwo.bind({})
+export const Bar = TemplateBar.bind({})
+export const Donut = TemplateDonut.bind({})
 
 
 Bar.args =  {

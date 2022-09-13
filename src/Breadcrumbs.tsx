@@ -55,15 +55,15 @@ const CrumbItem = ({ route, color = 'ruby', children, isInactive, divider = divi
     <li className={`inline-flex items-center`}>
         {!isInactive ? (
             <>
-                <a href={route}>
-                    <span className={`${colorVar[color]} text-russian-600 dark:text-sylver-100`}>{children}</span>
+                <a href={route} className='text-russian-600/60 dark:text-sylver-100/60'>
+                    <span className={`${colorVar[color]} duration-300 `}>{children}</span>
                 </a>
-                <span className='mx-1'>
+                <span className='mx-1 text-gray-600'>
                     {divider}
                 </span>
             </>
         ) : (
-            <span className='cursor-default'>{children}</span>
+            <span className='cursor-default text-russian-600 dark:text-sylver-100'>{children}</span>
         )}
     </li>
 )

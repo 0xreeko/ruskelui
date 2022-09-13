@@ -1,38 +1,58 @@
-import {Meta} from '@storybook/addon-docs'
+import { Meta } from '@storybook/addon-docs';
 
-<Meta title="About RuskelUI" />
+<Meta title="Introduction"/>
 
 # RuskelUI
-RuskelUI is set of UI Components dedicated for Web3 built with React and TailwindCSS - components that you can use with any React framework!
+RuskeUI is a TailwindCSS-based design system for rapid Web3 UI development in the React ecosystem.
 
 ## 🕵️ About RuskelUI
-RuskelUI came about to be due to the wanting to create my own UI vault that would be oriented towards Web3 development. This is the official UI set of Components for all of the Web3 initiatives (7+) that I'm working on, which I hope you keep an eye out for, as it may help you ship robust Web3 platforms that use - phew, nearly gave it away!😅
+I wanted to create my own UI vault that would be the official UI set of primitives for all of the Web3 related initiatives (7+) that I'm working on.
 
-It follows what I deem as `Neonic Nerophism`, which combines three UI trends together - neon colours, dark mode and glassmorphism, hence the name. The goal for this is to create aesthetically beautiful interfaces with RuskelUI Components that facilitates faster UI developement, getting you from concept to production very quickly.
+It follows what I deem as `Neonic Nerophism`, which combines three UI trends together - neonic colours, dark mode and glassmorphism, hence the name. The goal for this project is to rapidly create aesthetically beautiful interfaces, getting you from concept to production very quickly in the ReactJs ecosystem.
+
+Live Storybook Demo (Github Pages): https://0xreeko.github.io/ruskelui
 
 ## ⭐️ Star Us!
 If this project helps/has helped you build your Web3 projects faster, star us - every little star helps!
 
-
-## 🧩 Table Of Components
-- [⬇ Installation: `<installation/>`](#installation)
+## 🧩 Table Of Components (Not up to date!)
+- [⬇ Installation: `<installation/>`](#Installation)
 - [👤 Avatar: `<rui-avatar/>`](#rui-avatar)
 - [⌨️ Button: `<rui-button/>`](#rui-button)
 - [🃏 Card: `<rui-card/>`](#rui-card)
 - [✅ Checkbox: `<rui-checkbox/>`](#rui-checkbox)
+- [🎨 CryptoLogo: `<rui-cryptologo/>`](#rui-cryptologo)
+- [⬇️ Dropdown: `<rui-dropdown/>`](#rui-dropdown)
 - [💬 Input: `<rui-input/>`](#rui-input)
+- [🎹 KBD: `<rui-kbd/>`](#rui-kbd)
 - [⏲ Loader: `<rui-loader/>`](#rui-loader)
 - [🪟 Modal: `<rui-modal/>`](#rui-modal)
+- [📑 Pagination: `<rui-pagination/>`](#rui-pagination)
 - [💊 Pill: `<rui-pill/>`](#rui-pill)
+- [🍫 ProgressBar: `<rui-progressbar/>`](#rui-progressbar)
+- [🍩 ProgressDonut: `<rui-progressdonut/>`](#rui-progressdonut)
 - [📻 Radio: `<rui-radio/>`](#rui-radio)
 - [🗃 Select: `<rui-select/>`](#rui-select)
+- [♻️ Swap: `<rui-swap/>`](#rui-swap)
 - [🥂 Toast: `<rui-toast/>`](#rui-toast)
 - [💡 Toggle: `<rui-toggle/>`](#rui-toggle)
 - [🛠 Tooltip: `<rui-tooltip/>`](#rui-tooltip)
 
 
-### installation
-This is the process to install RuskelUI components. TBC.
+### Installation
+Run the following to install RuskelUI's Tailwind config file - the "-p" tag is optional and creates a PostCSS file: 
+```bash
+npx ruskelui -p
+``` 
+
+Run the following to install the RuskelUI package:
+```bash 
+npm i ruskelui
+```
+OR
+```bash
+yarn add ruskelui
+```
 
 
 ### rui-avatar
@@ -41,10 +61,10 @@ The Avatar element displays information from a user in the form of an image if a
 #### Props
 | Property    | Attribute    | Description | Type     | Default     |
 | ----------- | ------------ | ----------- | -------- | ----------- |
-elemName | elem-name | abac | string
-floatingLabel | floating-label | abac | string
-label | label | abac | string
-placeholder | placeholder | abac | string
+elemName | elem-name | abac | string | undefined
+floatingLabel | floating-label | abac | string | undefined
+label | label | abac | string | undefined
+placeholder | placeholder | abac | string | undefined
 
 ### rui-button
 The Button element.
@@ -77,7 +97,7 @@ The Checkbox element displays checked elements.
 color | color | abac | string
 labelAfter | label-after | abac | string
 labelBefore| label-before | abac | string
-name | name | abac | string
+name | name | abac | string 
 
 ### rui-cryptologo
 The CryptoLogo element displays SVG's icons of cryptocurrency.
