@@ -1,5 +1,5 @@
 .wrapper {
-    @apply flex flex-col relative w-full max-w-xs rounded-xl p-3 text-sylver-100 bg-russian-600 backdrop-blur-sm gap-3
+    @apply flex flex-col relative rounded-xl p-3 text-sylver-100 bg-russian-600 backdrop-blur-sm gap-3
 }
 
 .accordionItem {
