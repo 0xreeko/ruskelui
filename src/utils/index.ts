@@ -7,5 +7,3 @@ export type buttonSize = "small" | "base" | "large" | "xlarge";
 export type barFlowType = "r" | "l";
 
 export type gradientFlowType = "tl" | "t" | "tr" | "r" | "br" | "b" | "bl" | "l"
-
-export type cryptoType = "btc" | "eth" | "usdt" | "usdc" | "xrp" | "sol" | "luna" | "avax" | "dot" | "matic" | "cro" | "dai" | "atom" | "near" | "algo" | "xlm" | "ftm" | "hbar" | "miota" | "one" | "aave" | "celo" | "ens"
