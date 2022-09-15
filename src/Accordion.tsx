@@ -1,17 +1,8 @@
-import React, { HTMLAttributes, ReactNode, useState } from 'react'
+import React, { useState } from 'react'
+import { AccordionProps } from './types'
 // @ts-ignore
 import styles from './modules/Accordion.module.css'
 import { colorType } from './utils'
-
-type AccordionData = {
-    label?: ReactNode
-    content?: ReactNode
-}
-export interface Props extends HTMLAttributes<HTMLElement> {
-    data: AccordionData[]
-    fullWidth: boolean
-    color?: colorType
-}
 
 const hoverColor: { [key in colorType]: string } = {
     amber: "hover:text-amber-400 duration-300",
@@ -46,14 +37,14 @@ const hoverColor: { [key in colorType]: string } = {
     yellow: "hover:text-yellow-400 duration-300"
 }
 
-export const RuiAccordion = ({ data, color = "amethyst", fullWidth = false }: Props) => {
+export const RuiAccordion = ({ data, color = "amethyst", fullWidth = false }: AccordionProps) => {
 
     const [open, setOpen] = useState<number | null>(null)
     const toggle = (_id: number) => setOpen(open === _id ? null : _id)
 
     return (
         <div className={`${styles.wrapper} ${fullWidth === true ? `w-full` : `w-full max-w-xs`}`} tabIndex={0}>
-            {data.map(({ label, content }, idx) => (
+            {data.map(({ label, content }, idx: number) => (
                 <div>
                     <button className={`${styles.accordionItem} ${hoverColor[color]}`} onClick={() => toggle(idx)}>
                         <span className='text-left text-d-base'>{label}</span>
