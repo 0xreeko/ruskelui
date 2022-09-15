@@ -5,7 +5,7 @@ type AccordionData = {
     label?: ReactNode
     content?: ReactNode
 }
-export interface AccordionProps extends HTMLAttributes<HTMLElement> {
+export interface RuiAccordionProps extends HTMLAttributes<HTMLElement> {
     data: AccordionData[]
     fullWidth: boolean
     color?: color

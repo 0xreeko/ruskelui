@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { AccordionProps, hoverColor } from './types/Accordion'
+import {RuiAccordionProps, hoverColor } from './types/Accordion'
 // @ts-ignore
 import styles from './modules/Accordion.module.css'
 
 
 
-export const RuiAccordion = ({ data, color = "amethyst", fullWidth = false }: AccordionProps) => {
+export const RuiAccordion = ({ data, color = "amethyst", fullWidth = false }: RuiAccordionProps) => {
 
     const [open, setOpen] = useState<number | null>(null)
     const toggle = (_id: number) => setOpen(open === _id ? null : _id)
