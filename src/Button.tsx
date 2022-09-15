@@ -25,36 +25,36 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 }
 
 const defaultColor: { [key in colorType]: string } = {
-  amber: "bg-amber-500",
-  amethyst: "bg-amethyst-500",
-  aqua: "bg-aqua-500",
-  azure: "bg-azure-500",
-  blue: "bg-blue-500",
-  cyan: "bg-cyan-500",
-  emerald: "bg-emerald-500",
-  fuchsia: "bg-fuchsia-500",
-  green: "bg-green-500",
-  indigo: "bg-indigo-500",
-  jade: "bg-jade-500",
-  jasper: "bg-jasper-500",
-  kunzite: "bg-kunzite-500",
-  lime: "bg-lime-500",
-  moonstone: "bg-moonstone-500",
-  orange: "bg-orange-500",
-  peridot: "bg-peridot-500",
-  pink: "bg-pink-500",
-  purple: "bg-purple-500",
-  red: "bg-red-500",
-  rose: "bg-rose-500",
-  ruby: "bg-ruby-500",
-  russian: "bg-russian-500",
-  scarlet: "bg-scarlet-500",
-  stratos: "bg-stratos-500",
-  sunstone: "bg-sunstone-500",
-  sylver: "bg-sylver-500",
-  teal: "bg-teal-500",
-  violet: "bg-violet-500",
-  yellow: "bg-yellow-500"
+  amber: "bg-amber-500 hover:bg-amber-500/90 active:bg-amber-400/60 disabled:bg-amber-300",
+  amethyst: "bg-amethyst-500 hover:bg-amethyst-500/90 active:bg-amethyst-400/60 disabled:bg-amethyst-300",
+  aqua: "bg-aqua-500 hover:bg-aqua-500/90 active:bg-aqua-400/60 disabled:bg-aqua-300",
+  azure: "bg-azure-500 hover:bg-azure-500/90 active:bg-azure-400/60 disabled:bg-azure-300",
+  blue: "bg-blue-500 hover:bg-blue-500/90 active:bg-blue-400/60 disabled:bg-blue-300",
+  cyan: "bg-cyan-500 hover:bg-cyan-500/90 active:bg-cyan-400/60 disabled:bg-cyan-300",
+  emerald: "bg-emerald-500 hover:bg-emerald-500/90 active:bg-emerald-400/60 disabled:bg-emerald-300",
+  fuchsia: "bg-fuchsia-500 hover:bg-fuchsia-500/90 active:bg-fuchsia-400/60 disabled:bg-fuchsia-300",
+  green: "bg-green-500 hover:bg-green-500/90 active:bg-green-400/60 disabled:bg-green-300",
+  indigo: "bg-indigo-500 hover:bg-indigo-500/90 active:bg-indigo-400/60 disabled:bg-indigo-300",
+  jade: "bg-jade-500 hover:bg-jade-500/90 active:bg-jade-400/60 disabled:bg-jade-300",
+  jasper: "bg-jasper-500 hover:bg-jasper-500/90 active:bg-jasper-400/60 disabled:bg-jasper-300",
+  kunzite: "bg-kunzite-500 hover:bg-kunzite-500/90 active:bg-kunzite-400/60 disabled:bg-kunzite-300",
+  lime: "bg-lime-500 hover:bg-lime-500/90 active:bg-lime-400/60 disabled:bg-lime-300",
+  moonstone: "bg-moonstone-500 hover:bg-moonstone-500/90 active:bg-moonstone-400/60 disabled:bg-moonstone-300",
+  orange: "bg-orange-500 hover:bg-orange-500/90 active:bg-orange-400/60 disabled:bg-orange-300",
+  peridot: "bg-peridot-500 hover:bg-peridot-500/90 active:bg-peridot-400/60 disabled:bg-peridot-300",
+  pink: "bg-pink-500 hover:bg-pink-500/90 active:bg-pink-400/60 disabled:bg-pink-300",
+  purple: "bg-purple-500 hover:bg-purple-500/90 active:bg-purple-400/60 disabled:bg-purple-400",
+  red: "bg-red-500 hover:bg-red-500/90 active:bg-red-400/60 disabled:bg-red-300",
+  rose: "bg-rose-500 hover:bg-rose-500/90 active:bg-rose-400/60 disabled:bg-rose-300",
+  ruby: "bg-ruby-500 hover:bg-ruby-500/90 active:bg-ruby-400/60 disabled:bg-ruby-300",
+  russian: "bg-russian-500 hover:bg-russian-500/90 active:bg-russian-400/60 disabled:bg-russian-300",
+  scarlet: "bg-scarlet-500 hover:bg-scarlet-500/90 active:bg-scarlet-400/60 disabled:bg-scarlet-300",
+  stratos: "bg-stratos-500 hover:bg-stratos-500/90 active:bg-stratos-400/60 disabled:bg-stratos-300",
+  sunstone: "bg-sunstone-500 hover:bg-sunstone-500/90 active:bg-sunstone-400/60 disabled:bg-sunstone-300",
+  sylver: "bg-sylver-500 hover:bg-sylver-500/90 active:bg-sylver-400/60 disabled:bg-sylver-300",
+  teal: "bg-teal-500 hover:bg-teal-500/90 active:bg-teal-400/60 disabled:bg-teal-300",
+  violet: "bg-violet-500 hover:bg-violet-500/90 active:bg-violet-400/60 disabled:bg-violet-300",
+  yellow: "bg-yellow-500 hover:bg-yellow-500/90 active:bg-yellow-400/60 disabled:bg-yellow-300",
 }
 
 const outlineColor: { [key in colorType]: string } = {
@@ -176,20 +176,20 @@ const Outline = ({ children, color = "amethyst", size = "base", }: Props) => (
 )
 
 const Text = ({ children, color = "amethyst", size = "base" }: Props) => (
-  <button className={`${textColor[color]} whitespace-nowrap text-white inline-flex cursor-pointer w-fit items-center transition-all duration-150 ${size === 'base' ? 'text-m-base px-3 py-2 h-9 rounded-[10px]' : size === 'small' ? 'text-[11.1px] px-2 h-8 rounded-[8px]' : size === 'large' ? 'text-d-base px-4 py-3 h-10 rounded-[12px]' : size === 'xlarge' ? 'text-m-sub2 px-5 py-4 h-11 rounded-[14px]' : ''}`}>
+  <button className={`${textColor[color]} whitespace-nowrap text-sylver-100 inline-flex cursor-pointer w-fit items-center transition-all duration-150 ${size === 'base' ? 'text-m-base px-3 py-2 h-9 rounded-[10px]' : size === 'small' ? 'text-[11.1px] px-2 h-8 rounded-[8px]' : size === 'large' ? 'text-d-base px-4 py-3 h-10 rounded-[12px]' : size === 'xlarge' ? 'text-m-sub2 px-5 py-4 h-11 rounded-[14px]' : ''}`}>
     {children}
   </button>
 )
 
 const Gradient = ({ children, size = "base", startColor = "fuchsia", endColor = "purple", direction = "tr" }: Props) => (
-  <button className={`${gradientFlow[direction]} ${gradientColor[startColor][0]} ${gradientColor[endColor][1]} whitespace-nowrap text-white inline-flex cursor-pointer w-fit items-center transition-all duration-200 ${size === 'base' ? 'text-m-base px-3 py-2 h-9 rounded-[10px]' : size === 'small' ? 'text-[11.1px] px-2 h-8 rounded-[8px]' : size === 'large' ? 'text-d-base px-4 py-3 h-10 rounded-[12px]' : size === 'xlarge' ? 'text-m-sub2 px-5 py-4 h-11 rounded-[14px]' : ''}`}>
+  <button className={`${gradientFlow[direction]} ${gradientColor[startColor][0]} ${gradientColor[endColor][1]} whitespace-nowrap text-sylver-100 inline-flex cursor-pointer w-fit items-center transition-all duration-200 ${size === 'base' ? 'text-m-base px-3 py-2 h-9 rounded-[10px]' : size === 'small' ? 'text-[11.1px] px-2 h-8 rounded-[8px]' : size === 'large' ? 'text-d-base px-4 py-3 h-10 rounded-[12px]' : size === 'xlarge' ? 'text-m-sub2 px-5 py-4 h-11 rounded-[14px]' : ''}`}>
     {children}
   </button>
 )
 
 export const RuiButton = ({ children, color = 'amethyst', size = "base", disabled = false }: Props) => {
   return (
-    <button className={`${disabled !== true ? `${defaultColor[color]} whitespace-nowrap text-white inline-flex cursor-pointer w-fit items-center transition-all duration-150` : 'bg-gray-700 pointer-events-none c'} ${size === 'base' ? 'text-m-base px-3 py-2 h-9 rounded-[10px]' : size === 'small' ? 'text-[11.1px] px-2 h-8 rounded-[8px]' : size === 'large' ? 'text-d-base px-4 py-3 h-10 rounded-[12px]' : size === 'xlarge' ? 'text-m-sub2 px-5 py-4 h-11 rounded-[14px]' : ''}`}>
+    <button aria-disabled={disabled} disabled={disabled} className={`inline-flex w-fit items-center text-sylver-100 ${defaultColor[color]} ${disabled !== true ? `active:scale-90 whitespace-nowrap cursor-pointer transition-all duration-150` : `pointer-events-none cursor-not-allowed select-none`} ${size === 'base' ? 'text-m-base px-3 py-2 h-9 rounded-[10px]' : size === 'small' ? 'text-[11.1px] px-2 h-8 rounded-[8px]' : size === 'large' ? 'text-d-base px-4 py-3 h-10 rounded-[12px]' : size === 'xlarge' ? 'text-m-sub2 px-5 py-4 h-11 rounded-[14px]' : ''}`}>
       {children}
     </button>
   )
