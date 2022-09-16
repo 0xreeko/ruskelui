@@ -1,14 +1,9 @@
-import React, {HTMLAttributes} from "react"
+import React from "react"
 // @ts-ignore
 import styles from './modules/Card.module.css'
+import { RuiCardProps } from "./types/Card"
 
-export interface Props extends HTMLAttributes<HTMLInputElement> {
-    width?: number;
-    height?: number;
-    name?: string;
-}
-
-export const RuiCard = ({}: Props) => {
+export const RuiCard = ({}: RuiCardProps) => {
     return (
         <div className="relative inline-flex flex-col items-center wrapper text-sylver-100">
             <div className="overflow-hidden rounded-xl w-44 h-44">
