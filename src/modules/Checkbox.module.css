@@ -1,10 +1,10 @@
  /* Colors - Pill */
 
  .white {
-    @apply text-white
+    @apply text-sylver-100
  }
  .black {
-    @apply text-black
+    @apply text-russian-600
  }
 
     .amber {
