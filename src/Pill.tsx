@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactNode } from 'react'
+import React from 'react'
 import { RuiPillProps, colorVar } from './types/Pill'
 
 export const RuiPill = ({children, color = "ruby", svg}: RuiPillProps) => {
