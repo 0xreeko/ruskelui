@@ -1,14 +1,7 @@
-import React, { HTMLAttributes, ReactNode } from "react"
+import React from "react"
+import { RuiTooltipProps } from "./types/Tooltip"
 
-export interface Props extends HTMLAttributes<HTMLElement> {
-    /** Provide a static label for Input */
-    children: ReactNode;
-    /** Provide a static placeholder for Input */
-    name: string;
-    message: string;
-}
-
-export const RuiTooltip = ({ name, message, children }: Props) => {
+export const RuiTooltip = ({ name, message, children }: RuiTooltipProps) => {
     return (
             <div role={'tooltip'} id={name} title={name} className="relative flex-col inline-block duration-300 ease-in-out group text-russian-600 dark:text-sylver-100">
                 {children}

@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 
-interface RuiTooltipProps {
+export interface RuiTooltipProps extends HTMLAttributes<HTMLElement> {
     children: ReactNode
-    title: string
+    name: string
     message: string
 }
