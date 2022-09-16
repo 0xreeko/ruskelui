@@ -1,5 +1,7 @@
-interface RuiModalProps {
-    open: '' // bool
-    onClose: '' // () => void
-    children?: '' // ReactNode
+import { HTMLAttributes, ReactNode } from "react"
+
+export interface RuiModalProps extends HTMLAttributes<HTMLElement> {
+    open: boolean
+    onClose: () => void
+    children?: ReactNode
 }

@@ -1,24 +1,18 @@
-import React, { HTMLAttributes, } from "react"
+import React from "react"
 import { RuiButton } from "./Button";
-
-export interface Props extends HTMLAttributes<HTMLInputElement> {
-	open: boolean
-	onClose: () => void
-}
-
 
 const Header = () => <div className=""></div>
 const Main = () => <div className=""></div>
 const Footer = () => <div className=""></div>
 
-export const RuiModal = ({open, onClose}: Props) => {
+export const RuiModal = ({open, onClose}: RuiModalProps) => {
 
     return (
 		<>
-			<RuiButton color="russian" size="small" onClick={onClose}>Purchase with Metamask</RuiButton>
+			<RuiButton color="russian" size="small" onClick={() => onClose}>Purchase with Metamask</RuiButton>
 			{!open ? null : (
 				<div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-					<div onClick={onClose} className={`fixed inset-0 transition-opacity bg-gray-500 backdrop-blur-sm duration-300 ${open ? 'ease-in-out bg-opacity-0' : 'ease-in-out bg-opacity-10'}`} ></div>
+					<div onClick={() => onClose} className={`fixed inset-0 transition-opacity bg-gray-500 backdrop-blur-sm duration-300 ${open ? 'ease-in-out bg-opacity-0' : 'ease-in-out bg-opacity-10'}`} ></div>
 		  
 					<div className="fixed inset-0 z-10 overflow-y-auto">
 						<div className="flex items-end justify-center min-h-full p-4 text-center sm:items-center sm:p-0">
@@ -40,7 +34,7 @@ export const RuiModal = ({open, onClose}: Props) => {
 								</div>
 								<div className="px-4 py-3 bg-gray-50 sm:px-6 sm:flex sm:flex-row-reverse">
 									<button type="button" className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-red-600 border border-transparent rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">Deactivate</button>
-									<button type="button" onClick={onClose} className="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Cancel</button>
+									<button type="button" onClick={() => onClose} className="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Cancel</button>
 								</div>
 							</div>
 						</div>
