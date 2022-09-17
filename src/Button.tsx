@@ -3,7 +3,7 @@ import { RuiButtonProps, baseColor, ghostColor, textColor, gradientColor, gradie
 // @ts-ignore
 import styles from './modules/Button.module.css'
 
-const Outline = ({ children, color = "amethyst", size = "base", }: RuiButtonProps) => (
+const Ghost = ({ children, color = "amethyst", size = "base", }: RuiButtonProps) => (
   <button className={`${ghostColor[color]} whitespace-nowrap inline-flex cursor-pointer w-fit items-center transition-all duration-150 ${size === 'base' ? 'text-m-base px-3 py-2 h-9 rounded-[10px]' : size === 'small' ? 'text-[11.1px] px-2 h-8 rounded-[8px]' : size === 'large' ? 'text-d-base px-4 py-3 h-10 rounded-[12px]' : size === 'xlarge' ? 'text-m-sub2 px-5 py-4 h-11 rounded-[14px]' : ''}`}>
     {children}
   </button>
@@ -29,7 +29,7 @@ export const RuiButton = ({ children, color = 'amethyst', size = "base", isDisab
   )
 }
 
-RuiButton.Outline = Outline
+RuiButton.Ghost = Ghost
 RuiButton.Text = Text
 RuiButton.Gradient = Gradient
 

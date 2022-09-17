@@ -1,8 +1,7 @@
 import { HTMLAttributes, ReactNode } from "react";
-import { color, gradientDirection } from "./Generics";
+import { color, direction } from "./Generics";
 
 type variant = "base" | "ghost" | "text" | "gradient"
-
 
 type size = "small" | "xlarge" | "large" | 'base'
 
@@ -21,7 +20,7 @@ export interface RuiButtonProps extends HTMLAttributes<HTMLButtonElement> {
     /** Provide a size for Button */
     size: size
 
-    direction?: gradientDirection
+    direction?: direction
 
     isDisabled?: boolean
 
@@ -162,7 +161,7 @@ export const gradientColor: { [key in color]: string[] } = {
     yellow: ["from-yellow-400", "to-yellow-600"],
 }
   
-export const gradientFlow: { [key in gradientDirection]: string } = {
+export const gradientFlow: { [key in direction]: string } = {
     "bottom" : "bg-gradient-to-b",
     "bottomLeft" : "bg-gradient-to-bl",
     "bottomRight" : "bg-gradient-to-br",

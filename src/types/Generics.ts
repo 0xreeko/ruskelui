@@ -6,4 +6,4 @@ export type buttonSize = "small" | "base" | "large" | "xlarge";
 
 export type barFlowType = "r" | "l";
 
-export type gradientDirection = "topLeft" | "top" | "topRight" | "right" | "bottomRight" | "bottom" | "bottomLeft" | "left"
+export type direction = "topLeft" | "top" | "topRight" | "right" | "bottomRight" | "bottom" | "bottomLeft" | "left"
