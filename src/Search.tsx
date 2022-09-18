@@ -1,14 +1,14 @@
 import React, { ReactNode } from 'react'
-import { colorType } from './utils'
+import { color } from './types/Generics'
 
 export interface Props {
     leftIcon: ReactNode
     fullWidth?: boolean
     placeholder?: string
-    color: colorType
+    color: color
 }
 
-const colorVar: { [key in colorType]: string[] } = {
+const colorVar: { [key in color]: string[] } = {
     amber: ["focus:border-amber-400", "peer-focus:text-amber-400"],
     amethyst: ["focus:border-amethyst-400", "peer-focus:text-amethyst-400"],
     aqua: ["focus:border-aqua-400", "peer-focus:text-aqua-400"],

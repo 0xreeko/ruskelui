@@ -1,13 +1,11 @@
 import { HTMLAttributes } from "react"
-import { color, gradientDirection } from "./Generics"
-
-type position = gradientDirection
+import { color, direction } from "./Generics"
 
 export interface RuiToastProps extends HTMLAttributes<HTMLElement> {
     color: color
     title: string
     content: string
-    position: position
+    position: direction
 }
 
 export const colorVar: {[key in color]: string[]} = {
