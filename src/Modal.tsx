@@ -10,7 +10,7 @@ export const RuiModal = ({open, onClose}: RuiModalProps) => {
 
     return (
 		<>
-			<RuiButton color="russian" size="small" onClick={() => onClose}>Purchase with Metamask</RuiButton>
+			<RuiButton variant="3D" color="amethyst" size="small" onClick={() => onClose}>Purchase with Metamask</RuiButton>
 			{!open ? null : (
 				<div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
 					<div onClick={() => onClose} className={`fixed inset-0 transition-opacity bg-gray-500 backdrop-blur-sm duration-300 ${open ? 'ease-in-out bg-opacity-0' : 'ease-in-out bg-opacity-10'}`} ></div>

@@ -1,7 +1,7 @@
 import { HTMLAttributes, ReactNode } from "react";
 import { color, direction } from "./Generics";
 
-type variant = "base" | "ghost" | "text" | "gradient"
+type variant = "Base" | "Ghost" | "Gradient" | "Text" | "3D" | "3DGradient"
 
 type size = "small" | "xlarge" | "large" | 'base'
 
@@ -29,6 +29,38 @@ export interface RuiButtonProps extends HTMLAttributes<HTMLButtonElement> {
     variant?: variant
 }
 
+export const threeDeeColor: { [key in color]: string[] } = {
+    amber: ["bg-amber-500", "bg-amber-400"],
+    amethyst: ["bg-amethyst-500", "bg-amethyst-400"],
+    aqua: ["bg-aqua-500", "bg-aqua-400"],
+    azure: ["bg-azure-500", "bg-azure-400"],
+    blue: ["bg-blue-500", "bg-blue-400"],
+    cyan: ["bg-cyan-500", "bg-cyan-400"],
+    emerald: ["bg-emerald-500", "bg-emerald-400"],
+    fuchsia: ["bg-fuchsia-500", "bg-fuchsia-400"],
+    green: ["bg-green-500", "bg-green-400"],
+    indigo: ["bg-indigo-500", "bg-indigo-400"],
+    jade: ["bg-jade-500", "bg-jade-400"],
+    jasper: ["bg-jasper-500", "bg-jasper-400"],
+    kunzite: ["bg-kunzite-500", "bg-kunzite-400"],
+    lime: ["bg-lime-500", "bg-lime-400"],
+    moonstone: ["bg-moonstone-500", "bg-moonstone-400"],
+    orange: ["bg-orange-500", "bg-orange-400"],
+    peridot: ["bg-peridot-500", "bg-peridot-400"],
+    pink: ["bg-pink-500", "bg-pink-400"],
+    purple: ["bg-purple-500", "bg-purple-400"],
+    red: ["bg-red-500", "bg-red-400"],
+    rose: ["bg-rose-500", "bg-rose-400"],
+    ruby: ["bg-ruby-500", "bg-ruby-400"],
+    russian: ["bg-russian-500", "bg-russian-400"],
+    scarlet: ["bg-scarlet-500", "bg-scarlet-400"],
+    stratos: ["bg-stratos-500", "bg-stratos-400"],
+    sunstone: ["bg-sunstone-500", "bg-sunstone-400"],
+    sylver: ["bg-sylver-500", "bg-sylver-400"],
+    teal: ["bg-teal-500", "bg-teal-400"],
+    violet: ["bg-violet-500", "bg-violet-400"],
+    yellow: ["bg-yellow-500", "bg-yellow-400"],
+}
 export const baseColor: { [key in color]: string } = {
     amber: "bg-amber-500 hover:bg-amber-500/90 active:bg-amber-400/60 disabled:bg-amber-300",
     amethyst: "bg-amethyst-500 hover:bg-amethyst-500/90 active:bg-amethyst-400/60 disabled:bg-amethyst-300",
@@ -159,6 +191,39 @@ export const gradientColor: { [key in color]: string[] } = {
     teal: ["from-teal-400", "to-teal-600"],
     violet: ["from-violet-400", "to-violet-600"],
     yellow: ["from-yellow-400", "to-yellow-600"],
+}
+
+export const threeDeeGeeColor: { [key in color]: string[] } = {
+    amber: ["from-amber-400", "to-amber-500", "from-amber-500" ,"to-amber-600"],
+    amethyst: ["from-amethyst-400", "to-amethyst-500", "from-amethyst-500" ,"to-amethyst-600"],
+    aqua: ["from-aqua-400", "to-aqua-500", "from-aqua-500" ,"to-aqua-600"],
+    azure: ["from-azure-400", "to-azure-500", "from-azure-500" ,"to-azure-600"],
+    blue: ["from-blue-400", "to-blue-500", "from-blue-500" ,"to-blue-600"],
+    cyan: ["from-cyan-400", "to-cyan-500", "from-cyan-500" ,"to-cyan-600"],
+    emerald: ["from-emerald-400", "to-emerald-500", "from-emerald-500" ,"to-emerald-600"],
+    fuchsia: ["from-fuchsia-400", "to-fuchsia-500", "from-fuchsia-500" ,"to-fuchsia-600"],
+    green: ["from-green-400", "to-green-500", "from-green-500" ,"to-green-600"],
+    indigo: ["from-indigo-400", "to-indigo-500", "from-indigo-500" ,"to-indigo-600"],
+    jade: ["from-jade-400", "to-jade-500", "from-jade-500" ,"to-jade-600"],
+    jasper: ["from-jasper-400", "to-jasper-500", "from-jasper-500" ,"to-jasper-600"],
+    kunzite: ["from-kunzite-400", "to-kunzite-500", "from-kunzite-500" ,"to-kunzite-600"],
+    lime: ["from-lime-400", "to-lime-500", "from-lime-500" ,"to-lime-600"],
+    moonstone: ["from-moonstone-400", "to-moonstone-500", "from-moonstone-500" ,"to-moonstone-600"],
+    orange: ["from-orange-400", "to-orange-500", "from-orange-500" ,"to-orange-600"],
+    peridot: ["from-peridot-400", "to-peridot-500", "from-peridot-500" ,"to-peridot-600"],
+    pink: ["from-pink-400", "to-pink-500", "from-pink-500" ,"to-pink-600"],
+    purple: ["from-purple-400", "to-purple-500", "from-purple-500" ,"to-purple-600"],
+    red: ["from-red-400", "to-red-500", "from-red-500" ,"to-red-600"],
+    rose: ["from-rose-400", "to-rose-500", "from-rose-500" ,"to-rose-600"],
+    ruby: ["from-ruby-400", "to-ruby-500", "from-ruby-500" ,"to-ruby-600"],
+    russian: ["from-russian-400", "to-russian-500", "from-russian-500" ,"to-russian-600"],
+    scarlet: ["from-scarlet-400", "to-scarlet-500", "from-scarlet-500" ,"to-scarlet-600"],
+    stratos: ["from-stratos-400", "to-stratos-500", "from-stratos-500" ,"to-stratos-600"],
+    sunstone: ["from-sunstone-400", "to-sunstone-500", "from-sunstone-500" ,"to-sunstone-600"],
+    sylver: ["from-sylver-400", "to-sylver-500", "from-sylver-500" ,"to-sylver-600"],
+    teal: ["from-teal-400", "to-teal-500", "from-teal-500" ,"to-teal-600"],
+    violet: ["from-violet-400", "to-violet-500", "from-violet-500" ,"to-violet-600"],
+    yellow: ["from-yellow-400", "to-yellow-500", "from-yellow-500" ,"to-yellow-600"],
 }
   
 export const gradientFlow: { [key in direction]: string } = {
