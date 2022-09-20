@@ -12,7 +12,7 @@ export default meta
 
 const Template: Story<RuiBreadcrumbsProps> = args => <RuiBreadcrumbs {...args}>
     <RuiBreadcrumbs.Item route='/'>Home</RuiBreadcrumbs.Item>
-    <RuiBreadcrumbs.Item route='/blog' isInactive={true}>Blog</RuiBreadcrumbs.Item>
+    <RuiBreadcrumbs.Item route='/blog' variant='current'>Blog</RuiBreadcrumbs.Item>
 </RuiBreadcrumbs>
 
 export const Default = Template.bind({})

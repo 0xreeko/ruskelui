@@ -8,22 +8,40 @@ const dividerIcon = <svg xmlns="http://www.w3.org/2000/svg" width={16} height={1
     <polyline points="9 6 15 12 9 18"></polyline>
 </svg>
 
-const CrumbItem = ({ route, color = 'ruby', children, isInactive, divider = dividerIcon }: RuiBreadcrumbsProps) => (
-    <li className={`inline-flex items-center`}>
-        {!isInactive ? (
-            <>
-                <a href={route} className='text-russian-600/60 dark:text-sylver-100/60'>
-                    <span className={`${hoverColor[color]} duration-300 `}>{children}</span>
-                </a>
-                <span className='mx-1 text-gray-600'>
-                    {divider}
-                </span>
-            </>
-        ) : (
-            <span className='cursor-default text-russian-600 dark:text-sylver-100'>{children}</span>
-        )}
-    </li>
-)
+const CrumbItem = ({ route, color = 'ruby', children, divider = dividerIcon, variant }: RuiBreadcrumbsProps) => {
+    switch (variant) {
+        case "current":
+            return (
+                <li className={`inline-flex items-center`}>
+                    <span className='cursor-default text-russian-600 dark:text-sylver-100'>{children}</span>
+                </li>
+            )
+
+        case "inactive":
+            return (
+                <li className={`inline-flex items-center`}>
+                    <a href={route} className='text-russian-600/60 dark:text-sylver-100/60'>
+                        <span className={`${hoverColor[color]} duration-300 `}>{children}</span>
+                    </a>
+                    <span className='mx-1 text-gray-600'>
+                        {divider}
+                    </span>
+                </li>
+            )
+
+        default:
+            return (
+                <li className={`inline-flex items-center`}>
+                    <a href={route} className='text-russian-600/60 dark:text-sylver-100/60'>
+                        <span className={`${hoverColor[color]} duration-300 `}>{children}</span>
+                    </a>
+                    <span className='mx-1 text-gray-600'>
+                        {divider}
+                    </span>
+                </li>
+            )
+    }
+}
 
 export const RuiBreadcrumbs = ({ children, fullWidth = false }: RuiBreadcrumbsProps) => {
     return (
