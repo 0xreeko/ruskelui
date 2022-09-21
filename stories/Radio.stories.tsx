@@ -15,5 +15,7 @@ const Template: Story<RuiRadioProps> = (args) => <RuiRadio{...args}/>
 export const Default = Template.bind({})
 
 Default.args = {
-    label: "Payment Splitter"
+    label: "Payment Splitter",
+    value: "Payment Splitter",
+    name: "pay_splitter"
 }
