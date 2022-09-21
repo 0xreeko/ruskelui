@@ -1,7 +1,0 @@
-.progress {
-    @apply max-w-xs h-2 bg-black/30 overflow-hidden relative rounded-md w-full
-}
-
-.svg {
-    @apply relative w-32 h-32 -rotate-90
-}
