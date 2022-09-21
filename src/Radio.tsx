@@ -1,16 +1,10 @@
-import React, {HTMLAttributes} from "react"
+import React from "react"
+import { RuiRadioProps } from "./types/Radio"
 
-export interface Props extends HTMLAttributes<HTMLInputElement> {
-    /** Provide a static label for Input */
-    label?: string;
-    /** Provide a static placeholder for Input */
-    placeholder?: string;
-    /** Provide a dynamic label for Input */
-    floatingLabel?: string;
-    /** Provide an ID for Input */
-    name: string;
-}
-
-export const Radio = ({name}: Props) => (
-        <input type="radio" name={name} id="" />
+export const RuiRadio = ({label, value}: RuiRadioProps) => (
+    <label className="flex items-center gap-2">
+    <input type="radio" name="valid_ninja" id="radio" value={value} className="sr-only peer"/>
+    <div className="w-5 h-5 duration-150 bg-gray-100 border rounded-full appearance-none peer-checked:border-blue-600 peer-checked:bg-blue-400"></div>
+        <span>{label}</span>
+  </label>
     )

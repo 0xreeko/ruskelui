@@ -1,6 +1,7 @@
 import React from 'react';
 import {Meta, Story} from '@storybook/react'
-import { RuiCheckbox, Props} from '../src/Checkbox'
+import { RuiCheckbox } from '../src/Checkbox'
+import { RuiCheckboxProps } from '../src/types/Checkbox';
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Checkbox',
@@ -14,6 +15,6 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<Props> = (args) => <RuiCheckbox {...args}/>
+const Template: Story<RuiCheckboxProps> = (args) => <RuiCheckbox {...args}/>
 
 export const Default = Template.bind({})

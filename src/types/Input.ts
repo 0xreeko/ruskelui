@@ -1,7 +1,9 @@
-import { ReactNode } from "react"
+import { HTMLAttributes, ReactNode } from "react"
 import { color } from "./Generics"
 
-export interface RuiInputProps {
+type variant = "base" | "file" | "number" | "otp" | "password" | "textarea"
+
+export interface RuiInputProps extends HTMLAttributes<HTMLInputElement>{
     label: string
     placeholder: string
     floatingLabel: string
@@ -10,6 +12,7 @@ export interface RuiInputProps {
     leftIcon: ReactNode
     rightIcon: ReactNode
     name: string
+    variant: variant
 }
 
 export const inputColor: { [key in color]: string[] } = {
