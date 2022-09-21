@@ -10,7 +10,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<RuiRadioProps> = (args) => <RuiRadio{...args}/>
+const Template: Story<RuiRadioProps> = (args) => <RuiRadio variant='base' {...args}/>
 
 export const Default = Template.bind({})
 
