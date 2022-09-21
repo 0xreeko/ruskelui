@@ -45,7 +45,8 @@ Text.args = {
 }
 
 Gradient.args = {
-    color: 'pink',
+    startColor: 'green',
+    endColor: 'teal',
 }
 
 ThreeDee.args = {

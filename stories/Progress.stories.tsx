@@ -1,16 +1,25 @@
 import React from 'react'
 import {Meta, Story} from '@storybook/react'
-import {RuiProgress, Props} from '../src/Progress'
+import { RuiProgress } from '../src/Progress'
+import { RuiProgressProps } from '../src/types/Progress'
 
 const meta: Meta = {
     title: "@RuskelUI/Components/Progress",
-    component: RuiProgress
+    component: RuiProgress,
+    argTypes: {
+        color: {
+            defaultValue: 'amethyst'
+        },
+        percentage: {
+            defaultValue: 23
+        }
+    }
 }
 
 export default meta
 
-const TemplateBar: Story<Props> = (args) => <RuiProgress.Bar {...args} />
-const TemplateDonut: Story<Props> = (args) => <RuiProgress.Donut {...args} />
+const TemplateBar: Story<RuiProgressProps> = (args) => <RuiProgress variant='Bar' {...args}  />
+const TemplateDonut: Story<RuiProgressProps> = (args) => <RuiProgress variant='Donut' {...args} />
 
 export const Bar = TemplateBar.bind({})
 export const Donut = TemplateDonut.bind({})
