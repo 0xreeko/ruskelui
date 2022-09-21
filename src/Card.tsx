@@ -1,6 +1,4 @@
 import React from "react"
-// @ts-ignore
-import styles from './modules/Card.module.css'
 import { RuiCardProps } from "./types/Card"
 
 export const RuiCard = ({}: RuiCardProps) => {
