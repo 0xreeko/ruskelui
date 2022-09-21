@@ -14,6 +14,6 @@ jobs:
 
       - name: Build & Deploy Storybook
         run: |
-        npm install
-        npm run build-storybook
-        npm run deploy-storybook
+          npm install
+          npm run build-storybook
+          npm run deploy-storybook
