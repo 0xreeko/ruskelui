@@ -1,93 +1,98 @@
-import React, { HTMLAttributes, ReactNode, useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { SelectContext } from './context/SelectContext'
 // @ts-ignore
 import styles from './modules/Select.module.css'
-import { color } from './types/Generics'
+import { RuiSelectChildProps, RuiSelectProps } from './types/Select'
+import { selectColor } from './utils/Select'
 
-export interface Props extends HTMLAttributes<HTMLElement> {
-    label: string
-    color: color
-}
+export const SelectItem = ({ value = "d", color = "amethyst" }: RuiSelectChildProps) => {
+    const { handleChange } = useContext(SelectContext)
 
-interface Child extends HTMLAttributes<HTMLElement> {
-    children: ReactNode
-    color: color
-}
-
-export const selectColor: { [key in color]: string } = {
-    amber: "hover:bg-amber-400/10 hover:text-amber-400 ",
-    amethyst: "hover:bg-amethyst-400/10 hover:text-amethyst-400 ",
-    aqua: "hover:bg-aqua-400/10 hover:text-aqua-400 ",
-    azure: "hover:bg-azure-400/10 hover:text-azure-400 ",
-    blue: "hover:bg-blue-400/10 hover:text-blue-400 ",
-    cyan: "hover:bg-cyan-400/10 hover:text-cyan-400 ",
-    emerald: "hover:bg-emerald-400/10 hover:text-emerald-400 ",
-    fuchsia: "hover:bg-fuchsia-400/10 hover:text-fuchsia-400 ",
-    green: "hover:bg-green-400/10 hover:text-green-400 ",
-    indigo: "hover:bg-indigo-400/10 hover:text-indigo-400 ",
-    jade: "hover:bg-jade-400/10 hover:text-jade-400 ",
-    jasper: "hover:bg-jasper-400/10 hover:text-jasper-400 ",
-    kunzite: "hover:bg-kunzite-400/10 hover:text-kunzite-400 ",
-    lime: "hover:bg-lime-400/10 hover:text-lime-400 ",
-    moonstone: "hover:bg-moonstone-400/10 hover:text-moonstone-400 ",
-    orange: "hover:bg-orange-400/10 hover:text-orange-400 ",
-    peridot: "hover:bg-peridot-400/10 hover:text-peridot-400 ",
-    pink: "hover:bg-pink-400/10 hover:text-pink-400 ",
-    purple: "hover:bg-purple-400/10 hover:text-purple-400 ",
-    red: "hover:bg-red-400/10 hover:text-red-400 ",
-    rose: "hover:bg-rose-400/10 hover:text-rose-400 ",
-    ruby: "hover:bg-ruby-400/10 hover:text-ruby-400 ",
-    russian: "hover:bg-russian-400/10 hover:text-russian-400 ",
-    scarlet: "hover:bg-scarlet-400/10 hover:text-scarlet-400 ",
-    stratos: "hover:bg-stratos-400/10 hover:text-stratos-400 ",
-    sunstone: "hover:bg-sunstone-400/10 hover:text-sunstone-400 ",
-    sylver: "hover:bg-sylver-400/10 hover:text-sylver-400 ",
-    teal: "hover:bg-teal-400/10 hover:text-teal-400 ",
-    violet: "hover:bg-violet-400/10 hover:text-violet-400 ",
-    yellow: "hover:bg-yellow-400/10 hover:text-yellow-400 "
-}
-
-export const SelectItem = ({children, color = "amethyst"}: Child) => {
     return (
-        <li tabIndex={0} className={`flex justify-between py-2 px-4 ${selectColor[color]}`}>
-            {children}
+        // <li className="flex justify-between w-full px-3 py-2 duration-75 cursor-pointer hover:bg-indigo-200 dark:hover:bg-indigo-400 hover:text-white" tabIndex={0}>
+        //             <span>Polygon</span>
+        //             <span>🔥</span>
+        //         </li>
+        //         <li className="w-full px-3 py-2 duration-75 cursor-pointer hover:bg-blue-200 dark:hover:bg-blue-400 hover:text-white" tabIndex={0}>Ethereum</li>
+        //         <li className="w-full px-3 py-2 duration-75 cursor-pointer hover:bg-amber-200 dark:hover:bg-amber-400 hover:text-white" tabIndex={0}>Bitcoin</li>
+        //         <li className="w-full px-3 py-2 duration-75 cursor-pointer hover:bg-red-200 dark:hover:bg-red-400 hover:text-white" tabIndex={0}>Tron</li>
+        //         <li className="w-full px-3 py-2 duration-75 cursor-pointer hover:bg-green-200 dark:hover:bg-green-400 hover:text-white" tabIndex={0}>Celo</li>
+        //         <li className="w-full px-3 py-2 duration-75 cursor-pointer hover:bg-pink-200 dark:hover:bg-pink-400 hover:text-white" tabIndex={0}>Kadena</li>
+        <li tabIndex={0} className={`flex justify-between py-2 px-4 ${selectColor[color]}`} onClick={() => handleChange?.(value)}>
+            {value}
         </li>
     )
 }
 
-export const RuiSelect = ({label = "Choose an ISO20022 coin", color = "amethyst"}: Props) => {
-    const [hidden, setHidden] = useState(true)
+export const RuiSelect = ({ label, children }: RuiSelectProps) => {
+    const [currentValue, setCurrentValue] = useState('');
+    const [open, setOpen] = useState(false);
+
+    const onChange = () => {
+        if (open === true) {
+            setOpen(false)
+            return;
+        };
+        setOpen(true)
+    }
+
+    const handleChange = (value: string) => {
+        setCurrentValue(value)
+        setOpen(false)
+    };
+
+    // return (
+    //     <div className={`relative antialiased w-fit text-sylver-100 focus:ring-2 focus:ring-${color}-400`}>
+    //         <button className="flex items-center justify-between px-3 py-2 space-x-3 duration-500 rounded-lg bg-russian-500" onClick={() => setHidden(!hidden)}>
+    //             <span>{label}</span>
+    //             <svg className={`w-4 h-4 ${hidden ? 'rotate-0 duration-300' : 'rotate-180 duration-300'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    //         </button>
+    //         <ul tabIndex={0} className={`absolute origin-top text-[1rem] w-full z-10 mt-1.5 h-40 rounded-md overflow-scroll bg-russian-500 ${hidden ? 'transform transition-all scale-0 opacity-0 duration-300' : 'transform transition-all opacity-100 duration-300'}`} role="list">
+    //             <SelectItem color='amethyst'>
+    //                 <span>XRP</span>
+    //                 <span>{<svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-check" width={24} height={24} viewBox="0 0 24 24" stroke-width={2} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+    //                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    //                     <path d="M5 12l5 5l10 -10"></path>
+    //                 </svg>}</span>
+    //             </SelectItem>
+    //             <SelectItem color='green'>
+    //                 XLM
+    //             </SelectItem>
+    //             <SelectItem color="amber">
+    //                 ALGO
+    //             </SelectItem>
+    //             <SelectItem color="peridot">
+    //                 IOTA
+    //             </SelectItem>
+    //             <SelectItem color="azure">
+    //                 XDC
+    //             </SelectItem>
+    //             <SelectItem color="red">
+    //                 BTC
+    //             </SelectItem>
+    //         </ul>
+    //     </div >
+    // )
 
     return (
-        <div className={`relative antialiased w-fit text-sylver-100 focus:ring-2 focus:ring-${color}-400`}>
-            <button className="flex items-center justify-between px-3 py-2 space-x-3 duration-500 rounded-lg bg-russian-500" onClick={() => setHidden(!hidden)}>
-                <span>{label}</span>
-                <svg className={`w-4 h-4 ${hidden ? 'rotate-0 duration-300' : 'rotate-180 duration-300'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <ul tabIndex={0} className={`absolute origin-top text-[1rem] w-full z-10 mt-1.5 h-40 rounded-md overflow-scroll bg-russian-500 ${hidden ? 'transform transition-all scale-0 opacity-0 duration-300' : 'transform transition-all opacity-100 duration-300'}`} role="list">
-                <SelectItem color='amethyst'>
-                    <span>XRP</span>
-                    <span>{<svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-check" width={24} height={24} viewBox="0 0 24 24" stroke-width={2} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M5 12l5 5l10 -10"></path>
-                    </svg>}</span>
-                </SelectItem>
-                <SelectItem color='green'>
-                    XLM
-                </SelectItem>
-                <SelectItem color="amber">
-                    ALGO
-                </SelectItem>
-                <SelectItem color="peridot">
-                    IOTA
-                </SelectItem>
-                <SelectItem color="azure">
-                    XDC
-                </SelectItem>
-                <SelectItem color="red">
-                    BTC
-                </SelectItem>
-            </ul>
-        </div >
+        <SelectContext.Provider value={{ label, currentValue, handleChange }}>
+            <div className="relative w-72 group">
+                <span className='sr-only'>Select Dropdown</span>
+                <button className={`peer flex w-full items-center justify-between rounded-lg bg-gray-200 dark:bg-transparent py-1 px-3 border border-red-400`} onClick={() => onChange()}>
+                    <span className="whitespace-nowrap text-russian-600 dark:text-sylver-100">{currentValue !== "" ? currentValue : label}</span>
+                    <div className="pl-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" className={`${open === true ? "group-focus-within:rotate-180" : "rotate-0"} duration-300 text-red-400`} width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </button>
+                <ul role="list" className={`appearance-none absolute z-10 mt-1.5 transform transition-all duration-300 ${open === true ? 'group-focus-within:translate-y-0 opacity-100 flex flex-col' : '-translate-y-2 opacity-0 hidden'} overflow-hidden duration-300 h-fit w-full rounded-xl bg-gray-200/80 backdrop-blur-sm`} tabIndex={0} >
+                    <span className='sr-only'>Select Dropdown Items</span>
+                    {children}
+                </ul>
+            </div>
+        </SelectContext.Provider>
     )
 }
 
