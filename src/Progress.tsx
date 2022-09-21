@@ -3,16 +3,16 @@ import { RuiProgressProps, barColor, donutColor, positionVar } from './types/Pro
 // @ts-ignore
 import styles from './modules/Progress.module.css'
 
-export const RuiProgress = ({ name, percentage, isGradient, color = 'amethyst', startColor = 'blue', endColor = 'amethyst', barDirection = 'Right', variant = 'Bar' }: RuiProgressProps) => {
+export const RuiProgress = ({ name, percentage, isGradient, color = 'amethyst', startColor = 'blue', endColor = 'amethyst', barDirection = 'right', variant = 'bar' }: RuiProgressProps) => {
     switch (variant) {
-        case "Bar":
+        case "bar":
             return (
                 <div id={name} tabIndex={0} role={'progressbar'} className={styles.progress}>
                     <div className={`h-full absolute rounded-full duration-300 ${isGradient ? `${positionVar[barDirection]} ${barColor[startColor][1]} ${barColor[endColor][2]}` : `${barColor[color][0]}`}`} style={{ width: `${percentage}%` }}></div>
                     <span className="sr-only">Progress Bar</span>
                 </div>
             );
-        case "Donut":
+        case "donut":
             return (
                 <div id={name} className="relative inline-flex items-center justify-center">
                     <div className={`absolute text-d-h4 font-semibold ${donutColor[color]}`}>{percentage}%</div>

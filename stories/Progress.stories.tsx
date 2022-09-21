@@ -18,8 +18,8 @@ const meta: Meta = {
 
 export default meta
 
-const TemplateBar: Story<RuiProgressProps> = (args) => <RuiProgress variant='Bar' {...args}  />
-const TemplateDonut: Story<RuiProgressProps> = (args) => <RuiProgress variant='Donut' {...args} />
+const TemplateBar: Story<RuiProgressProps> = (args) => <RuiProgress variant='bar' {...args}  />
+const TemplateDonut: Story<RuiProgressProps> = (args) => <RuiProgress variant='donut' {...args} />
 
 export const Bar = TemplateBar.bind({})
 export const Donut = TemplateDonut.bind({})

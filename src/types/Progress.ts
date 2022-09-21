@@ -1,8 +1,8 @@
 import { HTMLAttributes } from "react"
 import { color } from "./Generics"
 
-type barDirection = 'Left' | 'Right'
-type variant = 'Bar' | 'Donut'
+type barDirection = 'left' | 'right'
+type variant = 'bar' | 'donut'
 
 export interface RuiProgressProps extends HTMLAttributes<HTMLElement> {
     percentage: number
@@ -82,6 +82,6 @@ export const donutColor: { [key in color]: string } = {
 }
 
 export const positionVar: {[key in barDirection]: string} = {
-    Right: "bg-gradient-to-r",
-    Left: "bg-gradient-to-l",
+    right: "bg-gradient-to-r",
+    left: "bg-gradient-to-l",
 }
