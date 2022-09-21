@@ -1,0 +1,90 @@
+    .amber{ 
+        @apply bg-stratos-400/20 peer-checked:bg-amber-400
+    }
+    .amethyst{ 
+        @apply bg-stratos-400/20 peer-checked:bg-amethyst-400
+    }
+    .aqua{ 
+        @apply bg-stratos-400/20 peer-checked:bg-aqua-400
+    }
+    .azure{ 
+        @apply bg-stratos-400/20 peer-checked:bg-azure-400
+    }
+    .blue{ 
+        @apply bg-stratos-400/20 peer-checked:bg-blue-400
+    }
+    .cyan{ 
+        @apply bg-stratos-400/20 peer-checked:bg-cyan-400
+    }
+    .emerald{ 
+        @apply bg-stratos-400/20 peer-checked:bg-emerald-400
+    }
+    .fuchsia{ 
+        @apply bg-stratos-400/20 peer-checked:bg-fuchsia-400
+    }
+    .green{ 
+        @apply bg-stratos-400/20 peer-checked:bg-green-400
+    }
+    .indigo{ 
+        @apply bg-stratos-400/20 peer-checked:bg-indigo-400
+    }
+    .jade{ 
+        @apply bg-stratos-400/20 peer-checked:bg-jade-400
+    }
+    .jasper{ 
+        @apply bg-stratos-400/20 peer-checked:bg-jasper-400
+    }
+    .kunzite{ 
+        @apply bg-stratos-400/20 peer-checked:bg-kunzite-400
+    }
+    .lime{ 
+        @apply bg-stratos-400/20 peer-checked:bg-lime-400
+    }
+    .moonstone{ 
+        @apply bg-stratos-400/20 peer-checked:bg-moonstone-400
+    }
+    .orange{ 
+        @apply bg-stratos-400/20 peer-checked:bg-orange-400
+    }
+    .peridot{ 
+        @apply bg-stratos-400/20 peer-checked:bg-peridot-400
+    }
+    .pink{ 
+        @apply bg-stratos-400/20 peer-checked:bg-pink-400
+    }
+    .purple{ 
+        @apply bg-stratos-400/20 peer-checked:bg-purple-400
+    }
+    .red{ 
+        @apply bg-stratos-400/20 peer-checked:bg-red-400
+    }
+    .rose{ 
+        @apply bg-stratos-400/20 peer-checked:bg-rose-400
+    }
+    .ruby{ 
+        @apply bg-stratos-400/20 peer-checked:bg-ruby-400
+    }
+    .russian{ 
+        @apply bg-stratos-400/20 peer-checked:bg-russian-400
+    }
+    .scarlet{ 
+        @apply bg-stratos-400/20 peer-checked:bg-scarlet-400
+    }
+    .stratos{ 
+        @apply bg-stratos-400/20 peer-checked:bg-stratos-400
+    }
+    .sunstone{ 
+        @apply bg-stratos-400/20 peer-checked:bg-sunstone-400
+    }
+    .sylver{ 
+        @apply bg-stratos-400/20 peer-checked:bg-sylver-400
+    }
+    .teal{ 
+        @apply bg-stratos-400/20 peer-checked:bg-teal-400
+    }
+    .violet{ 
+        @apply bg-stratos-400/20 peer-checked:bg-violet-400
+    }
+    .yellow{ 
+        @apply bg-stratos-400/20 peer-checked:bg-yellow-400
+    }
