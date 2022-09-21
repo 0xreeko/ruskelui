@@ -1,3 +1,123 @@
 .kbd {
     @apply inline-flex items-center backdrop-blur-sm justify-center w-9 h-9 px-1 border border-b-4 rounded-md min-w-fit text-m-copy border-russian-900/80 bg-russian-600/80
 }
+
+.amber {
+    @apply text-amber-400
+}
+
+.amethyst {
+    @apply text-amethyst-400
+}
+
+.aqua {
+    @apply text-aqua-400
+}
+
+.azure {
+    @apply text-azure-400
+}
+
+.blue {
+    @apply text-blue-400
+}
+
+.cyan {
+    @apply text-cyan-400
+}
+
+.emerald {
+    @apply text-emerald-400
+}
+
+.fuchsia {
+    @apply text-fuchsia-400
+}
+
+.green {
+    @apply text-green-400
+}
+
+.indigo {
+    @apply text-indigo-400
+}
+
+.jade {
+    @apply text-jade-400
+}
+
+.jasper {
+    @apply text-jasper-400
+}
+
+.kunzite {
+    @apply text-kunzite-400
+}
+
+.lime {
+    @apply text-lime-400
+}
+
+.moonstone {
+    @apply text-moonstone-400
+}
+
+.orange {
+    @apply text-orange-400
+}
+
+.peridot {
+    @apply text-peridot-400
+}
+
+.pink {
+    @apply text-pink-400
+}
+
+.purple {
+    @apply text-purple-400
+}
+
+.red {
+    @apply text-red-400
+}
+
+.rose {
+    @apply text-rose-400
+}
+
+.ruby {
+    @apply text-ruby-400
+}
+
+.russian {
+    @apply text-russian-400
+}
+
+.scarlet {
+    @apply text-scarlet-400
+}
+
+.stratos {
+    @apply text-stratos-400
+}
+
+.sunstone {
+    @apply text-sunstone-400
+}
+
+.sylver {
+    @apply text-sylver-400
+}
+
+.teal {
+    @apply text-teal-400
+}
+
+.violet {
+    @apply text-violet-400
+}
+
+.yellow {
+    @apply text-yellow-400
+}
