@@ -1,7 +1,5 @@
 import React, { useContext, useState } from 'react'
 import { SelectContext } from './context/SelectContext'
-// @ts-ignore
-import styles from './modules/Select.module.css'
 import { RuiSelectChildProps, RuiSelectProps } from './types/Select'
 import { selectColor } from './utils/Select'
 
