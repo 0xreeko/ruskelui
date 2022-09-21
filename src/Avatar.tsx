@@ -1,8 +1,5 @@
 import React from 'react'
 import { RuiAvatarProps } from './types/Avatar'
-// @ts-ignore
-import styles from './modules/Avatar.module.css'
-
 
 export const RuiAvatar = ({ size = 6, variant = 'base', src, alt }: RuiAvatarProps) => {
     return (
