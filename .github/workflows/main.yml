@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Build Storybook
-        run: npm run build-storybook
+        run: yarn run build-storybook
 
       - name: Deploy Storybook
-        run: npm run deploy-storybook
+        run: yarn run deploy-storybook
