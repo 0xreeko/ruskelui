@@ -1,6 +1,7 @@
 import React from 'react';
 import {Meta, Story} from '@storybook/react'
-import { RuiPill, Props} from '../src/Pill'
+import { RuiPill } from '../src/Pill/'
+import { RuiPillProps } from '../src/Pill/Pill';
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Pill',
@@ -14,7 +15,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<Props> = (args) => <RuiPill {...args}/>
+const Template: Story<RuiPillProps> = (args) => <RuiPill {...args}/>
 
 export const Default = Template.bind({})
 

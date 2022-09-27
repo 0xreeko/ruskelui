@@ -1,5 +1,5 @@
 import React from 'react'
-import { RuiPillProps, colorVar } from './types/Pill'
+import { RuiPillProps, colorVar } from './Pill'
 
 export const RuiPill = ({children, color = "ruby", svg}: RuiPillProps) => {
 
