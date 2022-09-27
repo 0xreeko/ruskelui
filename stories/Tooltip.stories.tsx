@@ -1,6 +1,7 @@
 import React from "react";
 import {Meta, Story} from '@storybook/react'
-import {RuiTooltip, Props} from '../src/Tooltip'
+import {RuiTooltip} from '../src/Tooltip/'
+import {RuiTooltipProps} from '../src/Tooltip/Tooltip'
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Tooltip',
@@ -17,6 +18,6 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story<Props> = args => <RuiTooltip {...args} />
+const Template: Story<RuiTooltipProps> = args => <RuiTooltip {...args} />
 
 export const Default = Template.bind({})

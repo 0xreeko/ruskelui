@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from 'react';
-import { direction } from './Generics';
+import { direction } from '../types/Generics';
 
 export interface RuiTooltipProps extends HTMLAttributes<HTMLElement> {
     children: ReactNode

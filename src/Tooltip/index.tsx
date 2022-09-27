@@ -1,5 +1,5 @@
 import React from "react"
-import { RuiTooltipProps } from "./types/Tooltip"
+import { RuiTooltipProps } from "./Tooltip"
 
 export const RuiTooltip = ({ name, message, children, direction }: RuiTooltipProps) => {
     switch (direction) {
