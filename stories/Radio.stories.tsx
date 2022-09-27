@@ -1,7 +1,7 @@
 import React from 'react';
 import {Meta, Story} from '@storybook/react'
-import { RuiRadio } from '../src/Radio'
-import { RuiRadioProps } from '../src/types/Radio';
+import { RuiRadio } from '../src/Radio/'
+import { RuiRadioProps } from '../src/Radio/Radio';
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Radio',

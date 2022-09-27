@@ -1,7 +1,7 @@
 import React from "react"
-import { RuiRadioProps } from "./types/Radio"
+import { RuiRadioProps } from "./Radio"
 // @ts-ignore
-import styles from './modules/Radio.module.css'
+import styles from './Radio.module.css'
 
 export const RuiRadio = ({ label, value, name, variant }: RuiRadioProps) => {
     switch (variant) {
