@@ -1,5 +1,5 @@
 import React from 'react'
-import { RuiButtonProps, baseColor, ghostColor, textColor, gradientColor, gradientFlow, threeDeeColor, threeDeeGeeColor, } from './types/Button'
+import { RuiButtonProps, baseColor, ghostColor, textColor, gradientColor, gradientFlow, threeDeeColor, threeDeeGeeColor, } from './Button'
 
 export const RuiButton = ({ children, color = 'amethyst', size = "base", isDisabled = false, variant = "Base", startColor = "fuchsia", endColor = "purple", direction = "topRight" }: RuiButtonProps) => {
   switch (variant) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Meta, Story} from '@storybook/react'
-import { RuiButton } from '../src/Button'
-import { gradientFlow, RuiButtonProps } from '../src/types/Button';
+import { RuiButton } from '../src/Button/index'
+import { RuiButtonProps } from '../src/Button/Button';
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Button',

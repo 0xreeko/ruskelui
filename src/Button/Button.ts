@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from "react";
-import { color, direction } from "./Generics";
+import { color, direction } from "../types/Generics";
 
 type variant = "Base" | "Ghost" | "Gradient" | "Text" | "3D" | "3DGradient"
 
