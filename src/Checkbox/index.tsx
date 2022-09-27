@@ -1,7 +1,7 @@
 import React from 'react'
-import { RuiCheckboxProps } from './types/Checkbox'
+import { RuiCheckboxProps } from './Checkbox'
 // @ts-ignore
-import styles from './modules/Checkbox.module.css'
+import styles from './Checkbox.module.css'
 
 export const RuiCheckbox = ({children, color = 'ruby', variant ="white", strikeThrough= false, defaultChecked}: RuiCheckboxProps) => {
   return (
@@ -15,3 +15,5 @@ export const RuiCheckbox = ({children, color = 'ruby', variant ="white", strikeT
     </label>
   )
 }
+
+export default RuiCheckbox

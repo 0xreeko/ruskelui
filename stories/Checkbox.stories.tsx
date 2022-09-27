@@ -1,7 +1,7 @@
 import React from 'react';
 import {Meta, Story} from '@storybook/react'
-import { RuiCheckbox } from '../src/Checkbox'
-import { RuiCheckboxProps } from '../src/types/Checkbox';
+import { RuiCheckbox } from '../src/Checkbox/'
+import { RuiCheckboxProps } from '../src/Checkbox/Checkbox';
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Checkbox',
