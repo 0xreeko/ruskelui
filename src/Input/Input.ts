@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from "react"
-import { color } from "./Generics"
+import { color } from "../types/Generics"
 
 type variant = "base" | "file" | "number" | "otp" | "password" | "textarea"
 

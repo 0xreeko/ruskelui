@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from "@storybook/react";
-import { RuiInput } from '../src/Input'
-import { RuiInputProps } from '../src/types/Input';
+import { RuiInput } from '../src/Input/'
+import { RuiInputProps } from '../src/Input/Input';
 
 
 const meta: Meta = {

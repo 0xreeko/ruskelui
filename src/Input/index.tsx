@@ -1,12 +1,12 @@
 import React from "react";
-import { RuiInputProps, inputColor } from "./types/Input";
+import { RuiInputProps, inputColor } from "./Input";
 // @ts-ignore
 import styles from './modules/Input.module.css'
 
 // const OTP = () => (<div className="">OTP input</div>)
-// const Textarea = () => (
-//     <textarea name="" id="" cols={40} rows={10} className="px-2 py-3 border rounded-lg"></textarea>
-// )
+const Textarea = () => (
+    <textarea name="" id="" cols={40} rows={10} className="px-2 py-3 border rounded-lg"></textarea>
+)
 // const Password = () => (<div className="">password input</div>)
 
 export const RuiInput = ({ label, placeholder, floatingLabel, name = "username", color = "kunzite", fullWidth = false, leftIcon, rightIcon}: RuiInputProps) => {
@@ -35,6 +35,6 @@ export const RuiInput = ({ label, placeholder, floatingLabel, name = "username",
 
 // RuiInput.Password = Password
 // RuiInput.OTP = OTP
-// RuiInput.Textarea = Textarea
+RuiInput.Textarea = Textarea
 
 export default RuiInput
