@@ -1,4 +1,4 @@
-import { color } from './Generics';
+import { color } from '../types/Generics';
 import { HTMLAttributes, ReactNode } from 'react';
 
 type AccordionData = {

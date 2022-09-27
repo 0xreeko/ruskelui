@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react';
-import { RuiAccordion } from '../src/Accordion'
-import { RuiAccordionProps } from '../src/types/Accordion';
+import { RuiAccordionProps } from '../src/Accordion/Accordion';
+import {RuiAccordion} from '../src/Accordion/index';
 
 const meta: Meta = {
     title: "@RuskelUI/Components/Accordion",

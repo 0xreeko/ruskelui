@@ -1,6 +1,6 @@
 import './tailwind.css'
 
-export * from './Accordion'
+export * from './Accordion/Accordion'
 export * from './Avatar'
 export * from './Breadcrumbs'
 export * from './Button'

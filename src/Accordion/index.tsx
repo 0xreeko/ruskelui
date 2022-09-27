@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import { RuiAccordionProps } from './types/Accordion'
+import {RuiAccordionProps} from './Accordion'
 import { accordionColor } from './utils/Accordion'
 // @ts-ignore
-import styles from './modules/Accordion.module.css'
-
-
+import styles from './Accordion.module.css'
 
 export const RuiAccordion = ({ data, color = "amethyst", fullWidth = false }: RuiAccordionProps) => {
 

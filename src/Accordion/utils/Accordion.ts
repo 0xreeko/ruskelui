@@ -1,4 +1,4 @@
-import { color } from "../types/Generics";
+import { color } from "../../types/Generics";
 
 export const accordionColor: { [key in color]: string[] } = {
     amber: ["hover:text-amber-400 duration-300", "text-amber-400"],
