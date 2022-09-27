@@ -1,6 +1,6 @@
 import React from "react"
-import { RuiButton } from "./Button/";
-import { RuiModalProps } from "./types/Modal";
+import { RuiButton } from "../Button";
+import { RuiModalProps } from "./Modal";
 
 const Header = () => <div className=""></div>
 const Main = () => <div className=""></div>

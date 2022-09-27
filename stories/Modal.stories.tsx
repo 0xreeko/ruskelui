@@ -1,6 +1,7 @@
 import React from 'react'
 import {Meta, Story} from "@storybook/react"
-import {RuiModal, Props} from '../src/Modal'
+import { RuiModal } from '../src/Modal/'
+import { RuiModalProps } from '../src/Modal/Modal'
 
 const meta: Meta = {
     title: "@RuskelUI/Components/Modal",
@@ -9,6 +10,6 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<Props> = args => <RuiModal {...args} />
+const Template: Story<RuiModalProps> = args => <RuiModal {...args} />
 
 export const Default = Template.bind({})
