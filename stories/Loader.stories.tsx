@@ -1,6 +1,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import { RuiLoader, Props} from '../src/Loader'
+import { RuiLoader } from '../src/Loader'
+import { RuiLoaderProps } from '../src/Loader/Loader'
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Loader',
@@ -9,6 +10,6 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story<Props> = (args) => <RuiLoader {...args}/>
+const Template: Story<RuiLoaderProps> = (args) => <RuiLoader {...args}/>
 
 export const Default = Template.bind({})

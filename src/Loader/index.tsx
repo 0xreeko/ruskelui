@@ -1,5 +1,5 @@
 import React, { FC } from "react"
-import { RuiLoaderProps, fillColor } from "./types/Loader"
+import { RuiLoaderProps, fillColor } from "./Loader"
 
 export const RuiLoader:FC<RuiLoaderProps> = ({color = "peridot", name}) => {
     return (
