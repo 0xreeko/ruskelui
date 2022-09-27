@@ -1,7 +1,7 @@
 import React from 'react'
 import {Meta, Story} from '@storybook/react'
-import { RuiSelect } from '../src/Select'
-import { RuiSelectProps } from '../src/types/Select'
+import { RuiSelect } from '../src/Select/'
+import { RuiSelectProps } from '../src/Select/Select'
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Select',

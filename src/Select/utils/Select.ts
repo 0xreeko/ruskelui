@@ -1,4 +1,4 @@
-import { color } from "../types/Generics";
+import { color } from "../../types/Generics";
 
 export const selectColor: { [key in color]: string } = {
     amber: "hover:bg-amber-400/10 hover:text-amber-400 ",

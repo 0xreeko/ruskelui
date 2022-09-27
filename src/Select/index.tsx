@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
-import { SelectContext } from './context/SelectContext'
-import { RuiSelectChildProps, RuiSelectProps } from './types/Select'
+import { SelectContext } from '../context/SelectContext'
+import { RuiSelectChildProps, RuiSelectProps } from './Select'
 import { selectColor } from './utils/Select'
 
 export const SelectItem = ({ value = "d", color = "amethyst" }: RuiSelectChildProps) => {
