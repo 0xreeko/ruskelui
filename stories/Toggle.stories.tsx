@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react';
-import {RuiToggle, Props} from '../src/Toggle'
+import {RuiToggle} from '../src/Toggle/'
+import {RuiToggleProps} from '../src/Toggle/Toggle'
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Toggle',
@@ -9,6 +10,6 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<Props> = (args) => <RuiToggle {...args} />
+const Template: Story<RuiToggleProps> = (args) => <RuiToggle {...args} />
 
 export const Default = Template.bind({})

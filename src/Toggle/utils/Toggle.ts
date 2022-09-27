@@ -1,4 +1,4 @@
-import { color } from "../types/Generics";
+import { color } from "../../types/Generics";
 
 export const toggleColor: {[key in color]: string} = {
     amber: "bg-stratos-400/20 peer-checked:bg-amber-400",

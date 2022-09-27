@@ -1,7 +1,7 @@
 import React from 'react'
-import { RuiToggleProps } from './types/Toggle';
+import { RuiToggleProps } from './Toggle';
 // @ts-ignore
-import styles from './modules/Toggle.module.css'
+import styles from './Toggle.module.css'
 import { toggleColor } from './utils/Toggle';
 
 export const RuiToggle = ({color = 'amethyst', name}: RuiToggleProps) => {
