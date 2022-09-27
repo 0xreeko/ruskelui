@@ -1,7 +1,7 @@
 import React from 'react'
 import {Meta, Story} from '@storybook/react'
-import { RuiProgress } from '../src/Progress'
-import { RuiProgressProps } from '../src/types/Progress'
+import { RuiProgress } from '../src/Progress/'
+import { RuiProgressProps } from '../src/Progress/Progress'
 
 const meta: Meta = {
     title: "@RuskelUI/Components/Progress",

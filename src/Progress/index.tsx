@@ -1,7 +1,7 @@
 import React from 'react'
-import { RuiProgressProps, barColor, donutColor, positionVar } from './types/Progress';
+import { RuiProgressProps, barColor, donutColor, positionVar } from './Progress';
 // @ts-ignore
-import styles from './modules/Progress.module.css'
+import styles from './Progress.module.css'
 
 export const RuiProgress = ({ name, percentage, isGradient, color = 'amethyst', startColor = 'blue', endColor = 'amethyst', barDirection = 'right', variant = 'bar' }: RuiProgressProps) => {
     switch (variant) {
