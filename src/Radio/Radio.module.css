@@ -29,14 +29,14 @@
     }
   
     .radio span::after {
-      @apply absolute w-2 h-2 bg-transparent left-1.5 duration-150;
+      @apply absolute block w-2 h-2 bg-transparent left-1.5 duration-300 transform scale-0 opacity-0 ease-in-out;
     }
   
-    .radio input:checked + span::before {
+    .radio input[type='radio']:checked ~ span::before {
       @apply bg-pink-400 border-pink-600;
     }
   
-    .radio input:checked + span::after{
-      @apply bg-white/40 backdrop-blur-sm delay-100
+    .radio input[type='radio']:checked ~ span::after {
+      @apply scale-100 -translate-y-1/2 opacity-100 top-1/2 bg-white/40;
     }
   
