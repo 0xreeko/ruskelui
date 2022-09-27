@@ -1,7 +1,7 @@
 import {Meta, Story} from '@storybook/react'
 import React from 'react';
-import { RuiAvatar } from '../src/Avatar'
-import { RuiAvatarProps } from '../src/types/Avatar';
+import {RuiAvatar} from '../src/Avatar/index'
+import { RuiAvatarProps } from '../src/Avatar/Avatar';
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Avatar',

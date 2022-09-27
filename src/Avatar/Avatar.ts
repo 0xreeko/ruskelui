@@ -1,5 +1,5 @@
 import { HTMLAttributes } from 'react';
-import { color } from './Generics';
+import { color } from '../types/Generics';
 
 type variant = 'base' | 'rounded'
 

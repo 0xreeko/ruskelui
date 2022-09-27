@@ -1,5 +1,5 @@
 import React from 'react'
-import { RuiAvatarProps } from './types/Avatar'
+import { RuiAvatarProps } from './Avatar'
 
 export const RuiAvatar = ({ size = 6, variant = 'base', src, alt }: RuiAvatarProps) => {
     return (
@@ -11,3 +11,5 @@ export const RuiAvatar = ({ size = 6, variant = 'base', src, alt }: RuiAvatarPro
         </div>
     )
 }
+
+export default RuiAvatar
