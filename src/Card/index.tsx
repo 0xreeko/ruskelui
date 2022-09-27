@@ -1,5 +1,5 @@
 import React from "react"
-import { RuiCardProps } from "./types/Card"
+import { RuiCardProps } from "./Card"
 
 export const RuiCard = ({}: RuiCardProps) => {
     return (

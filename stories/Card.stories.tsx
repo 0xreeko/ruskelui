@@ -1,6 +1,7 @@
 import React from 'react';
 import {Meta, Story} from '@storybook/react'
-import { RuiCard, Props} from '../src/Card'
+import { RuiCard } from '../src/Card/'
+import { RuiCardProps } from '../src/Card/Card';
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Card',
@@ -10,6 +11,6 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<Props> = (args) => <RuiCard {...args}/>
+const Template: Story<RuiCardProps> = (args) => <RuiCard {...args}/>
 
 export const Default = Template.bind({})
