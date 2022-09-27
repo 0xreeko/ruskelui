@@ -44,7 +44,7 @@ const DropdownItem = ({ children, leftIcon, rightIcon, isSub, color ="ruby"}: Ru
 
 export const RuiDropdown = ({ children }: RuiDropdownProps) => {
     return (
-        <div className="home">
+        <div className="">
             {children}
         </div>
     )

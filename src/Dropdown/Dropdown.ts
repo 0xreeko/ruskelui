@@ -12,6 +12,11 @@ export interface RuiDropdownProps extends HTMLAttributes<HTMLElement> {
     color?: color
 }
 
+type RuiDropdownWrapperProps = Pick<RuiDropdownProps, "children">
+type RuiDropdownInvokerProps = Pick<RuiDropdownProps, "children" | "menu" | "isSub">
+type RuiDropdownMenuProps = Pick<RuiDropdownProps, "children">
+type RuiDropdownItemProps = Pick<RuiDropdownProps, "leftIcon" | "rightIcon" | "children" | "isSub" | "menu">
+
 export const hoverColor: { [key in color]: string } = {
     amber: "hover:bg-amber-400/20 hover:text-amber-400 ",
     amethyst: "hover:bg-amethyst-400/20 hover:text-amethyst-400 ",

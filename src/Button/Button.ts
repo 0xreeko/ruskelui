@@ -7,25 +7,15 @@ type size = "small" | "xlarge" | "large" | 'base'
 
 export interface RuiButtonProps extends HTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
-
     svg?: ReactNode;
-
     startColor?: color
-
     endColor?: color
-
     /** Available colour ways to style your Button */
     color?: color;
-
     /** Provide a size for Button */
     size: size
-
     direction?: direction
-
     isDisabled?: boolean
-
-    ripples?: boolean
-
     variant?: variant
 }
 
