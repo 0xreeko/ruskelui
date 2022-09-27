@@ -1,5 +1,5 @@
 import React from "react"
-import { RuiToastProps, colorVar } from "./types/Toast"
+import { RuiToastProps, colorVar } from "./Toast"
 
 export const RuiToast = ({title = 'Transaction Unsuccessful!', content, color = "peridot"}: RuiToastProps) => {
 

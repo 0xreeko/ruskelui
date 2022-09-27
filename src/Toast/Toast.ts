@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react"
-import { color, direction } from "./Generics"
+import { color, direction } from "../types/Generics"
 
 export interface RuiToastProps extends HTMLAttributes<HTMLElement> {
     color: color
