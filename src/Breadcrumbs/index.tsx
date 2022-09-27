@@ -1,7 +1,7 @@
 import React from 'react'
-import { RuiBreadcrumbsProps } from './types/Breadcrumbs'
+import { RuiBreadcrumbsProps } from './Breadcrumbs'
 //@ts-ignore
-import styles from './modules/Breadcrumbs.module.css'
+import styles from './Breadcrumbs.module.css'
 
 const dividerIcon = <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} viewBox="0 0 24 24" stroke-width={2} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>

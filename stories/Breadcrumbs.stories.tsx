@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react';
-import { RuiBreadcrumbs } from '../src/Breadcrumbs'
-import { RuiBreadcrumbsProps } from '../src/types/Breadcrumbs';
+import { RuiBreadcrumbs } from '../src/Breadcrumbs/index'
+import { RuiBreadcrumbsProps } from '../src/Breadcrumbs/Breadcrumbs';
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Breadcrumbs',

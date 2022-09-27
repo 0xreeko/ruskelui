@@ -2,7 +2,7 @@ import './tailwind.css'
 
 export * from './Accordion/'
 export * from './Avatar/'
-export * from './Breadcrumbs'
+export * from './Breadcrumbs/Breadcrumbs'
 export * from './Button'
 export * from './Checkbox'
 export * from './Dropdown'
