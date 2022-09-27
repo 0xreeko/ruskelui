@@ -1,6 +1,7 @@
 import React from 'react';
 import {Meta, Story} from '@storybook/react'
-import {RuiPagination, Props} from '../src/Pagination'
+import { RuiPagination } from '../src/Pagination/'
+import { RuiPaginationProps } from '../src/Pagination/Pagination';
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Pagination',
@@ -9,6 +10,6 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<Props> = (args) => <RuiPagination {...args} />
+const Template: Story<RuiPaginationProps> = (args) => <RuiPagination {...args} />
 
 export const Default = Template.bind({})

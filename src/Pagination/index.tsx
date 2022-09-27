@@ -1,7 +1,7 @@
 import React from 'react'
 // @ts-ignore
-import styles from './modules/RuiPagination.module.css'
-import { RuiPaginationProps, colorVar } from './types/Pagination'
+import styles from './RuiPagination.module.css'
+import { RuiPaginationProps, colorVar } from './Pagination'
  
 export const RuiPagination = ({color = "ruby"}: RuiPaginationProps) => {
     return (
