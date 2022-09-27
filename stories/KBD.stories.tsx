@@ -1,6 +1,7 @@
 import React from 'react'
 import {Meta,Story} from '@storybook/react'
-import {RuiKBD, Props} from '../src/KBD'
+import { RuiKBD } from '../src/KBD/'
+import { RuiKBDProps } from '../src/KBD/KBD'
 
 const meta: Meta = {
     title: '@RuskelUI/Components/KBD',
@@ -9,7 +10,7 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story<Props> = args => <RuiKBD {...args} />
+const Template: Story<RuiKBDProps> = args => <RuiKBD {...args} />
 
 export const Default = Template.bind({})
 
