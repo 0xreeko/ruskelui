@@ -36,7 +36,7 @@ I wanted to create my own UI vault that would be the official UI set of primitiv
 
 It follows what I deem as `Neonic Nerophism`, which combines three UI trends together - neonic colours, dark mode and glassmorphism, hence the name. The goal for this project is to rapidly create aesthetically beautiful interfaces, getting you from concept to production very quickly in the ReactJs ecosystem.
 
-Live Storybook Demo (Github Pages): https://0xreeko.github.io/ruskelui
+Check out RuskelUI via [Storybook](https://0xreeko.github.io/ruskelui) or try out the [RuskelUI Playground](https://stackblitz.com/edit/react-ts-fd9u5q?file=App.tsx) in StackBlitz.
 
 ### Star Us!
 If this project helps/has helped you build your Web3 projects faster, star us - every little star helps!
@@ -65,7 +65,7 @@ yarn add ruskelui
 
 ### Components
 
-### Accordion
+#### Accordion
 The Accordion element displays information from a user in the form of an image if available, and displaying the initials of the user if the user's image is not available.
 
 **Props**
@@ -77,7 +77,7 @@ data | Array that takes objects with `title` and `content` as keys | `AccordionD
 fullWidth | Make the accordion full available width or not | boolean | false
 color | label | `color` | 
 
-### Avatar
+#### Avatar
 The Avatar element displays information from a user in the form of an image if available, and displaying the initials of the user if the user's image is not available.
 
 
@@ -91,7 +91,7 @@ alt | abac | string |
 badgeColor | abac | `color` | undefined
 variant | abac | `variant` | base
 
-### Breadcrumbs
+#### Breadcrumbs
 The Breadcrumbs element.
 
 **Props**
@@ -105,7 +105,7 @@ divider | placeholder | ReactNode |
 children | placeholder | ReactNode | 
 variant | placeholder | `variant` | 
 
-### Button
+#### Button
 The Button element.
 
 **Props**
@@ -122,7 +122,7 @@ direction | placeholder | `direction` | string
 isDisabled | placeholder | boolean | string
 variant | placeholder | `variant` | string
 
-### Card
+#### Card
 The Card element displays information.
 
 **Props**
@@ -134,7 +134,7 @@ floatingLabel | floating-label | abac | string
 label | label | abac | string
 placeholder | placeholder | abac | string
 
-### Checkbox
+#### Checkbox
 The Checkbox element displays checked elements.
 
 **Props**
@@ -147,7 +147,7 @@ variant| label-before | `variant` |
 strikeThrough | name | abac | false 
 defaultChecked | name | boolean | false 
 
-### Dropdown
+#### Dropdown
 The Dropdown element displays options to select elements.
 
 **Props**
@@ -163,7 +163,7 @@ idx | label | string | string
 route | label | string | string
 color | label | `color` |
 
-### Input
+#### Input
 The Input element allows data input.
 
 **Props**
@@ -176,7 +176,7 @@ label | label | abac | string
 placeholder | placeholder | abac | string
 
 
-### Loader
+#### Loader
 The Loader element.
 
 **Props**
@@ -186,7 +186,7 @@ The Loader element.
 color | color | Sets the color of the inner element inside the loader | string
 name | name | Name that's attached to ID HTML attribute | string
 
-### Modal
+#### Modal
 The Modal element.
 
 **Props**
@@ -198,7 +198,7 @@ floatingLabel | floating-label | abac | string
 label | label | abac | string
 placeholder | placeholder | abac | string
 
-### Pill
+#### Pill
 The Pill element displays information or status about a process.
 
 **Props**
@@ -212,7 +212,7 @@ The Pill element displays information or status about a process.
 |iconAfter | icon-after | Sets the icon to appear after the label | boolean | undefined
 |color | color | Sets the global color of the pill | string | undefined
 
-### Progress
+#### Progress
 The ProgressBar element visually shows the % of the meter filled.
 
 **Props**
@@ -227,7 +227,7 @@ The ProgressBar element visually shows the % of the meter filled.
 |endColour | endColour | Ending colour of dual gradient | colorType | "amethyst"
 |percentage | percentage | Sets the percentage value for the progress bar and changes how much is filled | number
 
-### Radio
+#### Radio
 The Radio element.
 
 **Props**
@@ -239,7 +239,7 @@ floatingLabel | floating-label | abac | string
 label | label | abac | string
 placeholder | placeholder | abac | string
 
-### Select
+#### Select
 The Select element.
 
 **Props**
@@ -251,7 +251,7 @@ floatingLabel | floating-label | abac | string
 label | label | abac | string
 placeholder | placeholder | abac | string
 
-### Toast
+#### Toast
 The Toast element.
 
 **Props**
@@ -262,7 +262,7 @@ color | color | Sets the colour from RuskelUI's neonic colours or Tailwind's nat
 title | title | Sets the title of the toast component | string
 content | content | Sets the content of the toast to convey information | ReactNode
 
-### Toggle
+#### Toggle
 The Toggle element.
 
 **Props**
@@ -272,7 +272,7 @@ The Toggle element.
 color | color | Sets BG color as RuskelUI's neonic colours or Tailwind's native colours | string
 name | name | Sets the accesibility name | string
 
-### Tooltip
+#### Tooltip
 The Tooltip element.
 
 **Props**
