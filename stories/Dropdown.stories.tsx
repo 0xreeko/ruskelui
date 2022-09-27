@@ -1,6 +1,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import { RuiDropdown, RootProps } from '../src/Dropdown'
+import { RuiDropdown } from '../src/Dropdown/'
+import { RuiDropdownProps } from '../src/Dropdown/Dropdown'
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Dropdown',
@@ -12,7 +13,7 @@ export default meta
 const iconUser = <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
 const iconChev = <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
 
-const Template: Story<RootProps> = (args) => <RuiDropdown.Wrapper {...args}>
+const Template: Story<RuiDropdownProps> = (args) => <RuiDropdown.Wrapper {...args}>
     <RuiDropdown.Button menu='main'>Profile</RuiDropdown.Button>
     <RuiDropdown.Menu menu='main'>
         <RuiDropdown.Item leftIcon={iconUser} rightIcon={iconChev} menu='settings' isSub>

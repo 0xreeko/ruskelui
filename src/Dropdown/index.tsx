@@ -1,7 +1,7 @@
 import React from 'react'
-import { RuiDropdownProps, hoverColor } from './types/Dropdown'
+import { RuiDropdownProps, hoverColor } from './Dropdown'
 // @ts-ignore
-import styles from './modules/Dropdown.module.css'
+import styles from './Dropdown.module.css'
 
 // Wrapper
 const DropdownWrap = ({ children }: RuiDropdownProps) => {
