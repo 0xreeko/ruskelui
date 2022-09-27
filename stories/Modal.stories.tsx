@@ -10,6 +10,9 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<RuiModalProps> = args => <RuiModal {...args} />
+const Template: Story<RuiModalProps> = args => <RuiModal {...args}>
+    <h1>Hi this is a modal!</h1>
+    <p>Giving you the room to customise the functionality around this modal, since it's extending the native Dialog element 👾</p>
+</RuiModal>
 
 export const Default = Template.bind({})
