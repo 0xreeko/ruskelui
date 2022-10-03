@@ -1,10 +1,10 @@
 	import React from "react"
 	import { RuiModalProps } from "./Modal";
 
-	export const RuiModal = ({ children, name, size = "lg" }: RuiModalProps) => {
+export const RuiModal = ({ children, name, size = "sm", pointer }: RuiModalProps) => {
 		return (
-				<dialog className={`p-4 border border-gray-200 min-w-xs w-full max-w-${size} modal rounded-xl bg-gray-200/70 backdrop-blur-sm ${name ?? 'modalia'}`} id={name ?? 'modalia'}>
-					{children}
+				<dialog ref={pointer} className={`p-4 border border-gray-200 min-w-xs w-full max-w-${size} rounded-xl bg-gray-200/70 backdrop-blur-sm`} id={name}>
+				{children}
 				</dialog>
 		)
 	}
