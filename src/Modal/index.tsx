@@ -1,12 +1,14 @@
-	import React from "react"
-	import { RuiModalProps } from "./Modal";
+import React from "react"
+import { RuiModalProps } from "./Modal";
+// @ts-ignore
+import styles from './Modal.module.css'
 
-export const RuiModal = ({ children, name, size = "sm", pointer }: RuiModalProps) => {
-		return (
-				<dialog ref={pointer} className={`p-4 border border-gray-200 min-w-xs w-full max-w-${size} rounded-xl bg-gray-200/70 backdrop-blur-sm`} id={name}>
+export const RuiModal = ({ children, size = "md", pointer }: RuiModalProps) => {
+	return (
+			<dialog ref={pointer} className={`p-4 min-w-xs ${styles.modal} max-w-${size}`}>
 				{children}
-				</dialog>
-		)
-	}
+			</dialog>
+	)
+}
 
-	export default RuiModal
+export default RuiModal
