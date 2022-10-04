@@ -210,7 +210,18 @@ The Pill element displays information or status about a process.
 |label | label | Useful for displaying statuses | string | undefined
 |iconBefore | icon-before | Default version - sets the icon to appear before the label | boolean | true
 |iconAfter | icon-after | Sets the icon to appear after the label | boolean | undefined
-|color | color | Sets the global color of the pill | string | undefined
+|color | color | Sets the global color of the pill | ruby | undefined
+
+**Component**
+```jsx
+import {RuiPill} from 'ruskelui';
+
+const App = () => {
+    return (
+        <RuiPill color={"ruby"} label="Processing" />
+    )
+}
+```
 
 #### Progress
 The ProgressBar element visually shows the % of the meter filled.
@@ -291,7 +302,7 @@ import {RuiTooltip} from 'ruskelui';
 const App = () => {
     let _message = "Fire reaction"
     return (
-        <RuiTooltip message={_message}>
+        <RuiTooltip message={_message} direction={"top"}>
             <button>🔥</button>
         </RuiTooltip>
     )
