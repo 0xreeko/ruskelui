@@ -131,6 +131,7 @@ divider | placeholder | ReactNode |
 children | placeholder | ReactNode | 
 variant | placeholder | `variant` |
 
+**Code Example**
 ```jsx
 import { RuiBreadcrumbs } from 'ruskelui'
 
@@ -160,6 +161,17 @@ size | placeholder | `size` | string
 direction | placeholder | `direction` | string
 isDisabled | placeholder | boolean | string
 variant | placeholder | `variant` | string
+
+**Code Example**
+```jsx
+import { RuiButton } from 'ruskelui'
+
+const App = () => {
+    return (
+        <RuiButton color="amethyst" size={"small"}>Connect Wallet</RuiButton>
+    )
+}
+```
 
 #### Card
 The Card element displays information.
