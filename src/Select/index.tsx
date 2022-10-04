@@ -46,7 +46,7 @@ export const RuiSelect = ({ label, children, selectedIcon = "🔥" }: RuiSelectP
         <SelectContext.Provider value={{ label, currentValue, handleChange, selectedIcon }}>
             <div className="relative w-72 group">
                 <span className='sr-only'>Select Dropdown</span>
-                <button className={`peer flex w-full items-center justify-between rounded-lg bg-gray-200 dark:bg-russian-400/40 py-1 px-3`} onClick={() => onChange()}>
+                <button className={`peer flex w-full items-center justify-between border border-gray-300 dark:border-gray-800 rounded-lg bg-gray-200 dark:bg-russian-400/40 py-1 px-3`} onClick={() => onChange()}>
                     <span className="whitespace-nowrap text-russian-600 dark:text-sylver-100">{currentValue !== "" ? currentValue : label}</span>
                     <div className="pl-3">
                         <svg xmlns="http://www.w3.org/2000/svg" className={`${open === true ? "group-focus-within:rotate-180" : "rotate-0"} duration-300 text-red-400`} width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
