@@ -129,7 +129,20 @@ route | floating-label | string |
 fullWidth | label | boolean | 
 divider | placeholder | ReactNode | 
 children | placeholder | ReactNode | 
-variant | placeholder | `variant` | 
+variant | placeholder | `variant` |
+
+```jsx
+import { RuiBreadcrumbs } from 'ruskelui'
+
+const App = () => {
+    return (
+        <RuiBreadcrumbs fullWidth divider={"-"}>
+            <RuiBreadcrumbs.Item route='/'>Home</RuiBreadcrumbs.Item>
+            <RuiBreadcrumbs.Item route='/blog' variant='current'>Blog</RuiBreadcrumbs.Item>
+        </RuiBreadcrumbs>
+    )
+} 
+```
 
 #### Button
 The Button element.
