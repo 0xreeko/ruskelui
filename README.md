@@ -196,7 +196,18 @@ children | color | ReactNode |
 color | label-after | `color` | ruby
 variant| label-before | `variant` |
 strikeThrough | name | abac | false 
-defaultChecked | name | boolean | false 
+defaultChecked | name | boolean | false
+
+**Code Example**
+```jsx
+import { RuiCheckbox } from 'ruskelui'
+
+const App = () => {
+    return (
+        <RuiCheckbox />
+    )
+}
+```
 
 #### Dropdown
 The Dropdown element displays options to select elements.
@@ -214,6 +225,40 @@ idx | label | string | string
 route | label | string | string
 color | label | `color` |
 
+**Code Example**
+```jsx
+import { RuiDropdown } from 'ruskelui'
+
+const App = () => {
+    return (
+        <RuiDropdown.Wrapper>
+            <RuiDropdown.Button menu='main'>Profile</RuiDropdown.Button>
+            <RuiDropdown.Menu menu='main'>
+                <RuiDropdown.Item leftIcon={iconUser} rightIcon={iconChev} menu='settings' isSub>
+                    Account Settings
+                <RuiDropdown.Menu menu='settings' isSub>
+                        <RuiDropdown.Item color='ruby'>User Settings</RuiDropdown.Item>
+                        <RuiDropdown.Item color='ruby'>Dashboard Settings</RuiDropdown.Item>
+                        <RuiDropdown.Item color='ruby'>Team Settings</RuiDropdown.Item>
+                        <RuiDropdown.Item color='scarlet'>Deactivate</RuiDropdown.Item>
+                    </RuiDropdown.Menu>
+                </RuiDropdown.Item>
+                <RuiDropdown.Item>Support</RuiDropdown.Item>
+                <RuiDropdown.Item>License</RuiDropdown.Item>
+                <RuiDropdown.Item rightIcon={iconChev} color='amethyst'>
+                    Documentation
+                    <RuiDropdown.Menu leftIcon={iconUser} menu='documentation' isSub>
+                        <RuiDropdown.Item color='amethyst'>Litepaper</RuiDropdown.Item>
+                        <RuiDropdown.Item color='amethyst'>PoC</RuiDropdown.Item>
+                        <RuiDropdown.Item color='amethyst'>Technical</RuiDropdown.Item>
+                    </RuiDropdown.Menu>
+                </RuiDropdown.Item>
+            </RuiDropdown.Menu>
+</RuiDropdown.Wrapper>
+    )
+}
+```
+
 #### Input
 The Input element allows data input.
 
@@ -226,6 +271,39 @@ floatingLabel | floating-label | abac | string
 label | label | abac | string
 placeholder | placeholder | abac | string
 
+**Code Example**
+```jsx
+import { RuiInput } from 'ruskelui'
+
+const App = () => {
+    return (
+        <RuiInput color >
+    )
+    
+}
+```
+
+#### KBD
+The KBD element.
+
+**Props**
+
+| Property     | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- |
+color | color | Sets the color of the inner element inside the loader | string
+name | name | Name that's attached to ID HTML attribute | string
+
+**Code Example**
+```jsx
+import { RuiKBD } from 'ruskelui'
+
+const App = () => {
+    return (
+        <RuiKBD color="teal">enter</RuiKBD>
+    )
+    
+}
+```
 
 #### Loader
 The Loader element.
@@ -236,6 +314,17 @@ The Loader element.
 | ----------- | ------------ | ----------- | -------- |
 color | color | Sets the color of the inner element inside the loader | string
 name | name | Name that's attached to ID HTML attribute | string
+
+**Code Example**
+```jsx
+import { RuiLoader } from 'ruskelui'
+
+const App = () => {
+    return (
+        <RuiLoader color="peridot"/>
+    )
+}
+```
 
 #### Modal
 The Modal element.
@@ -248,6 +337,29 @@ elemName | elem-name | abac | string
 floatingLabel | floating-label | abac | string
 label | label | abac | string
 placeholder | placeholder | abac | string
+
+**Code Example**
+```jsx
+import { RuiModal } from 'ruskelui'
+
+const App = () => {
+    const reffer = useRef<LegacyRef<HTMLDialogElement> | undefined>(null)
+    // @ts-ignore
+    const openModal = () => reffer.current.show()
+    // @ts-ignore
+    const closeModal = () => reffer.current.close()
+    return (
+        <>
+            <button onClick={() => openModal()}>open Modal</button>
+            <RuiModal pointer={reffer} {...args}>
+                <h1>Hi this is a modal!</h1>
+                <p>Giving you the room to customise the functionality around this modal, since it's extending the native Dialog element 👾</p>
+                <button onClick={() => closeModal()}>close Modal</button>
+            </RuiModal>
+        </>
+    )
+}
+```
 
 #### Pill
 The Pill element displays information or status about a process.
@@ -289,6 +401,18 @@ The ProgressBar element visually shows the % of the meter filled.
 |endColour | endColour | Ending colour of dual gradient | colorType | "amethyst"
 |percentage | percentage | Sets the percentage value for the progress bar and changes how much is filled | number
 
+**Code Example**
+```jsx
+import { RuiProgress } from 'ruskelui'
+
+const App = () => {
+    return (
+        <RuiProgress variant={"bar"} percentage={53} color={"teal"}>
+        <RuiProgress variant={"donut"} percentage={53} color={"indigo"}>
+    )
+}
+```
+
 #### Radio
 The Radio element.
 
@@ -300,6 +424,20 @@ elemName | elem-name | abac | string
 floatingLabel | floating-label | abac | string
 label | label | abac | string
 placeholder | placeholder | abac | string
+
+**Code Example**
+```jsx
+import { RuiRadio } from 'ruskelui'
+
+const App = () => {
+    return (
+        <RuiRadio variant={"base"} color="sunstone" label={'Option One'}>
+        <RuiRadio variant={"base"} color="sunstone" label={'Option Two'}>
+        <RuiRadio variant={"base"} color="sunstone" label={'Option Three'}>
+        <RuiRadio variant={"base"} color="sunstone" label={'Option Four'}>
+    )
+}
+```
 
 #### Select
 The Select element.
@@ -313,6 +451,25 @@ floatingLabel | floating-label | abac | string
 label | label | abac | string
 placeholder | placeholder | abac | string
 
+**Code Example**
+```jsx
+import { RuiSelect } from 'ruskelui'
+
+const App = () => {
+    return (
+        <RuiSelect>
+            <RuiSelect.Item color='amethyst' value='Polygon'/>
+            <RuiSelect.Item color='green' value='Holo'/>
+            <RuiSelect.Item color='blue' value='Fantom'/>
+            <RuiSelect.Item color='pink' value='Kadena'/>
+            <RuiSelect.Item color='red' value='Tron'/>
+            <RuiSelect.Item color='amber' value='Bitcoin'/>
+            <RuiSelect.Item color='yellow' value='USDC'/>
+        </RuiSelect>
+    )
+}
+```
+
 #### Toast
 The Toast element.
 
@@ -324,6 +481,7 @@ color | color | Sets the colour from RuskelUI's neonic colours or Tailwind's nat
 title | title | Sets the title of the toast component | string
 content | content | Sets the content of the toast to convey information | ReactNode
 
+
 #### Toggle
 The Toggle element.
 
@@ -333,6 +491,17 @@ The Toggle element.
 | ----------- | ------------ | ----------- | -------- |
 color | color | Sets BG color as RuskelUI's neonic colours or Tailwind's native colours | string
 name | name | Sets the accesibility name | string
+
+**Code Example**
+```jsx
+import { RuiToggle } from 'ruskelui'
+
+const App = () => {
+    return (
+        <RuiToggle color="azure">
+    )
+}
+```
 
 #### Tooltip
 The Tooltip element.
