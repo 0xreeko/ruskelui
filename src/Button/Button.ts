@@ -12,7 +12,7 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     endColor?: color
     /** Available colour ways to style your Button */
     color?: color;
-    /** Provide a size for Button */
+    /** Provide a size for Button */ 
     size: size
     direction?: direction
     isDisabled?: boolean
