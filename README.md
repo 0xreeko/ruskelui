@@ -85,7 +85,7 @@ const App = () => {
     let _data = [
         {label: "What is the #1 crypto?", content:"The one and only, XRP"}
     ];
-    
+
     return (
         <RuiAccordion data={_data} color="azure" fullWidth >
     )
@@ -105,6 +105,17 @@ src | abac | string |
 alt | abac | string | 
 badgeColor | abac | `color` | undefined
 variant | abac | `variant` | base
+
+**Code Example**
+```jsx
+import { RuiAvatar } from 'ruskelui'
+
+const App = () => {
+    return  (
+        <RuiAvatar size={16} src="https://imageUrl">
+    )
+}
+```
 
 #### Breadcrumbs
 The Breadcrumbs element.
@@ -227,7 +238,7 @@ The Pill element displays information or status about a process.
 |iconAfter | icon-after | Sets the icon to appear after the label | boolean | undefined
 |color | color | Sets the global color of the pill | ruby | undefined
 
-**Component**
+**Code Example**
 ```jsx
 import { RuiPill } from 'ruskelui';
 
@@ -310,7 +321,7 @@ name | name | Provides a name for the tooltip | string
 message | message | Sets the message to display when tooltip is shown | string
 position | position | Sets the position from which the tooltip should be shown | posType | "t"
 
-**Component**
+**Code Example**
 ```jsx
 import { RuiTooltip } from 'ruskelui';
 
