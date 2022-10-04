@@ -1,8 +1,8 @@
-import { HTMLAttributes } from "react"
+import { InputHTMLAttributes } from "react"
 
 type variant = "base" | "ghost"
 
-export interface RuiRadioProps extends HTMLAttributes<HTMLInputElement> {
+export interface RuiRadioProps extends InputHTMLAttributes<HTMLInputElement> {
     label: string
     value: string
     name: string

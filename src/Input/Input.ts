@@ -1,9 +1,9 @@
-import { HTMLAttributes, ReactNode } from "react"
+import { InputHTMLAttributes, ReactNode } from "react"
 import { color } from "../types/Generics"
 
 type variant = "base" | "file" | "number" | "otp" | "password" | "textarea"
 
-export interface RuiInputProps extends HTMLAttributes<HTMLInputElement>{
+export interface RuiInputProps extends InputHTMLAttributes<HTMLInputElement>{
     label: string
     placeholder: string
     floatingLabel: string

@@ -1,7 +1,7 @@
 import { HTMLAttributes, ReactNode } from "react"
 import { color } from "../types/Generics"
 
-export interface RuiPillProps extends HTMLAttributes<HTMLButtonElement> {
+export interface RuiPillProps extends HTMLAttributes<HTMLElement> {
     children: ReactNode
     svg: ReactNode
     color: color

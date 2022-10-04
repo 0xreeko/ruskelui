@@ -1,11 +1,11 @@
-import { HTMLAttributes, ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 import { color, direction } from "../types/Generics";
 
 type variant = "Base" | "Ghost" | "Gradient" | "Text" | "3D" | "3DGradient"
 
 type size = "small" | "xlarge" | "large" | 'base'
 
-export interface RuiButtonProps extends HTMLAttributes<HTMLButtonElement> {
+export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
     svg?: ReactNode;
     startColor?: color
