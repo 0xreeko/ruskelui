@@ -75,7 +75,22 @@ The Accordion element displays information from a user in the form of an image i
 | ----------- | ----------- | -------- | ----------- |
 data | Array that takes objects with `title` and `content` as keys | `AccordionData[]` | 
 fullWidth | Make the accordion full available width or not | boolean | false
-color | label | `color` | 
+color | label | `color` |
+
+**Code Example**
+```jsx
+import { RuiAccordion } from 'ruskelui'
+
+const App = () => {
+    let _data = [
+        {label: "What is the #1 crypto?", content:"The one and only, XRP"}
+    ];
+    
+    return (
+        <RuiAccordion data={_data} color="azure" fullWidth >
+    )
+}
+```
 
 #### Avatar
 The Avatar element displays information from a user in the form of an image if available, and displaying the initials of the user if the user's image is not available.
@@ -214,7 +229,7 @@ The Pill element displays information or status about a process.
 
 **Component**
 ```jsx
-import {RuiPill} from 'ruskelui';
+import { RuiPill } from 'ruskelui';
 
 const App = () => {
     return (
@@ -297,7 +312,7 @@ position | position | Sets the position from which the tooltip should be shown |
 
 **Component**
 ```jsx
-import {RuiTooltip} from 'ruskelui';
+import { RuiTooltip } from 'ruskelui';
 
 const App = () => {
     let _message = "Fire reaction"
