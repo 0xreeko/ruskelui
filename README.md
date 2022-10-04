@@ -284,5 +284,19 @@ name | name | Provides a name for the tooltip | string
 message | message | Sets the message to display when tooltip is shown | string
 position | position | Sets the position from which the tooltip should be shown | posType | "t"
 
+**Component**
+```jsx
+import {RuiTooltip} from 'ruskelui';
+
+const App = () => {
+    let _message = "Fire reaction"
+    return (
+        <RuiTooltip message={_message}>
+            <button>🔥</button>
+        </RuiTooltip>
+    )
+}
+```
+
 ## License
 This project is under the [MIT](https://github.com/0xreeko/ruskelui/blob/master/LICENSE) License - view the [LICENSE](https://github.com/0xreeko/ruskelui/blob/master/LICENSE) file for more details.
