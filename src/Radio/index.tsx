@@ -22,3 +22,5 @@ export const RuiRadio = ({ label, value, name, variant }: RuiRadioProps) => {
             )
     }
 }
+
+export default RuiRadio
