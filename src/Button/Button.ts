@@ -16,7 +16,7 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     size: size
     direction?: direction
     isDisabled?: boolean
-    variant?: variant
+    variant: variant
 }
 
 export const threeDeeColor: { [key in color]: string[] } = {
