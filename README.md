@@ -29,7 +29,7 @@
     - [🛠 Tooltip](#tooltip)
 - [📃 License](#license)
 
-### About RuskelUI
+e### About RuskelUI
 RuskeUI is a TailwindCSS-based design system for rapid Web3 development in NextJS/React.
 
 I wanted to create my own UI vault that would be the official UI set of primitives for all of the Web3 related initiatives that I'm working on and plan to work on.

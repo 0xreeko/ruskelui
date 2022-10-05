@@ -3,7 +3,7 @@ import { color } from "../types/Generics"
 
 export interface RuiPillProps extends HTMLAttributes<HTMLElement> {
     children: ReactNode
-    svg: ReactNode
+    svg?: ReactNode
     color: color
 }
 
