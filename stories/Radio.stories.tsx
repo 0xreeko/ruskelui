@@ -10,12 +10,29 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<RuiRadioProps> = (args) => <RuiRadio variant='base' {...args}/>
+const Template: Story<RuiRadioProps> = (args) => <RuiRadio {...args}/>
 
 export const Default = Template.bind({})
+export const Bordered = Template.bind({})
+export const Ghost = Template.bind({})
 
 Default.args = {
     label: "Payment Splitter",
     value: "Payment Splitter",
-    name: "pay_splitter"
+    name: "pay_splitter",
+    variant: 'base'
+}
+
+Bordered.args = {
+    label: "Payment Splitter",
+    value: "Payment Splitter",
+    name: "pay_splitter",
+    variant: 'bordered'
+}
+
+Ghost.args = {
+    label: "Payment Splitter",
+    value: "Payment Splitter",
+    name: "pay_splitter",
+    variant: 'ghost'
 }

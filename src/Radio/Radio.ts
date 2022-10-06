@@ -1,10 +1,11 @@
 import { InputHTMLAttributes } from "react"
+import { color } from "../types/Generics"
 
-type variant = "base" | "ghost"
+type variant = "base" | "bordered" | "ghost"
 
 export interface RuiRadioProps extends InputHTMLAttributes<HTMLInputElement> {
-    label: string
     value: string
     name: string
     variant?: variant
+    color?: color
 }
