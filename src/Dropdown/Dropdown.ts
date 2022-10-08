@@ -1,21 +1,4 @@
-import { HTMLAttributes, ReactNode } from "react"
 import { color } from "../types/Generics"
-
-export interface RuiDropdownProps extends HTMLAttributes<HTMLElement> {
-    isSub?: boolean
-    children: ReactNode 
-    leftIcon?: ReactNode 
-    rightIcon?: ReactNode 
-    menu?: string 
-    idx?: string 
-    route?: string 
-    color?: color
-}
-
-// type RuiDropdownWrapperProps = Pick<RuiDropdownProps, "children">
-// type RuiDropdownInvokerProps = Pick<RuiDropdownProps, "children" | "menu" | "isSub">
-// type RuiDropdownMenuProps = Pick<RuiDropdownProps, "children">
-// type RuiDropdownItemProps = Pick<RuiDropdownProps, "leftIcon" | "rightIcon" | "children" | "isSub" | "menu">
 
 export const hoverColor: { [key in color]: string } = {
     amber: "hover:bg-amber-400 dark:hover:bg-amber-400/20 dark:hover:text-amber-400",

@@ -1,47 +1,63 @@
-import React from 'react'
-import { RuiDropdownProps, hoverColor } from './Dropdown'
-// @ts-ignore
-import styles from './Dropdown.module.css'
+import React, { LegacyRef, ReactNode, useContext, useState } from 'react'
+import { CSSTransition } from 'react-transition-group'
+import { color } from '../types/Generics'
+import { hoverColor } from './Dropdown'
+import { DropdownContext } from './DropdownContext'
+import "./Dropdown.css"
 
-// Invoker
-const DropdownInvoker = ({ children, menu, isSub }: RuiDropdownProps) => {
+export const DropdownItem = ({ children, navToDrop, leftIcon, rightIcon, color = "ruby" }: { children: ReactNode, navToDrop?: string, leftIcon?: ReactNode, rightIcon?: ReactNode, color: color }) => {
+    const { setActiveDrop } = useContext(DropdownContext)
     return (
-        // outline-none focus:outline-none duration-300 hover:bg-russian-600/20 flex items-center ${isSub ? "w-full text-left" : "px-4 py-2.5 rounded-lg"}
-        <button aria-haspopup="true" aria-controls={isSub ? menu : 'menu'} tabIndex={0} className="border">
+        <li onClick={() => navToDrop && setActiveDrop?.(navToDrop)} role="menuitem" className={`p-2.5 ${hoverColor[color]} hover:text-sylver-100 cursor-pointer flex items-center`}>
+            {leftIcon && <div className='inline-flex items-center w-4 h-4 mr-2'>{leftIcon}</div>}
             {children}
-        </button>
+            {rightIcon && <span className='inline-flex items-center w-4 h-4 ml-auto'>{rightIcon}</span>}
+        </li>
     )
 }
 
-// Menu
-const DropdownMenu = ({ children, className, menu, isSub }: RuiDropdownProps) => {
+export const DropdownMenu = ({ children, label, variant }: { children: ReactNode, label: string, variant: "main" | "secondary" }) => {
+    const { activeDrop, calcHeight } = useContext(DropdownContext)
     return (
-        <ul id={isSub ? menu : 'menu'} aria-hidden="true" className={`w-40 shadow-lg bg-gray-800 text-sylver-100 rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none transform duration-300 ease-in-out absolute ${isSub ? "bg-gray-800 absolute top-0 right-0 transition duration-150 ease-in-out origin-left" : `bg-gray-800 -translate-y-3 scale-0 left-0 origin-top-left group-hover:scale-100 group-hover:translate-y-0 mt-6`} ${className}`}>
+        <CSSTransition
+            in={activeDrop === label}
+            timeout={300}
+            classNames={variant === 'main' ? `ruiMenuPrimary` : `ruiMenuSecondary`}
+            unmountOnExit
+            onEnter={calcHeight}>
+            <div className="ruiMenu">
+                {children}
+            </div>
+        </CSSTransition>
+    )
+}
+
+export const DropdownPortal = ({ children }: { children: ReactNode }) => {
+    const {menuHeight} = useContext(DropdownContext)
+    return (
+        <ul className="absolute mt-6 overflow-hidden text-xs border border-gray-300 rounded-lg dark:border-gray-800 bg-sylver-400/80 backdrop-blur-sm text-russian-600 dark:bg-russian-600/80 dark:text-sylver-100 w-44" style={{ height: menuHeight ?? 'fit-content' }}>
             {children}
         </ul>
     )
 }
- 
-// Menu Items
-const DropdownItem = ({ children, leftIcon, rightIcon, isSub, color ="ruby"}: RuiDropdownProps) => {
+
+export const RuiDropdown = ({ children, pointer, position }: { children: ReactNode, pointer?: LegacyRef<HTMLDivElement> | undefined, position: "start" | "center" | "end"}) => {
+    const [activeDrop, setActiveDrop] = useState<string>('main')
+    const [menuHeight, setMenuHeight] = useState<number | null>(null);
+    const calcHeight = (el: any) => {
+        const height = el.offsetHeight;
+        setMenuHeight(height)
+    }
     return (
-        <a className={`${hoverColor[color]} p-2.5 inline-flex items-center w-full text-xs ${isSub ? "" : "relative"}`} role="menuitem">
-            {leftIcon && <div className='inline-flex items-center w-4 h-4 mr-2 left'>{leftIcon}</div>}
-            {children}
-            {rightIcon && <span className='inline-flex items-center w-4 h-4 ml-auto transition duration-300 ease-in-out right'>{rightIcon}</span>}
-        </a>
+        <DropdownContext.Provider value={{ activeDrop, setActiveDrop, calcHeight, menuHeight }}>
+            <div className={`relative inline-flex justify-${position}`} ref={pointer}>
+                {children}
+            </div>
+        </DropdownContext.Provider>
     )
 }
 
-export const RuiDropdown = ({ children }: RuiDropdownProps) => {
-    return (
-        <div className={`${styles.wrapper} max-w-fit relative group`}>
-            {children}
-        </div>
-    )
-}
-
-RuiDropdown.Button = DropdownInvoker
+RuiDropdown.Portal = DropdownPortal
 RuiDropdown.Menu = DropdownMenu
 RuiDropdown.Item = DropdownItem
 
