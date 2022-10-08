@@ -7,18 +7,7 @@ export const SelectItem = ({ value, color = "amethyst" }: RuiSelectChildProps) =
     const { handleChange, selectedIcon, currentValue } = useContext(SelectContext)
 
     return (
-        // <>
-        //     <li className="flex justify-between w-full px-3 py-2 duration-75 cursor-pointer hover:bg-indigo-200 dark:hover:bg-indigo-400 hover:text-white" tabIndex={0}>
-        //             <span>Polygon</span>
-        //             <span>🔥</span>
-        //         </li>
-        //         <li className="w-full px-3 py-2 duration-75 cursor-pointer hover:bg-blue-200 dark:hover:bg-blue-400 hover:text-white" tabIndex={0}>Ethereum</li>
-        //         <li className="w-full px-3 py-2 duration-75 cursor-pointer hover:bg-amber-200 dark:hover:bg-amber-400 hover:text-white" tabIndex={0}>Bitcoin</li>
-        //         <li className="w-full px-3 py-2 duration-75 cursor-pointer hover:bg-red-200 dark:hover:bg-red-400 hover:text-white" tabIndex={0}>Tron</li>
-        //         <li className="w-full px-3 py-2 duration-75 cursor-pointer hover:bg-green-200 dark:hover:bg-green-400 hover:text-white" tabIndex={0}>Celo</li>
-        //         <li className="w-full px-3 py-2 duration-75 cursor-pointer hover:bg-pink-200 dark:hover:bg-pink-400 hover:text-white" tabIndex={0}>Kadena</li>
-        // </>
-        <li tabIndex={0} className={`flex justify-between text-d-base duration-150 hover:text-sylver-100 hover:cursor-pointer py-2 px-4 ${selectColor[color]}`} onClick={() => handleChange?.(value)}>
+        <li tabIndex={0} className={`flex justify-between duration-150 hover:text-sylver-100 hover:cursor-pointer py-2 px-4 ${selectColor[color]}`} onClick={() => handleChange?.(value)}>
             <span>{value}</span>
             <span>{currentValue === value ? selectedIcon : ""}</span>
         </li>
@@ -55,7 +44,7 @@ export const RuiSelect = ({ label, children, selectedIcon = "🔥" }: RuiSelectP
                         </svg>
                     </div>
                 </button>
-                <ul role="list" className={`appearance-none absolute z-10 mt-1.5 transform transition-all duration-300 text-russian-600 dark:text-sylver-100 ${open === true ? 'group-focus-within:translate-y-0 opacity-100 flex flex-col' : '-translate-y-2 opacity-0 hidden'} overflow-hidden duration-300 h-fit w-full rounded-xl bg-gray-200/80 dark:bg-russian-400/40 backdrop-blur-sm`} tabIndex={0} >
+                <ul role="list" className={`appearance-none absolute z-10 mt-1.5 text-d-base transform transition-all duration-300 text-russian-600 dark:text-sylver-100 ${open === true ? 'group-focus-within:translate-y-0 opacity-100 flex flex-col' : '-translate-y-2 opacity-0 hidden'} overflow-hidden duration-300 h-fit w-full rounded-xl bg-gray-200/80 dark:bg-russian-400/40 backdrop-blur-sm`} tabIndex={0} >
                     <span className='sr-only'>Select Dropdown Items</span>
                     {children}
                 </ul>

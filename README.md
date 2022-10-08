@@ -12,7 +12,6 @@
     - [👤 Avatar](#avatar)
     - [🍞 Breadcrumbs](#breadcrumbs)
     - [⌨️ Button](#button)
-    - [🃏 Card](#card)
     - [✅ Checkbox](#checkbox)
     - [⬇️ Dropdown](#dropdown)
     - [💬 Input](#input)
@@ -29,7 +28,7 @@
     - [🛠 Tooltip](#tooltip)
 - [📃 License](#license)
 
-e### About RuskelUI
+### About RuskelUI
 RuskeUI is a TailwindCSS-based design system for rapid Web3 development in NextJS/React.
 
 I wanted to create my own UI vault that would be the official UI set of primitives for all of the Web3 related initiatives that I'm working on and plan to work on.
@@ -173,18 +172,6 @@ const App = () => {
 }
 ```
 
-#### Card
-The Card element displays information.
-
-**Props**
-
-| Property     | Description | Type     | Default     |
-| ----------- | ------------ | ----------- | -------- |
-elemName | elem-name | abac | string
-floatingLabel | floating-label | abac | string
-label | label | abac | string
-placeholder | placeholder | abac | string
-
 #### Checkbox
 The Checkbox element displays checked elements.
 
@@ -216,45 +203,43 @@ The Dropdown element displays options to select elements.
 
 | Property     | Description | Type     | Default     |
 | ----------- | ------------ | ----------- | -------- |
-isSub | label | boolean | string
-children | label | ReactNode | string
-leftIcon | label | ReactNode | string
-rightIcon | label | ReactNode | string
-menu | label | string | string
-idx | label | string | string
-route | label | string | string
-color | label | `color` |
+pointer | Ref object for further DOM manipulation | LegacyRef<HTMLDivElement> | null
+position  | Align the dropdown's position with flex values `start`, `center` and `end`  | `position` |
+label | A label to differentiate drops | string
+variant | A way to differentiate drops with `main` and `secondary` | `variant`
+navToDrop | Target navigation (must be label of a drop) | string 
+color | Apply hover color to `RuiDropdown.Item` | `color` | ruby
+children | | ReactNode
+rightIcon | | ReactNode
+rightIcon | | ReactNode
+
 
 **Code Example**
 ```jsx
 import { RuiDropdown } from 'ruskelui'
 
 const App = () => {
+    const [open, setOpen] = useState(false)
     return (
-        <RuiDropdown.Wrapper>
-            <RuiDropdown.Button menu='main'>Profile</RuiDropdown.Button>
-            <RuiDropdown.Menu menu='main'>
-                <RuiDropdown.Item leftIcon={iconUser} rightIcon={iconChev} menu='settings' isSub>
-                    Account Settings
-                <RuiDropdown.Menu menu='settings' isSub>
-                        <RuiDropdown.Item color='ruby'>User Settings</RuiDropdown.Item>
-                        <RuiDropdown.Item color='ruby'>Dashboard Settings</RuiDropdown.Item>
-                        <RuiDropdown.Item color='ruby'>Team Settings</RuiDropdown.Item>
-                        <RuiDropdown.Item color='scarlet'>Deactivate</RuiDropdown.Item>
+        <RuiDropdown position='start' {...args}>
+            <button onClick={() => setOpen(!open)}>Click Here</button>
+            {open &&
+                <RuiDropdown.Portal>
+                    <RuiDropdown.Menu label='main' variant='main'>
+                        <RuiDropdown.Item color="amethyst">Dashboard</RuiDropdown.Item>
+                        <RuiDropdown.Item leftIcon={iconUser} rightIcon={iconChev} color="amethyst" navToDrop='accountSettings'>Account Settings</RuiDropdown.Item>
+                        <RuiDropdown.Item color="azure">Support</RuiDropdown.Item>
+                        <RuiDropdown.Item color="scarlet">Log Out</RuiDropdown.Item>
                     </RuiDropdown.Menu>
-                </RuiDropdown.Item>
-                <RuiDropdown.Item>Support</RuiDropdown.Item>
-                <RuiDropdown.Item>License</RuiDropdown.Item>
-                <RuiDropdown.Item rightIcon={iconChev} color='amethyst'>
-                    Documentation
-                    <RuiDropdown.Menu leftIcon={iconUser} menu='documentation' isSub>
-                        <RuiDropdown.Item color='amethyst'>Litepaper</RuiDropdown.Item>
-                        <RuiDropdown.Item color='amethyst'>PoC</RuiDropdown.Item>
-                        <RuiDropdown.Item color='amethyst'>Technical</RuiDropdown.Item>
+                    <RuiDropdown.Menu label='accountSettings' variant='secondary'>
+                        <RuiDropdown.Item color="amethyst" navToDrop='main'>Main Menu</RuiDropdown.Item>
+                        <RuiDropdown.Item color="azure">Edit Profile</RuiDropdown.Item>
+                        <RuiDropdown.Item color="teal">Edit 2FA settings</RuiDropdown.Item>
+                        <RuiDropdown.Item color="amethyst">Edit Party settings</RuiDropdown.Item>
+                        <RuiDropdown.Item color="scarlet">Log Out</RuiDropdown.Item>
                     </RuiDropdown.Menu>
-                </RuiDropdown.Item>
-            </RuiDropdown.Menu>
-</RuiDropdown.Wrapper>
+                </RuiDropdown.Portal>}
+        </RuiDropdown>
     )
 }
 ```
