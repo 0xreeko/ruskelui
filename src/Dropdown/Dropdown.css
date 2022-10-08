@@ -1,0 +1,59 @@
+:root {
+  --bg:  #242526;
+  --border: 1px solid #474a4d;
+  --border-radius: 8px;
+  --speed: 300ms; 
+}
+
+/* Dropdown Menu */
+
+.ruiDropdown {
+  position: absolute;
+  top: 60px;
+  width: 180px;
+  transform: translateX(-45%);
+  background-color: var(--bg);
+  border: var(--border);
+  overflow: hidden;
+  font-size: 0.75rem/* 12px */;
+  line-height: 1rem/* 16px */;
+  transition: height var(--speed) ease;
+}
+
+.ruiMenu {
+  width: 100%;
+  height: fit-content
+}
+
+/* CSSTransition classes  */
+.ruiMenuPrimary-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+.ruiMenuPrimary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.ruiMenuPrimary-exit {
+  position: absolute;
+}
+.ruiMenuPrimary-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+
+
+.ruiMenuSecondary-enter {
+  transform: translateX(110%);
+}
+.ruiMenuSecondary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.ruiMenuSecondary-exit {
+
+}
+.ruiMenuSecondary-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}

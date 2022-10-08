@@ -5,7 +5,7 @@ import styles from './modules/Input.module.css'
 
 // const OTP = () => (<div className="">OTP input</div>)
 const Textarea = () => (
-    <textarea name="" id="" cols={40} rows={10} className="px-2 py-3 border rounded-lg"></textarea>
+    <textarea name="" id="" cols={40} rows={10} className="px-2 py-3 border-2 border-gray-300 rounded-lg outline-none dark:text-sylver-100 bg-white/20 dark:border-gray-800 dark:bg-black/20 focus:ring-indigo-500 focus:ring-4"></textarea>
 )
 // const Password = () => (<div className="">password input</div>)
 
