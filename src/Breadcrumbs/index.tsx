@@ -45,7 +45,7 @@ const CrumbItem = ({ route, color = 'ruby', children, divider = dividerIcon, var
 
 export const RuiBreadcrumbs = ({ children, fullWidth = false }: RuiBreadcrumbsProps) => {
     return (
-        <nav className={`p-2 px-4 flex items-center rounded-lg bg-sylver-700/10 backdrop-blur-sm ${fullWidth === true ? "w-full" : "w-fit"}`}>
+        <nav className={`p-2 px-4 flex items-center rounded-lg bg-sylver-700/10 dark:bg-russian-600/80 border border-gray-300 dark:border-gray-800 backdrop-blur-sm ${fullWidth === true ? "w-full" : "w-fit"}`}>
             <ol className="inline-flex items-center">
                 {children}
             </ol>

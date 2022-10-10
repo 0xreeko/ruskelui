@@ -276,7 +276,6 @@ The KBD element.
 | Property     | Description | Type     | Default     |
 | ----------- | ------------ | ----------- | -------- |
 color | color | Sets the color of the inner element inside the loader | string
-name | name | Name that's attached to ID HTML attribute | string
 
 **Code Example**
 ```jsx
@@ -297,8 +296,7 @@ The Loader element.
 
 | Property     | Description | Type     | Default     |
 | ----------- | ------------ | ----------- | -------- |
-color | color | Sets the color of the inner element inside the loader | string
-name | name | Name that's attached to ID HTML attribute | string
+color | Sets the color of the inner element inside the loader | string | peridot
 
 **Code Example**
 ```jsx
@@ -318,10 +316,8 @@ The Modal element.
 
 | Property     | Description | Type     | Default     |
 | ----------- | ------------ | ----------- | -------- |
-elemName | elem-name | abac | string
-floatingLabel | floating-label | abac | string
-label | label | abac | string
-placeholder | placeholder | abac | string
+pointer | Name that's attached to ID HTML attribute | `LegacyRef<HTMLDialogElement>` 
+size | Change the width of the modal | `size` | md
 
 **Code Example**
 ```jsx
