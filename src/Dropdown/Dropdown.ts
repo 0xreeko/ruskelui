@@ -1,5 +1,14 @@
 import { color } from "../types/Generics"
 
+export type position = "left" | "top" | "right" | "bottom"
+
+export const positioning: { [key in position]: string } = {
+    left: "-top-1.5 -translate-x-full -left-6",
+    top: "-translate-y-full",
+    right: "-top-1.5 translate-x-1/2",
+    bottom: "mt-6"
+}
+
 export const hoverColor: { [key in color]: string } = {
     amber: "hover:bg-amber-400 dark:hover:bg-amber-400/20 dark:hover:text-amber-400",
     amethyst: "hover:bg-amethyst-400 dark:hover:bg-amethyst-400/20 dark:hover:text-amethyst-400",

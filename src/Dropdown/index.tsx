@@ -1,7 +1,7 @@
 import React, { LegacyRef, ReactNode, useContext, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { color } from '../types/Generics'
-import { hoverColor } from './Dropdown'
+import { hoverColor, position, positioning } from './Dropdown'
 import { DropdownContext } from './DropdownContext'
 import "./Dropdown.css"
 
@@ -33,15 +33,15 @@ export const DropdownMenu = ({ children, label, variant }: { children: ReactNode
 }
 
 export const DropdownPortal = ({ children }: { children: ReactNode }) => {
-    const {menuHeight} = useContext(DropdownContext)
+    const {menuHeight, position} = useContext(DropdownContext)
     return (
-        <ul className="absolute mt-6 overflow-hidden text-xs border border-gray-300 rounded-lg dark:border-gray-800 bg-sylver-400/80 backdrop-blur-sm text-russian-600 dark:bg-russian-600/80 dark:text-sylver-100 w-44" style={{ height: menuHeight ?? 'fit-content' }}>
+        <ul className={`absolute overflow-hidden text-xs ${positioning[position]} border border-gray-300 rounded-lg dark:border-gray-800 bg-sylver-400/80 backdrop-blur-sm text-russian-600 dark:bg-russian-600/80 dark:text-sylver-100 w-44`} style={{ height: menuHeight ?? 'fit-content' }}>
             {children}
         </ul>
     )
 }
 
-export const RuiDropdown = ({ children, pointer, position }: { children: ReactNode, pointer?: LegacyRef<HTMLDivElement> | undefined, position: "start" | "center" | "end"}) => {
+export const RuiDropdown = ({ children, pointer, position }: { children: ReactNode, pointer?: LegacyRef<HTMLDivElement> | undefined, position: position}) => {
     const [activeDrop, setActiveDrop] = useState<string>('main')
     const [menuHeight, setMenuHeight] = useState<number | null>(null);
     const calcHeight = (el: any) => {
@@ -49,7 +49,7 @@ export const RuiDropdown = ({ children, pointer, position }: { children: ReactNo
         setMenuHeight(height)
     }
     return (
-        <DropdownContext.Provider value={{ activeDrop, setActiveDrop, calcHeight, menuHeight }}>
+        <DropdownContext.Provider value={{ activeDrop, setActiveDrop, calcHeight, menuHeight, position }}>
             <div className={`relative inline-flex justify-${position}`} ref={pointer}>
                 {children}
             </div>
