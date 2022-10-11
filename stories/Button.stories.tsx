@@ -12,6 +12,11 @@ const meta: Meta = {
         },
         size: {
             defaultValue: 'sm'
+        },
+        onClick: {
+            handleClick: {
+                action: 'clicked'
+            }
         }
     }
 }
