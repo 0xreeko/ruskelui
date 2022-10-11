@@ -11,7 +11,7 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     /** Render an SVG icon to the right side of your button */
     rightIcon?: ReactNode
     /** Available colour ways to style your Button */
-    color: color;
+    color?: color;
     /** Provide a `size` for your Button */ 
     size: size
     /** Select a `variant` for your Button */

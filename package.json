@@ -20,7 +20,7 @@
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "push": "npm run sb-pipeline && git commit -a -m 'update: sb build' && git push origin master",
+    "push": "npm run sb-pipeline && git add . && git commit -a -m 'update: sb build' && git push origin master",
     "deploy": "npm version patch && npm publish",
     "sb-pipeline": "npm run build-storybook && npm run deploy-storybook",
     "storybook": "start-storybook -p 6006",
