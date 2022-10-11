@@ -10,6 +10,6 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<RuiToggleProps> = (args) => <RuiToggle {...args} />
+const Template: Story<RuiToggleProps> = (args) => <RuiToggle disabled {...args} />
 
 export const Default = Template.bind({})
