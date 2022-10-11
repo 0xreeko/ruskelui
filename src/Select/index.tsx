@@ -3,11 +3,11 @@ import { SelectContext } from './SelectContext'
 import { RuiSelectChildProps, RuiSelectProps } from './Select'
 import { selectColor } from './utils/Select'
 
-export const SelectItem = ({ value, color = "amethyst" }: RuiSelectChildProps) => {
+export const SelectItem = ({ value, color = "amethyst", disabled }: RuiSelectChildProps) => {
     const { handleChange, selectedIcon, currentValue } = useContext(SelectContext)
 
     return (
-        <li tabIndex={0} className={`flex justify-between duration-150 hover:text-sylver-100 hover:cursor-pointer py-2 px-4 ${selectColor[color]}`} onClick={() => handleChange?.(value)}>
+        <li tabIndex={0} className={`flex justify-between duration-150 hover:text-sylver-100 hover:cursor-pointer py-2 px-4 ${disabled !== true  ? selectColor[color] : "text-sylver-800 pointer-events-none select-none"}`} onClick={() => handleChange?.(value)}>
             <span>{value}</span>
             <span>{currentValue === value ? selectedIcon : ""}</span>
         </li>

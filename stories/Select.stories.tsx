@@ -13,7 +13,7 @@ export default meta
 const Template: Story<RuiSelectProps> = args => <RuiSelect {...args}>
     <RuiSelect.Item color='amethyst' value='Polygon'/>
     <RuiSelect.Item color='green' value='Holo'/>
-    <RuiSelect.Item color='blue' value='Fantom'/>
+    <RuiSelect.Item color='blue' value='Fantom' disabled/>
     <RuiSelect.Item color='pink' value='Kadena'/>
     <RuiSelect.Item color='red' value='Tron'/>
     <RuiSelect.Item color='amber' value='Bitcoin'/>

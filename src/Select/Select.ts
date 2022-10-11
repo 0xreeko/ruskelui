@@ -10,4 +10,5 @@ export interface RuiSelectProps {
 export interface RuiSelectChildProps {
     value: string
     color: color
+    disabled?: boolean
 }
