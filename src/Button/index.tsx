@@ -1,56 +1,44 @@
 import React from 'react'
-import { RuiButtonProps, baseColor, ghostColor, textColor, gradientColor, gradientFlow, threeDeeColor, threeDeeGeeColor, } from './Button'
+import { RuiButtonProps, textButtonStyles, sizing, baseButtonStyles, ghostButtonStyles, } from './Button'
 
-export const RuiButton = ({ children, color = 'amethyst', size = "base", isDisabled = false, variant = "Base", startColor = "fuchsia", endColor = "purple", direction = "topRight" }: RuiButtonProps) => {
+export const RuiButton = ({ children, color = 'amethyst', size = "sm", disabled = false, variant = "filled", rightIcon, leftIcon }: RuiButtonProps) => {
   switch (variant) {
-    case "Ghost":
+    case "ghost":
       return (
-        <button className={`${ghostColor[color]} whitespace-nowrap inline-flex cursor-pointer w-fit items-center transition-all duration-150 ${size === 'base' ? 'text-m-base px-3 py-2 h-9 rounded-[10px]' : size === 'small' ? 'text-[11.1px] px-2 h-8 rounded-[8px]' : size === 'large' ? 'text-d-base px-4 py-3 h-10 rounded-[12px]' : size === 'xlarge' ? 'text-m-sub2 px-5 py-4 h-11 rounded-[14px]' : ''}`}>
-          {children}
+        <button className={`flex ${sizing[size]} w-fit items-center gap-3 rounded-[9px] border-[1.5px] bg-transparent ${ghostButtonStyles[color]} text-sm duration-150 disabled:pointer-events-none disabled:border-gray-300 disabled:text-gray-300`} aria-readonly={disabled} disabled={disabled}>
+          {leftIcon && leftIcon}
+          <span>{children}</span>
+          {rightIcon && rightIcon}
         </button>
       );
-    case "Gradient":
+    case "text":
       return (
-        <button className={`${gradientFlow[direction]} ${gradientColor[startColor][0]} ${gradientColor[endColor][1]} whitespace-nowrap text-sylver-100 inline-flex cursor-pointer w-fit items-center transition-all duration-200 ${size === 'base' ? 'text-m-base px-3 py-2 h-9 rounded-[10px]' : size === 'small' ? 'text-[11.1px] px-2 h-8 rounded-[8px]' : size === 'large' ? 'text-d-base px-4 py-3 h-10 rounded-[12px]' : size === 'xlarge' ? 'text-m-sub2 px-5 py-4 h-11 rounded-[14px]' : ''}`}>
-          {children}
+        <button className={`flex ${sizing[size]} w-fit items-center ${textButtonStyles[color]} gap-3 rounded-[9px] border-[1.5px] border-transparent text-sm backdrop-blur-sm duration-150 disabled:pointer-events-none disabled:text-gray-300`} aria-readonly={disabled} disabled={disabled}>
+          {leftIcon && leftIcon}
+          <span>{children}</span>
+          {rightIcon && rightIcon}
         </button>
       );
-    case "Text":
+    case "filled":
       return (
-        <button className={`${textColor[color]} whitespace-nowrap text-sylver-100 inline-flex cursor-pointer w-fit items-center transition-all duration-150 ${size === 'base' ? 'text-m-base px-3 py-2 h-9 rounded-[10px]' : size === 'small' ? 'text-[11.1px] px-2 h-8 rounded-[8px]' : size === 'large' ? 'text-d-base px-4 py-3 h-10 rounded-[12px]' : size === 'xlarge' ? 'text-m-sub2 px-5 py-4 h-11 rounded-[14px]' : ''}`}>
-          {children}
+        <button className={`flex w-fit items-center gap-3 rounded-[9px] border border-transparent ${baseButtonStyles[color]} ${sizing[size]} text-sm text-white duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700`} aria-readonly={disabled} disabled={disabled}>
+          {leftIcon && leftIcon}
+          <span>{children}</span>
+          {rightIcon && rightIcon}
         </button>
       );
-    case "3D":
+    case "icon":
       return (
-        <div className="inline-block">
-          <button className="relative text-white">
-            <div className={`w-full h-8 inset-x-0 absolute ${threeDeeColor[color][0]} -bottom-1.5 rounded-lg`}></div>
-            <div className={`relative w-10 h-8 px-3 py-1 duration-150 ${threeDeeColor[color][1]} rounded-lg min-w-fit active:translate-y-1 whitespace-nowrap`}>{children}</div>
-          </button>
-        </div>
-      );
-    case "3DGradient":
-      return (
-        <div className="inline-block">
-          <button className="relative text-white">
-            <div className={`w-full h-8 inset-x-0 absolute ${gradientFlow[direction]} ${threeDeeGeeColor[startColor][2]} ${threeDeeGeeColor[endColor][3]} -bottom-1.5 rounded-lg`}></div>
-            <div className={`relative min-w-fit w-10 h-8 ${gradientFlow[direction]} ${threeDeeGeeColor [startColor][0]} ${threeDeeGeeColor[endColor][1]} py-1 px-3 rounded-lg active:translate-y-1 duration-150 whitespace-nowrap`}>
-              <span>{children}</span>
-            </div>
-          </button>
-        </div>
-      );
-    case "Base":
-      return (
-        <button aria-disabled={isDisabled} disabled={isDisabled} className={`inline-flex w-fit items-center text-sylver-100 ${baseColor[color]} ${isDisabled !== true ? `active:scale-90 whitespace-nowrap cursor-pointer transition-all duration-150` : `pointer-events-none cursor-not-allowed select-none`} ${size === 'base' ? 'text-m-base px-3 py-2 h-9 rounded-[10px]' : size === 'small' ? 'text-[11.1px] px-2 h-8 rounded-[8px]' : size === 'large' ? 'text-d-base px-4 py-3 h-10 rounded-[12px]' : size === 'xlarge' ? 'text-m-sub2 px-5 py-4 h-11 rounded-[14px]' : ''}`}>
-          {children}
+        <button className="flex w-fit px-3 items-center rounded-[9px] bg-gray-100 dark:bg-gray-900 dark:active:bg-gray-900/80 active:bg-gray-200 py-1.5 duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700" aria-readonly={disabled} disabled={disabled}>
+         {children}
         </button>
-      );
+      )
     default:
       return (
-        <button aria-disabled={isDisabled} disabled={isDisabled} className={`inline-flex w-fit items-center text-sylver-100 ${baseColor[color]} ${isDisabled !== true ? `active:scale-90 whitespace-nowrap cursor-pointer transition-all duration-150` : `pointer-events-none cursor-not-allowed select-none`} ${size === 'base' ? 'text-m-base px-3 py-2 h-9 rounded-[10px]' : size === 'small' ? 'text-[11.1px] px-2 h-8 rounded-[8px]' : size === 'large' ? 'text-d-base px-4 py-3 h-10 rounded-[12px]' : size === 'xlarge' ? 'text-m-sub2 px-5 py-4 h-11 rounded-[14px]' : ''}`}>
-          {children}
+        <button className={`flex w-fit items-center gap-3 rounded-[9px] border border-transparent ${baseButtonStyles[color]} ${sizing[size]} text-sm text-white duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700`} aria-readonly={disabled} disabled={disabled}>
+          {leftIcon && leftIcon}
+          <span>{children}</span>
+          {rightIcon && rightIcon}
         </button>
       );
   }

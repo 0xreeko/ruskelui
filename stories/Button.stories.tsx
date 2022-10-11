@@ -11,26 +11,29 @@ const meta: Meta = {
             defaultValue: 'Press Me'
         },
         size: {
-            defaultValue: 'base'
+            defaultValue: 'sm'
         }
     }
 }
 
 export default meta;
 
-const Template: Story<RuiButtonProps> = (args) => <RuiButton variant='Base' {...args} ></RuiButton>
-const ButtonGhost: Story<RuiButtonProps> = (args) => <RuiButton variant='Ghost' {...args} ></RuiButton>
-const ButtonGradient: Story<RuiButtonProps> = (args) => <RuiButton variant='Gradient' {...args} ></RuiButton>
-const ButtonText: Story<RuiButtonProps> = (args) => <RuiButton variant='Text' {...args} ></RuiButton>
-const ButtonThreeDee: Story<RuiButtonProps> = (args) => <RuiButton variant='3D' {...args} ></RuiButton>
-const ButtonThreeDeeGee: Story<RuiButtonProps> = (args) => <RuiButton variant='3DGradient' {...args} ></RuiButton>
+const Template: Story<RuiButtonProps> = (args) => <RuiButton variant='filled' {...args} ></RuiButton>
+const ButtonGhost: Story<RuiButtonProps> = (args) => <RuiButton variant='ghost' leftIcon={icon} {...args} ></RuiButton>
+const ButtonText: Story<RuiButtonProps> = (args) => <RuiButton variant='text' {...args} ></RuiButton>
+const ButtonIcon: Story<RuiButtonProps> = (args) => <RuiButton variant='icon' {...args} ></RuiButton>
+
+const icon = <svg xmlns="http://www.w3.org/2000/svg" className="text-rose-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+<path d="M5 4l.5 16.5l13.5 .5v-18z"></path>
+<path d="M9 15c.6 1.5 1.639 2 3.283 2h-.283c1.8 0 3 -.974 3 -2.435c0 -1.194 -.831 -1.799 -2.147 -2.333l-1.975 -.802c-1.15 -.467 -1.878 -1.422 -1.878 -2.467c0 -.97 .899 -1.786 2.087 -1.893l.613 -.055c1.528 -.138 2.999 .762 3.3 1.985"></path>
+<path d="M16 3.5v1"></path>
+</svg>
 
 export const Default = Template.bind({})
 export const Ghost = ButtonGhost.bind({})
-export const Gradient = ButtonGradient.bind({})
 export const Text = ButtonText.bind({})
-export const ThreeDee = ButtonThreeDee.bind({})
-export const ThreeDeeGee = ButtonThreeDeeGee.bind({})
+export const Icon = ButtonIcon.bind({})
 
 Default.args = {
     color: 'sunstone',
@@ -44,16 +47,6 @@ Text.args = {
     color: 'ruby',
 }
 
-Gradient.args = {
-    startColor: 'green',
-    endColor: 'teal',
-}
-
-ThreeDee.args = {
-    color: 'pink',
-}
-ThreeDeeGee.args = {
-    startColor: 'pink',
-    endColor: 'red',
-    direction: "right"
+Icon.args = {
+    children: icon
 }
