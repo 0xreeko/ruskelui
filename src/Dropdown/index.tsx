@@ -40,7 +40,7 @@ export const DropdownPortal = ({ children }: { children: ReactNode }) => {
     )
 }
 
-export const RuiDropdown = ({ children, pointer, position }: { children: ReactNode, pointer?: LegacyRef<HTMLDivElement> | undefined, position: position}) => {
+export const RuiDropdown = ({ children, pointer, position = "bottom" }: { children: ReactNode, pointer?: LegacyRef<HTMLDivElement> | undefined, position: position}) => {
     const [activeDrop, setActiveDrop] = useState<string>('main')
     const [menuHeight, setMenuHeight] = useState<number | null>(null);
     const calcHeight = (el: any) => {
