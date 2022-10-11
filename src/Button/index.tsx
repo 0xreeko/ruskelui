@@ -29,7 +29,7 @@ export const RuiButton = ({ children, color = 'amethyst', size = "sm", disabled 
       );
     case "icon":
       return (
-        <button className="flex w-fit px-3 items-center rounded-[9px] bg-gray-100 dark:bg-gray-900 dark:active:bg-gray-900/80 active:bg-gray-200 py-1.5 duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700" aria-readonly={disabled} disabled={disabled}>
+        <button className="flex w-fit px-3 items-center rounded-[9px] bg-sylver-100 dark:bg-russian-800 border border-gray-300 dark:border-gray-800 border-opacity-60 dark:active:bg-gray-900/80 active:bg-gray-200 py-1.5 duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700" aria-readonly={disabled} disabled={disabled}>
          {children}
         </button>
       )
