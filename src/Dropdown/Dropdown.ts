@@ -3,7 +3,7 @@ import { color } from "../types/Generics"
 export type position = "left" | "top" | "right" | "bottom"
 
 export const positioning: { [key in position]: string } = {
-    left: "-top-1.5 -translate-x-full -left-6",
+    left: "-top-1.5 -translate-x-full -left-3",
     top: "-translate-y-full",
     right: "-top-1.5 translate-x-1/2",
     bottom: "mt-6"
