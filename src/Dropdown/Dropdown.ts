@@ -1,4 +1,14 @@
+import { ReactNode } from "react"
 import { color } from "../types/Generics"
+
+export interface RuiDropdownProps {
+    children: ReactNode
+    navToDrop?: string
+    leftIcon?: ReactNode
+    rightIcon?: ReactNode
+    color: color
+    disabled: boolean
+}
 
 export type position = "left" | "top" | "right" | "bottom"
 

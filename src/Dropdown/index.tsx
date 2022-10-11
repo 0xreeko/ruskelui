@@ -1,14 +1,13 @@
 import React, { LegacyRef, ReactNode, useContext, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
-import { color } from '../types/Generics'
-import { hoverColor, position, positioning } from './Dropdown'
+import { hoverColor, position, positioning, RuiDropdownProps } from './Dropdown'
 import { DropdownContext } from './DropdownContext'
 import "./Dropdown.css"
 
-export const DropdownItem = ({ children, navToDrop, leftIcon, rightIcon, color = "ruby" }: { children: ReactNode, navToDrop?: string, leftIcon?: ReactNode, rightIcon?: ReactNode, color: color }) => {
+export const DropdownItem = ({ children, navToDrop, leftIcon, rightIcon, color = "ruby", disabled  }: RuiDropdownProps) => {
     const { setActiveDrop } = useContext(DropdownContext)
     return (
-        <li onClick={() => navToDrop && setActiveDrop?.(navToDrop)} role="menuitem" className={`p-2.5 ${hoverColor[color]} hover:text-sylver-100 cursor-pointer flex items-center`}>
+        <li onClick={() => !disabled && navToDrop && setActiveDrop?.(navToDrop)} role="menuitem" className={`p-2.5 ${disabled !== true ? hoverColor[color] : "text-sylver-800 pointer-events-none select-none"} hover:text-sylver-100 cursor-pointer flex items-center `} >
             {leftIcon && <div className='inline-flex items-center w-4 h-4 mr-2'>{leftIcon}</div>}
             {children}
             {rightIcon && <span className='inline-flex items-center w-4 h-4 ml-auto'>{rightIcon}</span>}
