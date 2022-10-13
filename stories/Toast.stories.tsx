@@ -1,16 +1,18 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react'
-import {RuiToast} from '../src/Toast/'
+import {RuiToastProvider, useRuiToasts} from '../src/Toast/'
 import {RuiToastProps} from '../src/Toast/Toast'
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Toast',
-    component: RuiToast,
+    component: RuiToastProvider,
 }
 
 export default meta;
 
-const Template: Story<RuiToastProps> = (args) => <RuiToast {...args}/>
+const Template: Story<RuiToastProps> = (args) => <div className="fixed right-2.5 top-2.5 max-w-xs">
+    Cannot test 
+</div>
 
 export const Default = Template.bind({})
 

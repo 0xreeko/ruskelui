@@ -1,11 +1,30 @@
-import { HTMLAttributes } from "react"
-import { color, direction } from "../types/Generics"
+import { HTMLAttributes, ReactNode } from "react"
+import { color } from "../types/Generics"
+
+type position = 
+    | "topLeft"
+    | "topRight"
+    | "bottomLeft"
+    | "bottomLeft"
+type theme = 
+    | "light"
+    | "dark"
+type variant = 
+    | "success"
+    | "info"
+    | "warn"
+    | "error"
+    | "colored"
+
 
 export interface RuiToastProps extends HTMLAttributes<HTMLElement> {
+    id?: string
+    icon?: ReactNode
+    variant: variant
+    content: ReactNode
     color: color
-    title: string
-    content: string
-    position: direction
+    theme: theme
+    position: position
 }
 
 export const colorVar: {[key in color]: string[]} = {

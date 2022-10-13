@@ -1,0 +1,37 @@
+.timerBar {
+    background: linear-gradient(
+        to right,
+        #4cd964,
+        #5ac8fa,
+        #007aff,
+        #34aadc,
+        #5856d6,
+        #ff2d55
+      );
+}
+
+.ruiNoti {
+    animation: slideInToLeft .9s forwards;
+}
+
+.ruiNoti.exit {
+    animation: slideInFromLeft .9s forwards;
+}
+
+@keyframes slideInToLeft {
+    0% {
+        @apply ml-[120%]
+    }
+    100% {
+        @apply ml-[0%]
+    }
+}
+
+@keyframes slideOutFromLeft {
+    0% {
+        @apply ml-[0%]
+    }
+    100% {
+        @apply ml-[120%]
+    }
+}
