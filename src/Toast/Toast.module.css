@@ -15,7 +15,7 @@
 }
 
 .ruiNoti.exit {
-    animation: slideInFromLeft .9s forwards;
+    animation: slideOutToRight 1.8s forwards;
 }
 
 @keyframes slideInToLeft {
@@ -27,7 +27,7 @@
     }
 }
 
-@keyframes slideOutFromLeft {
+@keyframes slideOutToRight {
     0% {
         @apply ml-[0%]
     }

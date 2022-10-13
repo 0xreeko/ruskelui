@@ -18,13 +18,14 @@ type variant =
 
 
 export interface RuiToastProps extends HTMLAttributes<HTMLElement> {
-    id?: string
+    id: string
     icon?: ReactNode
     variant: variant
     content: ReactNode
     color: color
     theme: theme
     position: position
+    dispatch: (arg: unknown) => void
 }
 
 export const colorVar: {[key in color]: string[]} = {
