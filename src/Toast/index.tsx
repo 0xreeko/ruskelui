@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { RuiToastProps, colorVar } from "./Toast"
 // @ts-ignore
 import styles from './Toast.module.css'
-import { ToastContext } from "./ToastProvider"
+import { RuiToastContext } from "./ToastProvider"
 
 const success = <svg xmlns="http://www.w3.org/2000/svg" className="text-green-400" width={24} height={24} viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -27,7 +27,7 @@ const error = <svg xmlns="http://www.w3.org/2000/svg" className="text-scarlet-40
 </svg>
 
 export const RuiToast = ({ id, content: { closeOnClick = false, timer = 6000, icon = '👾', variant, theme, message = "The transaction was successful. Check on reekoscan.com for more info.", color = "peridot" } }: RuiToastProps) => {
-  const { removeToast } = useContext(ToastContext)
+  const { removeToast } = useContext(RuiToastContext)
 
   const [width, setWidth] = useState(0)
   const [exit, setExit] = useState(false)

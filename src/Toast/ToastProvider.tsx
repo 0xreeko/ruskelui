@@ -4,12 +4,12 @@ import { RuiToastProps, RuiToastDeetsProps, position } from "./Toast"
 // @ts-ignore
 import styles from './Toast.module.css'
 
-interface ContextProps {
+export interface RuiToastContextProps {
     addToast?: (deets: RuiToastDeetsProps) => void,
     removeToast?: (_id: string) => void,
 }
 
-export const ToastContext = createContext<ContextProps>({
+export const RuiToastContext = createContext<RuiToastContextProps>({
 })
 
 export const ToastProvider = ({ children }: { children: ReactNode }) => {
@@ -33,7 +33,7 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
     
 
     return (
-        <ToastContext.Provider value={{ addToast, removeToast }}>
+        <RuiToastContext.Provider value={{ addToast, removeToast }}>
             {children}
             <div className={styles.ruiToastContainer} data-position={'topLeft'}>
                 {toasts.filter(t => t.content.position === 'topLeft').map(_t => (
@@ -55,7 +55,7 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
                     <RuiToast key={_t.id} {..._t} />
                 ))}
             </div>
-        </ToastContext.Provider>
+        </RuiToastContext.Provider>
     )
 }
 
