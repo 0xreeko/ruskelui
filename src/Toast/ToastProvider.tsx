@@ -4,12 +4,12 @@ import { RuiToastProps, RuiToastDeetsProps } from "./Toast"
 // @ts-ignore
 import styles from './Toast.module.css'
 
-export interface RuiToastContextProps {
+interface RuiToastContextProps {
     addToast?: (deets: RuiToastDeetsProps) => void,
     removeToast?: (_id: string) => void,
 }
 
-export const RuiToastContext = createContext<RuiToastContextProps>({
+const RuiToastContext = createContext<RuiToastContextProps>({
 })
 
 export const RuiToastProvider = ({ children }: { children: ReactNode }) => {
@@ -52,6 +52,13 @@ export const RuiToastProvider = ({ children }: { children: ReactNode }) => {
             </div>
         </RuiToastContext.Provider>
     )
+}
+
+import { useContext } from "react"
+
+export const useRuiToastify = () => {
+    const { addToast, removeToast } = useContext<RuiToastContextProps>(RuiToastContext)
+    return {addToast, removeToast}
 }
 
 export default RuiToastProvider
