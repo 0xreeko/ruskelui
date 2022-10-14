@@ -26,7 +26,7 @@ const error = <svg xmlns="http://www.w3.org/2000/svg" className="text-scarlet-40
   <path d="M10 10l4 4m0 -4l-4 4"></path>
 </svg>
 
-export const RuiToast = ({ id, content: { closeOnClick = false, timer = 6000, icon = '👾', variant, theme, message = "The transaction was successful. Check on reekoscan.com for more info.", color = "peridot" } }: RuiToastProps) => {
+const RuiToast = ({ id, content: { closeOnClick = false, timer = 6000, icon = '👾', variant, theme, message, color = "peridot" } }: RuiToastProps) => {
   const { removeToast } = useContext(RuiToastContext)
 
   const [width, setWidth] = useState(0)
@@ -133,4 +133,4 @@ export const RuiToast = ({ id, content: { closeOnClick = false, timer = 6000, ic
 
 export * from './ToastProvider'
 
-export default RuiToast;
+export default RuiToast

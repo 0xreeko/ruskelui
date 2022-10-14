@@ -1,6 +1,6 @@
 import React, { createContext, ReactNode, useState } from "react"
 import RuiToast from "."
-import { RuiToastProps, RuiToastDeetsProps, position } from "./Toast"
+import { RuiToastProps, RuiToastDeetsProps } from "./Toast"
 // @ts-ignore
 import styles from './Toast.module.css'
 
@@ -12,20 +12,15 @@ export interface RuiToastContextProps {
 export const RuiToastContext = createContext<RuiToastContextProps>({
 })
 
-export const ToastProvider = ({ children }: { children: ReactNode }) => {
+export const RuiToastProvider = ({ children }: { children: ReactNode }) => {
 
     const naniteId = () => Math.random().toString(36).slice(2);
 
     const [toasts, setToasts] = useState<RuiToastProps[]>([])
 
-    const [position, setPosition] = useState<position>('topRight')
-
     const addToast = (content: RuiToastDeetsProps) => {
         const _id = naniteId()
         const _toast = { id: _id, content }
-        setPosition(_toast.content.position)
-        console.log('pos:', position)
-        console.log('toast', _toast)
         setToasts([...toasts, _toast])
     }
 
@@ -59,4 +54,4 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
     )
 }
 
-export default ToastProvider
+export default RuiToastProvider

@@ -19,7 +19,7 @@ const _Revamped: Story = (args) => {
         <RuiDropdown position='bottom' {...args}>
             <button onClick={() => setOpen(!open)}>Click Here</button>
             {open &&
-                <RuiDropdown.Portal>
+                <RuiDropdown.Portal theme='dark'>
                     <RuiDropdown.Menu label='main' variant='main'>
                         <RuiDropdown.Item color="amethyst">Dashboard</RuiDropdown.Item>
                         <RuiDropdown.Item leftIcon={iconUser} rightIcon={iconChev} disabled color="amethyst" navToDrop='accountSettings'>Account Settings</RuiDropdown.Item>
