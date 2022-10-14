@@ -4,7 +4,6 @@ import { RuiToastProps, RuiToastDeetsProps, position } from "./Toast"
 // @ts-ignore
 import styles from './Toast.module.css'
 
-
 interface ContextProps {
     addToast?: (deets: RuiToastDeetsProps) => void,
     removeToast?: (_id: string) => void,
