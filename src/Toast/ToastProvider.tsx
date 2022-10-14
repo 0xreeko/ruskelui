@@ -1,42 +1,59 @@
-import React, { createContext, ReactNode, useReducer } from "react"
+import React, { createContext, ReactNode, useState } from "react"
 import RuiToast from "."
-import { RuiToastProps } from "./Toast"
+import { RuiToastProps, RuiToastDeetsProps, position } from "./Toast"
+// @ts-ignore
+import styles from './Toast.module.css'
 
-enum ActionEnum {
-    ADD_TOAST = 'ADD_TOAST',
-    REMOVE_TOAST = 'REMOVE_TOAST'
+
+interface ContextProps {
+    addToast?: (deets: RuiToastDeetsProps) => void,
+    removeToast?: (_id: string) => void,
 }
 
-interface ActionProps {
-    type: ActionEnum
-    payload: RuiToastProps
-}
-
-const ToastContext = createContext({
-    dispatch: {}
+export const ToastContext = createContext<ContextProps>({
 })
 
-const ToastProvider = ({ children }: { children: ReactNode }) => {
+export const ToastProvider = ({ children }: { children: ReactNode }) => {
 
-    const [state, dispatch] = useReducer((state: RuiToastProps[], action: ActionProps): RuiToastProps[] => {
-        const {type, payload} = action
-        switch (type) {
-            case "ADD_TOAST":
-                return [...state, { ...payload }];
-            case "REMOVE_TOAST":
-                return state.filter(t => t.id !== payload.id);
-            default:
-                return [...state];
-        }
-    }, [])
+    const naniteId = () => Math.random().toString(36).slice(2);
+
+    const [toasts, setToasts] = useState<RuiToastProps[]>([])
+
+    const [position, setPosition] = useState<position>('topRight')
+
+    const addToast = (content: RuiToastDeetsProps) => {
+        const _id = naniteId()
+        const _toast = { id: _id, content }
+        setPosition(_toast.content.position)
+        console.log('pos:', position)
+        console.log('toast', _toast)
+        setToasts([...toasts, _toast])
+    }
+
+    const removeToast = (_id: string) => setToasts(newToasts => newToasts.filter(t => t.id !== _id) )
+    
 
     return (
-        <ToastContext.Provider value={{dispatch}}>
+        <ToastContext.Provider value={{ addToast, removeToast }}>
             {children}
-            <div className="fixed right-2.5 top-2.5 max-w-xs">
-                {state.map(_t => (
-                    // @ts-ignore
-                    <RuiToast dispatch={dispatch} key={_t.id} {..._t} />
+            <div className={styles.ruiToastContainer} data-position={'topLeft'}>
+                {toasts.filter(t => t.content.position === 'topLeft').map(_t => (
+                    <RuiToast key={_t.id} {..._t} />
+                ))}
+            </div>
+            <div className={styles.ruiToastContainer} data-position={'topRight'}>
+                {toasts.filter(t => t.content.position === 'topRight').map(_t => (
+                    <RuiToast key={_t.id} {..._t} />
+                ))}
+            </div>
+            <div className={styles.ruiToastContainer} data-position={'bottomRight'}>
+                {toasts.filter(t => t.content.position === 'bottomRight').map(_t => (
+                    <RuiToast key={_t.id} {..._t} />
+                ))}
+            </div>
+            <div className={styles.ruiToastContainer} data-position={'bottomLeft'}>
+                {toasts.filter(t => t.content.position === 'bottomLeft').map(_t => (
+                    <RuiToast key={_t.id} {..._t} />
                 ))}
             </div>
         </ToastContext.Provider>

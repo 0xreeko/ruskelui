@@ -10,14 +10,49 @@
       );
 }
 
-.ruiNoti {
-    animation: slideInToLeft .9s forwards;
+.ruiToastContainer {
+    @apply fixed flex-col flex gap-3 box-border z-[9999]
 }
 
-.ruiNoti.exit {
-    animation: slideOutToRight 1.8s forwards;
+.ruiToastContainer[data-position="topLeft"] {
+    @apply top-5 sm:left-2.5
+}
+.ruiToastContainer[data-position="topRight"] {
+    @apply top-5 sm:right-2.5
+}
+.ruiToastContainer[data-position="bottomRight"] {
+    @apply bottom-5 sm:right-2.5 flex flex-col-reverse
+}
+.ruiToastContainer[data-position="bottomLeft"] {
+    @apply bottom-5 sm:left-2.5 flex flex-col-reverse
 }
 
+.ruiToast {
+    @apply relative box-border shadow-lg w-full sm:max-w-md border overflow-auto rounded-2xl h-fit backdrop-blur-sm
+}
+
+
+.ruiToastContainer[data-position$="Right"] .ruiToast {
+    animation: slideInToLeft .3s forwards;
+}
+
+.ruiToastContainer[data-position$="Right"] .ruiToast.exit {
+    animation: slideOutToRight .5s forwards;
+}
+
+.ruiToastContainer[data-position$="Left"] .ruiToast {
+    animation: slideInToRight .3s forwards;
+}
+
+.ruiToastContainer[data-position$="Left"] .ruiToast.exit {
+    animation: slideOutToLeft .5s forwards;
+}
+
+/* .ruiToast.exit {
+    animation: slideOutToRight .5s forwards;
+} */
+
+/* INTRO for topRight and bottomRight */
 @keyframes slideInToLeft {
     0% {
         @apply ml-[120%]
@@ -27,11 +62,32 @@
     }
 }
 
+/* OUTRO for topRight and bottomRight */
 @keyframes slideOutToRight {
     0% {
         @apply ml-[0%]
     }
     100% {
         @apply ml-[120%]
+    }
+}
+
+/* INTRO for topLeft and bottomLeft */
+@keyframes slideInToRight {
+    0% {
+        @apply ml-[-120%]
+    }
+    100% {
+        @apply ml-[0%]
+    }
+}
+
+/* OUTRO for topLeft and bottomLeft */
+@keyframes slideOutToLeft {
+    0% {
+        @apply ml-[0%]
+    }
+    100% {
+        @apply ml-[-120%]
     }
 }

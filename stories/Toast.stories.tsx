@@ -1,7 +1,8 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react'
-import {RuiToast} from '../src/Toast/'
-import {RuiToastProps} from '../src/Toast/Toast'
+import { RuiToast } from '../src/Toast/'
+import { ToastProvider } from '../src/Toast/ToastProvider'
+import { RuiToastProps } from '../src/Toast/Toast'
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Toast',
@@ -10,10 +11,13 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<RuiToastProps> = (args) => <div className="fixed right-2.5 top-2.5 max-w-xs">
-    <RuiToast theme='light' {...args} />
-    <RuiToast theme='dark'{...args}/>   
-</div>
+const Template: Story<RuiToastProps> = (args) => <ToastProvider>
+    <RuiToast id="asd" content={{ timer: 6000, position: 'topLeft', message: "hello from storybook!", variant: 'sucess', theme: 'light' }} {...args} />
+    <RuiToast id="asda" content={{ timer: 10000, position: 'topLeft', message: "hello from storybook!", variant: 'info', theme: 'dark' }}  {...args} />
+    <RuiToast id="dfg" content={{  timer: 3000, position: 'topLeft', message: "hello from storybook!", variant: 'warn', theme: 'light' }} {...args} />
+    <RuiToast id="sthg" content={{ timer: 5000, position: 'topLeft', message: "hello from storybook!", variant: 'error', theme: 'dark' }} {...args} />
+    <RuiToast id="sthg" content={{ timer: 15000, position: 'topLeft', message: "hello from storybook!", variant: 'colored', theme: 'dark' }} {...args} />
+</ToastProvider>
 
 export const Default = Template.bind({})
 

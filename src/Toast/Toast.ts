@@ -1,10 +1,10 @@
 import { HTMLAttributes, ReactNode } from "react"
 import { color } from "../types/Generics"
 
-type position = 
+export type position = 
     | "topLeft"
     | "topRight"
-    | "bottomLeft"
+    | "bottomRight"
     | "bottomLeft"
 type theme = 
     | "light"
@@ -17,16 +17,21 @@ type variant =
     | "colored"
 
 
-export interface RuiToastProps extends HTMLAttributes<HTMLElement> {
-    id: string
-    icon?: ReactNode
-    variant: variant
-    content: ReactNode
-    color: color
-    theme: theme
-    position: position
-    dispatch: (arg: unknown) => void
-}
+    export interface RuiToastProps {
+        id: string,
+        content: RuiToastDeetsProps
+    }
+    
+    export interface RuiToastDeetsProps extends HTMLAttributes<HTMLElement> {
+        icon?: ReactNode
+        variant: variant
+        message: ReactNode
+        color?: color
+        theme: theme
+        position: position
+        closeOnClick?: boolean
+        timer?: number
+    }
 
 export const colorVar: {[key in color]: string[]} = {
     amber: ["from-amber-600/20", "text-amber-400"],
