@@ -22,7 +22,7 @@ export const RuiButton = ({ children, color = 'amethyst', size = "sm", disabled 
       );
     case "filled":
       return (
-        <button onClick={onClick} className={`flex w-fit items-center gap-3 rounded-[9px] border-[1.5px] ${baseButtonStyles[color]} ${sizing[size]} text-sm text-white duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700 disabled:select-none`} disabled={disabled}>
+        <button onClick={onClick} className={`flex w-fit items-center gap-3 rounded-[9px] border-[1.5px] border-transparent ${baseButtonStyles[color]} ${sizing[size]} text-sm text-white duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700 disabled:select-none`} disabled={disabled}>
           {leftIcon && leftIcon}
           <span>{children}</span>
           {rightIcon && rightIcon}
