@@ -1,8 +1,8 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import { color } from "../types/Generics";
 
-type variant = "filled" | "ghost" | "text" | "icon"
-type size = "sm" | "lg"
+type variant = "filled" | "ghost" | "text" | "icon";
+type size = "sm" | "lg";
 
 export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
@@ -23,38 +23,6 @@ export const sizing: {[key in size]: string} = {
     "lg": "h-11 px-5 py-2.5",
 }
 
-export const threeDeeColor: { [key in color]: string[] } = {
-    amber: ["bg-amber-500", "bg-amber-400"],
-    amethyst: ["bg-amethyst-500", "bg-amethyst-400"],
-    aqua: ["bg-aqua-500", "bg-aqua-400"],
-    azure: ["bg-azure-500", "bg-azure-400"],
-    blue: ["bg-blue-500", "bg-blue-400"],
-    cyan: ["bg-cyan-500", "bg-cyan-400"],
-    emerald: ["bg-emerald-500", "bg-emerald-400"],
-    fuchsia: ["bg-fuchsia-500", "bg-fuchsia-400"],
-    green: ["bg-green-500", "bg-green-400"],
-    indigo: ["bg-indigo-500", "bg-indigo-400"],
-    jade: ["bg-jade-500", "bg-jade-400"],
-    jasper: ["bg-jasper-500", "bg-jasper-400"],
-    kunzite: ["bg-kunzite-500", "bg-kunzite-400"],
-    lime: ["bg-lime-500", "bg-lime-400"],
-    moonstone: ["bg-moonstone-500", "bg-moonstone-400"],
-    orange: ["bg-orange-500", "bg-orange-400"],
-    peridot: ["bg-peridot-500", "bg-peridot-400"],
-    pink: ["bg-pink-500", "bg-pink-400"],
-    purple: ["bg-purple-500", "bg-purple-400"],
-    red: ["bg-red-500", "bg-red-400"],
-    rose: ["bg-rose-500", "bg-rose-400"],
-    ruby: ["bg-ruby-500", "bg-ruby-400"],
-    russian: ["bg-russian-500", "bg-russian-400"],
-    scarlet: ["bg-scarlet-500", "bg-scarlet-400"],
-    stratos: ["bg-stratos-500", "bg-stratos-400"],
-    sunstone: ["bg-sunstone-500", "bg-sunstone-400"],
-    sylver: ["bg-sylver-500", "bg-sylver-400"],
-    teal: ["bg-teal-500", "bg-teal-400"],
-    violet: ["bg-violet-500", "bg-violet-400"],
-    yellow: ["bg-yellow-500", "bg-yellow-400"],
-}
 export const baseButtonStyles: { [key in color]: string } = {
     amber: "bg-amber-500 active:bg-amber-600",
     amethyst: "bg-amethyst-500 active:bg-amethyst-600",

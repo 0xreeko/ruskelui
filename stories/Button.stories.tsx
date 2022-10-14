@@ -23,10 +23,10 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<RuiButtonProps> = (args) => <RuiButton variant='filled' {...args} ></RuiButton>
-const ButtonGhost: Story<RuiButtonProps> = (args) => <RuiButton variant='ghost' leftIcon={icon} {...args} ></RuiButton>
-const ButtonText: Story<RuiButtonProps> = (args) => <RuiButton variant='text' {...args} ></RuiButton>
-const ButtonIcon: Story<RuiButtonProps> = (args) => <RuiButton variant='icon' {...args} ></RuiButton>
+const Template: Story<RuiButtonProps> = (args) => <RuiButton {...args} ></RuiButton>
+const ButtonGhost: Story<RuiButtonProps> = (args) => <RuiButton leftIcon={icon} {...args} ></RuiButton>
+const ButtonText: Story<RuiButtonProps> = (args) => <RuiButton {...args} ></RuiButton>
+const ButtonIcon: Story<RuiButtonProps> = (args) => <RuiButton {...args} ></RuiButton>
 
 const icon = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -42,16 +42,20 @@ export const Icon = ButtonIcon.bind({})
 
 Default.args = {
     color: 'sunstone',
+    variant: 'filled'
 }
 
 Ghost.args = {
     color: 'sunstone',
+    variant: 'ghost'
 }
 
 Text.args = {
     color: 'ruby',
+    variant: 'text'
 }
 
 Icon.args = {
-    children: icon
+    children: icon,
+    variant: 'icon'
 }
