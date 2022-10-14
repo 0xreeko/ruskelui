@@ -2,7 +2,6 @@ import React from 'react'
 import { RuiButtonProps, textButtonStyles, sizing, baseButtonStyles, ghostButtonStyles, } from './Button'
 
 export const RuiButton = ({ children, color = 'amethyst', size = "sm", disabled = false, variant = "filled", rightIcon, leftIcon, onClick }: RuiButtonProps) => {
-  console.log(baseButtonStyles[color])
   switch (variant) {
     case "ghost":
       return (

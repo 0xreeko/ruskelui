@@ -7,7 +7,7 @@ export interface RuiDropdownProps {
     leftIcon?: ReactNode
     rightIcon?: ReactNode
     color: color
-    disabled: boolean
+    disabled?: boolean
 }
 
 export type position = "left" | "top" | "right" | "bottom"

@@ -16,7 +16,7 @@ const _Revamped: Story = (args) => {
 
     const [open, setOpen] = useState(false)
     return (
-        <RuiDropdown position='start' {...args}>
+        <RuiDropdown position='bottom' {...args}>
             <button onClick={() => setOpen(!open)}>Click Here</button>
             {open &&
                 <RuiDropdown.Portal>

@@ -4,5 +4,5 @@ import { color } from "../types/Generics"
 export interface RuiToggleProps extends HTMLAttributes<HTMLElement> {
     color: color
     name: string
-    disabled: boolean
+    disabled?: boolean
 }
