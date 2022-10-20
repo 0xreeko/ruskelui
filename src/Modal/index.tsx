@@ -3,9 +3,9 @@ import { RuiModalProps } from "./Modal";
 // @ts-ignore
 import styles from './Modal.module.css'
 
-export const RuiModal = ({ children, size = "md", pointer }: RuiModalProps) => {
+export const RuiModal = ({ id, children, size = "md", pointer }: RuiModalProps) => {
 	return (
-			<dialog ref={pointer} className={`p-4 min-w-xs ${styles.modal} max-w-${size}`}>
+		<dialog id={id} ref={pointer} className={`p-4 min-w-xs ${styles.modal} max-w-${size}`}>
 				{children}
 			</dialog>
 	)
