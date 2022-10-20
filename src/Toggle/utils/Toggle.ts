@@ -1,6 +1,6 @@
-import { color } from "../../types/Generics";
+import { toggleColor } from "../Toggle"
 
-export const toggleColor: {[key in color]: string} = {
+export const checkedColor: {[key in toggleColor]: string} = {
     amber: "peer-checked:bg-amber-500",
     amethyst: "peer-checked:bg-amethyst-500",
     aqua: "peer-checked:bg-aqua-500",
@@ -17,7 +17,6 @@ export const toggleColor: {[key in color]: string} = {
     kunzite: "peer-checked:bg-kunzite-500",
     labrodite: "peer-checked:bg-labrodite-500",
     lime: "peer-checked:bg-lime-500",
-    moonstone: "peer-checked:bg-moonstone-500",
     orange: "peer-checked:bg-orange-500",
     peridot: "peer-checked:bg-peridot-500",
     pink: "peer-checked:bg-pink-500",
@@ -29,7 +28,6 @@ export const toggleColor: {[key in color]: string} = {
     scarlet: "peer-checked:bg-scarlet-500",
     stratos: "peer-checked:bg-stratos-500",
     sunstone: "peer-checked:bg-sunstone-500",
-    sylver: "peer-checked:bg-sylver-500",
     teal: "peer-checked:bg-teal-500",
     violet: "peer-checked:bg-violet-500",
     yellow: "peer-checked:bg-yellow-500",
