@@ -4,6 +4,9 @@ import { color } from "../types/Generics";
 type variant = "filled" | "ghost" | "text" | "icon";
 type size = "sm" | "lg";
 
+type type = 'button' | 'submit' | 'reset'
+
+
 export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
     /** Render an SVG icon to the left side of your button */
@@ -16,6 +19,7 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     size: size
     /** Select a `variant` for your Button */
     variant: variant
+    type: type
 }
 
 export const sizing: {[key in size]: string} = {
