@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
 import { color } from "../types/Generics"
 
-type variant = "current" | "inactive"
+type variant = "current" | "previous"
 
 export interface RuiBreadcrumbsProps {
     color?: color

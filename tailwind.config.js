@@ -5,26 +5,22 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        'd-hero': ['3.583rem', { lineHeight: '1.3', fontWeight: '900' }],
-        'd-h1': ['2.986rem', { lineHeight: '1.3' }],
-        'd-h2': ['2.488rem', { lineHeight: '1.3' }],
-        'd-h3': ['2.074rem', { lineHeight: '1.3' }],
-        'd-h4': ['1.728rem', { lineHeight: '1.3' }],
-        'd-sub1': ['1.44rem'],
-        'd-sub2': ['1.2rem'],
+        'd-hero': ['3.813rem', { lineHeight: '1.4', fontWeight: '800', letterSpacing: '-0.05' }],
+        'd-h2': ['3.063rem', { lineHeight: '1.5' }],
+        'd-h3': ['2.438rem', { lineHeight: '1.6' }],
+        'd-h4': ['1.938rem', { lineHeight: '1.6' }],
+        'd-h5': ['1.563rem', { lineHeight: '1.6' }],
+        'd-h6': ['1.25rem', { lineHeight: '1.6', fontWeight: '100', letterSpacing: "0.05" }],
         'd-base': ['1rem', { lineHeight: '1.5' }],
-        'd-copy': ['0.833rem'],
-        'd-overline': ['0.694rem', { letterSpacing: '0.25rem', fontWeight: '700', textTransform: 'uppercase' }],
-        'm-hero': ['2.281rem', { lineHeight: '1.75', fontWeight: '900' }],
-        'm-h1': ['2.027rem', { lineHeight: '1.75' }],
-        'm-h2': ['1.802rem', { lineHeight: '1.75' }],
-        'm-h3': ['1.692rem', { lineHeight: '1.75' }],
-        'm-h4': ['1.424rem', { lineHeight: '1.75' }],
-        'm-sub1': ['1.266rem'],
-        'm-sub2': ['1.125rem'],
+        'd-copy': ['0.833rem', { lineHeight: '2' }],
+        'm-hero': ['3rem', { lineHeight: '1.4', fontWeight: '800', letterSpacing: "-0.05", }],
+        'm-h2': ['2.5rem', { lineHeight: '1.5' }],
+        'm-h3': ['2.063rem', { lineHeight: '1.6' }],
+        'm-h4': ['1.75rem', { lineHeight: '1.6' }],
+        'm-h5': ['1.483rem', { lineHeight: '1.6' }],
+        'm-h6': ['1.188rem', { lineHeight: '1.6', fontWeight: '100', letterSpacing: "0.05" }],
         'm-base': ['1rem', { lineHeight: '1.5' }],
-        'm-copy': ['0.889rem'],
-        'm-overline': ['0.79rem', { letterSpacing: '0.25rem', fontWeight: '700', textTransform: 'uppercase' }]
+        'm-copy': ['0.889rem', { lineHeight: '2' }],
       },
       colors: {
         transparent: 'transparent',
@@ -66,6 +62,18 @@ module.exports = {
           "900": "rgb(0, 58, 125)"
         },
         bayoux: {
+          "50": "rgb(247, 247, 250)",
+          "100": "rgb(240, 240, 245)",
+          "200": "rgb(240, 240, 245)",
+          "300": "rgb(194, 194, 214)",
+          "400": "rgb(148, 148, 184)",
+          "500": "rgb(102, 102, 153)",
+          "600": "rgb(92, 92, 138)",
+          "700": "rgb(77, 77, 115)",
+          "800": "rgb(61, 61, 92)",
+          "900": "rgb(50, 50, 75)"
+        },
+        labrodite: {
           "50": "rgb(246, 247, 248)",
           "100": "rgb(238, 240, 242)",
           "200": "rgb(212, 217, 221)",
@@ -126,17 +134,17 @@ module.exports = {
           "900": "rgb(121, 113, 103)"
         },
         peridot: {
-          "50": "rgb(246, 255, 242)",
-          "100": "rgb(238, 255, 230)",
-          "200": "rgb(212, 255, 191)",
-          "300": "rgb(185, 255, 153)",
-          "400": "rgb(133, 255, 77)",
-          "500": "rgb(81, 255, 0)",
-          "600": "rgb(73, 230, 0)",
-          "700": "rgb(61, 191, 0)",
-          "800": "rgb(49, 153, 0)",
-          "900": "rgb(40, 125, 0)"
-        },
+          '50': 'rgb(245,254,247)', 
+          '100': 'rgb(235,253,239)', 
+          '200': 'rgb(206,249,215)', 
+          '300': 'rgb(176,245,191)', 
+          '400': 'rgb(116,238,143)', 
+          '500': 'rgb(57,231,95)', 
+          '600': 'rgb(51,208,86)', 
+          '700': 'rgb(43,173,71)', 
+          '800': 'rgb(34,139,57)', 
+          '900': 'rgb(28,113,47)'
+      },
         ruby: {
           "50": "rgb(255, 242, 248)",
           "100": "rgb(255, 230, 240)",

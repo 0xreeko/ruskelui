@@ -10,6 +10,9 @@
     .azure{ 
         @apply bg-stratos-400/20 peer-checked:bg-azure-400
     }
+    .bayoux{ 
+        @apply bg-stratos-400/20 peer-checked:bg-bayoux-400
+    }
     .blue{ 
         @apply bg-stratos-400/20 peer-checked:bg-blue-400
     }
@@ -36,6 +39,9 @@
     }
     .kunzite{ 
         @apply bg-stratos-400/20 peer-checked:bg-kunzite-400
+    }
+    .labrodite{ 
+        @apply bg-stratos-400/20 peer-checked:bg-labrodite-400
     }
     .lime{ 
         @apply bg-stratos-400/20 peer-checked:bg-lime-400

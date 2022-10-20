@@ -28,23 +28,8 @@ const iconoRight = <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-
 <line x1="6" y1="6" x2="18" y2="18"></line>
 </svg>
 
-const Template: Story<RuiInputProps> = (args) => <RuiInput {...args}/>
-const T_Textarea: Story<RuiInputProps> = (args) => <RuiInput.Textarea {...args}/>
+const Template: Story<RuiInputProps> = (args) => <RuiInput variant='base' {...args}/>
+const _Password: Story<RuiInputProps> = (args) => <RuiInput variant='password' autoComplete='false' {...args}/>
 
 export const Default = Template.bind({})
-export const Textarea = T_Textarea.bind({})
-export const LeftIcon = Template.bind({})
-export const RightIcon = Template.bind({})
-export const FloatingLabel = Template.bind({})
-
-LeftIcon.args = {
-   leftIcon: icono
-}
-
-RightIcon.args = {
-   rightIcon: iconoRight
-}
-
-FloatingLabel.args = {
-    floatingLabel: 'Username'
-}
+export const Password = _Password.bind({})

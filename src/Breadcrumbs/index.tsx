@@ -17,7 +17,7 @@ const CrumbItem = ({ route, color = 'ruby', children, divider = dividerIcon, var
                 </li>
             )
 
-        case "inactive":
+        case "previous":
             return (
                 <li className={`inline-flex items-center`}>
                     <a href={route} className='text-russian-600/60 dark:text-sylver-100/60'>

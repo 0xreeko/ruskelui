@@ -18,6 +18,10 @@
     @apply text-azure-400
 }
 
+.bayoux {
+    @apply text-bayoux-400
+}
+
 .blue {
     @apply text-blue-400
 }
@@ -52,6 +56,10 @@
 
 .kunzite {
     @apply text-kunzite-400
+}
+
+.labrodite {
+    @apply text-labrodite-400
 }
 
 .lime {

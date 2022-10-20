@@ -31,6 +31,9 @@
     .azure {
         @apply hover:text-azure-600
     }
+    .bayoux {
+        @apply hover:text-bayoux-600
+    }
     .blue {
         @apply hover:text-blue-600
     }
@@ -57,6 +60,9 @@
     }
     .kunzite {
         @apply hover:text-kunzite-600
+    }
+    .labrodite {
+        @apply hover:text-labrodite-600
     }
     .lime {
         @apply hover:text-lime-600

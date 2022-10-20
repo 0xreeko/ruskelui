@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react'
-import { RuiToastProvider, useRuiToastify } from '../src/Toast/ToastProvider'
+import { RuiToastProvider } from '../src/Toast/ToastProvider'
 import { RuiToastProps } from '../src/Toast/Toast'
 
 const meta: Meta = {
@@ -23,7 +23,7 @@ const Template: Story<RuiToastProps> = (args) => {
                     Usage: Import the Provider and Hook by
                     using the following import snippet:
                     <br/>
-                    <code className='font-bold text-amethyst-500'>{"import { RuiToastProvider, useRuiToastify } from 'ruskelui"}</code>
+                    <code className='font-bold text-amethyst-500'>{"import { RuiToastProvider, useRuiToastify } from 'ruskelui'"}</code>
                     <br/>
                     then wrapping your entrypoint {"(ex. `_app.tsx` in Next.js)"} with
                     <br/>
