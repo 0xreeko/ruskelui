@@ -1,5 +1,5 @@
 import React from 'react'
-import { RuiButtonProps, textButtonStyles, sizing, baseButtonStyles, ghostButtonStyles, } from './Button'
+import { RuiButtonProps, textButtonStyles, sizing, filledButtonStyles, ghostButtonStyles, } from './Button'
 
 export const RuiButton = ({ id, type, children, color = 'amethyst', size = "sm", disabled = false, variant = "filled", rightIcon, leftIcon, onClick }: RuiButtonProps) => {
   switch (variant) {
@@ -21,7 +21,7 @@ export const RuiButton = ({ id, type, children, color = 'amethyst', size = "sm",
       );
     case "filled":
       return (
-        <button id={id} type={type} onClick={onClick} className={`flex w-fit items-center gap-3 rounded-[9px] border-[1.5px] border-transparent ${baseButtonStyles[color]} ${sizing[size]} text-sm text-white duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700 disabled:select-none`} disabled={disabled}>
+        <button id={id} type={type} onClick={onClick} className={`flex w-fit items-center gap-3 rounded-[9px] border-[1.5px] border-transparent ${filledButtonStyles[color]} ${sizing[size]} text-sm text-white duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700 disabled:select-none`} disabled={disabled}>
           {leftIcon && leftIcon}
           <span>{children}</span>
           {rightIcon && rightIcon}
@@ -35,7 +35,7 @@ export const RuiButton = ({ id, type, children, color = 'amethyst', size = "sm",
       )
     default:
       return (
-        <button id={id} type={type} onClick={onClick} className={`flex w-fit items-center gap-3 rounded-[9px] border-[1.5px] border-transparent ${baseButtonStyles[color]} ${sizing[size]} text-sm text-white duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700 disabled:select-none`} disabled={disabled}>
+        <button id={id} type={type} onClick={onClick} className={`flex w-fit items-center gap-3 rounded-[9px] border-[1.5px] border-transparent ${filledButtonStyles[color]} ${sizing[size]} text-sm text-white duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700 disabled:select-none`} disabled={disabled}>
           {leftIcon && leftIcon}
           <span>{children}</span>
           {rightIcon && rightIcon}

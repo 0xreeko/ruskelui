@@ -21,7 +21,7 @@ const _Revamped: Story = (args) => {
             {open &&
                 <RuiDropdown.Portal theme='dark'>
                     <RuiDropdown.Menu label='main' variant='main'>
-                        <RuiDropdown.Item color="moonstone">Dashboard</RuiDropdown.Item>
+                        <RuiDropdown.Item color="amethyst">Dashboard</RuiDropdown.Item>
                         <RuiDropdown.Item leftIcon={iconUser} rightIcon={iconChev} disabled color="amethyst" navToDrop='accountSettings'>Account Settings</RuiDropdown.Item>
                         <RuiDropdown.Item color="azure" disabled>Support</RuiDropdown.Item>
                         <RuiDropdown.Item color="scarlet">Log Out</RuiDropdown.Item>

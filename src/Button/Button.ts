@@ -19,7 +19,8 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     size: size
     /** Select a `variant` for your Button */
     variant: variant
-    type: type
+    /** Select a `type` for your Button from 'button' | 'submit' | 'reset' */
+    type?: type
 }
 
 export const sizing: {[key in size]: string} = {
@@ -27,7 +28,7 @@ export const sizing: {[key in size]: string} = {
     "lg": "h-11 px-5 py-2.5",
 }
 
-export const baseButtonStyles: { [key in color]: string } = {
+export const filledButtonStyles: { [key in color]: string } = {
     amber: "bg-amber-500 active:bg-amber-600",
     amethyst: "bg-amethyst-500 active:bg-amethyst-600",
     aqua: "bg-aqua-500 active:bg-aqua-600",

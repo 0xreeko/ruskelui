@@ -1,19 +1,19 @@
 import { ReactNode } from "react"
 import { color } from "../types/Generics"
 
+export type position = "left" | "top" | "right" | "bottom"
+
+export type dropdownColor = Extract<color, 'amber' | 'amethyst' | 'aqua' | 'azure' | 'bayoux' | 'blue' | 'cyan' | 'emerald' | 'fuchsia' | 'green' | 'indigo' | 'jade' | 'jasper' | 'kunzite' | 'labrodite' | 'lime' | 'orange' | 'peridot' | 'pink' | 'purple' | 'red' | 'rose' | 'ruby' | 'russian' | 'scarlet' | 'stratos' | 'sunstone' | 'teal' | 'violet' | 'yellow'>
+
 export interface RuiDropdownProps {
     children: ReactNode
     navToDrop?: string
     leftIcon?: ReactNode
     rightIcon?: ReactNode
-    color: color
+    color: dropdownColor
     disabled?: boolean
 }
 
-export type position = "left" | "top" | "right" | "bottom"
-
-
-type dropdownColor = Extract<color, 'amber' | 'amethyst' | 'aqua' | 'azure' | 'bayoux' | 'blue' | 'cyan' | 'emerald' | 'fuchsia' | 'green' | 'indigo' | 'jade' | 'jasper' | 'kunzite' | 'labrodite' | 'lime' | 'orange' | 'peridot' | 'pink' | 'purple' | 'red' | 'rose' | 'ruby' | 'russian' | 'scarlet' | 'stratos' | 'sunstone' | 'teal' | 'violet' | 'yellow'>
 
 export const positioning: { [key in position]: string } = {
     left: "-top-1.5 -translate-x-full -left-3",
