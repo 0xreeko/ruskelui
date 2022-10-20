@@ -15,6 +15,6 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<RuiCheckboxProps> = (args) => <RuiCheckbox disabled {...args}/>
+const Template: Story<RuiCheckboxProps> = (args) => <RuiCheckbox {...args}/>
 
 export const Default = Template.bind({})
