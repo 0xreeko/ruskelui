@@ -3,7 +3,6 @@ import { color } from "../types/Generics"
 
 export interface RuiLoaderProps extends HTMLAttributes<HTMLElement> {
     color: color
-    name: string
 }
 
 export const fillColor: {[key in color]: string} = {
