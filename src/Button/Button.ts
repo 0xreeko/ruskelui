@@ -21,6 +21,8 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     variant: variant
     /** Select a `type` for your Button from 'button' | 'submit' | 'reset' */
     type?: type
+    /** Apply ripple effect to button when clicked */
+    ripples?: boolean
 }
 
 export const sizing: {[key in size]: string} = {
