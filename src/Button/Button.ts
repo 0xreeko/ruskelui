@@ -23,6 +23,10 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     type?: type
     /** Apply ripple effect to button when clicked */
     ripple?: boolean
+    /** Apply loading state */
+    isLoading?: boolean
+    /** Label shown when loading state is true */
+    loadingLabel?: ReactNode
 }
 
 export const sizing: {[key in size]: string} = {

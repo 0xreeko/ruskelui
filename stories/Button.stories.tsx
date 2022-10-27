@@ -17,6 +17,9 @@ const meta: Meta = {
             handleClick: {
                 action: 'clicked'
             }
+        },
+        loadingLabel: {
+            defaultValue: "Loading..."
         }
     }
 }
