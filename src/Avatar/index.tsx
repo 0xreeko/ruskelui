@@ -16,7 +16,7 @@ export const RuiAvatar = ({ children, size = "md", color = 'amethyst', zoomed, v
             return (
                 <div className='relative w-fit group'>
                     <div className={`overflow-hidden ${sizing[size]} ${rounded === 'base' ? 'rounded-[32%]' : 'rounded-full'} bg-gray-300`}>
-                        <img src={src} className={zoomed ? 'group-hover:scale-125 duration-300': ''} alt={alt ? alt : 'ruskel UI placeholder'} />
+                        <img src={src} className={zoomed ? 'group-hover:scale-110 duration-300': ''} alt={alt ? alt : 'ruskel UI placeholder'} />
                     </div>
                     <span className='sr-only'>Avatar Icon</span>
                 </div>
@@ -24,9 +24,9 @@ export const RuiAvatar = ({ children, size = "md", color = 'amethyst', zoomed, v
 
         default:
             return (
-                <div className='relative w-fit'>
+                <div className='relative w-fit group'>
                     <div className={`overflow-hidden ${sizing[size]} ${rounded === 'base' ? 'rounded-[32%]' : 'rounded-full'} bg-gray-300`}>
-                        <img src={src} alt={alt ? alt : 'ruskel UI placeholder'} />
+                        <img src={src} className={zoomed ? 'group-hover:scale-110 duration-300': ''} alt={alt ? alt : 'ruskel UI placeholder'} />
                     </div>
                     <span className='sr-only'>Avatar Icon</span>
                 </div>
