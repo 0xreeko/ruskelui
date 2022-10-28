@@ -1,7 +1,7 @@
 import { InputHTMLAttributes, ReactNode } from "react"
 import { color } from "../types/Generics"
 
-type variant = "base" | "password"
+type variant = "text" | "password" | "number" | "time"
 
 export interface RuiInputProps extends InputHTMLAttributes<HTMLInputElement>{
     label: string

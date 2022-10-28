@@ -2,7 +2,7 @@ import React from 'react';
 import { Meta, Story } from "@storybook/react";
 import { RuiInput } from '../src/Input/'
 import { RuiInputProps } from '../src/Input/Input';
-
+    
 
 const meta: Meta = {
     title: '@RuskelUI/Components/Input',
@@ -30,6 +30,8 @@ const iconoRight = <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-
 
 const Template: Story<RuiInputProps> = (args) => <RuiInput variant='base' floatingLabel='Username' disabled {...args}/>
 const _Password: Story<RuiInputProps> = (args) => <RuiInput variant='password' disabled autoComplete='false' {...args}/>
+const _Number: Story<RuiInputProps> = (args) => <RuiInput variant='number' min={0} max={9} {...args}/>
 
 export const Default = Template.bind({})
 export const Password = _Password.bind({})
+export const Number = _Number.bind({})
