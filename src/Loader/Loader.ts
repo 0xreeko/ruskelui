@@ -1,9 +1,7 @@
 import { HTMLAttributes } from "react"
 import { color } from "../types/Generics"
 
-export interface RuiLoaderProps extends HTMLAttributes<HTMLElement> {
-    color: color
-}
+export interface RuiLoaderProps extends HTMLAttributes<HTMLElement> {}
 
 export const fillColor: {[key in color]: string} = {
     amber: "fill-amber-600",
