@@ -1,6 +1,6 @@
 import { DialogHTMLAttributes, LegacyRef, ReactNode } from "react"
 
-type size = "sm" | "md" | "lg"
+type size = 'xs' | "sm" | "md" | "lg" | 'xl'
 
 export interface RuiModalProps extends DialogHTMLAttributes<HTMLDialogElement> {    
     children: ReactNode

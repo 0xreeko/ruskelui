@@ -4,8 +4,15 @@ import { RuiModalProps } from "./Modal";
 import styles from './Modal.module.css'
 
 export const RuiModal = ({ id, children, size = "md", pointer }: RuiModalProps) => {
+	const sizing: { [key in typeof size]: string } = {
+		'xl': 'max-w-xl',
+		'lg': 'max-w-lg',
+		'md': 'max-w-md',
+		'sm': 'max-w-sm',
+		'xs': 'max-w-xs',
+	}
 	return (
-		<dialog id={id} ref={pointer} className={`p-4 min-w-xs ${styles.modal} max-w-${size}`}>
+		<dialog id={id} ref={pointer} className={`p-4 w-full ${sizing[size]} ${styles.modal}`}>
 				{children}
 			</dialog>
 	)
