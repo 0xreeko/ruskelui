@@ -1,3 +1,18 @@
+ .clocker {
+    @apply appearance-none backdrop-blur-sm border-gray-600 box-border px-3 py-1 border rounded-[9px]
+ }
+ input.clocker[data-isdark="true"]::-webkit-calendar-picker-indicator{
+    filter: invert(100%);
+  }
+
+  input.clocker[data-isdark="true"] {
+    @apply text-sylver-100 bg-black/20 border-gray-600
+  }
+
+  input.clocker[data-isdark="false"] {
+    @apply text-russian-600 bg-white/20 border-gray-300
+  }
+
 .amethyst {
     @apply ring-amethyst-600;
 }

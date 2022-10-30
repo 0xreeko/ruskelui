@@ -28,10 +28,12 @@ const iconoRight = <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-
 <line x1="6" y1="6" x2="18" y2="18"></line>
 </svg>
 
-const Template: Story<RuiInputProps> = (args) => <RuiInput variant='base' floatingLabel='Username' disabled {...args}/>
-const _Password: Story<RuiInputProps> = (args) => <RuiInput variant='password' disabled autoComplete='false' {...args}/>
+const Template: Story<RuiInputProps> = (args) => <RuiInput variant='base' {...args}/>
+const _Password: Story<RuiInputProps> = (args) => <RuiInput variant='password' {...args}/>
 const _Number: Story<RuiInputProps> = (args) => <RuiInput variant='number' min={0} max={9} {...args}/>
+const _Time: Story<RuiInputProps> = (args) => <RuiInput variant='time' {...args}/>
 
 export const Default = Template.bind({})
 export const Password = _Password.bind({})
 export const Number = _Number.bind({})
+export const Time = _Time.bind({})
