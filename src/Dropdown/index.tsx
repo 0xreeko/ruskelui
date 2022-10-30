@@ -49,7 +49,7 @@ export const RuiDropdown = ({ children, pointer, position = "bottom" }: { childr
     }
     return (
         <DropdownContext.Provider value={{ activeDrop, setActiveDrop, calcHeight, menuHeight, position }}>
-            <div className={`relative inline-flex justify-${position}`} ref={pointer}>
+            <div className={`relative inline-flex`} ref={pointer}>
                 {children}
             </div>
         </DropdownContext.Provider>

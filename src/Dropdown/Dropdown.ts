@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
 import { color } from "../types/Generics"
 
-export type position = "left" | "top" | "right" | "bottom"
+export type position = "left" | "top" | "right" | "bottom" | "bottomRight" | "bottomLeft"
 
 export type dropdownColor = Extract<color, 'amber' | 'amethyst' | 'aqua' | 'azure' | 'bayoux' | 'blue' | 'cyan' | 'emerald' | 'fuchsia' | 'green' | 'indigo' | 'jade' | 'jasper' | 'kunzite' | 'labrodite' | 'lime' | 'orange' | 'peridot' | 'pink' | 'purple' | 'red' | 'rose' | 'ruby' | 'russian' | 'scarlet' | 'stratos' | 'sunstone' | 'teal' | 'violet' | 'yellow'>
 
@@ -14,12 +14,13 @@ export interface RuiDropdownProps {
     disabled?: boolean
 }
 
-
 export const positioning: { [key in position]: string } = {
     left: "-top-1.5 -translate-x-full -left-3",
-    top: "-translate-y-full",
+    top: "-translate-y-full -left-1/2",
     right: "-top-1.5 translate-x-1/2",
-    bottom: "mt-6"
+    bottom: "top-6 -left-1/2",
+    bottomRight: "top-6 right-0",
+    bottomLeft: "top-6 left-0",
 }
 
 export const hoverColor: { [key in dropdownColor]: string } = {
