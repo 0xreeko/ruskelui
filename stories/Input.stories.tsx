@@ -30,7 +30,7 @@ const iconoRight = <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-
 
 const Template: Story<RuiInputProps> = (args) => <RuiInput variant='base' {...args}/>
 const _Password: Story<RuiInputProps> = (args) => <RuiInput variant='password' {...args}/>
-const _Number: Story<RuiInputProps> = (args) => <RuiInput variant='number' min={0} max={9} {...args}/>
+const _Number: Story<RuiInputProps> = (args) => <RuiInput variant='number' min={0} max={100} {...args}/>
 const _Time: Story<RuiInputProps> = (args) => <RuiInput variant='time' {...args}/>
 const _Email: Story<RuiInputProps> = (args) => <RuiInput variant='email' {...args}/>
 
