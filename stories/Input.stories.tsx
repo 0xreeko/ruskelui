@@ -32,8 +32,10 @@ const Template: Story<RuiInputProps> = (args) => <RuiInput variant='base' {...ar
 const _Password: Story<RuiInputProps> = (args) => <RuiInput variant='password' {...args}/>
 const _Number: Story<RuiInputProps> = (args) => <RuiInput variant='number' min={0} max={9} {...args}/>
 const _Time: Story<RuiInputProps> = (args) => <RuiInput variant='time' {...args}/>
+const _Email: Story<RuiInputProps> = (args) => <RuiInput variant='email' {...args}/>
 
 export const Default = Template.bind({})
 export const Password = _Password.bind({})
+export const Email = _Email.bind({})
 export const Number = _Number.bind({})
 export const Time = _Time.bind({})
