@@ -12,9 +12,9 @@ export default meta
 
 
 const _data = [
-    { label: "What is RuskelUI?", content: "v" },
-    { label: "What is Web3Source that opens the portal?", content: "v" },
-    { label: "What is Thirdflow?", content: "v" },
+    { label: "What is RUI?", content: "v" },
+    { label: "How do you use this library?", content: "v" },
+    { label: "What is Web3?", content: "v" },
 ]
  
 const Template: Story<RuiAccordionProps> = args => <RuiAccordion data={_data} {...args} />
