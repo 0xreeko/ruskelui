@@ -27,6 +27,8 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     isLoading?: boolean
     /** Label shown when loading state is true */
     loadingLabel?: ReactNode
+    /** Make */
+    fullWidth?: boolean
 }
 
 export const sizing: {[key in size]: string} = {
