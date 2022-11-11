@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import { color } from "../types/Generics";
 
-type variant = "filled" | "ghost" | "text" | "icon";
+type variant = "filled" | "ghost" | "text"
 
 type type = 'button' | 'submit' | 'reset'
 
