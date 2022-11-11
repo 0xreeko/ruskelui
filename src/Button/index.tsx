@@ -1,8 +1,8 @@
 import React from 'react'
-import { RuiButtonProps, textButtonStyles, sizing, filledButtonStyles, ghostButtonStyles, } from './Button'
+import { RuiButtonProps, textButtonStyles, filledButtonStyles, ghostButtonStyles, } from './Button'
 import { loadingSpinner } from './LoadingSpinner';
 
-export const RuiButton = ({ id, form, isLoading, loadingLabel, fullWidth, value, type, ripple, children, color = 'amethyst', size = "sm", disabled = false, variant = "filled", rightIcon, leftIcon, onClick }: RuiButtonProps) => {
+export const RuiButton = ({ id, form, isLoading, loadingLabel, fullWidth, value, type, ripple, children, color = 'amethyst', disabled = false, variant = "filled", rightIcon, leftIcon, onClick }: RuiButtonProps) => {
   switch (variant) {
     case "ghost":
       return (

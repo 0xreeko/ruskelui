@@ -2,7 +2,6 @@ import { ButtonHTMLAttributes, ReactNode } from "react";
 import { color } from "../types/Generics";
 
 type variant = "filled" | "ghost" | "text" | "icon";
-type size = "sm" | "lg";
 
 type type = 'button' | 'submit' | 'reset'
 
@@ -15,8 +14,6 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     rightIcon?: ReactNode
     /** Available colour ways to style your Button */
     color?: color;
-    /** Provide a `size` for your Button */ 
-    size: size
     /** Select a `variant` for your Button */
     variant: variant
     /** Select a `type` for your Button from 'button' | 'submit' | 'reset' */
@@ -29,11 +26,6 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     loadingLabel?: ReactNode
     /** Make */
     fullWidth?: boolean
-}
-
-export const sizing: {[key in size]: string} = {
-    "sm": "h-9 px-3 py-1.5",
-    "lg": "h-11 px-5 py-2.5",
 }
 
 export const filledButtonStyles: { [key in color]: string } = {
