@@ -8,3 +8,14 @@
     text-transform: uppercase;
     letter-spacing: 0.05rem;
   }
+
+@layer base {
+  :root {
+    --ruiPxPy: 8px 12px;
+  }
+}
+
+
+  .rui-pXpY {
+    padding: var(--ruiPxPy);
+  }
