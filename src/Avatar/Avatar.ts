@@ -1,11 +1,13 @@
 import { HTMLAttributes } from 'react';
 import { color } from '../types/Generics';
 
-type variant = 'initials' | 'image'
+type variant = 'text' | 'image'
 
 type rounded = 'base' | 'rounded'
 
 type size = "xs" | "sm" | "md" | "lg" | 'xl'
+
+type avatarColorType = Extract<color, 'amethyst' | 'lazure' | 'citrine' | 'jade' | 'purpalite' | 'rosian' | 'scarlet' | 'sunstone' | 'tingual' >
 
 export const sizing: { [key in size]: string } = {
     "xs": 'w-7 h-7',
@@ -15,39 +17,16 @@ export const sizing: { [key in size]: string } = {
     "xl": 'w-20 h-20'
 }
 
-export const backgroundColor: { [key in color]: string } = {
-    amber: 'bg-amber-400',
+export const backgroundColor: { [key in avatarColorType]: string } = {
     amethyst: 'bg-amethyst-400',
-    aqua: 'bg-aqua-400',
-    azure: 'bg-azure-400',
-    bayoux: 'bg-bayoux-400',
-    blue: 'bg-blue-400',
-    cyan: 'bg-cyan-400',
-    emerald: 'bg-emerald-400',
-    fuchsia: 'bg-fuchsia-400',
-    green: 'bg-green-400',
-    indigo: 'bg-indigo-400',
+    lazure: 'bg-lazure-400',
+    citrine: 'bg-citrine-400',
     jade: 'bg-jade-400',
-    jasper: 'bg-jasper-400',
-    kunzite: 'bg-kunzite-400',
-    labrodite: 'bg-labrodite-400',
-    lime: 'bg-lime-400',
-    moonstone: 'bg-moonstone-400',
-    orange: 'bg-orange-400',
-    peridot: 'bg-peridot-400',
-    pink: 'bg-pink-400',
-    purple: 'bg-purple-400',
-    red: 'bg-red-400',
-    rose: 'bg-rose-400',
-    ruby: 'bg-ruby-400',
-    russian: 'bg-russian-400',
+    purpalite: 'bg-purpalite-400',
+    rosian: 'bg-rosian-400',
     scarlet: 'bg-scarlet-400',
-    stratos: 'bg-stratos-400',
     sunstone: 'bg-sunstone-400',
-    sylver: 'bg-sylver-400',
-    teal: 'bg-teal-400',
-    violet: 'bg-violet-400',
-    yellow: 'bg-yellow-400'
+    tingual: 'bg-tingual-400',
 }
 
 export interface RuiAvatarProps extends HTMLAttributes<HTMLImageElement> {
@@ -59,5 +38,5 @@ export interface RuiAvatarProps extends HTMLAttributes<HTMLImageElement> {
     rounded: rounded
     zoomed: boolean
     initials: string
-    color: color
+    color: avatarColorType
 }
