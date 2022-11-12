@@ -6,7 +6,7 @@
   }
 
   input.clocker[data-isdark="true"] {
-    @apply text-sylver-100 bg-black/20 border-gray-600
+    @apply text-obsidian-100 bg-black/20 border-gray-600
   }
 
   input.clocker[data-isdark="false"] {

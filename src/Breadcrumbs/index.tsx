@@ -8,19 +8,19 @@ const dividerIcon = <svg xmlns="http://www.w3.org/2000/svg" width={16} height={1
     <polyline points="9 6 15 12 9 18"></polyline>
 </svg>
 
-const CrumbItem = ({ route, color = 'ruby', children, divider = dividerIcon, variant }: RuiBreadcrumbsProps) => {
+const CrumbItem = ({ route, color = 'rosian', children, divider = dividerIcon, variant }: RuiBreadcrumbsProps) => {
     switch (variant) {
         case "current":
             return (
                 <li className={`inline-flex items-center`}>
-                    <span className='cursor-default text-russian-600 dark:text-sylver-100'>{children}</span>
+                    <span className='cursor-default text-russian-600 dark:text-obsidian-100'>{children}</span>
                 </li>
             )
 
         case "previous":
             return (
                 <li className={`inline-flex items-center`}>
-                    <a href={route} className='text-russian-600/60 dark:text-sylver-100/60'>
+                    <a href={route} className='text-russian-600/60 dark:text-obsidian-100/60'>
                         <span className={`${styles[color]} duration-300 `}>{children}</span>
                     </a>
                     <span className='mx-1 text-gray-600'>
@@ -32,7 +32,7 @@ const CrumbItem = ({ route, color = 'ruby', children, divider = dividerIcon, var
         default:
             return (
                 <li className={`inline-flex items-center`}>
-                    <a href={route} className='text-russian-600/60 dark:text-sylver-100/60'>
+                    <a href={route} className='text-russian-600/60 dark:text-obsidian-100/60'>
                         <span className={`${styles[color]} duration-300 `}>{children}</span>
                     </a>
                     <span className='mx-1 text-gray-600'>

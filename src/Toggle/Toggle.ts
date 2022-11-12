@@ -17,7 +17,6 @@ export const checkedColor: { [key in toggleColor]: string } = {
     jade: "peer-checked:bg-jade-500",
     purpalite: "peer-checked:bg-purpalite-500",
     rosian: "peer-checked:bg-rosian-500",
-    rubelle: "peer-checked:bg-rubelle-500",
     scarlet: "peer-checked:bg-scarlet-500",
     sunstone: "peer-checked:bg-sunstone-500",
     tingual: "peer-checked:bg-tingual-500",

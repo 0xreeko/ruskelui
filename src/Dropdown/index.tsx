@@ -4,10 +4,10 @@ import { hoverColor, position, positioning, RuiDropdownProps } from './Dropdown'
 import { DropdownContext } from './DropdownContext'
 import "./Dropdown.css"
 
-export const DropdownItem = ({ children, navToDrop, leftIcon, rightIcon, color = "ruby", disabled  }: RuiDropdownProps) => {
+export const DropdownItem = ({ children, navToDrop, leftIcon, rightIcon, color = "rosian", disabled  }: RuiDropdownProps) => {
     const { setActiveDrop } = useContext(DropdownContext)
     return (
-        <li onClick={() => !disabled && navToDrop && setActiveDrop?.(navToDrop)} role="menuitem" className={`p-2.5 ${disabled !== true ? hoverColor[color] : "text-sylver-800 pointer-events-none select-none"} hover:text-sylver-100 cursor-pointer flex items-center `} >
+        <li onClick={() => !disabled && navToDrop && setActiveDrop?.(navToDrop)} role="menuitem" className={`p-2.5 ${disabled !== true ? hoverColor[color] : "text-sylver-800 pointer-events-none select-none"} hover:text-obsidian-100 cursor-pointer flex items-center `} >
             {leftIcon && <div className='inline-flex items-center w-4 h-4 mr-2'>{leftIcon}</div>}
             {children}
             {rightIcon && <span className='inline-flex items-center w-4 h-4 ml-auto'>{rightIcon}</span>}
@@ -34,7 +34,7 @@ export const DropdownMenu = ({ children, label, variant }: { children: ReactNode
 export const DropdownPortal = ({ children, theme }: { children: ReactNode, theme: "light" | "dark" }) => {
     const {menuHeight, position} = useContext(DropdownContext)
     return (
-        <ul className={`absolute overflow-hidden text-xs rounded-lg backdrop-blur-sm w-44 border ${positioning[position]} ${theme === 'light' ? 'border-gray-300 bg-sylver-400/80 text-russian-600' : 'border-gray-800 bg-russian-600/80 text-sylver-100'}`} style={{ height: menuHeight ?? 'fit-content' }}>
+        <ul className={`absolute overflow-hidden text-xs rounded-lg backdrop-blur-sm w-44 border ${positioning[position]} ${theme === 'light' ? 'border-gray-300 bg-sylver-400/80 text-russian-600' : 'border-gray-800 bg-russian-600/80 text-obsidian-100'}`} style={{ height: menuHeight ?? 'fit-content' }}>
             {children}
         </ul>
     )

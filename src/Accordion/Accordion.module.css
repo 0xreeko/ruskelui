@@ -1,9 +1,9 @@
 .wrapper {
-    @apply flex flex-col relative rounded-xl p-3 text-sylver-100 bg-russian-600 backdrop-blur-sm gap-3
+    @apply flex flex-col relative rounded-xl p-3 text-obsidian-100 bg-russian-600 backdrop-blur-sm gap-3
 }
 
 .accordionItem {
-    @apply flex items-center justify-between w-full px-3 py-1 gap-3 backdrop-blur-sm border-b-[0.5px] border-opacity-10 border-sylver-100
+    @apply flex items-center justify-between w-full px-3 py-1 gap-3 backdrop-blur-sm border-b-[0.5px] border-opacity-10 border-obsidian-100
 }
 
 .content {

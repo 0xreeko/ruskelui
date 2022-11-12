@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import {RuiAccordionProps} from './Accordion'
-import { accordionColor } from './utils/Accordion'
+import {RuiAccordionProps, accordionColor} from './Accordion'
 // @ts-ignore
 import styles from './Accordion.module.css'
 
