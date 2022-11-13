@@ -1,5 +1,5 @@
 .wrapper {
-    @apply font-sans text-d-copy py-2 px-4 bg-russian-600/40 backdrop-blur-sm inline-block rounded-xl mb-2
+    @apply font-sans text-d-copy py-2 px-4 bg-neropside/40 backdrop-blur-sm inline-block rounded-xl mb-2
 }
 
 .innerWrap {
@@ -16,7 +16,7 @@
 
 .active::after {
     content: ">";
-    @apply text-gray-500/60 mx-2
+    @apply text-obsidian-500/60 mx-2
 }
 
     .amber {
