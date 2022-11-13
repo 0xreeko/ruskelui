@@ -6,11 +6,11 @@
   }
 
   input.clocker[data-isdark="true"] {
-    @apply text-obsidian-100 bg-black/20 border-gray-600
+    @apply text-onyx bg-black/20 border-gray-600
   }
 
   input.clocker[data-isdark="false"] {
-    @apply text-russian-600 bg-white/20 border-gray-300
+    @apply text-neropside bg-white/20 border-gray-300
   }
 
 .amethyst {
