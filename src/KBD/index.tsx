@@ -3,7 +3,7 @@ import { RuiKBDProps } from './KBD';
 // @ts-ignore
 import styles from './KBD.module.css'
 
-export const RuiKBD = ({id, children, color = "teal"}: RuiKBDProps) => {
+export const RuiKBD = ({id, children, color = "tingual"}: RuiKBDProps) => {
     return (
         <div id={id} className={`${styles.kbd} ${styles[color]}`}>
             {children}
