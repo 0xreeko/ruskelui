@@ -7,7 +7,7 @@
 }
 
 .innerWrap li {
-    @apply capitalize text-sylver-600
+    @apply capitalize text-obsidian-600
 }
 
 .innerWrap li > a {
