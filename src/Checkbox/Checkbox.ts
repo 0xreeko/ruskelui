@@ -1,11 +1,11 @@
 import { InputHTMLAttributes } from "react"
 import { color } from "../types/Generics"
 
-type variant = 'black' | 'white'
+type variant = 'neropside' | 'onyx'
 
-type checkboxColor = Extract<color, 'amber' | 'amethyst' | 'aqua' | 'azure' | 'bayoux' | 'blue' | 'cyan' | 'emerald' | 'fuchsia' | 'green' | 'indigo' | 'jade' | 'jasper' | 'kunzite' | 'labrodite' | 'lime' | 'orange' | 'peridot' | 'pink' | 'purple' | 'red' | 'rose' | 'ruby' | 'russian' | 'scarlet' | 'stratos' | 'sunstone' | 'teal' | 'violet' | 'yellow'>
+type checkboxColorType = Extract<color, 'amethyst' | 'bayoux' | 'citrine' | 'jade' | 'lazure' | 'purpalite' | 'rosian' | 'scarlet' | 'sunstone' | 'tingual'>
 
 export interface RuiCheckboxProps extends InputHTMLAttributes<HTMLElement>{
-    color: checkboxColor
+    color: checkboxColorType
     variant: variant
 }
