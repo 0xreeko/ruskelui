@@ -25,11 +25,8 @@
     .amethyst {
         @apply hover:text-amethyst-600
     }
-    .aqua {
-        @apply hover:text-aqua-600
-    }
-    .azure {
-        @apply hover:text-azure-600
+    .lazure {
+        @apply hover:text-lazure-600
     }
     .bayoux {
         @apply hover:text-bayoux-600
@@ -55,50 +52,23 @@
     .jade {
         @apply hover:text-jade-600
     }
-    .jasper {
-        @apply hover:text-jasper-600
-    }
-    .kunzite {
-        @apply hover:text-kunzite-600
-    }
-    .labrodite {
-        @apply hover:text-labrodite-600
-    }
     .lime {
         @apply hover:text-lime-600
-    }
-    .moonstone {
-        @apply hover:text-moonstone-600
     }
     .orange {
         @apply hover:text-orange-600
     }
-    .peridot {
-        @apply hover:text-peridot-600
-    }
     .pink {
         @apply hover:text-pink-600
     }
-    .purple {
-        @apply hover:text-purple-600
+    .purpalite {
+        @apply hover:text-purpalite-600
     }
-    .red {
-        @apply hover:text-red-600
-    }
-    .rose {
-        @apply hover:text-rose-600
-    }
-    .ruby {
-        @apply hover:text-ruby-600
-    }
-    .russian {
-        @apply hover:text-russian-600
+    .rosian {
+        @apply hover:text-rosian-600
     }
     .scarlet {
         @apply hover:text-scarlet-600
-    }
-    .stratos {
-        @apply hover:text-stratos-600
     }
     .sunstone {
         @apply hover:text-sunstone-600
@@ -106,12 +76,9 @@
     .sylver {
         @apply hover:text-sylver-600
     }
-    .teal {
-        @apply hover:text-teal-600
+    .tingual {
+        @apply hover:text-tingual-600
     }
-    .violet {
-        @apply hover:text-violet-600
-    }
-    .yellow {
-        @apply hover:text-yellow-600
+    .citrine {
+        @apply hover:text-citrine-600
     }
