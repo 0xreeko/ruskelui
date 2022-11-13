@@ -42,7 +42,7 @@ export const RuiButton = ({ id, form, isLoading, loadingLabel, fullWidth, value,
       );
     case "filled":
       return (
-        <button id={id} form={form} value={value} type={type} onClick={onClick} data-ripple={ripple === true} className={`flex active:scale-95 ${fullWidth ? 'w-full' : 'w-fit'} items-center justify-center gap-3 rounded-[9px] border-[1.5px] border-transparent ${filledButtonStyles[color]} rui-padding text-sm text-white duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700 disabled:select-none`} disabled={disabled}>
+        <button id={id} form={form} value={value} type={type} onClick={onClick} data-ripple={ripple === true} className={`flex active:scale-95 ${fullWidth ? 'w-full' : 'w-fit'} items-center justify-center gap-3 rounded-[9px] border-[1.5px] border-transparent ${filledButtonStyles[color]} rui-padding text-sm text-onyx duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700 disabled:select-none`} disabled={disabled}>
           {isLoading ? (
             <>
               {loadingSpinner}
@@ -60,7 +60,7 @@ export const RuiButton = ({ id, form, isLoading, loadingLabel, fullWidth, value,
       );
     default:
       return (
-        <button id={id} form={form} value={value} type={type} onClick={onClick} data-ripple={ripple === true} className={`flex active:scale-95 ${fullWidth ? 'w-full' : 'w-fit'} items-center justify-center gap-3 rounded-[9px] border-[1.5px] border-transparent ${filledButtonStyles[color]} rui-padding text-sm text-white duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700 disabled:select-none`} disabled={disabled}>
+        <button id={id} form={form} value={value} type={type} onClick={onClick} data-ripple={ripple === true} className={`flex active:scale-95 ${fullWidth ? 'w-full' : 'w-fit'} items-center justify-center gap-3 rounded-[9px] border-[1.5px] border-transparent ${filledButtonStyles[color]} rui-padding text-sm text-onyx duration-150 disabled:pointer-events-none disabled:bg-gray-100 disabled:text-gray-300 dark:disabled:bg-gray-800 dark:disabled:text-gray-700 disabled:select-none`} disabled={disabled}>
           {isLoading ? (
             <>
               {loadingSpinner}

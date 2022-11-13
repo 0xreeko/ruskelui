@@ -1,8 +1,7 @@
 import React from "react"
-import { RuiRadioProps } from "./Radio"
-import { radioColor } from "./utils/color";
+import { RuiRadioProps, radioColor } from "./Radio"
 
-export const RuiRadio = ({id, defaultChecked, defaultValue, value, name, variant, color = "teal", disabled, checked, onChange, onClick }: RuiRadioProps) => {
+export const RuiRadio = ({id, defaultChecked, defaultValue, value, name, variant, color = "tingual", disabled, checked, onChange, onClick }: RuiRadioProps) => {
     switch (variant) {
         case "base":
             return (
