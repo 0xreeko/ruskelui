@@ -73,9 +73,6 @@
     .sunstone {
         @apply hover:text-sunstone-600
     }
-    .sylver {
-        @apply hover:text-sylver-600
-    }
     .tingual {
         @apply hover:text-tingual-600
     }
