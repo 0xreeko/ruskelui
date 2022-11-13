@@ -1,5 +1,5 @@
 .progress {
-    @apply max-w-xs h-2 bg-black/30 overflow-hidden relative rounded-md w-full
+    @apply max-w-xs h-2 bg-obsidian-300 dark:bg-obsidian-800 overflow-hidden relative rounded-md w-full
 }
 
 .svg {
