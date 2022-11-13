@@ -26,10 +26,10 @@ export const Donut = TemplateDonut.bind({})
 
 
 Bar.args =  {
-    color: "ruby",
+    color: "rosian",
     percentage: 54
 }
 Donut.args =  {
-    color: "azure",
+    color: "lazure",
     percentage: 83
 }
