@@ -54,7 +54,7 @@ Ghost.args = {
 }
 
 Text.args = {
-    color: 'ruby',
+    color: 'rosian',
     variant: 'text'
 }
 

@@ -5,6 +5,8 @@ type variant = "filled" | "ghost" | "text"
 
 type type = 'button' | 'submit' | 'reset'
 
+type buttonColorType = color
+
 
 export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
@@ -13,7 +15,7 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     /** Render an SVG icon to the right side of your button */
     rightIcon?: ReactNode
     /** Available colour ways to style your Button */
-    color?: color;
+    color?: buttonColorType;
     /** Select a `variant` for your Button */
     variant: variant
     /** Select a `type` for your Button from 'button' | 'submit' | 'reset' */
@@ -26,7 +28,7 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     fullWidth?: boolean
 }
 
-export const filledButtonStyles: { [key in color]: string } = {
+export const filledButtonStyles: { [key in buttonColorType]: string } = {
     amethyst: "bg-amethyst-500 active:bg-amethyst-600",
     bayoux: "bg-bayoux-500 active:bg-bayoux-600",
     citrine: "bg-citrine-500 active:bg-citrine-600",
@@ -36,13 +38,12 @@ export const filledButtonStyles: { [key in color]: string } = {
     sunstone: "bg-sunstone-500 active:bg-sunstone-600",
     tingual: "bg-tingual-500 active:bg-tingual-600",
     rosian: "bg-rosian-500 active:bg-rosian-600",
-    obsidian: "bg-obsidian-500 active:bg-obsidian-600",
     purpalite: "bg-purpalite-500 active:bg-purpalite-600",
     onyx: "bg-onyx-500 active:bg-onyx-600",
     neropside: "bg-neropside active:bg-neropside/60",
 }
 
-export const ghostButtonStyles: { [key in color]: string } = {
+export const ghostButtonStyles: { [key in buttonColorType]: string } = {
     amethyst: "border-amethyst-500 text-amethyst-500 hover:border-amethyst-400/60 hover:text-amethyst-400/60 active:bg-amethyst-400/5",
     bayoux: "border-bayoux-500 text-bayoux-500 hover:border-bayoux-400/60 hover:text-bayoux-400/60 active:bg-bayoux-400/5",
     citrine: "border-citrine-500 text-citrine-500 hover:border-citrine-400/60 hover:text-citrine-400/60 active:bg-citrine-400/5",
@@ -53,12 +54,11 @@ export const ghostButtonStyles: { [key in color]: string } = {
     tingual: "border-tingual-500 text-tingual-500 hover:border-tingual-400/60 hover:text-tingual-400/60 active:bg-tingual-400/5",
     rosian: "border-rosian-500 text-rosian-500 hover:border-rosian-400/60 hover:text-rosian-400/60 active:bg-rosian-400/5",
     purpalite: "border-purpalite-500 text-purpalite-500 hover:border-purpalite-400/60 hover:text-purpalite-400/60 active:bg-purpalite-400/5",
-    obsidian: "border-obsidian-500 text-obsidian-500 hover:border-obsidian-400/60 hover:text-obsidian-400/60 active:bg-obsidian-400/5",
     onyx: "border-onyx text-onyx hover:border-onyx/60 hover:text-onyx/60 active:bg-onyx/5",
     neropside: "border-neropside text-neropside hover:border-neropside/60 hover:text-neropside/60 active:bg-neropside/5",
 }
 
-export const textButtonStyles: { [key in color]: string } = {
+export const textButtonStyles: { [key in buttonColorType]: string } = {
     amethyst: "text-amethyst-400 hover:bg-amethyst-400/10 hover:text-amethyst-400 active:bg-amethyst-400/20",
     bayoux: "text-bayoux-400 hover:bg-bayoux-400/10 hover:text-bayoux-400 active:bg-bayoux-400/20",
     citrine: "text-citrine-400 hover:bg-citrine-400/10 hover:text-citrine-400 active:bg-citrine-400/20",
@@ -69,7 +69,6 @@ export const textButtonStyles: { [key in color]: string } = {
     rosian: "text-rosian-400 hover:bg-rosian-400/10 hover:text-rosian-400 active:bg-rosian-400/20",
     tingual: "text-tingual-400 hover:bg-tingual-400/10 hover:text-tingual-400 active:bg-tingual-400/20",
     purpalite: "text-purpalite-400 hover:bg-purpalite-400/10 hover:text-purpalite-400 active:bg-purpalite-400/20",
-    obsidian: "text-obsidian-400 hover:bg-obsidian-400/10 hover:text-obsidian-400 active:bg-obsidian-400/20",
-    onyx: "text-onyx hover:bg-onyx-400/10 hover:text-onyx-400 active:bg-onyx-400/20",
+    onyx: "text-onyx hover:bg-onyx/10 hover:text-onyx-400 active:bg-onyx/20",
     neropside: "text-neropside hover:bg-neropside/10 hover:text-neropside active:bg-neropside/20",
 }
