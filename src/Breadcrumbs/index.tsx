@@ -1,5 +1,5 @@
 import React from 'react'
-import { RuiBreadcrumbsProps } from './Breadcrumbs'
+import { RuiBreadcrumbParentProps, RuiBreadcrumbItemProps } from './Breadcrumbs'
 //@ts-ignore
 import styles from './Breadcrumbs.module.css'
 
@@ -8,34 +8,41 @@ const dividerIcon = <svg xmlns="http://www.w3.org/2000/svg" width={16} height={1
     <polyline points="9 6 15 12 9 18"></polyline>
 </svg>
 
-const CrumbItem = ({ route, color = 'rosian', children, divider = dividerIcon, variant }: RuiBreadcrumbsProps) => {
+const CrumbItem = ({ route, color = 'rosian', children, divider = "arrow", variant, icon }: RuiBreadcrumbItemProps) => {
     switch (variant) {
         case "current":
             return (
                 <li className={`inline-flex items-center`}>
-                    <span className='cursor-default text-russian-600 dark:text-obsidian-100'>{children}</span>
+                    <span className='font-semibold cursor-default'>{children}</span>
                 </li>
             )
 
         case "previous":
             return (
                 <li className={`inline-flex items-center`}>
-                    <a href={route} className='text-russian-600/60 dark:text-obsidian-100/60'>
+                    <span className='mr-2'>{icon}</span>
+                    <a href={route}>
                         <span className={`${styles[color]} duration-300 `}>{children}</span>
                     </a>
-                    <span className='mx-1 text-gray-600'>
-                        {divider}
+                    {divider === 'arrow' ? (
+                        <span className='mx-4 dark:text-obsidian-300 text-obsidian-800'>
+                        {dividerIcon}
                     </span>
+                    ) : (
+                        <span className='mx-3 font-semibold dark:text-obsidian-300 text-obsidian-800'>
+                        /
+                    </span>
+                    )}
                 </li>
             )
 
         default:
             return (
                 <li className={`inline-flex items-center`}>
-                    <a href={route} className='text-russian-600/60 dark:text-obsidian-100/60'>
+                    <a href={route}>
                         <span className={`${styles[color]} duration-300 `}>{children}</span>
                     </a>
-                    <span className='mx-1 text-gray-600'>
+                    <span className='mx-4 dark:text-obsidian-300 text-obsidian-800'>
                         {divider}
                     </span>
                 </li>
@@ -43,13 +50,11 @@ const CrumbItem = ({ route, color = 'rosian', children, divider = dividerIcon, v
     }
 }
 
-export const RuiBreadcrumbs = ({ children, fullWidth = false }: RuiBreadcrumbsProps) => {
+export const RuiBreadcrumbs = ({ children, fullWidth = false }: RuiBreadcrumbParentProps) => {
     return (
-        <nav className={`p-2 px-4 flex items-center rounded-lg bg-sylver-700/10 dark:bg-russian-600/80 border border-gray-300 dark:border-gray-800 backdrop-blur-sm ${fullWidth === true ? "w-full" : "w-fit"}`}>
-            <ol className="inline-flex items-center">
-                {children}
-            </ol>
-        </nav>
+        <ul className={`inline-flex items-center p-2 px-4 text-neropside dark:text-onyx ${fullWidth === true ? "w-full" : "w-fit"}`}>
+            {children}
+        </ul>
     )
 }
 
