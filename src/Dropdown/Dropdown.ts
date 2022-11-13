@@ -3,14 +3,14 @@ import { color } from "../types/Generics"
 
 export type position = "left" | "top" | "right" | "bottom" | "bottomRight" | "bottomLeft"
 
-export type dropdownColor = Extract<color, 'amethyst' | 'lazure' | 'citrine' | 'jade' | 'purpalite' | 'rosian' | 'scarlet' | 'sunstone' | 'tingual' >
+export type dropdownColorType = Extract<color, 'amethyst' | 'lazure' | 'citrine' | 'jade' | 'purpalite' | 'rosian' | 'scarlet' | 'sunstone' | 'tingual' >
 
 export interface RuiDropdownProps {
     children: ReactNode
     navToDrop?: string
     leftIcon?: ReactNode
     rightIcon?: ReactNode
-    color: dropdownColor
+    color: dropdownColorType
     disabled?: boolean
 }
 
@@ -23,7 +23,7 @@ export const positioning: { [key in position]: string } = {
     bottomLeft: "top-6 left-0",
 }
 
-export const hoverColor: { [key in dropdownColor]: string } = {
+export const hoverColor: { [key in dropdownColorType]: string } = {
     amethyst: "hover:bg-amethyst-400 dark:hover:bg-amethyst-400/20 dark:hover:text-amethyst-400",
     citrine: "hover:bg-citrine-400 dark:hover:bg-citrine-400/20 dark:hover:text-citrine-400",
     lazure: "hover:bg-lazure-400 dark:hover:bg-lazure-400/20 dark:hover:text-lazure-400",
