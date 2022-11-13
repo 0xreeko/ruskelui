@@ -1,5 +1,5 @@
 .kbd {
-    @apply inline-flex items-center backdrop-blur-sm justify-center w-9 h-9 px-1 border border-b-4 rounded-md min-w-fit text-m-copy border-russian-900/80 bg-russian-600/80
+    @apply inline-flex items-center backdrop-blur-sm justify-center w-9 h-9 px-1 border border-b-4 rounded-md min-w-fit text-m-copy border-neropside/80 bg-neropside/80
 }
 
 .amber {
