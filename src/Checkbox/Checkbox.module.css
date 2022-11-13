@@ -1,9 +1,9 @@
  /* Colors - Pill */
 
- .white {
+ .onyx {
     @apply text-obsidian-100
  }
- .black {
+ .neropside {
     @apply text-russian-600
  }
 

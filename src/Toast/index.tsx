@@ -70,7 +70,7 @@ const RuiToast = ({ id, content: { closeOnClick = false, timer = 6000, icon = 'ð
   switch (variant) {
     case "success":
       return (
-        <div role={'alert'} onClick={closeOnClick === true ? () => removeToast?.(id) : undefined} onMouseEnter={handlePauseTimer} onMouseLeave={handleStartTimer} tabIndex={0} className={`${styles.ruiToast} ${exit ? `${styles.exit}` : ""}  ${theme === 'light' ? 'border-bayoux-300 bg-bayoux-100/80 text-russian-600' : 'border-bayoux-500 bg-bayoux-600/80 text-obsidian-100'}`}>
+        <div role={'alert'} onClick={closeOnClick === true ? () => removeToast?.(id) : undefined} onMouseEnter={handlePauseTimer} onMouseLeave={handleStartTimer} tabIndex={0} className={`${styles.ruiToast} ${exit ? `${styles.exit}` : ""}  ${theme === 'light' ? 'border-bayoux-300 bg-bayoux-100/80 text-neropside' : 'border-bayoux-500 bg-bayoux-600/80 text-onyx'}`}>
           <div className="flex items-center h-full m-4 min-w-fit">
             {<span className={`mr-2`}>{success}</span>}
             <p className="text-d-base">{message}</p>
@@ -80,7 +80,7 @@ const RuiToast = ({ id, content: { closeOnClick = false, timer = 6000, icon = 'ð
       )
     case "info":
       return (
-        <div role={'alert'} onClick={closeOnClick === true ? () => removeToast?.(id) : undefined} onMouseEnter={handlePauseTimer} onMouseLeave={handleStartTimer} tabIndex={0} className={`${styles.ruiToast} ${exit ? `${styles.exit}` : ""}  ${theme === 'light' ? 'border-bayoux-300 bg-bayoux-100/80 text-russian-600' : 'border-bayoux-500 bg-bayoux-600/80 text-obsidian-100'}`}>
+        <div role={'alert'} onClick={closeOnClick === true ? () => removeToast?.(id) : undefined} onMouseEnter={handlePauseTimer} onMouseLeave={handleStartTimer} tabIndex={0} className={`${styles.ruiToast} ${exit ? `${styles.exit}` : ""}  ${theme === 'light' ? 'border-bayoux-300 bg-bayoux-100/80 text-neropside' : 'border-bayoux-500 bg-bayoux-600/80 text-onyx'}`}>
           <div className="flex items-center h-full m-4 min-w-fit">
             {<span className={`mr-2`}>{info}</span>}
             <p className="text-d-base">{message}</p>
@@ -90,7 +90,7 @@ const RuiToast = ({ id, content: { closeOnClick = false, timer = 6000, icon = 'ð
       )
     case "warn":
       return (
-        <div role={'alert'} onClick={closeOnClick === true ? () => removeToast?.(id) : undefined} onMouseEnter={handlePauseTimer} onMouseLeave={handleStartTimer} tabIndex={0} className={`${styles.ruiToast} ${exit ? `${styles.exit}` : ""}  ${theme === 'light' ? 'border-bayoux-300 bg-bayoux-100/80 text-russian-600' : 'border-bayoux-500 bg-bayoux-600/80 text-obsidian-100'}`}>
+        <div role={'alert'} onClick={closeOnClick === true ? () => removeToast?.(id) : undefined} onMouseEnter={handlePauseTimer} onMouseLeave={handleStartTimer} tabIndex={0} className={`${styles.ruiToast} ${exit ? `${styles.exit}` : ""}  ${theme === 'light' ? 'border-bayoux-300 bg-bayoux-100/80 text-neropside' : 'border-bayoux-500 bg-bayoux-600/80 text-onyx'}`}>
           <div className="flex items-center h-full m-4 min-w-fit">
             {<span className={`mr-2`}>{warn}</span>}
             <p className="text-d-base">{message}</p>
@@ -100,7 +100,7 @@ const RuiToast = ({ id, content: { closeOnClick = false, timer = 6000, icon = 'ð
       )
     case "error":
       return (
-        <div role={'alert'} onClick={closeOnClick === true ? () => removeToast?.(id) : undefined} onMouseEnter={handlePauseTimer} onMouseLeave={handleStartTimer} tabIndex={0} className={`${styles.ruiToast} ${exit ? `${styles.exit}` : ""}  ${theme === 'light' ? 'border-bayoux-300 bg-bayoux-100/80 text-russian-600' : 'border-bayoux-500 bg-bayoux-600/80 text-obsidian-100'}`}>
+        <div role={'alert'} onClick={closeOnClick === true ? () => removeToast?.(id) : undefined} onMouseEnter={handlePauseTimer} onMouseLeave={handleStartTimer} tabIndex={0} className={`${styles.ruiToast} ${exit ? `${styles.exit}` : ""}  ${theme === 'light' ? 'border-bayoux-300 bg-bayoux-100/80 text-neropside' : 'border-bayoux-500 bg-bayoux-600/80 text-onyx'}`}>
           <div className="flex items-center h-full m-4 min-w-fit">
             {<span className={`mr-2`}>{error}</span>}
             <p className="text-d-base">{message}</p>
@@ -110,7 +110,7 @@ const RuiToast = ({ id, content: { closeOnClick = false, timer = 6000, icon = 'ð
       )
     case "colored":
       return (
-        <div role={'alert'} onClick={closeOnClick === true ? () => removeToast?.(id) : undefined} onMouseEnter={handlePauseTimer} onMouseLeave={handleStartTimer} tabIndex={0} className={`${styles.ruiToast} ${exit ? `${styles.exit}` : ""}  ${theme === 'light' ? 'border-bayoux-300 bg-bayoux-100/80 text-russian-600' : 'border-bayoux-500 bg-bayoux-600/80 text-obsidian-100'} overflow-auto rounded-lg h-fit backdrop-blur-`}>
+        <div role={'alert'} onClick={closeOnClick === true ? () => removeToast?.(id) : undefined} onMouseEnter={handlePauseTimer} onMouseLeave={handleStartTimer} tabIndex={0} className={`${styles.ruiToast} ${exit ? `${styles.exit}` : ""}  ${theme === 'light' ? 'border-bayoux-300 bg-bayoux-100/80 text-neropside' : 'border-bayoux-500 bg-bayoux-600/80 text-onyx'} overflow-auto rounded-lg h-fit backdrop-blur-`}>
           <div className="flex items-center h-full m-4 min-w-fit">
             {icon && <span className={`mr-2 ${colorVar[color][1]}`}>{icon}</span>}
             <p className="text-d-base">{message}</p>
@@ -120,7 +120,7 @@ const RuiToast = ({ id, content: { closeOnClick = false, timer = 6000, icon = 'ð
       )
     default:
       return (
-        <div role={'alert'} onClick={closeOnClick === true ? () => removeToast?.(id) : undefined} onMouseEnter={handlePauseTimer} onMouseLeave={handleStartTimer} tabIndex={0} className={`${styles.ruiToast} ${exit ? `${styles.exit}` : ""}  ${theme === 'light' ? 'border-bayoux-300 bg-bayoux-100/80 text-russian-600' : 'border-bayoux-500 bg-bayoux-600/80 text-obsidian-100'}`}>
+        <div role={'alert'} onClick={closeOnClick === true ? () => removeToast?.(id) : undefined} onMouseEnter={handlePauseTimer} onMouseLeave={handleStartTimer} tabIndex={0} className={`${styles.ruiToast} ${exit ? `${styles.exit}` : ""}  ${theme === 'light' ? 'border-bayoux-300 bg-bayoux-100/80 text-neropside' : 'border-bayoux-500 bg-bayoux-600/80 text-onyx'}`}>
           <div className="flex items-center h-full m-4 min-w-fit">
             {icon && <span className={`mr-2 ${colorVar[color][1]}`}>{icon}</span>}
             <p className="text-d-base">{message}</p>
