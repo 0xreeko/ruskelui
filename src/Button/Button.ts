@@ -5,7 +5,7 @@ type variant = "filled" | "ghost" | "text"
 
 type type = 'button' | 'submit' | 'reset'
 
-type buttonColorType = color
+type buttonColorType = Extract<color, 'amethyst' | 'lazure' | 'bayoux' | 'citrine' | 'jade' | 'scarlet' | 'sunstone' | 'tingual' | 'rosian' | 'purpalite' | 'onyx' | 'neropside'>
 
 
 export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -24,7 +24,7 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     isLoading?: boolean
     /** Label shown when loading state is true */
     loadingLabel?: ReactNode
-    /** Make */
+    /** Make the button take the full width of the parent container */
     fullWidth?: boolean
 }
 
