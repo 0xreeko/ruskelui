@@ -18,8 +18,6 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     variant: variant
     /** Select a `type` for your Button from 'button' | 'submit' | 'reset' */
     type?: type
-    /** Apply ripple effect to button when clicked */
-    ripple?: boolean
     /** Apply loading state */
     isLoading?: boolean
     /** Label shown when loading state is true */
