@@ -9,7 +9,7 @@ export const RuiAccordion = ({ data, color = "amethyst", fullWidth = false }: Ru
     const toggle = (_id: number) => setOpen(open === _id ? null : _id)
 
     return (
-        <div className={`${styles.wrapper} ${fullWidth === true ? `w-full` : `w-full max-w-xs`}`} tabIndex={0}>
+        <div className={`${styles.wrapper} text-neropside dark:text-onyx ${fullWidth === true ? `w-full` : `w-full max-w-xs`}`} tabIndex={0}>
             {data.map(({ label, content }, idx: number) => (
                 <div>
                     <button className={`${styles.accordionItem} ${open !== idx ? `${accordionColor[color][0]}` : `${accordionColor[color][1]}`}`} onClick={() => toggle(idx)}>
