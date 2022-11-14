@@ -34,7 +34,7 @@ export const DropdownMenu = ({ children, label, variant }: { children: ReactNode
 export const DropdownPortal = ({ children }: { children: ReactNode }) => {
     const {menuHeight, position} = useContext(DropdownContext)
     return (
-        <ul className={`absolute overflow-hidden text-xs rounded-lg backdrop-blur-sm w-44 border ${positioning[position]} border-obsidian-300 bg-onyx/80 text-neropside dark:border-obsidian-800 dark:bg-neropside/80 dark:text-obsidian-100`} style={{ height: menuHeight ?? 'fit-content' }}>
+        <ul className={`absolute overflow-hidden sm:text-sm rounded-lg backdrop-blur-sm w-44 border ${positioning[position]} border-obsidian-300 bg-onyx/80 text-neropside dark:border-obsidian-800 dark:bg-neropside/80 dark:text-obsidian-100`} style={{ height: menuHeight ?? 'fit-content' }}>
             {children}
         </ul>
     )

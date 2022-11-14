@@ -19,8 +19,8 @@ const icono = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" vie
 </svg>
 
 const Template: Story<RuiBreadcrumbParentProps> = args => <RuiBreadcrumbs {...args}>
-    <RuiBreadcrumbs.Item icon={icono} color={'tingual'} variant="previous" route='/'>Home</RuiBreadcrumbs.Item>
-    <RuiBreadcrumbs.Item icon={icono} color={'tingual'} variant="previous" route='/sapo'>Sapo</RuiBreadcrumbs.Item>
+    <RuiBreadcrumbs.Item icon={icono} color={'tingual'} divider={'slash'} variant="previous" route='/'>Home</RuiBreadcrumbs.Item>
+    <RuiBreadcrumbs.Item icon={icono} color={'tingual'} divider={'slash'} variant="previous" route='/sapo'>Sapo</RuiBreadcrumbs.Item>
     <RuiBreadcrumbs.Item route='/blog' variant='current'>Blog</RuiBreadcrumbs.Item>
 </RuiBreadcrumbs>
 
