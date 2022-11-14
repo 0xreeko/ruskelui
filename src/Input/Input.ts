@@ -27,6 +27,6 @@ export const inputColor: { [key in inputColorType]: string[] } = {
     sunstone: ["hover:border-sunstone-500 group-focus-within:border-sunstone-500 group-hover:border-sunstone-500 selection:bg-sunstone-400/10 selection:text-sunstone-500", "peer-focus-within:text-sunstone-500 peer-hover:text-sunstone-500 text-sunstone-500"],
     tingual: ["hover:border-tingual-500 group-focus-within:border-tingual-500 group-hover:border-tingual-500 selection:bg-tingual-400/10 selection:text-tingual-500", "peer-focus-within:text-tingual-500 peer-hover:text-tingual-500 text-tingual-500"],
     citrine: ["hover:border-citrine-500 group-focus-within:border-citrine-500 group-hover:border-citrine-500 selection:bg-citrine-400/10 selection:text-citrine-500", "peer-focus-within:text-citrine-500 peer-hover:text-citrine-500 text-citrine-500"],
-    neropside:  ["group-focus-within:ring-neropside/60 dark:focus:ring-neropside/60", "group-focus-within:text-neropside/60"],
-    onyx: ["group-focus-within:ring-onyx/60 dark:focus:ring-onyx/60", "group-focus-within:text-onyx/60"],
+    neropside:  ["hover:border-neropside group-focus-within:border-neropside group-hover:border-neropside selection:bg-neropside/10 selection:text-neropside", "group-focus-within:text-neropside/60"],
+    onyx: ["hover:border-onyx group-focus-within:border-onyx group-hover:border-onyx selection:bg-onyx/10 selection:text-onyx", "group-focus-within:text-onyx/60"],
 }
