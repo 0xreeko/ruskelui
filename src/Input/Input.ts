@@ -12,7 +12,6 @@ export interface RuiInputProps extends InputHTMLAttributes<HTMLInputElement>{
     color: color
     icon: ReactNode
     iconPosition?: position
-    name: string
     variant: variant
 }
 
