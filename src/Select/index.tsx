@@ -13,7 +13,7 @@ export const SelectItem = ({ value, color = "amethyst", disabled }: RuiSelectChi
     )
 }
 
-export const RuiSelect = ({ label, children, selectedIcon = "🔥", markerColor }: RuiSelectProps) => {
+export const RuiSelect = ({ label, children, selectedIcon = "🔥", markerColor = 'amethyst' }: RuiSelectProps) => {
     const [currentValue, setCurrentValue] = useState('');
     const [open, setOpen] = useState(false);
 
@@ -35,7 +35,7 @@ export const RuiSelect = ({ label, children, selectedIcon = "🔥", markerColor 
             <div className="relative w-72 group">
                 <span className='sr-only'>Select Dropdown</span>
                 <button className={`peer flex w-full items-center justify-between border border-obsidian-300 dark:border-obsidian-800 rounded-lg bg-obsidian-200 dark:bg-obsidian-400/40 py-2 px-4`} onClick={() => onChange()}>
-                    <span className="whitespace-nowrap text-neropside dark:text-onyx">{currentValue !== "" ? currentValue : label}</span>
+                    <span className="sm:text-sm whitespace-nowrap text-neropside dark:text-onyx">{currentValue !== "" ? currentValue : label}</span>
                     <div className="pl-4">
                         <svg xmlns="http://www.w3.org/2000/svg" className={`${open === true ? "group-focus-within:rotate-180" : "rotate-0"} duration-300 ${selectMarkerColor[markerColor]}`} width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -43,7 +43,7 @@ export const RuiSelect = ({ label, children, selectedIcon = "🔥", markerColor 
                         </svg>
                     </div>
                 </button>
-                <ul role="list" className={`appearance-none absolute z-10 mt-1.5 text-d-base transform transition-all duration-300 text-neropside dark:text-onyx ${open === true ? 'group-focus-within:translate-y-0 opacity-100 flex flex-col' : '-translate-y-2 opacity-0 hidden'} overflow-hidden duration-300 h-fit w-full rounded-lg bg-obsidian-200/80 dark:bg-neropside/40 backdrop-blur-sm`} tabIndex={0} >
+                <ul role="list" className={`appearance-none absolute z-10 mt-1.5 text-d-base transform transition-all sm:text-sm duration-300 text-neropside dark:text-onyx ${open === true ? 'group-focus-within:translate-y-0 opacity-100 flex flex-col' : '-translate-y-2 opacity-0 hidden'} overflow-hidden duration-300 h-fit w-full rounded-lg bg-obsidian-200/80 dark:bg-neropside/40 backdrop-blur-sm`} tabIndex={0} >
                     <span className='sr-only'>Select Dropdown Items</span>
                     {children}
                 </ul>
