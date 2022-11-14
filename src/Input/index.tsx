@@ -40,7 +40,7 @@ export const RuiInput = ({ id, disabled, isDark, label, placeholder = 'example@r
                 <div className={`relative group ${fullWidth ? "w-full" : "w-full max-w-xs"}`} >
                     <span className="sr-only">Password Input</span>
                     <input id={id} type={visible ? 'text' : 'password'} value={value} className={`peer  py-2 px-4 pr-10 w-full border border-obsidian-300 dark:border-obsidian-800 duration-200 text-neropside dark:text-onyx outline-none bg-onyx/40 dark:bg-neropside/40 backdrop-blur-sm ${inputColor[color][0]} ${placeholder ? "" : "placeholder-transparent"} rounded-md sm:text-sm ${disabled ? 'disabled:pointer-events-none' : ''}`} placeholder={placeholder} disabled={disabled} />
-                    <button onClick={() => setVisible(prev => (prev = !prev))} title={!visible ? "Click to show password" : "Click to hide password"} className={`absolute inset-y-0 grid place-content-center right-0 w-10 ${inputColor[color][1]}`}>
+                    <button onClick={() => setVisible(prev => (prev = !prev))} title={!visible ? "Click to show password" : "Click to hide password"} className={`absolute inset-y-0 grid place-content-center right-0 w-10 ${inputColor[color][1]} peer-placeholder-shown:text-obsidian-500 dark:peer-placeholder-shown:text-obsidian-400`}>
                         {!visible ? hiddenEye : visibleEye}
                     </button>
                 </div>
