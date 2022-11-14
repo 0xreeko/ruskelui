@@ -1,16 +1,16 @@
  .clocker {
-    @apply appearance-none backdrop-blur-sm border-gray-600 box-border px-3 py-1 border rounded-[9px]
+    @apply appearance-none backdrop-blur-sm px-4 py-2 sm:text-sm border w-full rounded-[9px] outline-none
  }
  input.clocker[data-isdark="true"]::-webkit-calendar-picker-indicator{
     filter: invert(100%);
   }
 
   input.clocker[data-isdark="true"] {
-    @apply text-onyx bg-black/20 border-gray-600
+    @apply text-onyx bg-neropside/20 border-obsidian-600
   }
 
   input.clocker[data-isdark="false"] {
-    @apply text-neropside bg-white/20 border-gray-300
+    @apply text-neropside bg-onyx/20 border-obsidian-300
   }
 
 .amethyst {
