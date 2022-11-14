@@ -5,8 +5,29 @@ type variant = "filled" | "ghost" | "text" | "social"
 
 type type = 'button' | 'submit' | 'reset'
 
-type buttonColorType = Extract<color, 'amethyst' | 'lazure' | 'bayoux' | 'citrine' | 'jade' | 'scarlet' | 'sunstone' | 'tingual' | 'rosian' | 'purpalite' | 'onyx' | 'neropside'>
+type buttonColorType = Extract<color, 'amethyst' | 'lazure' | 'bayoux' |  'citrine' | 'jade' | 'scarlet' | 'sunstone' | 'tingual' | 'rosian' | 'purpalite' | 'onyx' | 'neropside'>
 
+export type socialColorType = "facebook" | "twitter" | 'dribbble' | "youtube" | 'zoom' | 'google-plus' | 'twitch' | "linkedin" | "snapchat" | "whatsapp" | "tumblr" | "reddit" | "spotify" | "medium" | "slack" | "discord" | "telegram" | "messenger"
+export const socialColorStyles: { [key in socialColorType]: string } = {
+    'dribbble': 'bg-[rgb(234,76,137)]',
+    'discord': "bg-[rgb(114,137,218)]",
+    'facebook': "bg-[rgb(59,89,153)]",
+    'google-plus': "bg-[rgb(219,68,55)]",
+    'linkedin': "bg-[rgb(0,119,181)]",
+    'medium': "bg-[rgb(2,184,117)]",
+    'messenger': "bg-[rgb(0,132,255)]",
+    'reddit': "bg-[rgb(255,69,0)]",
+    'zoom': "bg-[rgb(45,140,255)]",
+    'slack': "bg-[rgb(74,21,75)]",
+    'snapchat': "bg-[rgb(255,252,0)]",
+    'spotify': "bg-[rgb(30,215,96)]",
+    'telegram': "bg-[rgb(0,136,204)]",
+    'tumblr': "bg-[rgb(54,70,93)]",
+    'twitch': "bg-[rgb(100,65,164)]",
+    'twitter': "bg-[rgb(29,161,242)]",
+    'whatsapp': "bg-[rgb(37,211,102)]",
+    'youtube': "bg-[rgb(255,0,0)]",
+}
 
 export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
@@ -16,6 +37,8 @@ export interface RuiButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
     rightIcon?: ReactNode
     /** Available colour ways to style your Button */
     color?: buttonColorType;
+    /** Available colour ways to style your Button */
+    socialColor?: socialColorType;
     /** Select a `variant` for your Button */
     variant: variant
     /** Select a `type` for your Button from 'button' | 'submit' | 'reset' */
