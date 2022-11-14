@@ -2,6 +2,6 @@ import React from 'react'
 
 export const RuiTextarea = () => {
     return (
-        <textarea className=""></textarea>
+        <textarea className="box-border" rows={3}></textarea>
     )
 }
