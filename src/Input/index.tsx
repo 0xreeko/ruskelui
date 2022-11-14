@@ -11,7 +11,7 @@ export const RuiInput = ({ id, disabled, isDark, label, placeholder = 'example@r
             return (
                 <div className={`relative group ${fullWidth ? "w-full" : "w-full max-w-xs"}`} >
                     <span className="sr-only">Input</span>
-                    <input type="text" id={id} placeholder={placeholder} value={value} autoComplete="off" {...props} className={`peer w-full rounded-md border border-obsidian-300 dark:border-obsidian-800 ${inputColor[color][0]} text-neropside dark:text-onyx py-2 px-4 ${iconPosition === "left" ? "pl-10" : "pr-10"} ${disabled ? 'disabled:pointer-events-none' : ''} ${inputColor[color][0]} backdrop-blur-sm bg-onyx/40 dark:bg-neropside/40 outline-none duration-200 placeholder:text-obsidian-500 dark:placeholder:text-obsidian-400 sm:text-sm`} disabled={disabled} />
+                    <input type="text" id={id} placeholder={placeholder} value={value} autoComplete="off" {...props} className={`peer w-full rounded-md border border-obsidian-300 dark:border-obsidian-800 ${inputColor[color][0]} text-neropside dark:text-onyx py-2 px-4 ${iconPosition === "left" ? "pl-10" : "pr-10"} ${disabled ? 'disabled:pointer-events-none' : ''} backdrop-blur-sm bg-onyx/40 dark:bg-neropside/40 outline-none duration-200 placeholder:text-obsidian-500 dark:placeholder:text-obsidian-400 sm:text-sm`} disabled={disabled} />
                     <span className={`absolute inset-y-0 ${iconPosition === 'left' ? 'left-0' : 'right-0'} grid w-10 duration-300 pointer-events-none place-content-center ${inputColor[color][1]} peer-placeholder-shown:text-obsidian-500 dark:peer-placeholder-shown:text-obsidian-400`}>
                         {icon && (
                             icon
