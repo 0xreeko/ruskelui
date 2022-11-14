@@ -7,7 +7,7 @@ export const RuiProgress = ({ id, percentage, isGradient, color = 'amethyst', st
     switch (variant) {
         case "bar":
             return (
-                <div ar id={id} role={'progressbar'} className={`${styles.progress} bg-obsidian-300 dark:bg-obsidian-700`}>
+                <div id={id} role={'progressbar'} className={`${styles.progress} bg-obsidian-300 dark:bg-obsidian-700`}>
                     <span aria-va role="progressbar" className={`h-full absolute rounded-full duration-300 ${isGradient ? `${positionVar[barDirection]} ${barColor[startColor][1]} ${barColor[endColor][2]}` : `${barColor[color][0]}`}`} style={{ width: `${percentage  <= 100 ? percentage : 'NaN'}%` }}></span>
                     <span className="sr-only">Progress Bar</span>
                 </div>
