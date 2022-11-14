@@ -2,10 +2,6 @@
     @apply inline-flex items-center backdrop-blur-sm justify-center w-9 h-9 px-1 border border-b-4 rounded-md min-w-fit text-m-copy border-neropside/80 bg-neropside/80
 }
 
-.amber {
-    @apply text-amber-400
-}
-
 .amethyst {
     @apply text-amethyst-400
 }
@@ -18,52 +14,12 @@
     @apply text-bayoux-400
 }
 
-.blue {
-    @apply text-blue-400
-}
-
-.cyan {
-    @apply text-cyan-400
-}
-
-.emerald {
-    @apply text-emerald-400
-}
-
-.fuchsia {
-    @apply text-fuchsia-400
-}
-
-.green {
-    @apply text-green-400
-}
-
-.indigo {
-    @apply text-indigo-400
-}
-
 .jade {
     @apply text-jade-400
 }
 
-.lime {
-    @apply text-lime-400
-}
-
-.orange {
-    @apply text-orange-400
-}
-
-.pink {
-    @apply text-pink-400
-}
-
-.purple {
-    @apply text-purple-400
-}
-
-.red {
-    @apply text-red-400
+.purpalite {
+    @apply text-purpalite-400
 }
 
 .rosian {
