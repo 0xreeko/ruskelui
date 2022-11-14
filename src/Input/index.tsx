@@ -27,7 +27,7 @@ export const RuiInput = ({ id, disabled, isDark, label, placeholder = 'example@r
                     {/* <input id={id} type="text" value={value} className={`peer py-2  px-4 ${leftIcon ? "pl-10" : ""} ${rightIcon ? "pr-10" : ""} w-full transition-all duration-300 outline-none bg-white/20 dark:bg-black/20 ring-[1px] backdrop-blur-sm ring-sylver-600 dark:ring-sylver-800 ${inputColor[color][0]} ${placeholder ? "" : "placeholder-transparent"} rounded-lg ${disabled ? 'disabled:pointer-events-none' : ''}`} placeholder={`${placeholder ? placeholder : "estoesunejemplo@es.com"}`} disabled={disabled} /> */}
                     <span className="sr-only">Input</span>
                     <input type="text" id={id} placeholder={placeholder} value={value} autoComplete="off" {...props} className={`peer w-full rounded-md border border-obsidian-300 dark:border-obsidian-800 ${inputColor[color][0]} text-neropside dark:text-onyx py-2 px-4 ${iconPosition === "left" ? "pl-10" : "pr-10"} ${disabled ? 'disabled:pointer-events-none' : ''} ${inputColor[color][0]} backdrop-blur-sm bg-onyx/40 dark:bg-neropside/40 shadow-sm outline-none duration-200 placeholder:text-obsidian-500 dark:placeholder:text-obsidian-400 sm:text-sm`} disabled={disabled} />
-                    <span className={`absolute inset-y-0 ${iconPosition === 'left' ? 'left-0' : 'right-0'} grid w-10 duration-3 00 pointer-events-none place-content-center ${inputColor[color][1]} peer-placeholder-shown:text-obsidian-500 dark:peer-placeholder-shown:text-obsidian-400`}>
+                    <span className={`absolute inset-y-0 ${iconPosition === 'left' ? 'left-0' : 'right-0'} grid w-10 duration-300 pointer-events-none place-content-center ${inputColor[color][1]} peer-placeholder-shown:text-obsidian-500 dark:peer-placeholder-shown:text-obsidian-400`}>
                         {icon && (
                             icon
                         )}
@@ -37,10 +37,12 @@ export const RuiInput = ({ id, disabled, isDark, label, placeholder = 'example@r
             )
         case 'password':
             return (
-                <div className={`relative group flex items-center justify-between text-russian-600 dark:text-sylver-200 ${fullWidth ? "w-full" : "w-full max-w-xs"} ${disabled ? 'disabled:pointer-events-none' : ''}`} >
-                    <input id={id} type={visible ? 'text' : 'password'} value={value} className={`box-border py-1 pl-2 pr-9 w-full transition-all duration-300 outline-none bg-white/20 dark:bg-black/20 ring-[1px] backdrop-blur-sm ring-sylver-600 dark:ring-sylver-800 ${inputColor[color][0]} ${placeholder ? "" : "placeholder-transparent"} rounded-lg`} placeholder={`${placeholder ? placeholder : "estoesunejemplo@es.com"} ${disabled ? 'disabled:pointer-events-none' : ''}`} disabled={disabled} />
-                    <button onClick={() => setVisible(prev => (prev = !prev))} className={`absolute inline-flex right-0 mr-2 scale-75 ${inputColor[color][1]}`}>{!visible ? hiddenEye : visibleEye}</button>
-                    <span className="sr-only">Input: Password</span>
+                <div className={`relative group ${fullWidth ? "w-full" : "w-full max-w-xs"}`} >
+                    <span className="sr-only">Password Input</span>
+                    <input id={id} type={visible ? 'text' : 'password'} value={value} className={`peer py-2 px-4 pr-10 w-full border border-obsidian-300 dark:border-obsidian-800 duration-200 text-neropside dark:text-onyx outline-none bg-onyx/40 dark:bg-neropside/40 backdrop-blur-sm ${inputColor[color][0]} ${placeholder ? "" : "placeholder-transparent"} rounded-md sm:text-sm ${disabled ? 'disabled:pointer-events-none' : ''}`} placeholder={placeholder} disabled={disabled} />
+                    <button onClick={() => setVisible(prev => (prev = !prev))} title={!visible ? "Click to show password" : "Click to hide password"} className={`absolute inset-y-0 grid place-content-center right-0 w-10 ${inputColor[color][1]}`}>
+                        {!visible ? hiddenEye : visibleEye}
+                    </button>
                 </div>
             )
         case 'email':
