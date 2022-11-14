@@ -3,30 +3,30 @@ import { color } from "../types/Generics"
 
 type variant = "text" | "password" | "email" | "number" | "time" | "date"
 type position = 'left' | 'right'
+type inputColorType = Extract<color, 'amethyst' | 'lazure' | 'bayoux' | 'jade' | 'purpalite' | 'rosian' | 'scarlet' | 'sunstone' | 'tingual' | 'citrine' | 'neropside' | 'onyx'>
 
 export interface RuiInputProps extends InputHTMLAttributes<HTMLInputElement>{
     label: string
     placeholder: string
     fullWidth: boolean
     isDark: boolean
-    color: color
+    color: inputColorType
     icon: ReactNode
     iconPosition?: position
     variant: variant
 }
 
-export const inputColor: { [key in color]: string[] } = {
-    amethyst: ["group-focus-within:ring-amethyst-400 dark:focus:ring-amethyst-400", "group-:text-amethyst-400"],
-    lazure: ["group-focus-within:ring-lazure-400 dark:focus:ring-lazure-400", "group-focus-within:text-lazure-400"],
-    bayoux: ["group-focus-within:ring-bayoux-400 dark:focus:ring-bayoux-400", "group-focus-within:text-bayoux-400"],
-    jade: ["group-focus-within:ring-jade-400 dark:focus:ring-jade-400", "group-focus-within:text-jade-400"],
-    purpalite: ["group-focus-within:ring-purpalite-400 dark:focus:ring-purpalite-400", "group-focus-within:text-purpalite-400"],
-    rosian: ["group-focus-within:ring-rosian-400 dark:focus:ring-rosian-400", "group-focus-within:text-rosian-400"],
-    scarlet: ["group-focus-within:ring-scarlet-400 dark:focus:ring-scarlet-400", "group-focus-within:text-scarlet-400"],
-    obsidian: ["group-focus-within:ring-obsidian-400 dark:focus:ring-obsidian-400", "group-focus-within:text-obsidian-400"],
-    sunstone: ["group-focus-within:ring-sunstone-400 dark:focus:ring-sunstone-400", "group-focus-within:text-sunstone-400"],
-    tingual: ["group-focus-within:ring-tingual-400 dark:focus:ring-tingual-400", "group-focus-within:text-tingual-400"],
-    citrine: ["group-focus-within:ring-citrine-400 dark:focus:ring-citrine-400", "group-focus-within:text-citrine-400"],
+export const inputColor: { [key in inputColorType]: string[] } = {
+    amethyst: ["hover:border-amethyst-500 group-focus-within:border-amethyst-500 group-hover:border-amethyst-500 selection:bg-amethyst-400/10 selection:text-amethyst-500", "peer-focus-within:text-amethyst-500 peer-hover:text-amethyst-500 text-amethyst-500"],
+    lazure: ["hover:border-lazure-500 group-focus-within:border-lazure-500 group-hover:border-lazure-500 selection:bg-lazure-400/10 selection:text-lazure-500", "peer-focus-within:text-lazure-500 peer-hover:text-lazure-500 text-lazure-500"],
+    bayoux: ["hover:border-bayoux-500 group-focus-within:border-bayoux-500 group-hover:border-bayoux-500 selection:bg-bayoux-400/10 selection:text-bayoux-500", "peer-focus-within:text-bayoux-500 peer-hover:text-bayoux-500 text-bayoux-500"],
+    jade: ["hover:border-jade-500 group-focus-within:border-jade-500 group-hover:border-jade-500 selection:bg-jade-400/10 selection:text-jade-500", "peer-focus-within:text-jade-500 peer-hover:text-jade-500 text-jade-500"],
+    purpalite: ["hover:border-purpalite-500 group-focus-within:border-purpalite-500 group-hover:border-purpalite-500 selection:bg-purpalite-400/10 selection:text-purpalite-500", "peer-focus-within:text-purpalite-500 peer-hover:text-purpalite-500 text-purpalite-500"],
+    rosian: ["hover:border-rosian-500 group-focus-within:border-rosian-500 group-hover:border-rosian-500 selection:bg-rosian-400/10 selection:text-rosian-500", "peer-focus-within:text-rosian-500 peer-hover:text-rosian-500 text-rosian-500"],
+    scarlet: ["hover:border-scarlet-500 group-focus-within:border-scarlet-500 group-hover:border-scarlet-500 selection:bg-scarlet-400/10 selection:text-scarlet-500", "peer-focus-within:text-scarlet-500 peer-hover:text-scarlet-500 text-scarlet-500"],
+    sunstone: ["hover:border-sunstone-500 group-focus-within:border-sunstone-500 group-hover:border-sunstone-500 selection:bg-sunstone-400/10 selection:text-sunstone-500", "peer-focus-within:text-sunstone-500 peer-hover:text-sunstone-500 text-sunstone-500"],
+    tingual: ["hover:border-tingual-500 group-focus-within:border-tingual-500 group-hover:border-tingual-500 selection:bg-tingual-400/10 selection:text-tingual-500", "peer-focus-within:text-tingual-500 peer-hover:text-tingual-500 text-tingual-500"],
+    citrine: ["hover:border-citrine-500 group-focus-within:border-citrine-500 group-hover:border-citrine-500 selection:bg-citrine-400/10 selection:text-citrine-500", "peer-focus-within:text-citrine-500 peer-hover:text-citrine-500 text-citrine-500"],
     neropside:  ["group-focus-within:ring-neropside/60 dark:focus:ring-neropside/60", "group-focus-within:text-neropside/60"],
     onyx: ["group-focus-within:ring-onyx/60 dark:focus:ring-onyx/60", "group-focus-within:text-onyx/60"],
 }
