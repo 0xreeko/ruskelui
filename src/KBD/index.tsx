@@ -5,7 +5,7 @@ import styles from './KBD.module.css'
 
 export const RuiKBD = ({id, children, color = "tingual"}: RuiKBDProps) => {
     return (
-        <div id={id} className={`${styles.kbd} ${styles[color]}`}>
+        <div id={id} className={`${styles.kbd} border-obsidian-800 bg-obsidian-600 dark:border-obsidian-600 dark:bg-obsidian-800 ${styles[color]}`}>
             {children}
         </div>
     )
