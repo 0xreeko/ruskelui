@@ -24,7 +24,7 @@ export const RuiButton = ({ id, form, isLoading, loadingLabel, fullWidth, value,
       );
     case "text":
       return (
-        <button id={id} form={form} value={value} type={type} onClick={onClick} {...props} className={`flex active:scale-95 rui-padding ${fullWidth ? 'w-full' : 'w-fit'} items-center justify-center ${textButtonStyles[color]} gap-3 rounded-[9px] border-[1.5px] border-transparent text-sm backdrop-blur-sm duration-150 disabled:pointer-events-none disabled:text-obsidian-300 disabled:select-none`} disabled={disabled}>
+        <button id={id} form={form} value={value} type={type} onClick={onClick} {...props} className={`flex active:scale-95 rui-padding ${fullWidth ? 'w-full' : 'w-fit'} items-center justify-center ${textButtonStyles[color]} gap-3 rounded-[9px] border-[1.5px] border-transparent text-sm backdrop-blur-sm duration-150 disabled:pointer-events-none disabled:text-obsidian-800 dark:disabled:text-obsidian-300 disabled:opacity-50 disabled:select-none`} disabled={disabled}>
           {isLoading ? (
             <>
               {loadingSpinner}
