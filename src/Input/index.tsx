@@ -62,7 +62,7 @@ export const RuiInput = ({ id, disabled, isDark, label, placeholder = 'example@r
         case 'time':
             return (
                 <div className={`relative ${fullWidth ? "w-full" : "w-full max-w-xs"}`} >
-                    <input type="time" id={id} data-isdark={`${isDark}`} value={value} className={`appearance-none ${styles.clocker} hover:border-jade-500 border-obsidian-300 dark:border-obsidian-800`} {...props} />
+                    <input type="time" id={id} data-isdark={`${isDark}`} value={value} className={`appearance-none ${styles.clocker} ${inputColor[color][0]} border-obsidian-300 dark:border-obsidian-800 disabled:pointer-events-none disabled:select-none disabled:border-obsidian-300 dark:disabled:border-obsidian-800`} disabled={disabled} {...props} />
                 </div>
             )
         default:
