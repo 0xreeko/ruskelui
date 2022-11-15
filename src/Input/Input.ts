@@ -6,12 +6,11 @@ type position = 'left' | 'right'
 type inputColorType = Extract<color, 'amethyst' | 'lazure' | 'bayoux' | 'jade' | 'purpalite' | 'rosian' | 'scarlet' | 'sunstone' | 'tingual' | 'citrine' | 'neropside' | 'onyx'>
 
 export interface RuiInputProps extends InputHTMLAttributes<HTMLInputElement>{
-    label: string
-    placeholder: string
-    fullWidth: boolean
-    isDark: boolean
+    placeholder?: string
+    fullWidth?: boolean
+    isDark?: boolean
     color: inputColorType
-    icon: ReactNode
+    icon?: ReactNode
     iconPosition?: position
     variant: variant
 }
