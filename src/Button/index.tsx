@@ -6,7 +6,7 @@ export const RuiButton = ({ id, form, isLoading, loadingLabel, fullWidth, value,
   switch (variant) {
     case "ghost":
       return (
-        <button id={id} form={form} value={value} type={type} onClick={onClick} {...props} className={`flex active:scale-95 rui-padding ${fullWidth ? 'w-full' : 'w-fit'} items-center justify-center gap-3 rounded-[9px] border-[1.5px] bg-transparent ${ghostButtonStyles[color]} text-sm duration-150 disabled:pointer-events-none disabled:border-obsidian-300 disabled:text-obsidian-300 disabled:select-none`} disabled={disabled}>
+        <button id={id} form={form} value={value} type={type} onClick={onClick} {...props} className={`flex active:scale-95 rui-padding ${fullWidth ? 'w-full' : 'w-fit'} items-center justify-center gap-3 rounded-[9px] border-[1.5px] bg-transparent ${ghostButtonStyles[color]} text-sm duration-150 disabled:opacity-50 disabled:pointer-events-none disabled:border-obsidian-800 disabled:text-obsidian-800 dark:disabled:border-obsidian-300 dark:disabled:text-obsidian-300 disabled:select-none`} disabled={disabled}>
           {isLoading ? (
             <>
               {loadingSpinner}
