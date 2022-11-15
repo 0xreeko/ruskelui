@@ -9,6 +9,6 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story = (args) => <RuiTextarea {...args} />
+const Template: Story = (args) => <RuiTextarea disabled {...args} />
 
 export const Default = Template.bind({}) 
