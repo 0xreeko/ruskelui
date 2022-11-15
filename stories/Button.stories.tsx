@@ -26,10 +26,10 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<RuiButtonProps> = (args) => <RuiButton varint={'filled'} {...args}></RuiButton>
-const ButtonGhost: Story<RuiButtonProps> = (args) => <RuiButton variant="ghost" leftIcon={icon} {...args} ></RuiButton>
-const ButtonText: Story<RuiButtonProps> = (args) => <RuiButton variant='text' {...args} ></RuiButton>
-const ButtonIcon: Story<RuiButtonProps> = (args) => <RuiButton variant='social' leftIcon={icon} {...args} >
+const Template: Story<RuiButtonProps> = (args) => <RuiButton varint={'filled'} {...args} disabled></RuiButton>
+const ButtonGhost: Story<RuiButtonProps> = (args) => <RuiButton variant="ghost" leftIcon={icon} {...args} disabled></RuiButton>
+const ButtonText: Story<RuiButtonProps> = (args) => <RuiButton variant='text' {...args} disabled></RuiButton>
+const ButtonIcon: Story<RuiButtonProps> = (args) => <RuiButton variant='social' leftIcon={icon} {...args} disabled>
     Follow me on Storybook
 </RuiButton>
 
