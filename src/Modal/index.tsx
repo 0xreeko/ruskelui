@@ -12,7 +12,7 @@ export const RuiModal = ({ id, children, size = "md", pointer }: RuiModalProps) 
 		'xs': 'max-w-xs',
 	}
 	return (
-		<dialog id={id} ref={pointer} className={`p-4 w-full ${sizing[size]} ${styles.modal}`}>
+		<dialog id={id} ref={pointer} className={`p-4 w-full ${sizing[size]} ${styles.modal} text-neropside dark:text-onyx  border-obsidian-300 bg-onyx/80 dark:border-obsidian-800 dark:bg-neropside/80`}>
 				{children}
 			</dialog>
 	)

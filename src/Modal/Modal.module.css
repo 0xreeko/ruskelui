@@ -1,5 +1,5 @@
 dialog.modal {
-    @apply inset-0 w-full border border-gray-300 bg-gray-200/70 rounded-xl;
+    @apply inset-0 w-full border rounded-xl;
 }
 
 dialog.modal::backdrop {
