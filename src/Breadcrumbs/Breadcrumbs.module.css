@@ -19,9 +19,6 @@
     @apply text-obsidian-500/60 mx-2
 }
 
-    .amber {
-        @apply hover:text-amber-600
-    }
     .amethyst {
         @apply hover:text-amethyst-600
     }
@@ -31,35 +28,8 @@
     .bayoux {
         @apply hover:text-bayoux-600
     }
-    .blue {
-        @apply hover:text-blue-600
-    }
-    .cyan {
-        @apply hover:text-cyan-600
-    }
-    .emerald {
-        @apply hover:text-emerald-600
-    }
-    .fuchsia {
-        @apply hover:text-fuchsia-600
-    }
-    .green {
-        @apply hover:text-green-600
-    }
-    .indigo {
-        @apply hover:text-indigo-600
-    }
     .jade {
         @apply hover:text-jade-600
-    }
-    .lime {
-        @apply hover:text-lime-600
-    }
-    .orange {
-        @apply hover:text-orange-600
-    }
-    .pink {
-        @apply hover:text-pink-600
     }
     .purpalite {
         @apply hover:text-purpalite-600

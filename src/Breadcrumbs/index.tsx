@@ -22,7 +22,7 @@ const CrumbItem = ({ route, color = 'rosian', children, divider = "arrow", varia
                 <li className={`inline-flex items-center`}>
                     <span className='mr-2'>{icon}</span>
                     <a href={route}>
-                        <span className={`${styles[color]} duration-300 `}>{children}</span>
+                        <span className={`${styles[color]} text-neropside/50 dark:text-onyx/50 duration-300 `}>{children}</span>
                     </a>
                     {divider === 'arrow' ? (
                         <span className='mx-3 dark:text-obsidian-300 text-obsidian-800'>
