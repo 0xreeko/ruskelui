@@ -42,7 +42,7 @@ export const RuiButton = ({ id, form, isLoading, loadingLabel, fullWidth, value,
       );
     case "filled":
       return (
-        <button id={id} form={form} value={value} type={type} onClick={onClick} {...props} className={`flex active:scale-95 ${fullWidth ? 'w-full' : 'w-fit'} items-center justify-center gap-3 rounded-[9px] border-2 text-m-copy sm:text-d-copy border-transparent ${filledButtonStyles[color]} rui-padding duration-150 disabled:pointer-events-none disabled:opacity-50 disabled:bg-obsidian-300 disabled:text-obsidian-800 dark:disabled:bg-obsidian-800 dark:disabled:text-obsidian-300 disabled:select-none`} disabled={disabled}>
+        <button id={id} form={form} value={value} type={type} onClick={onClick} {...props} className={`flex active:scale-95 ${fullWidth ? 'w-full' : 'w-fit'} items-center justify-center gap-3 rounded-[9px] border-2 text-m-copy sm:text-d-copy border-transparent text-onyx dark:text-neropside ${filledButtonStyles[color]} rui-padding duration-150 disabled:pointer-events-none disabled:opacity-50 disabled:bg-obsidian-300 disabled:text-obsidian-800 dark:disabled:bg-obsidian-800 dark:disabled:text-obsidian-300 disabled:select-none`} disabled={disabled}>
           {isLoading ? (
             <>
               {loadingSpinner}
@@ -68,7 +68,7 @@ export const RuiButton = ({ id, form, isLoading, loadingLabel, fullWidth, value,
       )
     default:
       return (
-        <button id={id} form={form} value={value} type={type} onClick={onClick} {...props} className={`flex active:scale-95 ${fullWidth ? 'w-full' : 'w-fit'} items-center justify-center gap-3 rounded-[9px] border-2 text-m-copy sm:text-d-copy border-transparent ${filledButtonStyles[color]} rui-padding text-onyx duration-150 disabled:pointer-events-none disabled:bg-obsidian-100 disabled:text-obsidian-300 dark:disabled:bg-obsidian-800 dark:disabled:text-obsidian-700 disabled:select-none`} disabled={disabled}>
+        <button id={id} form={form} value={value} type={type} onClick={onClick} {...props} className={`flex active:scale-95 ${fullWidth ? 'w-full' : 'w-fit'} items-center justify-center gap-3 rounded-[9px] border-2 text-m-copy sm:text-d-copy border-transparent text-onyx dark:text-neropside ${filledButtonStyles[color]} rui-padding duration-150 disabled:pointer-events-none disabled:opacity-50 disabled:bg-obsidian-300 disabled:text-obsidian-800 dark:disabled:bg-obsidian-800 dark:disabled:text-obsidian-300 disabled:select-none`} disabled={disabled}>
           {isLoading ? (
             <>
               {loadingSpinner}
