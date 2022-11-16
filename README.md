@@ -1,4 +1,4 @@
-# RuskelUI
+# RuskelUI v3.0
 [![NPM Version](https://img.shields.io/npm/v/ruskelui.svg?branch=master)](https://www.npmjs.com/package/ruskelui) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/ruskelui)](https://bundlephobia.com/result?p=ruskelui) [![npm](https://img.shields.io/npm/dt/ruskelui?label=installs)](https://www.npmjs.com/package/ruskelui) [![License](https://img.shields.io/npm/l/ruskelui.svg)](https://github.com/0xreeko/ruskelui/blob/master/LICENSE) ![Top Language](https://img.shields.io/github/languages/top/0xreeko/ruskelui) ![Languages Count](https://img.shields.io/github/languages/count/0xreeko/ruskelui) [![Twitter Invite](https://img.shields.io/twitter/follow/0xreeko?style=social)](https://twitter.com/intent/follow?screen_name=0xreeko)
 
 ## 🧩 Table of Contents (Not up to date!)

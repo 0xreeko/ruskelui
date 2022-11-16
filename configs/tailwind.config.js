@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// ruskelUI v2 colour system & typography
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
