@@ -1,5 +1,5 @@
  .clocker {
-    @apply appearance-none backdrop-blur-sm px-4 py-2 sm:text-sm border w-full rounded-[9px] outline-none
+    @apply appearance-none backdrop-blur-sm px-3 h-9 py-2 sm:text-sm border w-full rounded-lg outline-none
  }
  input.clocker[data-isdark="true"]::-webkit-calendar-picker-indicator{
     filter: invert(100%);
