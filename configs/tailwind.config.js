@@ -9,29 +9,25 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    fontSize: {
+      'xs': '.75rem', // 12xpx
+      'sm': '.875rem', // 14px
+      'base': '1rem', // 16px
+      'lg': '1.125rem', // 18px
+      'xl': '1.25rem', // 20px
+      '2xl': '1.5rem', // 24px
+      '3xl': '1.75rem', // 28px
+      '4xl': '2rem', // 32px
+      '5xl': '2.5rem', // 40px
+      '6xl': '3rem', // 48px
+      '7xl': '3.625rem', // 58px
+    },
     extend: {
-      fontSize: {
-        'd-hero': ['3.813rem', { lineHeight: '1.4', fontWeight: '800', letterSpacing: '-0.05' }],
-        'd-h2': ['3.063rem', { lineHeight: '1.5' }],
-        'd-h3': ['2.438rem', { lineHeight: '1.6' }],
-        'd-h4': ['1.938rem', { lineHeight: '1.6' }],
-        'd-h5': ['1.563rem', { lineHeight: '1.6' }],
-        'd-h6': ['1.25rem', { lineHeight: '1.6', fontWeight: '100', letterSpacing: "0.05" }],
-        'd-base': ['1rem', { lineHeight: '1.5' }],
-        'd-copy': ['0.833rem', { lineHeight: '2' }],
-        'm-hero': ['3rem', { lineHeight: '1.4', fontWeight: '800', letterSpacing: "-0.05", }],
-        'm-h2': ['2.5rem', { lineHeight: '1.5' }],
-        'm-h3': ['2.063rem', { lineHeight: '1.6' }],
-        'm-h4': ['1.75rem', { lineHeight: '1.6' }],
-        'm-h5': ['1.483rem', { lineHeight: '1.6' }],
-        'm-h6': ['1.188rem', { lineHeight: '1.6', fontWeight: '100', letterSpacing: "0.05" }],
-        'm-base': ['1rem', { lineHeight: '1.5' }],
-        'm-copy': ['0.889rem', { lineHeight: '2' }],
-      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        neropside: '#1a2744',
+        neropside: '#0f172a',
+        asphalt: '#1a232e',
         onyx: '#f4f4fc',
         amethyst: {
           50: '#f7f7ff',
@@ -80,6 +76,18 @@ module.exports = {
           700: '#00ac73',
           800: '#00895c',
           900: '#00704b',
+        },
+        celuria: {
+          '50': '#f2f8ff',
+          '100': '#e6f1ff',
+          '200': '#bfddff',
+          '300': '#99c9ff',
+          '400': '#4da0ff',
+          '500': '#0077ff',
+          '600': '#006be6',
+          '700': '#0059bf',
+          '800': '#004799',
+          '900': '#003a7d'
         },
         lazure: {
           50: '#f2fbff',

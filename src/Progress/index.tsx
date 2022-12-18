@@ -3,7 +3,7 @@ import { RuiProgressProps, barColor, donutColor, positionVar } from './Progress'
 // @ts-ignore
 import styles from './Progress.module.css'
 
-export const RuiProgress = ({ id, percentage, isGradient, color = 'amethyst', startColor = 'lazure', endColor = 'amethyst', barDirection = 'right', variant = 'bar' }: RuiProgressProps) => {
+const RuiProgress = ({ id, percentage, isGradient, color = 'amethyst', startColor = 'lazure', endColor = 'amethyst', barDirection = 'right', variant = 'bar' }: RuiProgressProps) => {
     switch (variant) {
         case "bar":
             return (
