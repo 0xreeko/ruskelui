@@ -10,6 +10,7 @@ module.exports = {
         },
         extensions: ['.css'],
         minimize: true,
+        treeShake: true,
         inject: {
           insertAt: 'top',
         },

@@ -1,7 +1,7 @@
 import React from "react"
 import { RuiLoaderProps } from "./Loader"
 
-export const RuiLoader = (props: RuiLoaderProps) => {
+const RuiLoader = (props: RuiLoaderProps) => {
     return (
         <div role={'status'} id={props.id} {...props}>
             <svg fill="none" className="animate-spin" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -12,3 +12,4 @@ export const RuiLoader = (props: RuiLoaderProps) => {
         </div>
     )
 }
+export default RuiLoader

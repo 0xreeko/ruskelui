@@ -1,7 +1,7 @@
 import React from "react"
 import { RuiTooltipProps } from "./Tooltip"
 
-export const RuiTooltip = ({ id, message, children, direction }: RuiTooltipProps) => {
+const RuiTooltip = ({ id, message, children, direction }: RuiTooltipProps) => {
     switch (direction) {
         case 'left':
             return (
@@ -86,3 +86,5 @@ export const RuiTooltip = ({ id, message, children, direction }: RuiTooltipProps
             )
     }
 }
+
+export default RuiTooltip

@@ -1,11 +1,17 @@
 {
+  "name": "ruskelui",
   "version": "0.3.2",
   "license": "MIT",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/ruskelui.esm.js",
+  "types": "./dist/types/index.d.ts",
+  "author": "0xreeko",
+  "description": "RuskeUI is a TailwindCSS-based design system for rapid Web3 development in NextJS/React.",
+  "homepage": "https://github.com/0xreeko/ruskelui/blob/master/README.md",
+  "readme": "https://github.com/0xreeko/ruskelui/blob/master/README.md",
   "bin": {
     "ruskelui": "bin/index.js"
   },
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -14,7 +20,7 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build",
+    "build": "tsdx build --minify",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
@@ -41,10 +47,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "ruskelui",
-  "author": "0xreeko",
-  "description": "RuskeUI is a TailwindCSS-based design system for rapid Web3 development in NextJS/React.",
-  "homepage": "https://github.com/0xreeko/ruskelui/blob/master/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/0xreeko/ruskelui"
@@ -65,8 +67,6 @@
     "design system",
     "dark mode"
   ],
-  "readme": "https://github.com/0xreeko/ruskelui/blob/master/README.md",
-  "module": "dist/ruskelui.esm.js",
   "size-limit": [
     {
       "path": "dist/ruskelui.cjs.production.min.js",

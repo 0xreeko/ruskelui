@@ -3,7 +3,7 @@ import { RuiCheckboxProps } from './Checkbox'
 // @ts-ignore
 import styles from './Checkbox.module.css'
 
-export const RuiCheckbox = ({color = 'rosian', variant ="onyx", id, defaultChecked, disabled, value, checked, onClick, onChange }: RuiCheckboxProps) => {
+const RuiCheckbox = ({color = 'rosian', variant ="onyx", id, defaultChecked, disabled, value, checked, onClick, onChange }: RuiCheckboxProps) => {
   return (
     <label className={`${ disabled !== true ? `${styles[color]} cursor-pointer` : "bg-obsidian-800 pointer-events-none" } select-none rounded-lg w-5 h-5 min-h-fit flex items-center relative`}>
       <input type="checkbox" value={value} className="sr-only peer" id={id} checked={checked} defaultChecked={defaultChecked} onChange={onChange} onClick={onClick} />

@@ -3,7 +3,7 @@ import { RuiModalProps } from "./Modal";
 // @ts-ignore
 import styles from './Modal.module.css'
 
-export const RuiModal = ({ id, children, size = "md", pointer }: RuiModalProps) => {
+const RuiModal = ({ id, children, size = "md", pointer }: RuiModalProps) => {
 	const sizing: { [key in typeof size]: string } = {
 		'xl': 'max-w-xl',
 		'lg': 'max-w-lg',

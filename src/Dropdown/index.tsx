@@ -4,7 +4,7 @@ import { hoverColor, position, positioning, RuiDropdownProps } from './Dropdown'
 import { DropdownContext } from './DropdownContext'
 import "./Dropdown.css"
 
-export const DropdownItem = ({ children, navToDrop, leftIcon, rightIcon, color = "rosian", disabled  }: RuiDropdownProps) => {
+const DropdownItem = ({ children, navToDrop, leftIcon, rightIcon, color = "rosian", disabled  }: RuiDropdownProps) => {
     const { setActiveDrop } = useContext(DropdownContext)
     return (
         <li onClick={() => !disabled && navToDrop && setActiveDrop?.(navToDrop)} role="menuitem" className={`p-2.5 ${disabled !== true ? hoverColor[color] : "text-neropside/40 dark:text-onyx/40 pointer-events-none select-none"} hover:text-obsidian-100 cursor-pointer flex items-center `} >
@@ -15,7 +15,7 @@ export const DropdownItem = ({ children, navToDrop, leftIcon, rightIcon, color =
     )
 }
 
-export const DropdownMenu = ({ children, label, variant }: { children: ReactNode, label: string, variant: "main" | "secondary" }) => {
+const DropdownMenu = ({ children, label, variant }: { children: ReactNode, label: string, variant: "main" | "secondary" }) => {
     const { activeDrop, calcHeight } = useContext(DropdownContext)
     return (
         <CSSTransition
@@ -31,7 +31,7 @@ export const DropdownMenu = ({ children, label, variant }: { children: ReactNode
     )
 }
 
-export const DropdownPortal = ({ children }: { children: ReactNode }) => {
+const DropdownPortal = ({ children }: { children: ReactNode }) => {
     const {menuHeight, position} = useContext(DropdownContext)
     return (
         <ul className={`absolute overflow-hidden sm:text-sm rounded-lg backdrop-blur-sm w-44 border ${positioning[position]} border-obsidian-300 bg-onyx/80 text-neropside dark:border-obsidian-800 dark:bg-neropside/80 dark:text-obsidian-100`} style={{ height: menuHeight ?? 'fit-content' }}>

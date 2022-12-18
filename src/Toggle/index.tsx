@@ -3,7 +3,7 @@ import { RuiToggleProps, checkedColor} from './Toggle';
 // @ts-ignore
 import styles from './Toggle.module.css'
 
-export const RuiToggle = ({ id, defaultChecked, defaultValue, color = 'amethyst', name, disabled }: RuiToggleProps) => {
+const RuiToggle = ({ id, defaultChecked, defaultValue, color = 'amethyst', name, disabled }: RuiToggleProps) => {
     return (
         <label id={id} tabIndex={0} className={`relative group flex items-center w-12 h-6 overflow-hidden rounded-full ${disabled !== true ? "cursor-pointer backdrop-blur-sm bg-obsidian-400/80" : "bg-sylver-800 pointer-events-none select-none"}`} >
             <input role={'switch'} aria-checked="false" aria-label={name ? name : 'toggle placeholder'} type="checkbox" defaultChecked={defaultChecked} defaultValue={defaultValue} className="sr-only peer" id={name} />
@@ -12,3 +12,5 @@ export const RuiToggle = ({ id, defaultChecked, defaultValue, color = 'amethyst'
         </label>
     )
 }
+
+export default RuiToggle

@@ -2,7 +2,7 @@ import React from 'react'
 import { RuiButtonProps, textButtonStyles, filledButtonStyles, ghostButtonStyles, socialColorStyles } from './Button'
 import { loadingSpinner } from './LoadingSpinner';
 
-export const RuiButton = ({ id, form, isLoading, loadingLabel, fullWidth, value, type, children, color = 'amethyst', socialColor = 'twitter', disabled = false, variant = "filled", rightIcon, leftIcon, onClick, ...props }: RuiButtonProps) => {
+const RuiButton = ({ id, form, isLoading, loadingLabel, fullWidth, value, type, children, color = 'amethyst', socialColor = 'twitter', disabled = false, variant = "filled", rightIcon, leftIcon, onClick, ...props }: RuiButtonProps) => {
   switch (variant) {
     case "ghost":
       return (

@@ -4,7 +4,7 @@ import { hiddenEye, visibleEye } from "./InputIcons";
 // @ts-ignore
 import styles from './Input.module.css'
 
-export const RuiInput = ({ id, disabled, isDark, placeholder = 'example@rhcp.com', pattern, max, min, variant, value, color = "amethyst", fullWidth = false, icon, iconPosition = 'right', ...props }: RuiInputProps) => {
+const RuiInput = ({ id, disabled, isDark, placeholder = 'example@rhcp.com', pattern, max, min, variant, value, color = "amethyst", fullWidth = false, icon, iconPosition = 'right', ...props }: RuiInputProps) => {
     const [visible, setVisible] = useState(false)
     switch (variant) {
         case "text":

@@ -54,4 +54,4 @@ export const RuiSelect = ({ label, children, selectedIcon = "🔥", markerColor 
 
 RuiSelect.Item = SelectItem
 
-export default RuiSelect.Item
+export default RuiSelect

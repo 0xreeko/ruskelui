@@ -1,7 +1,7 @@
 import React from 'react'
 import { backgroundColor, RuiAvatarProps, sizing } from './Avatar'
 
-export const RuiAvatar = ({ children, size = "md", color = 'amethyst', zoomed, variant, rounded = 'base', src, alt }: RuiAvatarProps) => {
+const RuiAvatar = ({ children, size = "md", color = 'amethyst', zoomed, variant, rounded = 'base', src, alt }: RuiAvatarProps) => {
     switch (variant) {
         case 'text':
             return (

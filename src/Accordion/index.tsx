@@ -3,7 +3,7 @@ import {RuiAccordionProps, accordionColor} from './Accordion'
 // @ts-ignore
 import styles from './Accordion.module.css'
 
-export const RuiAccordion = ({ data, color = "amethyst", fullWidth = false }: RuiAccordionProps) => {
+const RuiAccordion = ({ data, color = "amethyst", fullWidth = false }: RuiAccordionProps) => {
 
     const [open, setOpen] = useState<number | null>(null)
     const toggle = (_id: number) => setOpen(open === _id ? null : _id)
